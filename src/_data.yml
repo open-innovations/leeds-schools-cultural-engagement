@@ -12,8 +12,9 @@ header_class: c5-bg
 metas:
   site: Leeds Schools' Cultural Engagement
   description: |
-    Website supporting the "University of Leeds Mapping cultural engagement with schools in Leeds" project. 
+    This is a project being run by the University of Leeds to map engagement with
+    culture with schools in Leeds project.
   # image: https://open-innovations.org/resources/images/logos/oi-square.png
-  twitter: openinnovates
+  # twitter: openinnovates
   lang: en
-  keywords: [open, data, leeds, innovation]
+  # keywords: [open, data, leeds, innovation]
