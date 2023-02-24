@@ -10,9 +10,10 @@ header_class: c5-bg
 # Automatically adds meta and social tags 
 # See https://lume.land/plugins/metas/
 metas:
-  site: Open Innovations Lume Template Site
-  description: A template site for Open Innovations
-  image: https://open-innovations.org/resources/images/logos/oi-square.png
+  site: Leeds Schools' Cultural Engagement
+  description: |
+    Website supporting the "University of Leeds Mapping cultural engagement with schools in Leeds" project. 
+  # image: https://open-innovations.org/resources/images/logos/oi-square.png
   twitter: openinnovates
   lang: en
   keywords: [open, data, leeds, innovation]
