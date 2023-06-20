@@ -4,11 +4,27 @@ import date from "lume/plugins/date.ts";
 import metas from "lume/plugins/metas.ts";
 import postcss from "lume/plugins/postcss.ts";
 
+// Importing the OI Lume charts and utilities
+import oiCharts from "https://deno.land/x/oi_lume_charts@v0.8.0/mod.ts";
+import autoDependency from "https://deno.land/x/oi_lume_utils@v0.3.0/processors/auto-dependency.ts";
+import csvLoader from "https://deno.land/x/oi_lume_utils@v0.3.0/loaders/csv-loader.ts";
+
 const site = lume({
   src: './src',
   // TODO Update this with the proper URL
   location: new URL("https://open-innovations.github.io/leeds-schools-cultural-engagement/"),
 });
+
+// Register a series of extensions to be loaded by the OI CSV loader
+// https://lume.land/docs/core/loaders/
+site.loadData([".csv", ".tsv", ".dat"], csvLoader);
+
+// Register an HTML processor
+// https://lume.land/docs/core/processors/
+site.process([".html"], autoDependency);
+
+// Import lume charts
+site.use(oiCharts());
 
 site.use(base_path());
 site.use(metas({

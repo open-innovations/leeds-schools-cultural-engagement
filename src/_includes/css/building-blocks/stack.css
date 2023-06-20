@@ -5,3 +5,7 @@
 .no-stack > * {
 	margin-top: 0;
 }
+
+.panel {
+  margin-top: 0;
+}

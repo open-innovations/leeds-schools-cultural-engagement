@@ -1,0 +1,18 @@
+title: Title
+value: Value
+data:
+  - Title: Thing 1
+    Value: 15
+  - Title: Thing 2
+    Value: 132
+  - Title: Thing 3
+    Value: 19
+  - Title: Thing 4
+    Value: 90
+  - Title: Thing 5
+    Value: 56.4
+panels:
+  - name: Thing 1
+  - name: Thing 3
+  - name: Thing 2
+  - name: Thing 4
