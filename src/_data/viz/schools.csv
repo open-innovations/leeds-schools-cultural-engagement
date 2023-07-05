@@ -224,8 +224,8 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 108005,St. Bartholomew's CofE Voluntary Controlled Primary School,53.79383,-1.58645,Voluntary,State-funded primary,527,35,562,,,,3,11
 138945,St. Benedict's Catholic Primary School,53.79530,-1.38333,Academy & Free Schools,State-funded primary,213,8,221,,,,3,11
 141521,St. Chad's Church of England Primary School,53.83281,-1.59773,Academy & Free Schools,State-funded primary,219,16,235,,,,3,11
-108012,St. Edward's Catholic Primary School, Boston Spa,53.90203,-1.35708,Voluntary,State-funded primary,174,0,174,,,,4,11
-108016,St. Francis Catholic Primary School, Morley,53.74681,-1.60968,Voluntary,State-funded primary,238,0,238,,,,3,11
+108012,"St. Edward's Catholic Primary School, Boston Spa",53.90203,-1.35708,Voluntary,State-funded primary,174,0,174,,,,4,11
+108016,"St. Francis Catholic Primary School, Morley",53.74681,-1.60968,Voluntary,State-funded primary,238,0,238,,,,3,11
 148739,St. Francis of Assisi Catholic Primary School,53.77876,-1.54765,Academy & Free Schools,State-funded primary,209,19,228,,,,3,11
 139350,St. Joseph's Catholic Primary School,53.79984,-1.65816,Academy & Free Schools,State-funded primary,310,17,327,,,,3,11
 108028,St. Joseph's Catholic Primary School,53.78188,-1.52910,Voluntary,State-funded primary,201,0,201,,,,4,11

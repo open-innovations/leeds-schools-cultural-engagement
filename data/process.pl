@@ -111,7 +111,7 @@ for($s = 0; $s < @schools; $s++){
 		$v = "";
 		if($keepfields[$k]->{'src'} eq "schools"){ $v = $schools[$s]->{$keepfields[$k]->{'field'}}; }
 		elsif($keepfields[$k]->{'src'} eq "edubase"){ $v = $edubase->{$urn}{$keepfields[$k]->{'field'}}; }
-		$csvrow .= ($csvrow ? "," : "").($v =~ /\"/ ? "\"".$v."\"" : $v);
+		$csvrow .= ($csvrow ? "," : "").($v =~ /\,/ ? "\"".$v."\"" : $v);
 	}
 	$csv .= "$csvrow\n";
 
