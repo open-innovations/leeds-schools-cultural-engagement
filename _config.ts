@@ -5,7 +5,7 @@ import metas from "lume/plugins/metas.ts";
 import postcss from "lume/plugins/postcss.ts";
 
 // Importing the OI Lume charts and utilities
-import oiCharts from "https://deno.land/x/oi_lume_charts@v0.9.2/mod.ts";
+import oiCharts from "https://deno.land/x/oi_lume_viz@v0.9.2/mod.ts";
 import autoDependency from "https://deno.land/x/oi_lume_utils@v0.3.0/processors/auto-dependency.ts";
 import csvLoader from "https://deno.land/x/oi_lume_utils@v0.3.0/loaders/csv-loader.ts";
 import jsonLoader from "lume/core/loaders/json.ts";
@@ -26,8 +26,18 @@ site.loadData([".geojson"], jsonLoader);
 site.process([".html"], autoDependency);
 
 // Import lume charts
-site.use(oiCharts());
-
+site.use(oiCharts({
+	"colour": {
+		"names": {
+			"Academy & Free Schools": "#F7AB3D",
+			"Voluntary": "#4A783C",
+			"Community": "#69C2C9",
+			"Independent": "#7D2248",
+			"Foundation": "#005776",
+			"Special School": "#FF808B"
+		}
+	}
+}));
 site.use(base_path());
 site.use(metas({
   defaultPageData: {

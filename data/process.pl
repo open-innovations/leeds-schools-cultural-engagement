@@ -36,6 +36,7 @@ for($o = 0; $o < @osmurls; $o++){
 }
 $n = @{$osm->{'features'}};
 
+
 @keepfields = (
 	{'src'=>'schools','field'=>'urn','rename'=>'URN'},
 	{'src'=>'schools','field'=>'school_name','rename'=>'Name'},
@@ -74,25 +75,6 @@ for($s = 0; $s < @schools; $s++){
 			$n2 = cleanSchoolName($osm->{'features'}[$i]{'properties'}{'name'});
 			if($n1 eq $n2){ $match = $i; last; }
 		}
-
-#		# If we have no match we try matching by postcode
-#		if($match < 0){
-#
-#			warning("\tNo EDUBASE code\n");
-#
-#			$p1 = cleanPostcode($schools[$s]->{'school_postcode'});
-#			for($i = 0; $i < $n; $i++){
-#				$p2 = cleanPostcode($osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'});
-#				if($schools[$s]->{'school_postcode'} eq $osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'}){ $match = $i; last; }
-#			}
-#			if($match < 0){
-##				warning("\tNo postcode match for $schools[$s]->{'school_name'}\n");
-##				print Dumper $schools[$s]->{'urn'};
-##				print Dumper $edubase->{$schools[$s]->{'urn'}};
-#			}else{
-##				msg("\tPostcode: $match ($schools[$s]->{'school_name'} / $osm->{'features'}[$match]{'properties'}{'name'})\n");
-#			}
-#		}
 
 	}
 
