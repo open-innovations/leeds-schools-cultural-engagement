@@ -37,18 +37,18 @@ for($o = 0; $o < @osmurls; $o++){
 $n = @{$osm->{'features'}};
 
 @keepfields = (
-	{'src'=>'school','field'=>'urn','rename'=>'URN'},
-	{'src'=>'school','field'=>'school_name','rename'=>'Name'},
+	{'src'=>'schools','field'=>'urn','rename'=>'URN'},
+	{'src'=>'schools','field'=>'school_name','rename'=>'Name'},
 	{'src'=>'edubase','field'=>'latitude','rename'=>'Latitude'},
 	{'src'=>'edubase','field'=>'longitude','rename'=>'Longitude'},
-	{'src'=>'school','field'=>'type'},
-	{'src'=>'school','field'=>'phase_type_grouping'},
-	{'src'=>'school','field'=>'total_fulltime','rename'=>'total_FT'},
-	{'src'=>'school','field'=>'total_parttime','rename'=>'total_PT'},
-	{'src'=>'school','field'=>'total_pupils'},
-	{'src'=>'school','field'=>'artsmark'},
-	{'src'=>'school','field'=>'most_recent_award'},
-	{'src'=>'school','field'=>'artsaward'},
+	{'src'=>'schools','field'=>'type'},
+	{'src'=>'schools','field'=>'phase_type_grouping'},
+	{'src'=>'schools','field'=>'total_fulltime','rename'=>'total_FT'},
+	{'src'=>'schools','field'=>'total_parttime','rename'=>'total_PT'},
+	{'src'=>'schools','field'=>'total_pupils'},
+	{'src'=>'schools','field'=>'artsmark'},
+	{'src'=>'schools','field'=>'most_recent_award'},
+	{'src'=>'schools','field'=>'artsaward'},
 	{'src'=>'edubase','field'=>'StatutoryLowAge'},
 	{'src'=>'edubase','field'=>'StatutoryHighAge'}
 );
@@ -109,7 +109,7 @@ for($s = 0; $s < @schools; $s++){
 	$csvrow = "";
 	for($k = 0; $k < @keepfields; $k++){
 		$v = "";
-		if($keepfields[$k]->{'src'} eq "school"){ $v = $schools[$s]->{$keepfields[$k]->{'field'}}; }
+		if($keepfields[$k]->{'src'} eq "schools"){ $v = $schools[$s]->{$keepfields[$k]->{'field'}}; }
 		elsif($keepfields[$k]->{'src'} eq "edubase"){ $v = $edubase->{$urn}{$keepfields[$k]->{'field'}}; }
 		$csvrow .= ($csvrow ? "," : "").($v =~ /\"/ ? "\"".$v."\"" : $v);
 	}
