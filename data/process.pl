@@ -36,6 +36,23 @@ for($o = 0; $o < @osmurls; $o++){
 }
 $n = @{$osm->{'features'}};
 
+@keepfields = (
+	{'src'=>'school','field'=>'urn','rename'=>'URN'},
+	{'src'=>'school','field'=>'school_name','rename'=>'Name'},
+	{'src'=>'edubase','field'=>'latitude','rename'=>'Latitude'},
+	{'src'=>'edubase','field'=>'longitude','rename'=>'Longitude'},
+	{'src'=>'school','field'=>'type'},
+	{'src'=>'school','field'=>'phase_type_grouping'},
+	{'src'=>'school','field'=>'total_fulltime','rename'=>'total_FT'},
+	{'src'=>'school','field'=>'total_parttime','rename'=>'total_PT'},
+	{'src'=>'school','field'=>'total_pupils'},
+	{'src'=>'school','field'=>'artsmark'},
+	{'src'=>'school','field'=>'most_recent_award'},
+	{'src'=>'school','field'=>'artsaward'},
+	{'src'=>'edubase','field'=>'StatutoryLowAge'},
+	{'src'=>'edubase','field'=>'StatutoryHighAge'}
+);
+
 
 $csv = "";
 $geojson = "";
@@ -71,9 +88,6 @@ for($s = 0; $s < @schools; $s++){
 			if($match < 0){
 #				warning("\tNo postcode match for $schools[$s]->{'school_name'}\n");
 #				print Dumper $schools[$s]->{'urn'};
-				($lat,$lon) = grid_to_ll($edubase->{$schools[$s]->{'urn'}}{'Easting'},$edubase->{$schools[$s]->{'urn'}}{'Northing'});
-				$edubase->{$schools[$s]->{'urn'}}{'latitude'} = $lat;
-				$edubase->{$schools[$s]->{'urn'}}{'longitude'} = $lon;
 #				print Dumper $edubase->{$schools[$s]->{'urn'}};
 			}else{
 #				msg("\tPostcode: $match ($schools[$s]->{'school_name'} / $osm->{'features'}[$match]{'properties'}{'name'})\n");
@@ -83,10 +97,26 @@ for($s = 0; $s < @schools; $s++){
 	}
 
 	$urn = $schools[$s]->{'urn'};
-	$csv .= "$urn,\"$schools[$s]->{'school_name'}\"";
 
+
+	($lat,$lon) = grid_to_ll($edubase->{$urn}{'Easting'},$edubase->{$urn}{'Northing'});
+	$edubase->{$urn}{'latitude'} = sprintf("%0.5f",$lat);
+	$edubase->{$urn}{'longitude'} = sprintf("%0.5f",$lon);
+
+
+
+	# Build CSV entry
+	$csvrow = "";
+	for($k = 0; $k < @keepfields; $k++){
+		$v = "";
+		if($keepfields[$k]->{'src'} eq "school"){ $v = $schools[$s]->{$keepfields[$k]->{'field'}}; }
+		elsif($keepfields[$k]->{'src'} eq "edubase"){ $v = $edubase->{$urn}{$keepfields[$k]->{'field'}}; }
+		$csvrow .= ($csvrow ? "," : "").($v =~ /\"/ ? "\"".$v."\"" : $v);
+	}
+	$csv .= "$csvrow\n";
+
+	# Build GeoJSON entry
 	$geojson .= ($geojson ? ",\n":"")."\t\t{ \"type\": \"Feature\", \"properties\": {\"URN\":\"$urn\",\"name\":\"$schools[$s]->{'school_name'}\"}, \"geometry\": {";
-
 	if($match < 0){
 		warning("$s - $schools[$s]->{'school_name'} NOT FOUND\n");
 		$geojson .= "\"type\":\"Point\",\"coordinates\":\[".sprintf("%0.5f",$edubase->{$urn}{'longitude'}).",".sprintf("%0.5f",$edubase->{$urn}{'latitude'})."\]";
@@ -96,11 +126,15 @@ for($s = 0; $s < @schools; $s++){
 	}
 	$geojson .= "}}";
 
-	$csv .= "\n";
 }
 
+
 open(FILE,">",$basedir."../src/_data/viz/schools.csv");
-print FILE "URN,School\n";
+# Build header
+for($k = 0; $k < @keepfields; $k++){
+	print FILE ($k > 0 ? ",":"").($keepfields[$k]->{'rename'}||$keepfields[$k]->{'field'});
+}
+print FILE "\n";
 print FILE $csv;
 close(FILE);
 
