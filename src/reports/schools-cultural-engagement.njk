@@ -1,39 +1,64 @@
 ---
 title: Schools cultural engagement
-config:
-  geojson:
+visualisations:
+  - geojson:
+      key: "URN"
+      data: viz.school-map
+    data: viz.schools
+    columns:
+      - name: "Tooltip label"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}</p>"
     key: "URN"
-    data: viz.school-map
-  data: viz.schools
-  columns:
-    - name: "Tooltip label"
-      template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}</p>"
-  key: "URN"
-  tooltip: "Tooltip label"
-  value: "type"
-  legend:
-    position: top
-    items:
-      - label: "Academy & Free Schools"
-        colour: "Academy & Free Schools"
-      - label: "Community"
-        colour: "Community"
-      - label: "Foundation"
-        colour: "Foundation"
-      - label: "Independent"
-        colour: "Independent"
-      - label: "Special School"
-        colour: "Special School"
-      - label: "Voluntary"
-        colour: "Voluntary"
+    tooltip: "Tooltip label"
+    value: "type"
+    legend:
+      position: top
+      items:
+        - label: "Academy & Free Schools"
+          colour: "Academy & Free Schools"
+        - label: "Community"
+          colour: "Community"
+        - label: "Foundation"
+          colour: "Foundation"
+        - label: "Independent"
+          colour: "Independent"
+        - label: "Special School"
+          colour: "Special School"
+        - label: "Voluntary"
+          colour: "Voluntary"
+  - data: viz.schools
+    legend:
+      show: true
+      position: top
+    category: type
+    series:
+      - title: School
+        value: School
+        colour: '#E52E36'
+        tooltip: School Label
+      - title: College
+        value: College
+        colour: '#F7AB3D'
+        tooltip: College Label
+      - title: University
+        value: University
+        colour: '#69C2C9'
+        tooltip: University Label
 ---
 
+<p>Some example text.</p>
+
 {{
-  comp.oi.map.zoomable({
-    config: config
-  }) | safe
+	comp.oi.map.zoomable({
+		config: visualisations[0]
+	}) | safe
 }}
 
+<h2>Title</h2>
+<p>Blah.</p>
+
+{#
 <pre>
-{{ config | dump(2) }}
+{{ visualisations | dump(2) }}
 </pre>
+#}
