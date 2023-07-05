@@ -58,51 +58,49 @@ $csv = "";
 $geojson = "";
 for($s = 0; $s < @schools; $s++){
 	$match = -1;
-	$n1 = cleanSchoolName($schools[$s]->{'school_name'});
+	
+	
+	$r1 = $schools[$s]->{'urn'};
 	for($i = 0; $i < $n; $i++){
-		$n2 = cleanSchoolName($osm->{'features'}[$i]{'properties'}{'name'});
-		if($n1 eq $n2){ $match = $i; last; }
+		$r2 = $osm->{'features'}[$i]{'properties'}{'other_tags'}{'ref:edubase'};
+		if($r1 eq $r2){ $match = $i; last; print "$r1 => $r2\n"; }
 	}
-#	msg("$s = $schools[$s]->{'school_name'}\n");
 
 	# If we don't have a match we will try matching the edubase reference
 	if($match < 0){
 
-		$r1 = $schools[$s]->{'urn'};
+		$n1 = cleanSchoolName($schools[$s]->{'school_name'});
 		for($i = 0; $i < $n; $i++){
-			$r2 = $osm->{'features'}[$i]{'properties'}{'other_tags'}{'ref:edubase'};
-			if($r1 eq $r2){ $match = $i; last; print "$r1 => $r2\n"; }
+			$n2 = cleanSchoolName($osm->{'features'}[$i]{'properties'}{'name'});
+			if($n1 eq $n2){ $match = $i; last; }
 		}
-#		msg("\tRef:edubase $match ($r1)\n");
 
-		# If we have no match we try matching by postcode
-		if($match < 0){
-
+#		# If we have no match we try matching by postcode
+#		if($match < 0){
+#
 #			warning("\tNo EDUBASE code\n");
-
-			$p1 = cleanPostcode($schools[$s]->{'school_postcode'});
-			for($i = 0; $i < $n; $i++){
-				$p2 = cleanPostcode($osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'});
-				if($schools[$s]->{'school_postcode'} eq $osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'}){ $match = $i; last; }
-			}
-			if($match < 0){
-#				warning("\tNo postcode match for $schools[$s]->{'school_name'}\n");
-#				print Dumper $schools[$s]->{'urn'};
-#				print Dumper $edubase->{$schools[$s]->{'urn'}};
-			}else{
-#				msg("\tPostcode: $match ($schools[$s]->{'school_name'} / $osm->{'features'}[$match]{'properties'}{'name'})\n");
-			}
-		}
+#
+#			$p1 = cleanPostcode($schools[$s]->{'school_postcode'});
+#			for($i = 0; $i < $n; $i++){
+#				$p2 = cleanPostcode($osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'});
+#				if($schools[$s]->{'school_postcode'} eq $osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'}){ $match = $i; last; }
+#			}
+#			if($match < 0){
+##				warning("\tNo postcode match for $schools[$s]->{'school_name'}\n");
+##				print Dumper $schools[$s]->{'urn'};
+##				print Dumper $edubase->{$schools[$s]->{'urn'}};
+#			}else{
+##				msg("\tPostcode: $match ($schools[$s]->{'school_name'} / $osm->{'features'}[$match]{'properties'}{'name'})\n");
+#			}
+#		}
 
 	}
 
 	$urn = $schools[$s]->{'urn'};
 
-
 	($lat,$lon) = grid_to_ll($edubase->{$urn}{'Easting'},$edubase->{$urn}{'Northing'});
 	$edubase->{$urn}{'latitude'} = sprintf("%0.5f",$lat);
 	$edubase->{$urn}{'longitude'} = sprintf("%0.5f",$lon);
-
 
 
 	# Build CSV entry
@@ -122,7 +120,9 @@ for($s = 0; $s < @schools; $s++){
 		$geojson .= "\"type\":\"Point\",\"coordinates\":\[".sprintf("%0.5f",$edubase->{$urn}{'longitude'}).",".sprintf("%0.5f",$edubase->{$urn}{'latitude'})."\]";
 	}else{
 		#msg("$s - $schools[$s]->{'school_name'}\n");
-		$geojson .= "\"type\":\"$osm->{'features'}[$i]{'geometry'}{'type'}\",\"coordinates\":".JSON::XS->new->encode($osm->{'features'}[$i]{'geometry'}{'coordinates'})."";;
+		$coords = JSON::XS->new->encode($osm->{'features'}[$i]{'geometry'}{'coordinates'});
+		$coords =~ s/([0-9]\.[0-9]{5})[0-9]/$1/g;
+		$geojson .= "\"type\":\"$osm->{'features'}[$i]{'geometry'}{'type'}\",\"coordinates\":".$coords."";;
 	}
 	$geojson .= "}}";
 
