@@ -1,8 +1,14 @@
 #!/usr/bin/perl
 
+use utf8;
 use Data::Dumper;
+use Cwd qw(abs_path);
 use JSON::XS;
+use Geo::Coordinates::OSGB qw(ll_to_grid grid_to_ll);
 
+# Get the real base directory for this script
+my $basedir = "./";
+if(abs_path($0) =~ /^(.*\/)[^\/]*/){ $basedir = $1; }
 
 my %colours = (
 	'black'=>"\033[0;30m",
@@ -16,11 +22,11 @@ my %colours = (
 	'none'=>"\033[0m"
 );
 
-@osmurls = ("https://raw.githubusercontent.com/open-innovations/west-yorkshire-mapping/main/data/leeds/leeds-amenities-school.geojson","https://raw.githubusercontent.com/open-innovations/west-yorkshire-mapping/main/data/leeds/leeds-amenities-college.geojson");
+# Load in data
 $schoolfile = "leeds_schools_public.csv";
-
-#print Dumper Load($osmurl);
-@schools = Load($schoolfile);
+@schools = Load($basedir.$schoolfile);
+$edubase = Load($basedir."edubase-leeds.csv","URN");
+@osmurls = ("https://raw.githubusercontent.com/open-innovations/west-yorkshire-mapping/main/data/leeds/leeds-amenities-school.geojson","https://raw.githubusercontent.com/open-innovations/west-yorkshire-mapping/main/data/leeds/leeds-amenities-college.geojson");
 $osm = {'type'=>'FeatureCollection','features'=>()};
 for($o = 0; $o < @osmurls; $o++){
 	$geojson = Load($osmurls[$o]);
@@ -28,9 +34,11 @@ for($o = 0; $o < @osmurls; $o++){
 		push(@{$osm->{'features'}},$geojson->{'features'}[$i]);
 	}
 }
-
 $n = @{$osm->{'features'}};
 
+
+$csv = "";
+$geojson = "";
 for($s = 0; $s < @schools; $s++){
 	$match = -1;
 	$n1 = cleanSchoolName($schools[$s]->{'school_name'});
@@ -38,7 +46,7 @@ for($s = 0; $s < @schools; $s++){
 		$n2 = cleanSchoolName($osm->{'features'}[$i]{'properties'}{'name'});
 		if($n1 eq $n2){ $match = $i; last; }
 	}
-	msg("$s = $schools[$s]->{'school_name'}\n");
+#	msg("$s = $schools[$s]->{'school_name'}\n");
 
 	# If we don't have a match we will try matching the edubase reference
 	if($match < 0){
@@ -48,13 +56,12 @@ for($s = 0; $s < @schools; $s++){
 			$r2 = $osm->{'features'}[$i]{'properties'}{'other_tags'}{'ref:edubase'};
 			if($r1 eq $r2){ $match = $i; last; print "$r1 => $r2\n"; }
 		}
-		msg("\tRef:edubase $match ($r1)\n");
-
+#		msg("\tRef:edubase $match ($r1)\n");
 
 		# If we have no match we try matching by postcode
 		if($match < 0){
 
-			warning("\tNo EDUBASE code\n");
+#			warning("\tNo EDUBASE code\n");
 
 			$p1 = cleanPostcode($schools[$s]->{'school_postcode'});
 			for($i = 0; $i < $n; $i++){
@@ -62,34 +69,65 @@ for($s = 0; $s < @schools; $s++){
 				if($schools[$s]->{'school_postcode'} eq $osm->{'features'}[$i]{'properties'}{'other_tags'}{'addr:postcode'}){ $match = $i; last; }
 			}
 			if($match < 0){
-				warning("\tNo postcode match for $schools[$s]->{'school_name'}\n");
+#				warning("\tNo postcode match for $schools[$s]->{'school_name'}\n");
+#				print Dumper $schools[$s]->{'urn'};
+				($lat,$lon) = grid_to_ll($edubase->{$schools[$s]->{'urn'}}{'Easting'},$edubase->{$schools[$s]->{'urn'}}{'Northing'});
+				$edubase->{$schools[$s]->{'urn'}}{'latitude'} = $lat;
+				$edubase->{$schools[$s]->{'urn'}}{'longitude'} = $lon;
+#				print Dumper $edubase->{$schools[$s]->{'urn'}};
 			}else{
-				msg("\tPostcode: $match ($schools[$s]->{'school_name'} / $osm->{'features'}[$match]{'properties'}{'name'})\n");
+#				msg("\tPostcode: $match ($schools[$s]->{'school_name'} / $osm->{'features'}[$match]{'properties'}{'name'})\n");
 			}
 		}
 
-
 	}
+
+	$urn = $schools[$s]->{'urn'};
+	$csv .= "$urn,\"$schools[$s]->{'school_name'}\"";
+
+	$geojson .= ($geojson ? ",\n":"")."\t\t{ \"type\": \"Feature\", \"properties\": {\"URN\":\"$urn\",\"name\":\"$schools[$s]->{'school_name'}\"}, \"geometry\": {";
+
+	if($match < 0){
+		warning("$s - $schools[$s]->{'school_name'} NOT FOUND\n");
+		$geojson .= "\"type\":\"Point\",\"coordinates\":\[".sprintf("%0.5f",$edubase->{$urn}{'longitude'}).",".sprintf("%0.5f",$edubase->{$urn}{'latitude'})."\]";
+	}else{
+		#msg("$s - $schools[$s]->{'school_name'}\n");
+		$geojson .= "\"type\":\"$osm->{'features'}[$i]{'geometry'}{'type'}\",\"coordinates\":".JSON::XS->new->encode($osm->{'features'}[$i]{'geometry'}{'coordinates'})."";;
+	}
+	$geojson .= "}}";
+
+	$csv .= "\n";
 }
+
+open(FILE,">",$basedir."../src/_data/viz/schools.csv");
+print FILE "URN,School\n";
+print FILE $csv;
+close(FILE);
+
+open(FILE,">",$basedir."../src/_data/viz/school-map.geojson");
+print FILE "{\n\t\"type\":\"FeatureCollection\",\n\t\"features\":[\n";
+print FILE $geojson;
+print FILE "\n\t]\n\}\n";
+close(FILE);
 
 
 #########################
 
 sub msg {
-	my $str = $_[0];
-	my $dest = $_[1]||STDOUT;
+	my $str = shift;
+	my $dest = shift||STDOUT;
 	foreach my $c (keys(%colours)){ $str =~ s/\< ?$c ?\>/$colours{$c}/g; }
 	print $dest $str;
 }
 
 sub error {
-	my $str = $_[0];
+	my $str = shift;
 	$str =~ s/(^[\t\s]*)/$1<red>ERROR:<none> /;
 	msg($str,STDERR);
 }
 
 sub warning {
-	my $str = $_[0];
+	my $str = shift;
 	$str =~ s/(^[\t\s]*)/$1$colours{'yellow'}WARNING:$colours{'none'} /;
 	print STDERR $str;
 }
@@ -114,31 +152,32 @@ sub getURL {
 }
 
 sub Load {
-	my $file = $_[0];
+	my $file = shift;
+	my $arg = shift;
 	my ($str,@lines);
 	if(-e $file){
-		msg("\tProcessing file from <cyan>$file<none>\n");
+		msg("Processing file from <cyan>$file<none>\n");
 		open(FILE,"<:utf8",$file);
 		@lines = <FILE>;
 		close(FILE);
 	}elsif($file =~ /^https?\:/){
-		msg("\tDownloading from <cyan>$file<none>\n");
+		msg("Downloading from <cyan>$file<none>\n");
 		@lines = getURL($file);
 	}else{
-		msg("\tFile <cyan>$file<none> doesn't seem to exist or be a valid URL.\n");
+		msg("File <cyan>$file<none> doesn't seem to exist or be a valid URL.\n");
 		@lines = ();
 	}
 
 	$str = join("",@lines);
 
 	if($file =~ /\.csv$/){
-		return parseCSV($str);
+		return parseCSV($str,$arg);
 	}elsif($file =~ /\.json$/){
 		return parseJSON($str);
 	}elsif($file =~ /\.geojson$/){
 		return parseGeoJSON($str);
 	}else{
-		warning("\tUnknown file type to process \"$file\".\n");
+		warning("Unknown file type to process \"$file\".\n");
 	}
 }
 
@@ -155,6 +194,10 @@ sub parseCSV {
 		if($r < 1){
 			# Header
 			if(!@header){
+				# Trim quotes
+				for($c = 0; $c < @cols; $c++){
+					$cols[$c] =~ s/(^\"|\"$)//g;
+				}
 				@header = @cols;
 			}else{
 				for($c = 0; $c < @cols; $c++){
@@ -189,7 +232,7 @@ sub parseJSON {
 	eval {
 		$json = JSON::XS->new->decode($str);
 	};
-	if($@){ warning("\tInvalid JSON.\n".$str); }
+	if($@){ warning("Invalid JSON.\n".$str); }
 	if(ref($json) eq "ARRAY"){
 		return {'array'=>\@{$json}};
 	}else{
