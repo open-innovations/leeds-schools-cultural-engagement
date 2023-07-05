@@ -203,18 +203,27 @@ for($s = 0; $s < @schools; $s++){
 		print "Unknown group $g\n";
 		exit;
 	}
-	$groups->{$g}{'KS4'} += $schools[$s]->{'KS4_total'};
-	$groups->{$g}{'KS5'} += $schools[$s]->{'KS5_total'};
-	$groups->{$g}{'KS4&5'} += $schools[$s]->{'KS4_total'};
-	$groups->{$g}{'KS4&5'} += $schools[$s]->{'KS5_total'};
 
-	for($f = 0; $f < @fields; $f++){
-		$groups->{$g}{'entries'} += $schools[$s]->{$fields[$f]->{'name'}};
-		if($fields[$f]->{'name'} =~ /KS4/){ $groups->{$g}{'entries_KS4'} += $schools[$s]->{$fields[$f]->{'name'}}; }
-		if($fields[$f]->{'name'} =~ /KS5/){ $groups->{$g}{'entries_KS5'} += $schools[$s]->{$fields[$f]->{'name'}}; }
-		$groups->{$g}{$fields[$f]->{'name'}} += $schools[$s]->{$fields[$f]->{'name'}};
+	# Only include schools with the appropriate ages
+	if($edubase->{$urn}{'StatutoryHighAge'} >= 13){
+		
+		$groups->{$g}{'KS4'} += $schools[$s]->{'KS4_total'};
+		$groups->{$g}{'KS5'} += $schools[$s]->{'KS5_total'};
+
+		if($schools[$s]->{'KS4_total'} > 0 || $schools[$s]->{'KS5_total'} > 0){
+			$groups->{$g}{'KS4&5'} += $schools[$s]->{'KS4_total'};
+			$groups->{$g}{'KS4&5'} += $schools[$s]->{'KS5_total'};
+#		}else{
+#			$groups->{$g}{'KS4&5'} += $schools[$s]->{'total_fulltime'};
+		}
+
+		for($f = 0; $f < @fields; $f++){
+			$groups->{$g}{'entries'} += $schools[$s]->{$fields[$f]->{'name'}};
+			if($fields[$f]->{'name'} =~ /KS4/){ $groups->{$g}{'entries_KS4'} += $schools[$s]->{$fields[$f]->{'name'}}; }
+			if($fields[$f]->{'name'} =~ /KS5/){ $groups->{$g}{'entries_KS5'} += $schools[$s]->{$fields[$f]->{'name'}}; }
+			$groups->{$g}{$fields[$f]->{'name'}} += $schools[$s]->{$fields[$f]->{'name'}};
+		}
 	}
-
 }
 
 
@@ -242,17 +251,17 @@ foreach $g (sort(keys(%{$groups}))){
 print FILE "\n";
 print FILE "KS4 & 5";
 foreach $g (sort(keys(%{$groups}))){
-	print FILE ",$groups->{$g}{'KS4&5'},$groups->{$g}{'entries'},".($groups->{$g}{'KS4&5'} > 0 ? $groups->{$g}{'entries'}/$groups->{$g}{'KS4&5'} : 0);
+	print FILE ",$groups->{$g}{'KS4&5'},$groups->{$g}{'entries'},".sprintf("%0.4f",$groups->{$g}{'KS4&5'} > 0 ? $groups->{$g}{'entries'}/$groups->{$g}{'KS4&5'} : 0);
 }
 print FILE "\n";
 print FILE "KS4";
 foreach $g (sort(keys(%{$groups}))){
-	print FILE ",$groups->{$g}{'KS4'},$groups->{$g}{'entries_KS4'},".($groups->{$g}{'KS4'} > 0 ? $groups->{$g}{'entries_KS4'}/$groups->{$g}{'KS4'} : 0);
+	print FILE ",$groups->{$g}{'KS4'},$groups->{$g}{'entries_KS4'},".sprintf("%0.4f",$groups->{$g}{'KS4'} > 0 ? $groups->{$g}{'entries_KS4'}/$groups->{$g}{'KS4'} : 0);
 }
 print FILE "\n";
 print FILE "KS5";
 foreach $g (sort(keys(%{$groups}))){
-	print FILE ",$groups->{$g}{'KS5'},$groups->{$g}{'entries_KS5'},".($groups->{$g}{'KS5'} > 0 ? $groups->{$g}{'entries_KS5'}/$groups->{$g}{'KS5'} : 0);
+	print FILE ",$groups->{$g}{'KS5'},$groups->{$g}{'entries_KS5'},".sprintf("%0.4f",$groups->{$g}{'KS5'} > 0 ? $groups->{$g}{'entries_KS5'}/$groups->{$g}{'KS5'} : 0);
 }
 print FILE "\n";
 close(FILE);
