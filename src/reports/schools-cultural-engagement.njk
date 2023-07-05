@@ -95,8 +95,40 @@ visualisations:
           stroke-width: 0.5
 ---
 
-<p>Some example text.</p>
+<p>Here is a breakdown of the types of schools in Leeds:</p>
 
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.school-data-by-type",
+			title: "Type",
+			value: "Number",
+			width: "30%",
+			panels: [{
+				name: "Academy & Free Schools",
+				colour: "Academy & Free Schools"
+			},{
+				name: "Community",
+				colour: "Community"
+			},{
+				name: "Foundation",
+				colour: "Foundation"
+			},{
+				name: "Independent",
+				colour: "Independent"
+			},{
+				name: "Special School",
+				colour: "Special School"
+			},{
+				name: "Voluntary",
+				colour: "Voluntary"
+			}]
+		}
+	}) | safe
+}}
+
+<p>Let's show them all on a map:</p>
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
