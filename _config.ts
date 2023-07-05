@@ -5,9 +5,10 @@ import metas from "lume/plugins/metas.ts";
 import postcss from "lume/plugins/postcss.ts";
 
 // Importing the OI Lume charts and utilities
-import oiCharts from "https://deno.land/x/oi_lume_charts@v0.8.0/mod.ts";
+import oiCharts from "https://deno.land/x/oi_lume_charts@v0.9.2/mod.ts";
 import autoDependency from "https://deno.land/x/oi_lume_utils@v0.3.0/processors/auto-dependency.ts";
 import csvLoader from "https://deno.land/x/oi_lume_utils@v0.3.0/loaders/csv-loader.ts";
+import jsonLoader from "lume/core/loaders/json.ts";
 
 const site = lume({
   src: './src',
@@ -18,6 +19,7 @@ const site = lume({
 // Register a series of extensions to be loaded by the OI CSV loader
 // https://lume.land/docs/core/loaders/
 site.loadData([".csv", ".tsv", ".dat"], csvLoader);
+site.loadData([".geojson"], jsonLoader);
 
 // Register an HTML processor
 // https://lume.land/docs/core/processors/

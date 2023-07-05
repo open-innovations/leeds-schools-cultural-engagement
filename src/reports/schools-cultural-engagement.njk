@@ -1,0 +1,25 @@
+---
+title: Schools cultural engagement
+config:
+  geojson:
+    key: "URN"
+    data: viz.school-map
+  data: viz.schools
+  columns:
+    - name: "Tooltip label"
+      template: "{{ Name }}<br />Pupils: {{ total_pupils | toLocaleString() }}"
+  key: "URN"
+  tooltip: "Tooltip label"
+  value: "total_pupils"
+  scale: "Viridis"
+---
+
+{{
+  comp.oi.map.zoomable({
+    config: config
+  }) | safe
+}}
+
+<pre>
+{{ config | dump(2) }}
+</pre>
