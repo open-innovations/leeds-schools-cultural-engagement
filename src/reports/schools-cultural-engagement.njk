@@ -1,7 +1,8 @@
 ---
 title: Schools cultural engagement
 visualisations:
-  - geojson:
+  map:
+    geojson:
       key: "URN"
       data: viz.school-map
     data: viz.schools
@@ -26,39 +27,88 @@ visualisations:
           colour: "Special School"
         - label: "Voluntary"
           colour: "Voluntary"
-  - data: viz.schools
+  ratios:
+    data: viz.school-data-ratios
+    columns:
+      - name: "Academy & Free Schools Tooltip"
+        template: "Academy & Free Schools<br />Number: {{ Academy & Free Schools number | toLocaleString() }}<br />Entries: {{ Academy & Free Schools entries | toLocaleString() }}<br />Ratio: {{ Academy & Free Schools ratio | toFixed(2) }}"
+      - name: "Community Tooltip"
+        template: "Community<br />Number: {{ Community number | toLocaleString() }}<br />Entries: {{ Community entries | toLocaleString() }}<br />Ratio: {{ Community ratio | toFixed(2) }}"
+      - name: "Foundation Tooltip"
+        template: "Foundation<br />Number: {{ Foundation number | toLocaleString() }}<br />Entries: {{ Foundation entries | toLocaleString() }}<br />Ratio: {{ Foundation ratio | toFixed(2) }}"
+      - name: "Independent Tooltip"
+        template: "Independent<br />Number: {{ Independent number | toLocaleString() }}<br />Entries: {{ Independent entries | toLocaleString() }}<br />Ratio: {{ Independent ratio | toFixed(2) }}"
+      - name: "Special School Tooltip"
+        template: "Special School<br />Number: {{ Special School number | toLocaleString() }}<br />Entries: {{ Special School entries | toLocaleString() }}<br />Ratio: {{ Special School ratio | toFixed(2) }}"
+      - name: "Voluntary Tooltip"
+        template: "Voluntary<br />Number: {{ Voluntary number | toLocaleString() }}<br />Entries: {{ Voluntary entries | toLocaleString() }}<br />Ratio: {{ Voluntary ratio | toFixed(2) }}"
     legend:
       show: true
       position: top
-    category: type
+    category: Category
     series:
-      - title: School
-        value: School
-        colour: '#E52E36'
-        tooltip: School Label
-      - title: College
-        value: College
-        colour: '#F7AB3D'
-        tooltip: College Label
-      - title: University
-        value: University
-        colour: '#69C2C9'
-        tooltip: University Label
+      - title: "Academy & Free Schools"
+        value: "Academy & Free Schools ratio"
+        colour: "Academy & Free Schools"
+        tooltip: "Academy & Free Schools Tooltip"
+      - title: "Community"
+        value: "Community ratio"
+        colour: "Community"
+        tooltip: "Community Tooltip"
+      - title: "Foundation"
+        value: "Foundation ratio"
+        colour: "Foundation"
+        tooltip: "Foundation Tooltip"
+      - title: "Independent"
+        value: "Independent ratio"
+        colour: "Independent"
+        tooltip: "Independent Tooltip"
+      - title: "Special School"
+        value: "Special School ratio"
+        colour: "Special School"
+        tooltip: "Special School Tooltip"
+      - title: "Voluntary"
+        value: "Voluntary ratio"
+        colour: "Voluntary"
+        tooltip: "Voluntary Tooltip"
+    gap: 0.2
+    axis:
+      x:
+        min: 0
+        max: 1
+        grid:
+          stroke-dasharray: 6 2
+          stroke-width: 1
+        ticks:
+          - value: 0
+            label: "0"
+          - value: 0.25
+            label: "0.25"
+          - value: 0.5
+            label: "0.5"
+          - value: 0.75
+            label: "0.75"
+          - value: 1
+            label: "1"
+      y:
+        grid:
+          stroke-width: 0.5
 ---
 
 <p>Some example text.</p>
 
 {{
 	comp.oi.map.zoomable({
-		config: visualisations[0]
+		config: visualisations.map
 	}) | safe
 }}
 
 <h2>Title</h2>
 <p>Blah.</p>
 
-{#
-<pre>
-{{ visualisations | dump(2) }}
-</pre>
-#}
+
+{{
+	comp.oi.chart.bar({
+		config: visualisations.ratios
+	}) | safe
+}}

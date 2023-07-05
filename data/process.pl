@@ -9,6 +9,7 @@ use Geo::Coordinates::OSGB qw(ll_to_grid grid_to_ll);
 # Get the real base directory for this script
 my $basedir = "./";
 if(abs_path($0) =~ /^(.*\/)[^\/]*/){ $basedir = $1; }
+my $datadir = "../src/_data/viz/";
 
 my %colours = (
 	'black'=>"\033[0;30m",
@@ -59,12 +60,12 @@ $csv = "";
 $geojson = "";
 for($s = 0; $s < @schools; $s++){
 	$match = -1;
-	
-	
-	$r1 = $schools[$s]->{'urn'};
+
+	$urn = $schools[$s]->{'urn'};
+
 	for($i = 0; $i < $n; $i++){
 		$r2 = $osm->{'features'}[$i]{'properties'}{'other_tags'}{'ref:edubase'};
-		if($r1 eq $r2){ $match = $i; last; print "$r1 => $r2\n"; }
+		if($urn eq $r2){ $match = $i; last; print "$urn => $r2\n"; }
 	}
 
 	# If we don't have a match we will try matching the edubase reference
@@ -77,8 +78,6 @@ for($s = 0; $s < @schools; $s++){
 		}
 
 	}
-
-	$urn = $schools[$s]->{'urn'};
 
 	($lat,$lon) = grid_to_ll($edubase->{$urn}{'Easting'},$edubase->{$urn}{'Northing'});
 	$edubase->{$urn}{'latitude'} = sprintf("%0.5f",$lat);
@@ -112,7 +111,7 @@ for($s = 0; $s < @schools; $s++){
 }
 
 
-open(FILE,">",$basedir."../src/_data/viz/schools.csv");
+open(FILE,">",$basedir.$datadir."schools.csv");
 # Build header
 for($k = 0; $k < @keepfields; $k++){
 	print FILE ($k > 0 ? ",":"").($keepfields[$k]->{'rename'}||$keepfields[$k]->{'field'});
@@ -121,11 +120,148 @@ print FILE "\n";
 print FILE $csv;
 close(FILE);
 
-open(FILE,">",$basedir."../src/_data/viz/school-map.geojson");
+open(FILE,">",$basedir.$datadir."school-map.geojson");
 print FILE "{\n\t\"type\":\"FeatureCollection\",\n\t\"features\":[\n";
 print FILE $geojson;
 print FILE "\n\t]\n\}\n";
 close(FILE);
+
+
+
+
+$csv = "";
+@fields = (
+	{'name'=>'KS4_GCSE_entries_art_design'},
+	{'name'=>'KS4_GCSE_entries_art_design_3d'},
+	{'name'=>'KS4_GCSE_entries_art_design_fineart'},
+	{'name'=>'KS4_GCSE_entries_art_design_graphics'},
+	{'name'=>'KS4_GCSE_entries_art_design_photography'},
+	{'name'=>'KS4_GCSE_entries_art_design_textiles'},
+	{'name'=>'KS4_GCSE_entries_d&t_food_tech'},
+	{'name'=>'KS4_GCSE_entries_d&t'},
+	{'name'=>'KS4_technical_entries_dance_general'},
+	{'name'=>'KS4_GCSE_entries_dance'},
+	{'name'=>'KS4_GCSE_entries_drama&theatre'},
+	{'name'=>'KS4_technical_entries_engineeering'},
+	{'name'=>'KS4_GCSE_entries_film_studies'},
+	{'name'=>'KS4_technical_award_graphic_design'},
+	{'name'=>'KS4_GCSE_entries_media_film_tv_studies'},
+	{'name'=>'KS4_technical_award_entries_multimedia'},
+	{'name'=>'KS4_GCSE_entries_music'},
+	{'name'=>'KS4_technical_award_entries_music_studies_general'},
+	{'name'=>'KS4_technical_award_entries_music_performance_group'},
+	{'name'=>'KS4_technical_award_entries_music_tech_electronic'},
+	{'name'=>'KS4_technical_award_entries_speech_and_drama'},
+	{'name'=>'KS5_BTEC_certificate_art_design'},
+	{'name'=>'KS5_BTEC_diploma_art_design'},
+	{'name'=>'KS5_Alevel_art_design'},
+	{'name'=>'KS5_Alevel_art_design_3D'},
+	{'name'=>'KS5_Alevel_art_design_fine_art'},
+	{'name'=>'KS5_Alevel_art_design_graphics'},
+	{'name'=>'KS5_AS_art_design_photography'},
+	{'name'=>'KS5_ALevel_art_design_photography'},
+	{'name'=>'KS5_ALevel_art_design_textiles'},
+	{'name'=>'KS5_ALevel_design_and_tech_product_design'},
+	{'name'=>'KS5_ALevel_drama_and_theatre'},
+	{'name'=>'KS5_Engineeering_OCR_technical_diploma'},
+	{'name'=>'KS5_engineeering_OCR_extended_certificate'},
+	{'name'=>'KS5_Engineeering_VRQ_level3'},
+	{'name'=>'KS5_Engineeering_OCR_technical_foundation_diploma'},
+	{'name'=>'KS5_ASLevel_film_studies'},
+	{'name'=>'KS5_ALevel_film_studies'},
+	{'name'=>'KS5_OCR_level3_multimedia'},
+	{'name'=>'KS5_OCR_extended_level3_multimedia'},
+	{'name'=>'KS5_ALevel_media_film_tv_studies'},
+	{'name'=>'KS5_BTEC_Level3_music_performance_group'},
+	{'name'=>'KS5_VRQ_Level3_music_performance_group'},
+	{'name'=>'KS5_ASLevel_music'},
+	{'name'=>'KS5_ALevel_music'},
+	{'name'=>'KS5_ALevel_music_technology'},
+	{'name'=>'KS5_BTEC_Level3_speech_and_drama_group'}
+);
+$groupby = "type";
+$groups = {};
+$grouped = {};
+for($s = 0; $s < @schools; $s++){
+	$g = $schools[$s]->{$groupby};
+	if(!$groups->{$g}){ $groups->{$g} = {'schools'=>0,'entries'=>0,'entries_KS4'=>0,'entries_KS5'=>0,'KS4'=>0,'KS5'=>0,'KS4&5'=>0}; }
+	$groups->{$g}{'schools'}++;
+}
+# Create empty totals object
+foreach $g (keys(%{$groups})){
+	for($f = 0; $f < @fields; $f++){
+		$groups->{$g}{$fields[$f]->{'name'}} = 0;
+	}
+}
+
+for($s = 0; $s < @schools; $s++){
+
+	$urn = $schools[$s]->{'urn'};
+	$g = $schools[$s]->{$groupby};
+
+	if(!$groups->{$g}){
+		print "Unknown group $g\n";
+		exit;
+	}
+	$groups->{$g}{'KS4'} += $schools[$s]->{'KS4_total'};
+	$groups->{$g}{'KS5'} += $schools[$s]->{'KS5_total'};
+	$groups->{$g}{'KS4&5'} += $schools[$s]->{'KS4_total'};
+	$groups->{$g}{'KS4&5'} += $schools[$s]->{'KS5_total'};
+
+	for($f = 0; $f < @fields; $f++){
+		$groups->{$g}{'entries'} += $schools[$s]->{$fields[$f]->{'name'}};
+		if($fields[$f]->{'name'} =~ /KS4/){ $groups->{$g}{'entries_KS4'} += $schools[$s]->{$fields[$f]->{'name'}}; }
+		if($fields[$f]->{'name'} =~ /KS5/){ $groups->{$g}{'entries_KS5'} += $schools[$s]->{$fields[$f]->{'name'}}; }
+		$groups->{$g}{$fields[$f]->{'name'}} += $schools[$s]->{$fields[$f]->{'name'}};
+	}
+
+}
+
+
+open(FILE,">",$basedir.$datadir."school-data-by-type.csv");
+print FILE "Type,Number,KS4,KS5,entries,entries ratio,entries KS4,entries KS4 ratio,entries KS5,entries KS5 ratio";
+for($f = 0; $f < @fields; $f++){
+	print FILE ",".$fields[$f]->{'name'};
+}
+print FILE "\n";
+foreach $g (keys(%{$groups})){
+	print FILE "\"$g\",$groups->{$g}{'schools'},$groups->{$g}{'KS4'},$groups->{$g}{'KS5'},$groups->{$g}{'entries'},".($groups->{$g}{'KS4&5'} > 0 ? $groups->{$g}{'entries'}/$groups->{$g}{'KS4&5'} : 0).",$groups->{$g}{'entries_KS4'},".($groups->{$g}{'KS4'} > 0 ? $groups->{$g}{'entries_KS4'}/$groups->{$g}{'KS4'} : 0).",$groups->{$g}{'entries_KS5'},".($groups->{$g}{'KS5'} > 0 ? $groups->{$g}{'entries_KS5'}/$groups->{$g}{'KS5'} : 0)."";
+	for($f = 0; $f < @fields; $f++){
+		print FILE ",".$groups->{$g}{$fields[$f]->{'name'}};
+	}
+	print FILE "\n";
+}
+close(FILE);
+
+
+open(FILE,">",$basedir.$datadir."school-data-ratios.csv");
+print FILE "Category";
+foreach $g (sort(keys(%{$groups}))){
+	print FILE ",$g number,$g entries,$g ratio";
+}
+print FILE "\n";
+print FILE "KS4 & 5";
+foreach $g (sort(keys(%{$groups}))){
+	print FILE ",$groups->{$g}{'KS4&5'},$groups->{$g}{'entries'},".($groups->{$g}{'KS4&5'} > 0 ? $groups->{$g}{'entries'}/$groups->{$g}{'KS4&5'} : 0);
+}
+print FILE "\n";
+print FILE "KS4";
+foreach $g (sort(keys(%{$groups}))){
+	print FILE ",$groups->{$g}{'KS4'},$groups->{$g}{'entries_KS4'},".($groups->{$g}{'KS4'} > 0 ? $groups->{$g}{'entries_KS4'}/$groups->{$g}{'KS4'} : 0);
+}
+print FILE "\n";
+print FILE "KS5";
+foreach $g (sort(keys(%{$groups}))){
+	print FILE ",$groups->{$g}{'KS5'},$groups->{$g}{'entries_KS5'},".($groups->{$g}{'KS5'} > 0 ? $groups->{$g}{'entries_KS5'}/$groups->{$g}{'KS5'} : 0);
+}
+print FILE "\n";
+close(FILE);
+
+
+
+
+
+
 
 
 #########################
