@@ -46,9 +46,9 @@ $n = @{$osm->{'features'}};
 	{'src'=>'schools','field'=>'total_fulltime','rename'=>'total_FT'},
 	{'src'=>'schools','field'=>'total_parttime','rename'=>'total_PT'},
 	{'src'=>'schools','field'=>'total_pupils'},
-	{'src'=>'schools','field'=>'artsmark'},
+	{'src'=>'schools','field'=>'artsmark_progress','empty'=>'?'},
 	{'src'=>'schools','field'=>'most_recent_award'},
-	{'src'=>'schools','field'=>'artsaward'},
+	{'src'=>'schools','field'=>'artsaward','empty'=>'NO'},
 	{'src'=>'edubase','field'=>'StatutoryLowAge'},
 	{'src'=>'edubase','field'=>'StatutoryHighAge'}
 );
@@ -109,6 +109,7 @@ for($s = 0; $s < @schools; $s++){
 		$v = "";
 		if($keepfields[$k]->{'src'} eq "schools"){ $v = $schools[$s]->{$keepfields[$k]->{'field'}}; }
 		elsif($keepfields[$k]->{'src'} eq "edubase"){ $v = $edubase->{$urn}{$keepfields[$k]->{'field'}}; }
+		if($v eq "" && $keepfields[$k]->{'empty'}){ $v = $keepfields[$k]->{'empty'}; }
 		$csvrow .= ($csvrow ? "," : "").($v =~ /\,/ ? "\"".$v."\"" : $v);
 	}
 	$csv .= "$csvrow\n";
