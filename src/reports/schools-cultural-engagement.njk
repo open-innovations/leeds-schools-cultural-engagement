@@ -7,7 +7,7 @@ config:
   data: viz.schools
   columns:
     - name: "Tooltip label"
-      template: "{{ Name }}<br />Pupils: {{ total_pupils | toLocaleString() }}"
+      template: "<h3>{{ Name }}</h3><p>{{ phase_type_grouping }}<br />Pupils: {{ total_pupils | toLocaleString() }}</p>"
   key: "URN"
   tooltip: "Tooltip label"
   value: "total_pupils"
