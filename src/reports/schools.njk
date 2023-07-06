@@ -141,6 +141,87 @@ visualisations:
 
 {{
 	comp.oi.chart.bar({
+		config: {
+			data: "viz.school-data-artsmark",
+			columns: [{
+				name: "Working towards Tooltip",
+				template: "{{ type }}\nWorking towards: {{ working_towards_percent | toFixed(1) }}%"
+			},{
+				name: "Registered Tooltip",
+				template: "{{ type }}\nRegistered: {{ Registered_percent | toFixed(1) }}%"
+			},{
+				name: "Awarded Tooltip",
+				template: "{{ type }}\nAwarded: {{ Awarded_percent | toFixed(1) }}%"
+			}],
+			category: "type",
+			height: 300,
+			stacked: true,
+			legend: { show: true, position: "top" },
+			series: [{
+				title: "Working towards",
+				value: "working_towards_percent",
+				tooltip: "Working towards Tooltip"
+			},{
+				title: "Registered",
+				value: "Registered_percent",
+				tooltip: "Registered Tooltip"
+			},{
+				title: "Awarded",
+				value: "Awarded_percent",
+				tooltip: "Awarded Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.school-data-artsaward",
+			columns: [{
+				name: "Tooltip",
+				template: "{{ type }}\nArts Award: {{ Percentage of schools of this type signed up for Arts Award | toFixed(1) }}%"
+			}],
+			category: "type",
+			height: 300,
+			stacked: true,
+			legend: { show: true, position: "top" },
+			series: [{
+				title: "Percent",
+				value: "Percentage of schools of this type signed up for Arts Award",
+				tooltip: "Tooltip",
+				colour: "type"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+{{
+	comp.oi.chart.bar({
 		config: visualisations.ratios
 	}) | safe
 }}
