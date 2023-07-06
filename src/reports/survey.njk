@@ -1,0 +1,256 @@
+---
+title: Survey summary
+---
+
+<p>Response rates to the survey of <a href="/reports/schools/">schools in Leeds</a>.</p>
+
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.survey-response-rate",
+			title: "Type",
+			value: "Percent",
+			units: {
+				postfix: "Units"
+			},
+			panels: [{
+				name: "Primary schools",
+				colour: "Primary"
+			},{
+				name: "Secondary schools",
+				colour: "Secondary"
+			},{
+				name: "Academy & Free Schools",
+				colour: "Academy & Free Schools"
+			}]
+		}
+	}) | safe
+}}
+
+<p>Optional explanatory text goes here... Introducing survey results below and/or putting headline figures in context</p>
+
+<h3>Overall, how would you rate your school's arts curriculum offer?</h3>
+
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-rate-school-arts-offer",
+			height: 300,
+			columns: [{
+				name: "Overall Tooltip",
+				template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+			},{
+				name: "Primary Tooltip",
+				template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+			},{
+				name: "Secondary Tooltip",
+				template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+			}],
+			legend: { show: true, position: "top" },
+			category: "Rating",
+			series: [{
+				title: "Overall",
+				value: "Overall (%)",
+				colour: "Overall",
+				tooltip: "Overall Tooltip"
+			},{
+				title: "Primary",
+				value: "Primary (%)",
+				colour: "Primary",
+				tooltip: "Primary Tooltip"
+			},{
+				title: "Secondary",
+				value: "Secondary (%)",
+				colour: "Secondary",
+				tooltip: "Secondary Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {
+						"stroke-dasharray": [6,2],
+						"stroke-width": 1
+					},
+					ticks: [{
+						value: 0,
+						label: "0"
+					},{
+						value: 20,
+						label: "20%"
+					},{
+						value: 40,
+						label: "40%"
+					},{
+						value: 60,
+						label: "60%"
+					},{
+						value: 80,
+						label: "80%"
+					},{
+						value: 100,
+						label: "100%"
+					}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
+					}
+				}
+			}
+		}
+	}) | safe
+}}
+
+<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+
+
+
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-rate-school-extra-curricula-offer",
+			height: 300,
+			columns: [{
+				name: "Overall Tooltip",
+				template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+			},{
+				name: "Primary Tooltip",
+				template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+			},{
+				name: "Secondary Tooltip",
+				template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+			}],
+			legend: { show: true, position: "top" },
+			category: "Rating",
+			series: [{
+				title: "Overall",
+				value: "Overall (%)",
+				colour: "Overall",
+				tooltip: "Overall Tooltip"
+			},{
+				title: "Primary",
+				value: "Primary (%)",
+				colour: "Primary",
+				tooltip: "Primary Tooltip"
+			},{
+				title: "Secondary",
+				value: "Secondary (%)",
+				colour: "Secondary",
+				tooltip: "Secondary Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {
+						"stroke-dasharray": [6,2],
+						"stroke-width": 1
+					},
+					ticks: [{
+						value: 0,
+						label: "0"
+					},{
+						value: 20,
+						label: "20%"
+					},{
+						value: 40,
+						label: "40%"
+					},{
+						value: 60,
+						label: "60%"
+					},{
+						value: 80,
+						label: "80%"
+					},{
+						value: 100,
+						label: "100%"
+					}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
+					}
+				}
+			}
+		}
+	}) | safe
+}}
+
+<h3>Does your school provide non-curriculum based arts activities that pupils can participate in?</h3>
+
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-rate-school-non-curriculum-activities",
+			height: 600,
+			columns: [{
+				name: "Overall Tooltip",
+				template: "{{ Activity }}<br />Overall: {{ Overall (%) }}%"
+			},{
+				name: "Primary Tooltip",
+				template: "{{ Activity }}<br />Primary: {{ Primary (%) }}%"
+			},{
+				name: "Secondary Tooltip",
+				template: "{{ Activity }}<br />Secondary: {{ Secondary (%) }}%"
+			}],
+			legend: { show: true, position: "top" },
+			category: "Activity",
+			series: [{
+				title: "Overall",
+				value: "Overall (%)",
+				colour: "Overall",
+				tooltip: "Overall Tooltip"
+			},{
+				title: "Primary",
+				value: "Primary (%)",
+				colour: "Primary",
+				tooltip: "Primary Tooltip"
+			},{
+				title: "Secondary",
+				value: "Secondary (%)",
+				colour: "Secondary",
+				tooltip: "Secondary Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {
+						"stroke-dasharray": [6,2],
+						"stroke-width": 1
+					},
+					ticks: [{
+						value: 0,
+						label: "0"
+					},{
+						value: 20,
+						label: "20%"
+					},{
+						value: 40,
+						label: "40%"
+					},{
+						value: 60,
+						label: "60%"
+					},{
+						value: 80,
+						label: "80%"
+					},{
+						value: 100,
+						label: "100%"
+					}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
+					}
+				}
+			}
+		}
+	}) | safe
+}}
+

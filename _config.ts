@@ -34,7 +34,17 @@ site.use(oiCharts({
 			"Community": "#69C2C9",
 			"Independent": "#7D2248",
 			"Foundation": "#005776",
-			"Special School": "#FF808B"
+			"Special School": "#FF808B",
+			"Primary": "#f2e61a",
+			"Secondary": "#636aaf",
+			"Overall": "#19bc9c",
+			"School/teachers": "#D50C52",
+			"External providers": "#2DB8C5",
+			"Key Stage 1": "#CBF8EF",
+			"Key Stage 2": "#62EACF",
+			"Key Stage 3": "#19BC9C",
+			"Key Stage 4": "#138D75",
+			"Key Stage 5": "#0D5E4E"
 		}
 	}
 }));
