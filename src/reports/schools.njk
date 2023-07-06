@@ -138,7 +138,7 @@ visualisations:
 <h2>Title</h2>
 <p>Blah.</p>
 
-
+<h3>ArtsMark percentage by school type</h3>
 {{
 	comp.oi.chart.bar({
 		config: {
@@ -186,6 +186,8 @@ visualisations:
 	}) | safe
 }}
 
+<h3>Arts Award percentage by school type</h3>
+
 {{
 	comp.oi.chart.bar({
 		config: {
@@ -220,8 +222,43 @@ visualisations:
 	}) | safe
 }}
 
+<h3>Creative subject entries in KS4 / KS5</h3>
+
 {{
+	comp.oi.chart.scatter({
+		config: {
+			data: "viz.school-data-creative-entries",
+			height: 600,
+			columns: [{
+				name: "Tooltip",
+				template: "<p class=\"subtitle\">{{ school_name }}</p><p>{{ type }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
+			}],
+			series: [{
+				title: "Creative entries",
+				x: "total_KS4_KS5_pupils",
+				y: "total_creative_subject_entered",
+				colour: "type",
+				tooltip: "Tooltip",
+				points: { size: 10 }
+			}],
+			axis: {
+				x: {
+					grid: {show:true,"stroke-width": 1},
+					title: {label: "Total KS4/5 pupils"},
+					tickSpacing: 200
+				},
+				y: {
+					grid: {show:true,"stroke-width": 0.5},
+					title: {label:"Creative subject entries"},
+					tickSpacing: 200
+				}
+			}
+		}
+	}) | safe
+}}
+
+{#
 	comp.oi.chart.bar({
 		config: visualisations.ratios
 	}) | safe
-}}
+#}

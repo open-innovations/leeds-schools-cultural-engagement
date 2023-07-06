@@ -10,6 +10,7 @@
 
 .oi-viz { margin-bottom: 1em; }
 .oi-viz:last-child { margin-bottom: 0; }
+.oi-viz .tooltip .inner > *:last-child { margin-bottom: 0; }
 
 .l23-yellow { background: hsl(52, 100%, 50%); color: black!important; }
 .l23-magenta { background: hsl(321, 100%, 50%); color: white!important; }
