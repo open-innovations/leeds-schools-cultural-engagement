@@ -30,6 +30,113 @@ title: Survey summary
 
 <p>Optional explanatory text goes here... Introducing survey results below and/or putting headline figures in context</p>
 
+
+<h2>Responses</h2>
+
+<h3>By school phase</h3>
+
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-response-by-phase",
+			height: 250,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ School phase }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
+			}],
+			category: "School phase",
+			series: [{
+				title: "Percentage of this type of school responding",
+				value: "Percentage of this type of school responding",
+				tooltip: "Tooltip",
+				colour: "School phase"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+
+<h3>By school type</h3>
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-response-by-type",
+			height: 300,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
+			}],
+			category: "School type",
+			series: [{
+				title: "Percentage of this type of school responding",
+				value: "Percentage of this type of school responding",
+				tooltip: "Tooltip",
+				colour: "School type"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+<h3>By school size</h3>
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-response-by-size",
+			height: 200,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
+			}],
+			category: "School size",
+			series: [{
+				title: "Percentage of this school size responding",
+				value: "Percentage of this school size responding",
+				tooltip: "Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+
+
+
+
 <h3>Overall, how would you rate your school's arts curriculum offer?</h3>
 
 {{
