@@ -36,7 +36,7 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 143238,Brigshaw High School and Language College,53.75658,-1.38216,Academy & Free Schools,State-funded secondary,1406,0,1406,?,,NO,11,18
 107874,Broadgate Primary School,53.84073,-1.63326,Community,State-funded primary,455,0,455,?,,NO,3,11
 108054,Brodetsky Primary School,53.85409,-1.54267,Voluntary,State-funded primary,222,28,250,?,,NO,2,11
-108123,Broomfield South SILC,53.75657,-1.52292,Special School,State-funded special school,224,0,224,?,,NO,2,19
+108123,Broomfield South SILC,53.75657,-1.52292,Special Schools,State-funded special school,224,0,224,?,,NO,2,19
 107885,Brudenell Primary School,53.81383,-1.57138,Foundation,State-funded primary,265,0,265,?,,NO,3,11
 142056,Bruntcliffe Academy,53.74560,-1.62020,Academy & Free Schools,State-funded secondary,1273,0,1273,?,,NO,11,16
 108001,Burley St Matthias Church of England Voluntary Controlled Primary School,53.80799,-1.58127,Voluntary,State-funded primary,188,0,188,?,,NO,5,11
@@ -96,7 +96,7 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 107923,Grange Farm Primary School,53.82780,-1.47370,Foundation,State-funded primary,451,5,456,?,,NO,3,11
 134913,Great Preston Church of England Primary School,53.75729,-1.38865,Voluntary,State-funded primary,216,8,224,?,,NO,3,11
 136326,Green Lane Primary Academy,53.78920,-1.36691,Academy & Free Schools,State-funded primary,417,36,453,?,,NO,3,11
-148654,Green Meadows Academy,53.87481,-1.72093,Special School,State-funded special school,217,0,217,?,,NO,2,19
+148654,Green Meadows Academy,53.87481,-1.72093,Special Schools,State-funded special school,217,0,217,?,,NO,2,19
 107975,Greenhill Primary School,53.79925,-1.62284,Community,State-funded primary,393,25,418,?,,NO,3,11
 107949,Greenmount Primary School,53.77713,-1.55301,Community,State-funded primary,421,44,465,?,,NO,3,11
 107828,Greenside Primary School,53.79206,-1.66802,Community,State-funded primary,302,0,302,Awarded,Silver,NO,5,11
@@ -126,7 +126,7 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 107952,Ingram Road Primary School,53.78422,-1.56385,Community,State-funded primary,316,33,349,Registered,,NO,3,11
 107896,Ireland Wood Primary School,53.85262,-1.60503,Foundation,State-funded primary,417,0,417,?,,NO,5,11
 107886,Iveson Primary School,53.84319,-1.60548,Foundation,State-funded primary,393,0,393,?,,NO,3,11
-108119,John Jamieson School,53.82331,-1.49478,Special School,State-funded special school,425,0,425,Registered,,YES,2,19
+108119,John Jamieson School,53.82331,-1.49478,Special Schools,State-funded special school,425,0,425,Registered,,YES,2,19
 148793,John Smeaton Academy,53.81546,-1.43480,Academy & Free Schools,State-funded secondary,638,0,638,?,,NO,11,18
 107910,Kerr Mackie Primary School,53.82899,-1.51329,Community,State-funded primary,419,36,455,?,,NO,3,11
 143240,Kippax Ash Tree Primary School,53.76910,-1.36589,Academy & Free Schools,State-funded primary,339,32,371,?,,NO,3,11
@@ -144,7 +144,7 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 139773,Leeds Jewish Free School,53.85373,-1.54433,Academy & Free Schools,State-funded secondary,137,0,137,?,,NO,11,18
 108110,Leeds Menorah School,53.84324,-1.52936,Independent,Independent school,13,2,15,?,,NO,3,11
 135935,Leeds West Academy,53.81416,-1.65445,Academy & Free Schools,State-funded secondary,1407,0,1407,?,,NO,11,16
-138380,Lighthouse School Leeds,53.84544,-1.61306,Special School,State-funded special school,81,0,81,?,,YES,11,19
+138380,Lighthouse School Leeds,53.84544,-1.61306,Special Schools,State-funded special school,81,0,81,?,,YES,11,19
 107888,Little London Community Primary School,53.80861,-1.53957,Foundation,State-funded primary,395,0,395,?,,NO,4,11
 107957,Low Road Primary School,53.77856,-1.52363,Community,State-funded primary,202,0,202,Registered,,NO,3,11
 107972,Lower Wortley Primary School,53.78389,-1.59842,Community,State-funded primary,308,19,327,?,,NO,3,11
@@ -176,7 +176,7 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 107964,Park Spring Primary School,53.79896,-1.63742,Community,State-funded primary,410,23,433,?,,NO,3,11
 138673,Park View Primary Academy,53.77346,-1.55355,Academy & Free Schools,State-funded primary,209,39,248,?,,NO,3,11
 107943,Parklands Primary School,53.81340,-1.46447,Community,State-funded primary,389,0,389,?,,NO,4,11
-145732,Penny Field School,53.84064,-1.55791,Special School,State-funded special school,57,0,57,?,,NO,2,19
+145732,Penny Field School,53.84064,-1.55791,Special Schools,State-funded special school,57,0,57,?,,NO,2,19
 108000,Pool-in-Wharfedale Church of England Voluntary Controlled Primary School,53.90144,-1.62300,Voluntary,State-funded primary,195,0,195,?,,NO,4,11
 139688,Primley Wood Primary School,53.84962,-1.53886,Academy & Free Schools,State-funded primary,254,35,289,?,,NO,2,11
 107869,Primrose Lane Primary School,53.90295,-1.35215,Foundation,State-funded primary,210,11,221,?,,NO,3,11
@@ -215,7 +215,7 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 107847,Southroyd Primary and Nursery School,53.78819,-1.66325,Foundation,State-funded primary,436,10,446,?,,NO,2,11
 146633,Southway Independant School,53.76188,-1.52482,Independent,Independent school,91,0,91,?,,NO,11,16
 107890,Spring Bank Primary School,53.81714,-1.57534,Community,State-funded primary,189,0,189,?,,NO,4,11
-142630,Springwell Leeds Academy,53.76120,-1.52496,Special School,State-funded special school,304,0,304,Working towards,Silver,YES,5,16
+142630,Springwell Leeds Academy,53.76120,-1.52496,Special Schools,State-funded special school,304,0,304,Working towards,Silver,YES,5,16
 139354,Ss. Peter and Paul Catholic Primary School,53.86455,-1.69872,Academy & Free Schools,State-funded primary,209,0,209,Registered,Silver,NO,4,11
 108120,St John's Catholic Specialist School,53.90004,-1.35070,Independent,Non-maintained special school,56,0,56,?,,YES,3,19
 147485,St Paul's Catholic Primary School,53.85186,-1.55731,Academy & Free Schools,State-funded primary,210,0,210,?,,NO,5,11
@@ -271,8 +271,8 @@ URN,Name,Latitude,Longitude,type,phase_type_grouping,total_FT,total_PT,total_pup
 142450,Victoria Primary Academy,53.80007,-1.50195,Academy & Free Schools,State-funded primary,381,30,411,Registered,,NO,3,11
 107897,Weetwood Primary School,53.82990,-1.58242,Community,State-funded primary,239,19,258,Awarded,Gold,NO,3,11
 107846,West End Primary School,53.84139,-1.65316,Community,State-funded primary,261,1,262,?,,NO,3,11
-108133,West Oaks School,53.81314,-1.54648,Special School,State-funded special school,410,0,410,?,,NO,2,19
-134884,West Specialist Inclusive Learning Centre,53.80896,-1.65874,Special School,State-funded special school,245,0,245,?,,NO,2,19
+108133,West Oaks School,53.81314,-1.54648,Special Schools,State-funded special school,410,0,410,?,,NO,2,19
+134884,West Specialist Inclusive Learning Centre,53.80896,-1.65874,Special Schools,State-funded special school,245,0,245,?,,NO,2,19
 107861,Westbrook Lane Primary School,53.84750,-1.64122,Community,State-funded primary,209,0,209,?,,NO,4,11
 142452,Westerton Primary Academy,53.72417,-1.57900,Academy & Free Schools,State-funded primary,658,45,703,?,,NO,3,11
 107879,Westgate Primary School,53.90298,-1.70330,Community,State-funded primary,231,12,243,Awarded,Silver,NO,3,11
