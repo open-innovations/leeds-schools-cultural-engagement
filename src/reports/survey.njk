@@ -133,6 +133,101 @@ title: Survey summary
 	}) | safe
 }}
 
+<h3>By if schools are in a trust</h3>
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-response-by-trust",
+			height: 200,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ Type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
+			}],
+			category: "Type",
+			series: [{
+				title: "Percentage of this type of school responding",
+				value: "Percentage of this type of school responding",
+				tooltip: "Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+<h3>By ArtsMark</h3>
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-response-by-artsmark",
+			height: 200,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ ArtsMark }}: {{ Percentage | toFixed(1) }}% responded"
+			}],
+			category: "ArtsMark",
+			series: [{
+				title: "Percentage",
+				value: "Percentage",
+				tooltip: "Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
+
+<h3>By Arts Award Centres</h3>
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey-response-by-artsaward",
+			height: 200,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
+			}],
+			category: "Arts Award Centres",
+			series: [{
+				title: "Percentage",
+				value: "Percentage",
+				tooltip: "Tooltip"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	}) | safe
+}}
 
 
 
