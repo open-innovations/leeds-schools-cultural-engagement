@@ -46,7 +46,9 @@ site.use(oiCharts({
 			"Key Stage 2": "#62EACF",
 			"Key Stage 3": "#19BC9C",
 			"Key Stage 4": "#138D75",
-			"Key Stage 5": "#0D5E4E"
+			"Key Stage 5": "#0D5E4E",
+			"Yes": "#2166ac",
+			"No": "#67001f"
 		}
 	},
 	"font": {

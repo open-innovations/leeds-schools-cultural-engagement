@@ -222,8 +222,8 @@ visualisations:
 	}) | safe
 }}
 
-<h3>Creative subject entries in KS4 / KS5</h3>
 
+<h3>Creative subject entries in KS4 / KS5 (coloured by school type)</h3>
 {{
 	comp.oi.chart.scatter({
 		config: {
@@ -241,6 +241,78 @@ visualisations:
 				tooltip: "Tooltip",
 				points: { size: 10 }
 			}],
+			legend: { show: false },
+			axis: {
+				x: {
+					grid: {show:true,"stroke-width": 1},
+					title: {label: "Total KS4/5 pupils"},
+					tickSpacing: 200
+				},
+				y: {
+					grid: {show:true,"stroke-width": 0.5},
+					title: {label:"Creative subject entries"},
+					tickSpacing: 200
+				}
+			}
+		}
+	}) | safe
+}}
+
+<h3>Creative subject entries in KS4 / KS5 (coloured by ArtsMark)</h3>
+{{
+	comp.oi.chart.scatter({
+		config: {
+			data: "viz.school-data-creative-entries",
+			height: 600,
+			columns: [{
+				name: "Tooltip",
+				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in ArtsMark: {{ artsmark }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
+			}],
+			series: [{
+				title: "Creative entries",
+				x: "total_KS4_KS5_pupils",
+				y: "total_creative_subject_entered",
+				tooltip: "Tooltip",
+				colour: "artsmark",
+				points: { size: 10 }
+			}],
+			legend: { show: false },
+			axis: {
+				x: {
+					grid: {show:true,"stroke-width": 1},
+					title: {label: "Total KS4/5 pupils"},
+					tickSpacing: 200
+				},
+				y: {
+					grid: {show:true,"stroke-width": 0.5},
+					title: {label:"Creative subject entries"},
+					tickSpacing: 200
+				}
+			}
+		}
+	}) | safe
+}}
+
+
+<h3>Creative subject entries in KS4 / KS5 (coloured by Arts Award)</h3>
+{{
+	comp.oi.chart.scatter({
+		config: {
+			data: "viz.school-data-creative-entries",
+			height: 600,
+			columns: [{
+				name: "Tooltip",
+				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in Arts Award: {{ artsaward }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
+			}],
+			series: [{
+				title: "Creative entries",
+				x: "total_KS4_KS5_pupils",
+				y: "total_creative_subject_entered",
+				tooltip: "Tooltip",
+				colour: "artsaward",
+				points: { size: 10 }
+			}],
+			legend: { show: false },
 			axis: {
 				x: {
 					grid: {show:true,"stroke-width": 1},
