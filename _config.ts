@@ -35,6 +35,7 @@ site.use(oiCharts({
 			"Independent": "#7D2248",
 			"Foundation": "#005776",
 			"Special Schools": "#FF808B",
+			"Other": "#bbbbbb",
 			"Primary": "#f2e61a",
 			"Secondary": "#636aaf",
 			"Through": "#67E767",
@@ -48,7 +49,16 @@ site.use(oiCharts({
 			"Key Stage 4": "#138D75",
 			"Key Stage 5": "#0D5E4E",
 			"Yes": "#2166ac",
-			"No": "#67001f"
+			"No": "#67001f",
+			"Theatre": "#f2e61a",
+			"Concerts": "#67E767",
+			"Cinema": "#62EACF",
+			"Gallery": "#D50C52",
+			"Dance": "#2DB8C5",
+			"Museum": "#005776",
+			"Heritage": "#4A783C",
+			"Gaming": "#FF808B",
+			"Library": "#bbbbbb"
 		}
 	},
 	"font": {

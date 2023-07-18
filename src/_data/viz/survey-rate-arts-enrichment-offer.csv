@@ -1,6 +1,6 @@
-Rating,Overall,Primary,Secondary,Special School,Other,Overall,Primary,Secondary,Special School,Other
-Very poor,0.03,0.05,0,0,0,3,5,0,0,0
-Poor,0,0,0,0,0,0,0,0,0,0
-Mixed,0.26,0.3,0.2,0.33,0,26,30,20,33,0
-Good,0.41,0.35,0.5,0.33,1,41,35,50,33,100
-Excellent,0.29,0.3,0.3,0.33,0,29,30,30,33,0
+Rating,Overall (%),Primary (%),Secondary (%),Special School (%),Other (%)
+Very poor,3,5,0,0,0
+Poor,0,0,0,0,0
+Mixed,26,30,20,33,0
+Good,41,35,50,33,100
+Excellent,29,30,30,33,0
