@@ -1,0 +1,33 @@
+---
+title: Cultural Organisations in Leeds
+
+---
+
+<p>This page provides an overview of the cultural organisations and individuals that are engaging with Leeds schools.</p>
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.organisation-by-funding",
+			title: "Funding",
+			value: "Number",
+			width: "20%",
+			panels: [{
+				name: "Funded by Leeds City Council",
+				colour: "Academy & Free Schools"
+			},{
+				name: "National Portfolio Organisations",
+				colour: "Community"
+			},{
+				name: "Arts Award Centres",
+				colour: "Foundation"
+			},{
+				name: "NPOs that are Arts Award Centres",
+				colour: "Independent"
+			},{
+				name: "Arts Council funded projects",
+				colour: "Independent"
+			}]
+		}
+	}) | safe
+}}
