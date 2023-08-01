@@ -1,5 +1,5 @@
 ---
-title: Schools
+title: Leeds Creative School Engagement
 visualisations:
   map:
     geojson:
@@ -95,8 +95,7 @@ visualisations:
           stroke-width: 0.5
 ---
 
-<p>Here is a breakdown of the types of schools in Leeds:</p>
-
+<p>This page provides a breakdown of the types of schools in Leeds and their engagements with arts and culture.</p>
 
 {{
 	comp.oi.dashboard({
@@ -129,16 +128,22 @@ visualisations:
 }}
 
 <p>Let's show them all on a map:</p>
+<br>
+
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
 	}) | safe
 }}
 
-<h2>Title</h2>
-<p>Blah.</p>
+<h2>Creative engagement in Leeds schools</h2>
+<p>The visualisations on this page present a picture of the types of schools in Leeds, and to understand how they are engaging with arts and culture.</p>
+<p>[Some more context on how the data was captured] You can explore the raw data here.</p>
 
 <h3>ArtsMark percentage by school type</h3>
+<p>ArtsMark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the ArtsMark award.</p> 
+<br>
+
 {{
 	comp.oi.chart.bar({
 		config: {
@@ -155,6 +160,7 @@ visualisations:
 			}],
 			category: "type",
 			height: 300,
+			width: 950,
 			stacked: true,
 			legend: { show: true, position: "top" },
 			series: [{
@@ -174,7 +180,7 @@ visualisations:
 			axis: {
 				x: {
 					min: 0,
-					max: 100,
+					max: 40,
 					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
 					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
 				},
@@ -187,6 +193,8 @@ visualisations:
 }}
 
 <h3>Arts Award percentage by school type</h3>
+<p>The visualisation below shows a breakdown of schools in Leeds that provide an Arts Award offering to young people. Arts Award is  a suite of arts-based qualifications available to young people aged 25 and under. It is managed by Trinity College London and Arts Council England.</p>
+<br>
 
 {{
 	comp.oi.chart.bar({
@@ -198,6 +206,7 @@ visualisations:
 			}],
 			category: "type",
 			height: 300,
+			width: 950,
 			stacked: true,
 			legend: { show: true, position: "top" },
 			series: [{
@@ -210,7 +219,7 @@ visualisations:
 			axis: {
 				x: {
 					min: 0,
-					max: 100,
+					max: 45,
 					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
 					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
 				},
@@ -224,11 +233,15 @@ visualisations:
 
 
 <h3>Creative subject entries in KS4 / KS5 (coloured by school type)</h3>
+<p>The chart below explores the relationship between the size, type and creative subject offering of schools in Leeds. Hover over the data points to view information about each school.</p>
+<br>
+
 {{
 	comp.oi.chart.scatter({
 		config: {
 			data: "viz.school-data-creative-entries",
-			height: 600,
+			height: 500,
+			width: 950,
 			columns: [{
 				name: "Tooltip",
 				template: "<p class=\"subtitle\">{{ school_name }}</p><p>{{ type }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
@@ -259,11 +272,14 @@ visualisations:
 }}
 
 <h3>Creative subject entries in KS4 / KS5 (coloured by ArtsMark)</h3>
+<p>The chart below explores the relationship between the size, creative subject offering and ArtsMark accreditation of schools in Leeds. Hover over the data points to view information about each school.</p>
+<br>
 {{
 	comp.oi.chart.scatter({
 		config: {
 			data: "viz.school-data-creative-entries",
-			height: 600,
+			height: 500,
+			width: 950,
 			columns: [{
 				name: "Tooltip",
 				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in ArtsMark: {{ artsmark }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
@@ -295,11 +311,14 @@ visualisations:
 
 
 <h3>Creative subject entries in KS4 / KS5 (coloured by Arts Award)</h3>
+<p>The chart below explores the relationship between the size, creative subject and Arts Award offering by schools in Leeds. Hover over the data points to view information about each school.</p>
+
 {{
 	comp.oi.chart.scatter({
 		config: {
 			data: "viz.school-data-creative-entries",
-			height: 600,
+			height: 500,
+			width: 950,
 			columns: [{
 				name: "Tooltip",
 				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in Arts Award: {{ artsaward }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
