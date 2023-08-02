@@ -7,6 +7,63 @@
   Could be modularised, given PostCSS could enable much smaller css packages to be created.
 */
 @import 'css/oi.css';
+@import 'css/nav.css';
+
+* {
+--background-colour: #b2c929;
+--header-height: 112px;
+}
+
+/*h1, h2, h3, h4, .title {
+	letter-spacing: -0.12em;
+	font-family: Bungee Hairline;
+	font-weight: 400;
+	text-shadow: 0.04em 0.04em 0,
+	-0.04em 0.04em 0,
+	0.04em -0.04em 0,
+	-0.04em -0.04em 0,
+	0px 0.04em 0,
+	0px -0.04em 0,
+	-0.04em 0px 0,
+	0.04em 0px 0,
+	0.02em 0.02em 0,
+	-0.02em 0.02em 0,
+	0.02em -0.02em 0,
+	-0.02em -0.02em 0,
+	0px 0.02em 0,
+	0px -0.02em 0,
+	-0.02em 0px 0,
+	0.02em 0px 0,
+	0.04em 0.02em 0,
+	-0.04em 0.02em 0,
+	0.04em -0.02em 0,
+	-0.04em -0.02em 0,
+	0.02em 0.04em 0,
+	-0.02em 0.04em 0,
+	0.02em -0.04em 0,
+	-0.02em -0.04em 0;
+}*/
+h1, h2, h3, h4, .title {
+	font-family: Titillium Web;
+	font-weight: 700;
+}
+
+* { 
+	font-family: Titillium Web;
+	font-weight: 600;
+}
+a {
+	text-decoration: none;
+}
+header { text-align: left; }
+header .holder {
+	line-height: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
 
 .oi-viz { margin-bottom: 1em; }
 .oi-viz:last-child { margin-bottom: 0; }
@@ -18,5 +75,8 @@
 .l23-dark { background: hsl(188, 100%, 12%); color: white!important; }
 .l23-head { background: #b2c929; color: black!important; }
 
-.organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); column-gap: 2em; row-gap: 0.5em; }
+.organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); column-gap: 2em; row-gap: 0.5em; }
 .organisations li svg { width: 100%; height: auto; color: #a8b6be; filter: grayscale(1) brightness(2); }
+.organisations.supporter li svg { width: 100%; height: 4em; color: #a8b6be; filter: grayscale(1) brightness(2); }
+
+.oi-dashboard .panel h3 { font-size: 1.5em!important; font-weight: normal!important; }

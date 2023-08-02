@@ -126,21 +126,9 @@ section { padding: 2em 0; }
 .skip-to-content-link:focus { top: 0.25rem; }
 
 header h1 { margin-top: 0; }
-header nav ul {
-	width: min-content;
-	text-align: center;
-	margin: 0 auto;
-	font-size: 1.2em;
-	position: relative;
-	font-family: Poppins;
-	display: flex;
-}
-header nav ul li { display: inline-block; }
-header nav ul > li > a { padding: 0.5em 1em; display: inline-block; width: 100%; color: inherit; }
-header nav ul > li > a:hover, header nav ul > li > a:focus { background: white; color: black; }
 
 .grid { display: grid; grid-template-columns: 50% 50%; grid-gap: 1em; }
-ul.grid { list-style: none; margin-left: 0em; grid-template-columns: repeat(3,1fr); }
+ul.grid { list-style: none; margin-left: 0em; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 ul.grid > li > a { display: block; text-decoration: none; padding: 2em; }
 ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .grid .pane { background: #f9f9f9; }
