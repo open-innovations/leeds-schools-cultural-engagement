@@ -82,3 +82,4 @@ footer { padding: 0; }
 
 .oi-dashboard .panel h3 { font-size: 1.5em!important; font-weight: normal!important; }
 .oi-dashboard .panel { padding: 2em!important; }
+.oi-legend-inner .oi-legend-icon { float: left; }
