@@ -62,7 +62,7 @@ header .holder {
 	align-items: center;
 	justify-content: space-between;
 }
-
+footer { padding: 0; }
 
 .grid li h2 { font-weight: normal; }
 
