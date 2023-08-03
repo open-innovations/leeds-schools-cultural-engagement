@@ -29,6 +29,7 @@
 
 	.menu-toggle[aria-expanded=false] ~ .menu-items {
 		height: auto;
+		overflow: unset;
 	}
 	.menu-items > li + li {
 		margin-top: 0;
