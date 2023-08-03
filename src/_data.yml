@@ -10,7 +10,7 @@ header_class: l23-head
 # Automatically adds meta and social tags 
 # See https://lume.land/plugins/metas/
 metas:
-  site: Leeds Schools' Cultural Engagement
+  site: Mapping Creative Education
   description: |
     This is a project being run by the University of Leeds to map engagement with
     culture with schools in Leeds project.
