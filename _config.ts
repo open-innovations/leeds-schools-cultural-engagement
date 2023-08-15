@@ -49,6 +49,14 @@ site.use(oiCharts({
 			"Overall": "#19bc9c",
 			"School/teachers": "#D50C52",
 			"External providers": "#2DB8C5",
+			"Orchestra": "#440d54",
+			"Music": "#19bc9c",
+			"Choirs / Vocal Ensemble": "#73d055",
+			"Dance": "#b8de29",
+			"Drama": "#b8de29",
+			"D&T": "#2DB8C5",
+			"Digital Media": "#D50C52",
+			"Art Groups": "#2d708e",
 			"Key Stage 1": "#440d54",
 			"Key Stage 2": "#404788",
 			"Key Stage 3": "#277d8e",
@@ -65,7 +73,12 @@ site.use(oiCharts({
 			"Heritage": "#2d708e",
 			"Gaming": "#39568c",
 			"Library": "#453781",
-			"Community": "#481567"
+			"Community": "#481567",
+			"Leeds City Council": "#440d54",
+			"Neither":  "#404788",
+			"Arts Council England": "#277d8e",
+			"Both": "#29af7f", 
+
 		}
 	},
 	"font": {

@@ -1,9 +1,44 @@
 ---
 title: Cultural Organisations in Leeds
 
+visualisations:
+  map:
+    geojson:
+      key: "URN"
+      data: viz.organisations-map
+    data: viz.orgs
+    columns:
+      - name: "Tooltip label"
+        template: "<h3>{{ Name }}</h3><p>Funded by {{ Funding }}</br>Type of engagement: {{ Engagement }} </br>Website: {{ Website }} </br>Address: <br/> {{ Address }}<br/>{{ Postcode }}<br/>"
+    key: "URN"
+    tooltip: "Tooltip label"
+    value: "Funding"
+    legend:
+      position: top
+      items:
+        - label: "Leeds City Council"
+          value: "Leeds City Council"
+          colour: "Leeds City Council"
+        - label: "Arts Council England"
+          value: "Arts Council England"
+          colour: "Arts Council England"
+        - label: "Funded by neither organisation"
+          value: "Neither"
+          colour: "Neither"
+        - label: "Funded by both organisations"
+          value: "Both"
+          colour: "Both"
+
 ---
 
-<p>This page provides an overview of the cultural organisations and individuals that are engaging with Leeds schools.</p>
+<p>There is a lack of data currently available on the arts and cultural individuals and organisations currently engaging with schools in Leeds.</p>
+
+<p>This page presents an overview of how these people and organisations are currently engaging with schools, an approximation of the type of engagement offered by each organisation and provides information for schools to reach out and initiate their own cultural engagement initiatives.</p>
+
+<p>The data on this page is indicative only and has been collected through research and analysis of open data sources. If you see any problems with the data on this page, get in touch with us at hello@open-innovations.org.</p>
+
+{% comp 'grid.autogrid', { min_width: '40rem' } %}
+
 
 {{
 	comp.oi.dashboard({
@@ -31,3 +66,24 @@ title: Cultural Organisations in Leeds
 		}
 	}) | safe
 }}
+
+<p>Hover over the data points on the map below to view more information on each organisation.</p>
+
+<br>
+
+{{
+	comp.oi.map.zoomable({
+		config: visualisations.map
+	}) | safe
+}}
+{% endcomp %}
+
+<br/>
+<p>Data were included in the analysis if the individual or organisations was either: funded by Leeds City Council; funded by Arts Council England, or were funded by neither organisation but were mentioned in the survey. <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/survey/">Read more about the survey</a>. 
+
+<p>The visualisation above presents data on the organisations for which address data was available. Freelance artists, and organisations for which we do not have address information, are listed in the table below.</p>
+
+
+
+
+
