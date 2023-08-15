@@ -37,8 +37,6 @@ visualisations:
 
 <p>The data on this page is indicative only and has been collected through research and analysis of open data sources. If you see any problems with the data on this page, get in touch with us at hello@open-innovations.org.</p>
 
-{% comp 'grid.autogrid', { min_width: '40rem' } %}
-
 
 {{
 	comp.oi.dashboard({
@@ -76,7 +74,6 @@ visualisations:
 		config: visualisations.map
 	}) | safe
 }}
-{% endcomp %}
 
 <br/>
 <p>Data were included in the analysis if the individual or organisations was either: funded by Leeds City Council; funded by Arts Council England, or were funded by neither organisation but were mentioned in the survey. <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/survey/">Read more about the survey</a>. 
