@@ -11,47 +11,37 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey-response-rate-phase",
-			title: "School phase",
+			data: "viz.headline-stats",
+			title: "Headlines",
 			value: "Percent",
+			note: "Note",
 			width: "30%",
 			units: {
 				postfix: "Units"
 			},
 			panels: [{
-				name: "Primary",
+				name: "Arts commitment",
 				colour: "Primary"
 			},{
-				name: "Secondary",
+				name: "Additional funding",
 				colour: "Secondary"
 			},{
-				name: "Through",
+				name: "Local arts partnerships",
 				colour: "Through"
+			},{
+				name: "Local schools partnerships",
+				colour: "16+"
+			},{
+				name: "Sign-posting opportunities",
+				colour: "Drama"
+			},{
+				name: "Local arts programmes",
+				colour: "Music"
 			}]
 		}
 	}) | safe
 }}
 
-{{
-	comp.oi.dashboard({
-		config: {
-			data: "viz.survey-response-rate-phase",
-			title: "School phase",
-			value: "Percent",
-			width: "40%",
-			units: {
-				postfix: "Units"
-			},
-			panels: [{
-				name: "16+",
-				colour: "16+"
-			},{
-				name: "Other",
-				colour: "Other"
-			}]
-		}
-	}) | safe
-}}
 
 <p>The visualisations below provide a more detailed breakdown of survey responses. They give an insight into how schools in Leeds are engaging with arts and culture, their facilities and approaches to funding for schools wishing to engage with other organisations.</p>
 
