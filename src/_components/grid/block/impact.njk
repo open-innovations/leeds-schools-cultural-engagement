@@ -1,0 +1,43 @@
+---
+css: |
+  .impact-link {
+    text-decoration: none;
+  }
+  .impact-block {
+    --background: lightgrey;
+    --foreground: black;
+    --align: center;
+    --min-height: unset;
+    color: var(--foreground);
+    background: var(--background);
+    min-height: var(--min-height);
+    max-width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: var(--align);
+    transition: color 0.3s linear, background-color 0.3s linear;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      color: white;
+      background: black;
+    }
+    & * {
+      margin-top: 0;
+    }
+  }
+---
+{%-if link -%}<a class="impact-link" href="{{ link | url }}">{%- endif -%}
+<div class="impact-block"
+  style="
+    {%- if fg %}--foreground: {{ fg }};{% endif -%}
+    {%- if bg %}--background: {{ bg }};{% endif -%}
+    {%- if align %}--align: {{ align }};{% endif -%}
+    {%- if min-height %}--min-height: {{ min-height }};{% endif -%}
+  ">
+  {{ content | safe }}
+</div>
+{%-if link -%}</a>{%- endif -%}

@@ -419,34 +419,81 @@ title: Survey summary
 		}) | safe
 	}}
 
+<p>Schools are therefore actively promoting involvement with art and culture and sign-posting students to organisations and opportunities outside their normal curriculum.</p>
+
 
 <h2>External Practitioners</h2> 
+
+<p>Survey responses showed that schools in Leeds actively seek out opportunities to partner with local cultural organisations.<a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/organisations/"> Learn more about partnership organisations</a>.</p>
 
 <h3>Headline findings:</h3>
 
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey-response-rate-phase",
-			title: "School phase",
+			data: "viz.external-practitioners-headlines",
+			title: "Headlines",
 			value: "Percent",
+			note: "Note",
 			width: "30%",
 			units: {
 				postfix: "Units"
 			},
 			panels: [{
-				name: "Primary",
+				name: "Local partnerships with primary schools",
 				colour: "Primary"
 			},{
-				name: "Secondary",
+				name: "Local partnerships with secondary schools",
 				colour: "Secondary"
-			},{
-				name: "Through",
-				colour: "Through"
 			}]
 		}
 	}) | safe
 }}
+
+<p>Partnership organisations offer a range of services, including workshops in the schools, after school clubs, music provision, performances in schools, meeting artists, trips for performances.</p>
+
+<h4>External practitioners offered programmes across many artforms...</h4>
+</br>
+
+{% comp "grid.autogrid", { columns: 5 } %}
+
+  {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#440d54"
+  } %}
+    <p>Music</p>
+  {% endcomp %}
+
+    {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#277d8e"
+  } %}
+    <p>Theatre</p>
+  {% endcomp %}
+
+    {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#20a387"
+  } %}
+    <p>Dance</p>
+  {% endcomp %}
+
+
+  {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#238a8d"
+  } %}
+    <p>Museums/Heritage</p>
+  {% endcomp %}
+
+    {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#2d708e"
+  } %}
+    <p>Art</p>
+  {% endcomp %}
+
+  {% endcomp %}
 
 
 <h3> In academic year 2021/22, did your school invite organisations or creative practitioners into the school to deliver arts performances or workshops?</h3>

@@ -9,11 +9,14 @@ css: |
     grid-gap: var(--auto-grid-gap);
     & > * {
       margin: 0;
+      padding-top: 2em;
     }
   }
 ---
 <div class="auto-grid"
-  {%- if min_width %} style="--auto-grid-min-size: {{ min_width }}"{% endif -%}
-  >
+  style="
+  {%- if min-width %}--auto-grid-min-size: {{ min-width }};{% endif -%}
+  {% if columns %}grid-template-columns: repeat( {{ columns }}, minmax(0, 1fr));{% endif %}
+  ">
   {{- content | safe -}}
 </div>
