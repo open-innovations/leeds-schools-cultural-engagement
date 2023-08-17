@@ -50,7 +50,7 @@ title: Survey summary
 {% endcomp %}
 {% endcomp %}
 
-<h2>Responses</h2>
+<h2 id="Responses">Responses</h2>
 
 <h3>Overview of Respondents</h3>
 
@@ -217,7 +217,7 @@ title: Survey summary
 	}) | safe
 }}
 
-<h2>Arts Provision in Schools</h2> 
+<h2 id="Arts">Arts Provision in Schools</h2> 
 
 
 <h3>Commitment to the arts</h3>
@@ -426,7 +426,7 @@ title: Survey summary
 <p>Schools are therefore actively promoting involvement with art and culture and sign-posting students to organisations and opportunities outside their normal curriculum.</p>
 
 
-<h2>External Practitioners</h2> 
+<h2 id="Practitioners">External Practitioners</h2> 
 
 <p>Survey responses showed that schools in Leeds actively seek out opportunities to partner with local cultural organisations.<a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/organisations/"> Learn more about partnership organisations</a>.</p>
 
@@ -503,7 +503,7 @@ title: Survey summary
 </br>
 <p>Overall, <strong>2 in 3 schools</strong> said that they invited organisations and creative practitioners into their school to deliver arts performances and workshops - 75% of primary schools, and 40% of secondary schools. The subject areas of these organisations are broken down below. Practitioners were mostly brought into schools for <strong>theatre, music and dance</strong> programmes. Regular <strong>music and dance groups</strong> were most often delivered by external providers.</p> 
 
-<h3>What are the subject areas of the organisations or creative practitioners that are invited into school?</h3>
+<h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
 
 {{
 	comp.oi.chart.bar({
@@ -625,9 +625,13 @@ title: Survey summary
 
 
 
-<h2>Facilities</h2>
+<h2 id="Facilities">Facilities</h2>
 
-<h3>Which facilities does your school have access to?</h3> 
+<p><strong>1 in 5 schools said they do not have access to any arts or creative facilities</strong>. Most schools that responded to the survey have access to a music room and theatre or hall space with some production facilities. <strong>80%</strong> of secondary schools had access to an art studio compared with only <strong>1 in 5</strong> primary schools, or <strong>1 in 3</strong> special schools.</p> 
+
+<p>The majority of both primary (92%) and secondary (70%) schools provide musical intruments, if they offer lessons.</p>
+
+<h3>Schools indicated that they have the following facilities:</h3> 
 
 {{
 	comp.oi.chart.bar({
@@ -718,189 +722,58 @@ title: Survey summary
 }}
 
 
-
-<h2>Funding & Support</h2> 
+<h2 id="Funding">Funding & Support</h2> 
 
 
 <p>The section below provides an overview of the survey responses when school staff were asked about the funding and support they have accessed to enable arts and enrichment activities in their school.</p>
 
-<h3>Does your school attract additional funding for arts curriculum or enrichment activity?</h3>
+<p><strong>1 in 4 schools</strong> reported that they attract additional funding for arts curriculum and enrichment activities. Funding sources are broken down by school type below.</p>
+
+<h3>Funding sources for provision of art curriculum and enrichment activity:</h3>
 
 {{
-	comp.oi.chart.bar({
+	comp.oi.dashboard({
 		config: {
-			data: "viz.survey-response-additional-funding",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
+			data: "viz.funding-source-headlines",
+			title: "Headlines",
+			value: "Percent",
+			note: "Note",
+			width: "25%",
+			units: {
+				postfix: "Units"
+			},
+			panels: [{
+				name: "Trusts and foundations",
+				colour: "Primary"
 			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
+				name: "Leeds City Council",
+				colour: "Secondary"
 			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
+				name: "Fundraising events or activities",
+				colour: "Special"
+			}]
+		}
+	}) | safe
+}}
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.funding-source-headlines",
+			title: "Headlines",
+			value: "Percent",
+			note: "Note",
+			width: "40%",
+			units: {
+				postfix: "Units"
+			},
+			panels: [{
+				name: "Parents",
+				colour: "Drama"
 			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
+				name: "Other sources",
+				colour: "Music"
+			}]
 		}
 	}) | safe
 }}
 
-
-<h3>Where does your school attract funding from?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-funding-source",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
-			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
