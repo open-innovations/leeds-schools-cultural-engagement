@@ -2,11 +2,12 @@
 title: Survey summary
 ---
 
+{% comp 'figure', { min_width: "100%" } %}
 <p>This research serves to address the lack of data currently available on schools’ engagement with the arts in Leeds. A baseline understanding of how schools currently engage with local cultural organisations is needed to inform cultural strategy and funding priorities. It comes in light of evaluation of the LEEDS 2023 programme of activities across the city and will support other cultural organisations to perform their own evaluations and benchmarking activities.</p>
 <p>A pilot survey was sent to members of the Senior Leadership team at every school in Leeds, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. This will act as a pilot to gauge response and validate the approach and methodology for a future phase of work.</p>
 <p>Key findings from the survey responses are presented on this page, based on responses from 34 of the 293 schools included within the study.</p>
 <p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
-
+{% endcomp %}
 
 {{
 	comp.oi.dashboard({
@@ -41,10 +42,13 @@ title: Survey summary
 		}
 	}) | safe
 }}
-
-
 <p>The visualisations below provide a more detailed breakdown of survey responses. They give an insight into how schools in Leeds are engaging with arts and culture, their facilities and approaches to funding for schools wishing to engage with other organisations.</p>
 
+
+{% comp 'figure', { min_width: "100%" } %}
+{% comp 'contents' %}
+{% endcomp %}
+{% endcomp %}
 
 <h2>Responses</h2>
 
@@ -426,8 +430,6 @@ title: Survey summary
 
 <p>Survey responses showed that schools in Leeds actively seek out opportunities to partner with local cultural organisations.<a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/organisations/"> Learn more about partnership organisations</a>.</p>
 
-<h3>Headline findings:</h3>
-
 {{
 	comp.oi.dashboard({
 		config: {
@@ -440,11 +442,14 @@ title: Survey summary
 				postfix: "Units"
 			},
 			panels: [{
-				name: "Local partnerships with primary schools",
+				name: "Primary schools",
 				colour: "Primary"
 			},{
-				name: "Local partnerships with secondary schools",
+				name: "Secondary schools",
 				colour: "Secondary"
+			},{
+				name: "Special schools",
+				colour: "Special"
 			}]
 		}
 	}) | safe
@@ -495,211 +500,8 @@ title: Survey summary
 
   {% endcomp %}
 
-
-<h3> In academic year 2021/22, did your school invite organisations or creative practitioners into the school to deliver arts performances or workshops?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-21-22-arts-performances",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
-			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
-
-<h3>Which of your arts groups are run by external providers?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-teacher-or-external-breakdown",
-			height: 600,
-			columns: [{
-				name: "Music Tooltip",
-				template: "{{ Response }}<br />Music: {{ Music (%) }}%"
-			},{
-				name: "Orchestra Tooltip",
-				template: "{{ Response }}<br />Orchestra: {{ Orchestra (%) }}%"
-			},{
-				name: "Choirs / Vocal Ensemble Tooltip",
-				template: "{{ Response }}<br />Choirs / Vocal Ensemble: {{ Choirs / Vocal Ensemble (%) }}%"
-			},{
-				name: "Dance Tooltip",
-				template: "{{ Response }}<br />Dance: {{ Dance (%) }}%"
-			},{
-				name: "Drama Tooltip",
-				template: "{{ Response }}<br />Drama: {{ Drama (%) }}%"
-			},{
-				name: "D&T Tooltip",
-				template: "{{ Response }}<br />D&T: {{ D&T (%) }}%"
-			},{
-				name: "Digital Media Tooltip",
-				template: "{{ Response }}<br />Digital Media: {{ Digital Media (%) }}%"
-			},{
-				name: "Art Groups Tooltip",
-				template: "{{ Response }}<br />Art Groups: {{ Art Groups (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Music",
-				value: "Music (%)",
-				colour: "Music",
-				tooltip: "Music Tooltip"
-			},{
-				title: "Orchestra",
-				value: "Orchestra (%)",
-				colour: "Orchestra",
-				tooltip: "Orchestra Tooltip"
-			},{
-				title: "Choirs / Vocal Ensemble",
-				value: "Choirs / Vocal Ensemble (%)",
-				colour: "Choirs / Vocal Ensemble",
-				tooltip: "Choirs / Vocal Ensemble Tooltip"
-			},{
-				title: "Dance",
-				value: "Dance (%)",
-				colour: "Dance",
-				tooltip: "Dance Tooltip"
-			},{
-				title: "Drama",
-				value: "Drama (%)",
-				colour: "Drama",
-				tooltip: "Drama Tooltip"
-			},{
-				title: "D&T",
-				value: "D&T (%)",
-				colour: "D&T",
-				tooltip: "D&T Tooltip"
-			},{
-				title: "Digital Media",
-				value: "Digital Media (%)",
-				colour: "Digital Media",
-				tooltip: "Digital Media Tooltip"
-			},{
-				title: "Art Groups",
-				value: "Art Groups (%)",
-				colour: "Art Groups",
-				tooltip: "Art Groups Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
-
+</br>
+<p>Overall, <strong>2 in 3 schools</strong> said that they invited organisations and creative practitioners into their school to deliver arts performances and workshops - 75% of primary schools, and 40% of secondary schools. The subject areas of these organisations are broken down below. Practitioners were mostly brought into schools for <strong>theatre, music and dance</strong> programmes. Regular <strong>music and dance groups</strong> were most often delivered by external providers.</p> 
 
 <h3>What are the subject areas of the organisations or creative practitioners that are invited into school?</h3>
 
@@ -791,368 +593,35 @@ title: Survey summary
 	}) | safe
 }}
 
-<h3>Is your school part of any national programmes delivered by arts institutions or organisations?</h3>
+<h3>Local partnerships:</h3>
 
 {{
-	comp.oi.chart.bar({
+	comp.oi.dashboard({
 		config: {
-			data: "viz.survey-response-national-programmes",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
+			data: "viz.local-partnerships-headlines",
+			title: "Headlines",
+			value: "Percent",
+			note: "Note",
+			width: "30%",
+			units: {
+				postfix: "Units"
+			},
+			panels: [{
+				name: "Local arts organisations",
+				colour: "Primary"
 			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
+				name: "School partnerships",
+				colour: "Secondary"
 			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
-			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other Tooltip",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
+				name: "Local community arts programmes",
+				colour: "Special"
+			}]
 		}
 	}) | safe
 }}
 
 
 
-<h3>Does your school have a partnership with any local arts organisations, i.e. a relationship with an organisation that the school has worked with over a number of years?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-local-partnerships",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
-			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other Tooltip",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
-
-<h3>Does your school have a partnership with any other local schools to support the arts curriculum?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-local-school-partnership",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
-			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other Tooltip",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
-
-
-<h3>Is your school part of any local/community-based arts programmes?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-community-arts-programmes",
-			height: 600,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Response }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Response }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Response }}<br />Secondary: {{ Secondary (%) }}%"
-			},{
-				name: "Special School Tooltip",
-				template: "{{ Response }}<br />Special School: {{ Special School (%) }}%"
-			},{
-				name: "Other Tooltip",
-				template: "{{ Response }}<br />Other: {{ Other (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Response",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			},{
-				title: "Special School",
-				value: "Special School (%)",
-				colour: "Special Schools",
-				tooltip: "Special School Tooltip"
-			},{
-				title: "Other",
-				value: "Other (%)",
-				colour: "Other",
-				tooltip: "Other Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
 
 
 
