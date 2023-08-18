@@ -9,7 +9,7 @@ visualisations:
     data: viz.orgs
     columns:
       - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>Funded by {{ Funding }}</br>Type of engagement: {{ Engagement }} </br>Website: {{ Website }} </br>Address: <br/> {{ Address }}<br/>{{ Postcode }}<br/>"
+        template: "<h3>{{ Name }}</h3><p>Funded by {{ Funding }}</br>Type of engagement: {{ Engagement }} </br>Website: <a href='{{ Website }}' target='_blank'>{{ Website }}</a></br>Address: <br/> {{ Address }}<br/>{{ Postcode }}<br/>"
     key: "URN"
     tooltip: "Tooltip label"
     value: "Funding"
@@ -86,6 +86,9 @@ visualisations:
 <h3>Key Organisations</h3> 
 
 <p>The organisations below were mentioned by name in the survey.</p>
+
+<h4>Primary schools:</h4> 
+
 
 
 
