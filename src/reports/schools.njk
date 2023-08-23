@@ -27,72 +27,6 @@ visualisations:
           colour: "Special Schools"
         - label: "Voluntary"
           colour: "Voluntary"
-  ratios:
-    data: viz.school-data-ratios
-    columns:
-      - name: "Academy & Free Schools Tooltip"
-        template: "Academy & Free Schools<br />Students: {{ Academy & Free Schools number | toLocaleString() }}<br />Entries: {{ Academy & Free Schools entries | toLocaleString() }}<br />Ratio: {{ Academy & Free Schools ratio | toFixed(2) }}"
-      - name: "Community Tooltip"
-        template: "Community<br />Students: {{ Community number | toLocaleString() }}<br />Entries: {{ Community entries | toLocaleString() }}<br />Ratio: {{ Community ratio | toFixed(2) }}"
-      - name: "Foundation Tooltip"
-        template: "Foundation<br />Students: {{ Foundation number | toLocaleString() }}<br />Entries: {{ Foundation entries | toLocaleString() }}<br />Ratio: {{ Foundation ratio | toFixed(2) }}"
-      - name: "Independent Tooltip"
-        template: "Independent<br />Students: {{ Independent number | toLocaleString() }}<br />Entries: {{ Independent entries | toLocaleString() }}<br />Ratio: {{ Independent ratio | toFixed(2) }}"
-      - name: "Special Schools Tooltip"
-        template: "Special Schools<br />Students: {{ Special Schools number | toLocaleString() }}<br />Entries: {{ Special Schools entries | toLocaleString() }}<br />Ratio: {{ Special Schools ratio | toFixed(2) }}"
-      - name: "Voluntary Tooltip"
-        template: "Voluntary<br />Students: {{ Voluntary number | toLocaleString() }}<br />Entries: {{ Voluntary entries | toLocaleString() }}<br />Ratio: {{ Voluntary ratio | toFixed(2) }}"
-    legend:
-      show: true
-      position: top
-    category: Category
-    series:
-      - title: "Academy & Free Schools"
-        value: "Academy & Free Schools ratio"
-        colour: "Academy & Free Schools"
-        tooltip: "Academy & Free Schools Tooltip"
-      - title: "Community"
-        value: "Community ratio"
-        colour: "Community"
-        tooltip: "Community Tooltip"
-      - title: "Foundation"
-        value: "Foundation ratio"
-        colour: "Foundation"
-        tooltip: "Foundation Tooltip"
-      - title: "Independent"
-        value: "Independent ratio"
-        colour: "Independent"
-        tooltip: "Independent Tooltip"
-      - title: "Special Schools"
-        value: "Special Schools ratio"
-        colour: "Special Schools"
-        tooltip: "Special Schools Tooltip"
-      - title: "Voluntary"
-        value: "Voluntary ratio"
-        colour: "Voluntary"
-        tooltip: "Voluntary Tooltip"
-    gap: 0.1
-    axis:
-      x:
-        min: 0
-        max: 1
-        grid:
-          stroke-dasharray: 6 2
-          stroke-width: 1
-        ticks:
-          - value: 0
-            label: "0"
-          - value: 0.25
-            label: "0.25"
-          - value: 0.5
-            label: "0.5"
-          - value: 0.75
-            label: "0.75"
-          - value: 1
-            label: "1"
-      y:
-        grid:
-          stroke-width: 0.5
 ---
 
 <p>This page provides an overview of the schools in Leeds and their engagements with arts and culture. The headlines below show the number of schools in Leeds of each type.</p>
@@ -164,14 +98,17 @@ visualisations:
 			legend: { show: true, position: "top" },
 			series: [{
 				title: "Working towards",
+				colour: 'Working towards',
 				value: "working_towards_percent",
 				tooltip: "Working towards Tooltip"
 			},{
 				title: "Registered",
+				colour: 'Registered',
 				value: "Registered_percent",
 				tooltip: "Registered Tooltip"
 			},{
 				title: "Awarded",
+				colour: 'Awarded',
 				value: "Awarded_percent",
 				tooltip: "Awarded Tooltip"
 			}],
@@ -359,9 +296,8 @@ visualisations:
 <p>Improving the accuracy of this dataset will allow for schools, local authorities, and arts organisations to inform their strategy and funding priorities, as well as enabling collaboration with the cultural sector. We therefore encourage anyone with an interest in the sector to reach out and take part in the next phase of work by emailing <a href="mailto:hello@open-innovations.org">hello@open-innovations.org</a>.</p>
 
 
-
-{#
-	comp.oi.chart.bar({
+{# {{
+	comp.oi.map.zoomable({
 		config: visualisations.ratios
 	}) | safe
-#}
+}} #}
