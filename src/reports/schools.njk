@@ -34,7 +34,8 @@ visualisations:
     data: viz.schools
     columns:
       - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%<br>Number of creative subjects entered: {{ total_creative_subject_entered
+}}"
     key: "URN"
     tooltip: "Tooltip label"
     value: "%_pupils_eligible_FSMs"
@@ -227,8 +228,9 @@ visualisations:
 
 
 <h3>Creative subject entries in KS4 / KS5 (coloured by school type)</h3>
-<p>The chart below explores the relationship between the size, type and creative subject offering of schools in Leeds. Hover over the data points to view information about each school.</p>
-<br>
+<p>The chart below explores the relationship between the size, type and number of students enrolled in creative subjects at GCSE level. Hover over the data points to view information about each school.</p>
+<p>In the chart, you would expect that the number of students enrolled in creative subjects is greater in larger schools. There is an overall positive trend, however some schools are obvious outliers. There must therefore be some other factors that influence the uptake of creative subjects by students in schools. We have started some initial exploration of this data below.</p>
+<br><br>
 
 {{
 	comp.oi.chart.scatter({
@@ -266,7 +268,7 @@ visualisations:
 }}
 
 <h3>Creative subject entries in KS4 / KS5 (coloured by ArtsMark)</h3>
-<p>The chart below explores the relationship between the size, creative subject offering and ArtsMark accreditation of schools in Leeds. Hover over the data points to view information about each school.</p>
+<p>The chart below explores the relationship between the size, creative subject offering and ArtsMark accreditation of schools in Leeds. Hover over the data points to view information about each school. Whilst the chart shows that some schools with ArtsMark accreditation have a higher take-up of creative subjects, this is not always the case.</p>
 <br>
 {{
 	comp.oi.chart.scatter({
@@ -284,45 +286,6 @@ visualisations:
 				y: "total_creative_subject_entered",
 				tooltip: "Tooltip",
 				colour: "artsmark",
-				points: { size: 10 }
-			}],
-			legend: { show: false },
-			axis: {
-				x: {
-					grid: {show:true,"stroke-width": 1},
-					title: {label: "Total KS4/5 pupils"},
-					tickSpacing: 200
-				},
-				y: {
-					grid: {show:true,"stroke-width": 0.5},
-					title: {label:"Creative subject entries"},
-					tickSpacing: 200
-				}
-			}
-		}
-	}) | safe
-}}
-
-
-<h3>Creative subject entries in KS4 / KS5 (coloured by Arts Award)</h3>
-<p>The chart below explores the relationship between the size, creative subject and Arts Award offering by schools in Leeds. Hover over the data points to view information about each school.</p>
-
-{{
-	comp.oi.chart.scatter({
-		config: {
-			data: "viz.school-data-creative-entries",
-			height: 500,
-			width: 950,
-			columns: [{
-				name: "Tooltip",
-				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in Arts Award: {{ artsaward }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
-			}],
-			series: [{
-				title: "Creative entries",
-				x: "total_KS4_KS5_pupils",
-				y: "total_creative_subject_entered",
-				tooltip: "Tooltip",
-				colour: "artsaward",
 				points: { size: 10 }
 			}],
 			legend: { show: false },
