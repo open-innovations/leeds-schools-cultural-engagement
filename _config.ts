@@ -78,7 +78,8 @@ site.use(oiCharts({
 			"Neither":  "#404788",
 			"Arts Council England": "#277d8e",
 			"Both": "#29af7f", 
-
+			"ArtsMark": "#404788",
+			"Arts Award": "#277d8e"
 		}
 	},
 	"font": {

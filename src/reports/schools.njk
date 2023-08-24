@@ -27,6 +27,35 @@ visualisations:
           colour: "Special Schools"
         - label: "Voluntary"
           colour: "Voluntary"
+  fsm:
+    geojson:
+      key: "URN"
+      data: viz.school-map
+    data: viz.schools
+    columns:
+      - name: "Tooltip label"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%"
+    key: "URN"
+    tooltip: "Tooltip label"
+    value: "%_pupils_eligible_FSMs"
+    scale: "Viridis"
+    min: 0
+    max: 70
+    legend:
+      position: top
+      items:
+        - label: "&lt;10%"
+          value: 10
+        - label: "&lt;20%"
+          value: 20
+        - label: "&lt;30%"
+          value: 30        
+        - label: "&lt;40%"
+          value: 40
+        - label: "&lt;50%"
+          value: 50
+        - label: "&lt;60%"
+          value: 60
 ---
 
 <p>This page provides an overview of the schools in Leeds and their engagements with arts and culture. The headlines below show the number of schools in Leeds of each type.</p>
@@ -73,8 +102,37 @@ visualisations:
 <h2>Schools Overview</h2>
 <p>The visualisations on this page present a picture of the types of schools in Leeds, and to understand how they are engaging with arts and culture.</p>
 
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.school-overview-headlines",
+			title: "Headlines",
+			value: "Percent",
+			width: "30%",
+			note: "Note",
+			units: {
+				postfix: "Units"
+			},
+			panels: [{
+				name: "Academy & Free Schools",
+				colour: "Academy & Free Schools"
+			},{
+				name: "ArtsMark",
+				colour: "ArtsMark"
+			},{
+				name: "Arts Award",
+				colour: "Arts Award"
+			}]
+		}
+	}) | safe
+}}
+
+
+
+
 <h3>ArtsMark percentage by school type</h3>
-<p>ArtsMark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the ArtsMark award.</p> 
+<p>ArtsMark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the <a href="https://www.artsmark.org.uk/">ArtsMark award</a>.</p> 
 <br>
 
 {{
@@ -129,7 +187,7 @@ visualisations:
 }}
 
 <h3>Arts Award percentage by school type</h3>
-<p>The visualisation below shows a breakdown of schools in Leeds that provide an Arts Award offering to young people. Arts Award is a suite of arts-based qualifications available to young people aged 25 and under. It is managed by Trinity College London and Arts Council England.</p>
+<p>The visualisation below shows a breakdown of schools in Leeds that provide an <a href="https://www.artsaward.org.uk/site/">Arts Award</a> offering to young people. Arts Award is a suite of arts-based qualifications available to young people aged 25 and under. It is managed by Trinity College London and Arts Council England.</p>
 <br>
 
 {{
@@ -285,6 +343,21 @@ visualisations:
 }}
 
 
+<h2>Social factors & arts provision</h2>
+
+<p>The section below begins to explore some of the demographic and regional factors that may influence a school's creative offering for students. This information may give an indication of where organisations such as Leeds City Council and LEEDS 2023 could focus their efforts to engage more with schools in under-served regions of Leeds. Many arts providers have a commitment to engage with children and young people from all demographics, and could use this type of data to inform their approach. <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/organisations/">Learn more about the cultural organisations involved in this study</a>.</p>
+
+<p>The map below shows the schools in Leeds, scaled by the percentage of pupils that are eligible for free school meals. Lighter coloured markers have a higher percentage of eligible students. Hover over the polygons to view more information on each school, such as their ArtsMark award status and number of creative subject entries.</p>
+
+<p>This study serves as a pilot for a future phase of work to explore these relationships in more detail. The data presented here is therefore indicative only - read more about how we have processed the data in the section below.</p>
+
+{{
+	comp.oi.map.zoomable({
+		config: visualisations.fsm
+	}) | safe
+}}
+
+
 <h2>About the data on this page</h2>
 
 <p><a href="https://raw.githubusercontent.com/open-innovations/leeds-schools-cultural-engagement/main/data/schools.csv">You can download and explore the raw data here</a>.</p>
@@ -296,8 +369,3 @@ visualisations:
 <p>Improving the accuracy of this dataset will allow for schools, local authorities, and arts organisations to inform their strategy and funding priorities, as well as enabling collaboration with the cultural sector. We therefore encourage anyone with an interest in the sector to reach out and take part in the next phase of work by emailing <a href="mailto:hello@open-innovations.org">hello@open-innovations.org</a>.</p>
 
 
-{# {{
-	comp.oi.map.zoomable({
-		config: visualisations.ratios
-	}) | safe
-}} #}
