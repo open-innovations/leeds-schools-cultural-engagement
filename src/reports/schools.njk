@@ -8,7 +8,7 @@ visualisations:
     data: viz.schools
     columns:
       - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}</p>"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}</p>"
     key: "URN"
     tooltip: "Tooltip label"
     value: "type"
@@ -34,7 +34,7 @@ visualisations:
     data: viz.schools
     columns:
       - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Artsaward: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%<br>Number of creative subjects entered: {{ total_creative_subject_entered }}"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%<br>Number of creative subjects entered: {{ total_creative_subject_entered }}"
     key: "URN"
     tooltip: "Tooltip label"
     value: "%_pupils_eligible_FSMs"
@@ -58,7 +58,9 @@ visualisations:
           value: 60
 ---
 
-<p>This page provides an overview of the schools in Leeds and their engagements with arts and culture. The headlines below show the number of schools in Leeds of each type.</p>
+<p>This page provides an overview of the schools in Leeds and their engagements with arts and culture.</p>
+<p>The information on this page is a combination of data collected from <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/survey/">the survey responses from this research</a> in combination with open sources - <a href="https://datamillnorth.org/dataset/primary-school-allocations">Primary</a> and <a href="https://datamillnorth.org/dataset/secondary-school-allocations">Secondary</a> school allocations can be accessed via Data Mill North. The Department for Education publishes yearly statistics on <a href="https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics">school pupils and their characteristics</a>.</p>
+<p>The headlines below show the number of schools in Leeds of each type.</p>
 
 {{
 	comp.oi.dashboard({
@@ -131,8 +133,8 @@ visualisations:
 
 
 
-<h3>ArtsMark percentage by school type</h3>
-<p>ArtsMark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the <a href="https://www.artsmark.org.uk/">ArtsMark award</a>.</p> 
+<h3>Artsmark percentage by school type</h3>
+<p>Artsmark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p> 
 <br>
 
 {{
@@ -266,8 +268,8 @@ visualisations:
 	}) | safe
 }}
 
-<h3>Creative subject entries in KS4 / KS5 (coloured by ArtsMark)</h3>
-<p>The chart below explores the relationship between the size, creative subject offering and ArtsMark accreditation of schools in Leeds. Hover over the data points to view information about each school. Whilst the chart shows that some schools with ArtsMark accreditation have a higher take-up of creative subjects, this is not always the case.</p>
+<h3>Creative subject entries in KS4 / KS5 (coloured by Artsmark)</h3>
+<p>The chart below explores the relationship between the size, creative subject offering and Artsmark accreditation of schools in Leeds. Hover over the data points to view information about each school. Whilst the chart shows that some schools with Artsmark accreditation have a higher take-up of creative subjects, this is not always the case.</p>
 <br>
 {{
 	comp.oi.chart.scatter({
@@ -277,7 +279,7 @@ visualisations:
 			width: 950,
 			columns: [{
 				name: "Tooltip",
-				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in ArtsMark: {{ artsmark }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
+				template: "<p class=\"subtitle\">{{ school_name }}</p><p>Involved in Artsmark: {{ artsmark }}\nNumber of pupils (KS4/5): {{ total_KS4_KS5_pupils | toLocaleString() }}\nNumber of creative entries: {{ total_creative_subject_entered | toLocaleString() }}</p>"
 			}],
 			series: [{
 				title: "Creative entries",
@@ -309,7 +311,7 @@ visualisations:
 
 <p>The section below begins to explore some of the demographic and regional factors that may influence a school's creative offering for students. This information may give an indication of where organisations could focus their efforts to engage more with schools in underserved regions of Leeds. Many arts providers have a commitment to engage with children and young people from all demographics, and could use this type of data to inform their approach. <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/organisations/">Learn more about the cultural organisations involved in this study</a>.</p>
 
-<p>The map below shows the schools in Leeds, scaled by the percentage of pupils that are eligible for free school meals. Lighter coloured markers have a higher percentage of eligible students. Hover over the polygons to view more information on each school, such as their ArtsMark award status and number of creative subject entries.</p>
+<p>The map below shows the schools in Leeds, scaled by the percentage of pupils that are eligible for free school meals. Lighter coloured markers have a higher percentage of eligible students. Hover over the polygons to view more information on each school, such as their Artsmark award status and number of creative subject entries.</p>
 
 <p>This study serves as a pilot for a future phase of work to explore these relationships in more detail. The data presented here is therefore indicative only - read more about how we have processed the data in the section below.</p>
 
