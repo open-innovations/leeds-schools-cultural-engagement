@@ -2,8 +2,8 @@ URN,Name,Engagement,Address,Postcode,Latitude,Longitude,Funding,Type of organisa
 10000,Abbey House Museum,Provider,"Abbey Walk, Kirkstall",LS5 3EH,53.82221,-1.60708,Leeds City Council,,https://museumsandgalleries.leeds.gov.uk/abbey-house-museum/
 10001,Alive and Kicking Theatre Company,Provider,"3 Lady Wood Rd, Roundhay",LS8 2QF,53.82752,-1.50067,Neither,,https://aaktheatre.wordpress.com/
 10002,Art School for Rebel Girls,Provider,"Pavilion, 42 New Briggate",LS1 6NU,53.79997,-1.54066,Neither,,https://pavilion.org.uk/art-school-for-rebel-girls/
-10003,Artforms - Arts Development,"Provider, Network, CPD/Training","Pudsey Civic Hall, Dawson’s Corner",LS28 5TA,53.80738,-1.67876,Neither,,https://artformsleeds.co.uk/arts/
-10004,Artforms - Music,"Provider, Network, CPD/Training, Information","c/o Adams Court, Kildare Terrace",LS12 1DB,53.79008,-1.56909,Neither,,https://artformsleeds.co.uk/music/
+10003,Artforms - Arts Development,"Provider, Network, CPD/Training","c/o Adams Court, Kildare Terrace",LS12 1DB,53.79008,-1.56909,Neither,,https://artformsleeds.co.uk/arts/
+10004,Artforms - Music,"Provider, Network, CPD/Training, Information","Pudsey Civic Hall, Dawson's Corner",LS28 5TA,53.80738,-1.67876,Neither,,https://artformsleeds.co.uk/music/
 10005,Artis Foundation,"CPD/Training, Provider","311 Union Wharf, 23 Wenlock Road",N1 7ST,51.53264,-0.09532,Neither,,https://www.artisfoundation.org.uk/
 10006,Artlink West Yorkshire,Unknown,191 Belle Vue Road,LS3 1HG,53.80641,-1.56476,Leeds City Council,,https://artlinkwestyorks.org/
 10007,Assembly House,Unknown,"44 Canal Rd,",LS12 2PL,53.80072,-1.58248,Leeds City Council,,https://www.assemblyhouse.art/
@@ -58,8 +58,6 @@ URN,Name,Engagement,Address,Postcode,Latitude,Longitude,Funding,Type of organisa
 10056,National Society for Education in Art and Design,CPD,"3 Masons Wharf, Potley Lane, Corsham, Wiltshire",SN13 9FY,51.42377,-2.19228,Neither,,https://www.nsead.org/
 10057,National Theatre,Provider,"Upper Ground, London",SE1 9PX,51.50686,-0.11408,Neither,,https://www.nationaltheatre.org.uk/
 10058,Northern Ballet,Provider,"2 St Cecilia Street, Quarry Hill",LS2 7PA,53.79765,-1.53289,Both,NPO,https://northernballet.com/
-10059,Northern Ballet (Spotted programme),Programme,"2 St Cecilia Street, Quarry Hill",LS2 7PA,53.79765,-1.53289,Leeds City Council,,https://northernballet.com/academy/workshops-and-events
-10060,Northern Opera Group,Provider,"c/o Northern Ballet, Leeds",LS2 7PA,53.79765,-1.53289,Both,,https://www.northernoperagroup.co.uk/
 10061,Northern School of Contemporary Dance,Provider,98 Chapeltown Road,LS7 4BH,53.81306,-1.53347,Both,NPO,https://www.nscd.ac.uk/
 10062,Northern School of Contemporary Dance (CAT Programme),Signpost,98 Chapeltown Road,LS7 4BH,53.81306,-1.53347,Neither,,https://www.nscd.ac.uk/take-part/cat/
 10063,Northern School of Contemportary Dance (Youth Programme),Provider,98 Chapeltown Road,LS7 4BH,53.81306,-1.53347,Neither,,https://www.nscd.ac.uk/take-part/cat/
