@@ -89,7 +89,7 @@ ul, ol { margin-left: 2em; }
 .footnote { font-size: 0.85em!important; }
 
 .holder { position: relative; width: 1080px; max-width: 100%; margin: auto; }
-.holder.padded > *:last-child { margin-bottom: 0; }
+.holder.padded > *:last-child { margin-bottom: 0;}
 button, .button { margin-top: 0.25em; border: 0px; font-size: 1em; background-color: #efefef; color: black; text-decoration: none!important; display: inline-block; padding: 0.5em 1em; cursor: pointer; }
 a.button:hover, button:hover, button:focus, a.button:focus { background-color: #333333!important; color: #efefef!important; }
 .b1-bg { background-color: #000000; color: white!important; }
@@ -122,7 +122,10 @@ a.button:hover, button:hover, button:focus, a.button:focus { background-color: #
 .spaced { margin-bottom: 1em; }
 .centred { text-align: center; }
 .tallpadded { padding-top: 3em; padding-bottom: 3em; }
-section { padding: 2em 0; }
+section { padding: 2em 0; }	
+.feedback-bg { background-color: #440d54; color: white; }
+.feedback-bg a { color: #a951ed; text-decoration: underline; }
+
 
 .skip-to-content-link { position: absolute; top: -3rem; right: 0.5rem; z-index: 2000; transition: top 0.3s; padding: 0.5rem 1rem; }
 .skip-to-content-link:focus { top: 0.25rem; }
