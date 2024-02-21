@@ -263,155 +263,165 @@ title: Survey Responses Academic Year 2021/22
 
 <p>Primary schools were three times more likely to report that they had a particular commitment. However, when asked about their school's arts curriculum, secondary schools were more likely to consider their school's offering as 'Excellent'.</p>
 
-<h3>How would you rate your school's arts curriculum offer?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey.survey-rate-school-arts-offer",
-			height: 250,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Rating",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
-
 <p>Secondary schools were also more likely to report their extra-curricular offering as 'Good'.</p>
 
-<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
 
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey.survey-rate-school-extra-curricula-offer",
-			height: 250,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Rating",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
+<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
+
+<li>
+	<h3>How would you rate your school's arts curriculum offer?</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.survey-rate-school-arts-offer",
+				height: 400,
+				width: 700,
+				columns: [{
+					name: "Overall Tooltip",
+					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+				},{
+					name: "Primary Tooltip",
+					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+				},{
+					name: "Secondary Tooltip",
+					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+				}],
+				legend: { show: true, position: "top" },
+				category: "Rating",
+				series: [{
+					title: "Overall",
+					value: "Overall (%)",
+					colour: "Overall",
+					tooltip: "Overall Tooltip"
+				},{
+					title: "Primary",
+					value: "Primary (%)",
+					colour: "Primary",
+					tooltip: "Primary Tooltip"
+				},{
+					title: "Secondary",
+					value: "Secondary (%)",
+					colour: "Secondary",
+					tooltip: "Secondary Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 100,
+						grid: {
+							"stroke-dasharray": [6,2],
+							"stroke-width": 1
+						},
+						ticks: [{
+							value: 0,
+							label: "0"
+						},{
+							value: 20,
+							label: "20%"
+						},{
+							value: 40,
+							label: "40%"
+						},{
+							value: 60,
+							label: "60%"
+						},{
+							value: 80,
+							label: "80%"
+						},{
+							value: 100,
+							label: "100%"
+						}]
 					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
 					}
 				}
 			}
-		}
-	}) | safe
-}}
+		}) | safe
+	}}
+</li>
+
+<li>
+	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.survey-rate-school-extra-curricula-offer",
+				height: 400,
+				width: 700,
+				columns: [{
+					name: "Overall Tooltip",
+					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+				},{
+					name: "Primary Tooltip",
+					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+				},{
+					name: "Secondary Tooltip",
+					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+				}],
+				legend: { show: true, position: "top" },
+				category: "Rating",
+				series: [{
+					title: "Overall",
+					value: "Overall (%)",
+					colour: "Overall",
+					tooltip: "Overall Tooltip"
+				},{
+					title: "Primary",
+					value: "Primary (%)",
+					colour: "Primary",
+					tooltip: "Primary Tooltip"
+				},{
+					title: "Secondary",
+					value: "Secondary (%)",
+					colour: "Secondary",
+					tooltip: "Secondary Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 100,
+						grid: {
+							"stroke-dasharray": [6,2],
+							"stroke-width": 1
+						},
+						ticks: [{
+							value: 0,
+							label: "0"
+						},{
+							value: 20,
+							label: "20%"
+						},{
+							value: 40,
+							label: "40%"
+						},{
+							value: 60,
+							label: "60%"
+						},{
+							value: 80,
+							label: "80%"
+						},{
+							value: 100,
+							label: "100%"
+						}]
+					},
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
+					}
+				}
+			}
+		}) | safe
+	}}
+</li>
+</ul>
+
+
 
 	{{
 		comp.oi.dashboard({
