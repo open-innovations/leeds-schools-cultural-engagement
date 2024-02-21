@@ -4,8 +4,8 @@ visualisations:
   map:
     geojson:
       key: "URN"
-      data: viz.school-map
-    data: viz.schools
+      data: viz.schools.school-map
+    data: viz.schools.schools
     columns:
       - name: "Tooltip label"
         template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}</p>"
@@ -30,8 +30,8 @@ visualisations:
   fsm:
     geojson:
       key: "URN"
-      data: viz.school-map
-    data: viz.schools
+      data: viz.schools.school-map
+    data: viz.schools.schools
     columns:
       - name: "Tooltip label"
         template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%<br>Number of creative subjects entered: {{ total_creative_subject_entered }}"
@@ -65,7 +65,7 @@ visualisations:
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.school-data-by-type",
+			data: "viz.schools.school-data-by-type",
 			title: "Type",
 			value: "Number",
 			width: "30%",
@@ -108,7 +108,7 @@ visualisations:
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.school-overview-headlines",
+			data: "viz.schools.school-overview-headlines",
 			title: "Headlines",
 			value: "Percent",
 			width: "30%",
@@ -140,7 +140,7 @@ visualisations:
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.school-data-artsmark",
+			data: "viz.schools.school-data-artsmark",
 			columns: [{
 				name: "Working towards Tooltip",
 				template: "{{ type }}\nWorking towards: {{ working_towards_percent | toFixed(1) }}%"
@@ -195,7 +195,7 @@ visualisations:
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.school-data-artsaward",
+			data: "viz.schools.school-data-artsaward",
 			columns: [{
 				name: "Tooltip",
 				template: "{{ type }}\nArts Award: {{ Percentage of schools of this type signed up for Arts Award | toFixed(1) }}%"
@@ -236,7 +236,7 @@ visualisations:
 {{
 	comp.oi.chart.scatter({
 		config: {
-			data: "viz.school-data-creative-entries",
+			data: "viz.schools.school-data-creative-entries",
 			height: 500,
 			width: 950,
 			columns: [{
@@ -274,7 +274,7 @@ visualisations:
 {{
 	comp.oi.chart.scatter({
 		config: {
-			data: "viz.school-data-creative-entries",
+			data: "viz.schools.school-data-creative-entries",
 			height: 500,
 			width: 950,
 			columns: [{
