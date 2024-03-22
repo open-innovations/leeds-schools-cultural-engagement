@@ -5,8 +5,8 @@ visualisations:
   map:
     geojson:
       key: "URN"
-      data: viz.organisations-map
-    data: viz.orgs
+      data: viz.organisations.organisations-map
+    data: viz.organisations.orgs
     columns:
       - name: "Tooltip label"
         template: "<h3>{{ Name }}</h3><p>Funded by {{ Funding }}</br>Type of engagement: {{ Engagement }} </br>Website: <a href='{{ Website }}' target='_blank'>{{ Website }}</a></br>Address: <br/> {{ Address }}<br/>{{ Postcode }}<br/>"
@@ -40,7 +40,7 @@ visualisations:
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.organisation-by-funding",
+			data: "viz.organisations.organisation-by-funding",
 			title: "Funding",
 			value: "Number",
 			width: "20%",

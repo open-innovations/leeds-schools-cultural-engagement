@@ -1,0 +1,39 @@
+---
+title: Data Catalogue
+---
+
+<p>
+    This is a placeholder for a page to catalogue data used to build this data microsite. Data has been processed from
+    a number of open sources and stored in the <a href="https://github.com/open-innovations/leeds-schools-cultural-engagement">Leeds Cultural Engagement Github Repository</a>.
+</p>
+
+<h2>Datasets</h2>
+
+<p>
+    Download links will be added below for each of the open datasets used to power this site.
+</p>
+
+{% comp "grid.autogrid", { columns: 3 } %}
+
+  {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#440d54"
+  } %}
+    <p>Survey Data</p>
+  {% endcomp %}
+
+    {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#20a387"
+  } %}
+    <p>Schools Data</p>
+  {% endcomp %}
+
+    {% comp "grid.block.impact", {
+    fg: "white",
+    bg: "#277d8e"
+  } %}
+    <p>Cultural Organisations</p>
+  {% endcomp %}
+
+  {% endcomp %}

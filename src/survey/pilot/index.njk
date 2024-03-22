@@ -1,5 +1,5 @@
 ---
-title: Survey summary
+title: Survey Responses Academic Year 2021/22
 ---
 
 {% comp 'figure', { min_width: "100%" } %}
@@ -12,7 +12,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.headline-stats",
+			data: "viz.survey.headline-stats",
 			title: "Headlines",
 			value: "Percent",
 			note: "Note",
@@ -50,9 +50,7 @@ title: Survey summary
 {% endcomp %}
 {% endcomp %}
 
-<h2 id="Responses">Responses</h2>
-
-<h3>Overview of Respondents</h3>
+<h2 id="Reponses">Overview of Respondents</h2>
 
 <p>The responding schools can be described in a number of ways, as visualised below.  Based on this sample size, it is not possible to say that the findings represent the whole population of schools in Leeds. This information is therefore presented to indicate the range of schools who did respond.</p>
 
@@ -61,7 +59,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey-response-rate-phase",
+			data: "viz.survey.survey-response-rate-phase",
 			title: "School phase",
 			value: "Percent",
 			width: "30%",
@@ -83,139 +81,153 @@ title: Survey summary
 }}
 
 
-<h3>Responses by school type</h3>
+	
+<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
 
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-by-type",
-			height: 300,
-			columns: [{
-				name: "Tooltip",
-				template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
-			}],
-			category: "School type",
-			series: [{
-				title: "Percentage of this type of school responding",
-				value: "Percentage of this type of school responding",
-				tooltip: "Tooltip",
-				colour: "School type"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 40,
-					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-				},
-				y: {
-					grid: {"stroke-width": 0.5}
+	<li>
+		<h3>Responses by school type</h3>
+		{{
+			comp.oi.chart.bar({
+				config: {
+					data: "viz.survey.survey-response-by-type",
+					height: 250,
+					width: 600,
+					columns: [{
+						name: "Tooltip",
+						template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
+					}],
+					category: "School type",
+					series: [{
+						title: "Percentage of this type of school responding",
+						value: "Percentage of this type of school responding",
+						tooltip: "Tooltip",
+						colour: "School type"
+					}],
+					gap: 0.1,
+					axis: {
+						x: {
+							min: 0,
+							max: 40,
+							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+						},
+						y: {
+							grid: {"stroke-width": 0.5}
+						}
+					}
 				}
-			}
-		}
-	}) | safe
-}}
+			}) | safe
+		}}
+	</li>
 
-<h3>By school size</h3>
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-by-size",
-			height: 200,
-			columns: [{
-				name: "Tooltip",
-				template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
-			}],
-			category: "School size",
-			series: [{
-				title: "Percentage of this school size responding",
-				value: "Percentage of this school size responding",
-				tooltip: "Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 40,
-					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-				},
-				y: {
-					grid: {"stroke-width": 0.5}
+	<li>
+		<h3>By school size</h3>
+		{{
+			comp.oi.chart.bar({
+				config: {
+					data: "viz.survey.survey-response-by-size",
+					height: 250,
+					width: 600,
+					columns: [{
+						name: "Tooltip",
+						template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
+					}],
+					category: "School size",
+					series: [{
+						title: "Percentage of this school size responding",
+						value: "Percentage of this school size responding",
+						tooltip: "Tooltip"
+					}],
+					gap: 0.1,
+					axis: {
+						x: {
+							min: 0,
+							max: 40,
+							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+						},
+						y: {
+							grid: {"stroke-width": 0.5}
+						}
+					}
 				}
-			}
-		}
-	}) | safe
-}}
+			}) | safe
+		}}
+	</li>
 
-<h3>By Artsmark</h3>
-<p>The percentage of survey respondents who have been awarded, or who are working towards, an <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p>
+	<li>
+		<h3>By Artsmark</h3>
+		<p>The percentage of survey respondents who have been awarded, or who are working towards, an <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p>
 
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-by-artsmark",
-			height: 200,
-			columns: [{
-				name: "Tooltip",
-				template: "{{ ArtsMark }}: {{ Percentage | toFixed(1) }}% responded"
-			}],
-			category: "ArtsMark",
-			series: [{
-				title: "Percentage",
-				value: "Percentage",
-				tooltip: "Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 60,
-					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-				},
-				y: {
-					grid: {"stroke-width": 0.5}
+		{{
+			comp.oi.chart.bar({
+				config: {
+					data: "viz.survey.survey-response-by-artsmark",
+					height: 250,
+					width: 600,
+					columns: [{
+						name: "Tooltip",
+						template: "{{ ArtsMark }}: {{ Percentage | toFixed(1) }}% responded"
+					}],
+					category: "ArtsMark",
+					series: [{
+						title: "Percentage",
+						value: "Percentage",
+						tooltip: "Tooltip"
+					}],
+					gap: 0.1,
+					axis: {
+						x: {
+							min: 0,
+							max: 60,
+							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+						},
+						y: {
+							grid: {"stroke-width": 0.5}
+						}
+					}
 				}
-			}
-		}
-	}) | safe
-}}
+			}) | safe
+		}}
+	</li>
 
-<h3>By Arts Award Centres</h3>
-<p>The percentage of survey respondents who are registered as an <a href="https://www.artsaward.org.uk/site/">Arts Award centre</a>.</p>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-response-by-artsaward",
-			height: 200,
-			columns: [{
-				name: "Tooltip",
-				template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
-			}],
-			category: "Arts Award Centres",
-			series: [{
-				title: "Percentage",
-				value: "Percentage",
-				tooltip: "Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 40,
-					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-				},
-				y: {
-					grid: {"stroke-width": 0.5}
+	<li>
+		<h3>By Arts Award Centres</h3>
+		<p>The percentage of survey respondents who are registered as an <a href="https://www.artsaward.org.uk/site/">Arts Award centre</a>.</p>
+		{{
+			comp.oi.chart.bar({
+				config: {
+					data: "viz.survey.survey-response-by-artsaward",
+					height: 250,
+					width: 600,
+					columns: [{
+						name: "Tooltip",
+						template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
+					}],
+					category: "Arts Award Centres",
+					series: [{
+						title: "Percentage",
+						value: "Percentage",
+						tooltip: "Tooltip"
+					}],
+					gap: 0.1,
+					axis: {
+						x: {
+							min: 0,
+							max: 40,
+							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+						},
+						y: {
+							grid: {"stroke-width": 0.5}
+						}
+					}
 				}
-			}
-		}
-	}) | safe
-}}
+			}) | safe
+		}}
+	</li>
+</ul>
 
 <h2 id="Arts">Arts Provision in Schools</h2> 
 
@@ -227,7 +239,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.arts-commitment-headlines",
+			data: "viz.survey.arts-commitment-headlines",
 			title: "Headlines",
 			value: "Percent",
 			note: "Note",
@@ -251,160 +263,170 @@ title: Survey summary
 
 <p>Primary schools were three times more likely to report that they had a particular commitment. However, when asked about their school's arts curriculum, secondary schools were more likely to consider their school's offering as 'Excellent'.</p>
 
-<h3>How would you rate your school's arts curriculum offer?</h3>
-
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-rate-school-arts-offer",
-			height: 300,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Rating",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
-					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
-					}
-				}
-			}
-		}
-	}) | safe
-}}
-
 <p>Secondary schools were also more likely to report their extra-curricular offering as 'Good'.</p>
 
-<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
 
-{{
-	comp.oi.chart.bar({
-		config: {
-			data: "viz.survey-rate-school-extra-curricula-offer",
-			height: 300,
-			columns: [{
-				name: "Overall Tooltip",
-				template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
-			},{
-				name: "Primary Tooltip",
-				template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
-			},{
-				name: "Secondary Tooltip",
-				template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
-			}],
-			legend: { show: true, position: "top" },
-			category: "Rating",
-			series: [{
-				title: "Overall",
-				value: "Overall (%)",
-				colour: "Overall",
-				tooltip: "Overall Tooltip"
-			},{
-				title: "Primary",
-				value: "Primary (%)",
-				colour: "Primary",
-				tooltip: "Primary Tooltip"
-			},{
-				title: "Secondary",
-				value: "Secondary (%)",
-				colour: "Secondary",
-				tooltip: "Secondary Tooltip"
-			}],
-			gap: 0.1,
-			axis: {
-				x: {
-					min: 0,
-					max: 100,
-					grid: {
-						"stroke-dasharray": [6,2],
-						"stroke-width": 1
+<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
+
+<li>
+	<h3>How would you rate your school's arts curriculum offer?</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.survey-rate-school-arts-offer",
+				height: 400,
+				width: 700,
+				columns: [{
+					name: "Overall Tooltip",
+					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+				},{
+					name: "Primary Tooltip",
+					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+				},{
+					name: "Secondary Tooltip",
+					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+				}],
+				legend: { show: true, position: "top" },
+				category: "Rating",
+				series: [{
+					title: "Overall",
+					value: "Overall (%)",
+					colour: "Overall",
+					tooltip: "Overall Tooltip"
+				},{
+					title: "Primary",
+					value: "Primary (%)",
+					colour: "Primary",
+					tooltip: "Primary Tooltip"
+				},{
+					title: "Secondary",
+					value: "Secondary (%)",
+					colour: "Secondary",
+					tooltip: "Secondary Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 100,
+						grid: {
+							"stroke-dasharray": [6,2],
+							"stroke-width": 1
+						},
+						ticks: [{
+							value: 0,
+							label: "0"
+						},{
+							value: 20,
+							label: "20%"
+						},{
+							value: 40,
+							label: "40%"
+						},{
+							value: 60,
+							label: "60%"
+						},{
+							value: 80,
+							label: "80%"
+						},{
+							value: 100,
+							label: "100%"
+						}]
 					},
-					ticks: [{
-						value: 0,
-						label: "0"
-					},{
-						value: 20,
-						label: "20%"
-					},{
-						value: 40,
-						label: "40%"
-					},{
-						value: 60,
-						label: "60%"
-					},{
-						value: 80,
-						label: "80%"
-					},{
-						value: 100,
-						label: "100%"
-					}]
-				},
-				y: {
-					grid: {
-						"stroke-width": 0.5
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
 					}
 				}
 			}
-		}
-	}) | safe
-}}
+		}) | safe
+	}}
+</li>
+
+<li>
+	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.survey-rate-school-extra-curricula-offer",
+				height: 400,
+				width: 700,
+				columns: [{
+					name: "Overall Tooltip",
+					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+				},{
+					name: "Primary Tooltip",
+					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+				},{
+					name: "Secondary Tooltip",
+					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+				}],
+				legend: { show: true, position: "top" },
+				category: "Rating",
+				series: [{
+					title: "Overall",
+					value: "Overall (%)",
+					colour: "Overall",
+					tooltip: "Overall Tooltip"
+				},{
+					title: "Primary",
+					value: "Primary (%)",
+					colour: "Primary",
+					tooltip: "Primary Tooltip"
+				},{
+					title: "Secondary",
+					value: "Secondary (%)",
+					colour: "Secondary",
+					tooltip: "Secondary Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 100,
+						grid: {
+							"stroke-dasharray": [6,2],
+							"stroke-width": 1
+						},
+						ticks: [{
+							value: 0,
+							label: "0"
+						},{
+							value: 20,
+							label: "20%"
+						},{
+							value: 40,
+							label: "40%"
+						},{
+							value: 60,
+							label: "60%"
+						},{
+							value: 80,
+							label: "80%"
+						},{
+							value: 100,
+							label: "100%"
+						}]
+					},
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
+					}
+				}
+			}
+		}) | safe
+	}}
+</li>
+</ul>
+
+
 
 	{{
 		comp.oi.dashboard({
 			config: {
-				data: "viz.sign-posting-headlines",
+				data: "viz.survey.sign-posting-headlines",
 				title: "Headlines",
 				value: "Percent",
 				note: "Note",
@@ -433,7 +455,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.external-practitioners-headlines",
+			data: "viz.survey.external-practitioners-headlines",
 			title: "Headlines",
 			value: "Percent",
 			note: "Note",
@@ -508,7 +530,7 @@ title: Survey summary
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey-response-subject-area-orgs-or-practitioners-invited-to-perform",
+			data: "viz.survey.survey-response-subject-area-orgs-or-practitioners-invited-to-perform",
 			height: 600,
 			columns: [{
 				name: "Overall Tooltip",
@@ -598,7 +620,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.local-partnerships-headlines",
+			data: "viz.survey.local-partnerships-headlines",
 			title: "Headlines",
 			value: "Percent",
 			note: "Note",
@@ -636,7 +658,7 @@ title: Survey summary
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey-response-does-school-have",
+			data: "viz.survey.survey-response-does-school-have",
 			height: 600,
 			columns: [{
 				name: "Overall Tooltip",
@@ -734,7 +756,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.funding-source-headlines",
+			data: "viz.survey.funding-source-headlines",
 			title: "Headlines",
 			value: "Percent",
 			note: "Note",
@@ -758,7 +780,7 @@ title: Survey summary
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.funding-source-headlines",
+			data: "viz.survey.funding-source-headlines",
 			title: "Headlines",
 			value: "Percent",
 			note: "Note",
