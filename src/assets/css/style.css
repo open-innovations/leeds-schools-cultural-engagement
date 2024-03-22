@@ -71,9 +71,9 @@ footer { padding: 0; }
 .oi-viz .tooltip .inner > *:last-child { margin-bottom: 0; }
 
 .l23-green { background: #b8de29; color: black!important; }
-.l23-light-blue { background: #277d8e; color: white!important; }
+.l23-light-blue { background: #166178; color: white!important; }
 .l23-purple { background: #370b45; color: white!important; }
-.l23-light-purple { background: #691583; color: white!important; }
+.l23-light-purple { background: #b463cc; color: white!important; }
 .l23-head { background: var(--background-colour); color: black!important; }
 
 .organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); column-gap: 2em; row-gap: 0.5em; }
