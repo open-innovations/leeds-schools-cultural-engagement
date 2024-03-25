@@ -8,9 +8,13 @@ title: Survey Responses Academic Year 2022/23
 
 <p>Key findings from the second phase of survey responses are presented on this page, based on responses from 53 of the 293 schools included within the study, seeing an increased response rate after the pilot study.</p>
 
-<p>The headlines below represent the breakdown of survey respondents by school type.</p>
 
 {% endcomp %}
+
+<h2 id="Reponses">Overview of Respondents</h2>
+
+<p>The headlines below represent the breakdown of survey respondents by school type. Of the 53 schools used in this analysis:</p>
+
 
 {{
 	comp.oi.dashboard({
@@ -19,6 +23,7 @@ title: Survey Responses Academic Year 2022/23
 			title: "3_school_type",
 			value: "percent_respondents",
 			width: "20%",
+            note: 'notes',
 			units: {
 				postfix: "unit"
 			},
@@ -38,3 +43,232 @@ title: Survey Responses Academic Year 2022/23
 		}
 	}) | safe
 }}
+
+
+{# <ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;"> #}
+
+		<h3>Responses by school type</h3>
+            {{
+                comp.oi.chart.bar({
+                    config: {
+                        data: "viz.survey.phase_2.by_school_type",
+                        height: 250,
+                        width: 600,
+                        columns: [{
+                            name: "Tooltip",
+                            template: "{{ 3_school_type }}: {{ percent_respondents | toFixed(1) }}% responded"
+                        }],
+                        category: "3_school_type",
+                        series: [{
+                            title: "Percentage of this type of school responding",
+                            value: "percent_respondents",
+                            tooltip: "Tooltip",
+                            colour: "3_school_type"
+                        }],
+                        gap: 0.1,
+                        axis: {
+                            x: {
+                                min: 0,
+                                max: 100,
+                                grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+                                ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+                            },
+                            y: {
+                                grid: {"stroke-width": 0.5}
+                            }
+                        }
+                    }
+                }) | safe
+            }}
+
+<h2 id="Arts">Arts Provision in Schools</h2> 
+
+<h3>Commitment to the arts</h3>
+
+<p>The headlines below describe the responses given by staff when asked about their school's commitment to pupil entitlement in the arts. For example, every pupil learns a musical instrument, or has the opportunity to go on trips each year. 
+
+<p>These figures refer to the percentage of total responses <strong>from each school type</strong>, who said their school has a commitment to pupil entitlement in the arts.</p>
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.survey.phase_2.arts_commitment_headlines",
+			title: "3_school_type",
+			value: "percent_responded_yes",
+			width: "20%",
+			note: "notes",
+			units: {
+				postfix: "unit"
+			},
+			panels: [{
+				name: "Primary",
+				colour: "Primary"
+			},{
+				name: "Secondary",
+				colour: "Secondary"
+			},{
+				name: "Special School",
+				colour: "Special School"
+            },{
+				name: "Through School",
+				colour: "Through School"
+			}]
+		}
+	}) | safe
+}}
+
+
+<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
+
+<li>
+	<h3>How would you rate your school's arts curriculum offer?</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.phase_2.overall_rating_arts_offer",
+				height: 400,
+				width: 700,
+				columns: [{
+					name: "Overall Tooltip",
+					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+				},{
+					name: "Primary Tooltip",
+					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+				},{
+					name: "Secondary Tooltip",
+					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+				}],
+				legend: { show: true, position: "top" },
+				category: "Rating",
+				series: [{
+					title: "Overall",
+					value: "Overall (%)",
+					colour: "Overall",
+					tooltip: "Overall Tooltip"
+				},{
+					title: "Primary",
+					value: "Primary (%)",
+					colour: "Primary",
+					tooltip: "Primary Tooltip"
+				},{
+					title: "Secondary",
+					value: "Secondary (%)",
+					colour: "Secondary",
+					tooltip: "Secondary Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 100,
+						grid: {
+							"stroke-dasharray": [6,2],
+							"stroke-width": 1
+						},
+						ticks: [{
+							value: 0,
+							label: "0"
+						},{
+							value: 20,
+							label: "20%"
+						},{
+							value: 40,
+							label: "40%"
+						},{
+							value: 60,
+							label: "60%"
+						},{
+							value: 80,
+							label: "80%"
+						},{
+							value: 100,
+							label: "100%"
+						}]
+					},
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
+					}
+				}
+			}
+		}) | safe
+	}}
+</li>
+
+{# <li>
+	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.phase-2.rating_extra_curricular_arts_enrichment_offering",
+				height: 400,
+				width: 700,
+				columns: [{
+					name: "Overall Tooltip",
+					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+				},{
+					name: "Primary Tooltip",
+					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+				},{
+					name: "Secondary Tooltip",
+					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+				}],
+				legend: { show: true, position: "top" },
+				category: "Rating",
+				series: [{
+					title: "Overall",
+					value: "Overall (%)",
+					colour: "Overall",
+					tooltip: "Overall Tooltip"
+				},{
+					title: "Primary",
+					value: "Primary (%)",
+					colour: "Primary",
+					tooltip: "Primary Tooltip"
+				},{
+					title: "Secondary",
+					value: "Secondary (%)",
+					colour: "Secondary",
+					tooltip: "Secondary Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 100,
+						grid: {
+							"stroke-dasharray": [6,2],
+							"stroke-width": 1
+						},
+						ticks: [{
+							value: 0,
+							label: "0"
+						},{
+							value: 20,
+							label: "20%"
+						},{
+							value: 40,
+							label: "40%"
+						},{
+							value: 60,
+							label: "60%"
+						},{
+							value: 80,
+							label: "80%"
+						},{
+							value: 100,
+							label: "100%"
+						}]
+					},
+					y: {
+						grid: {
+							"stroke-width": 0.5
+						}
+					}
+				}
+			}
+		}) | safe
+	}}
+</li>
+</ul> #}
