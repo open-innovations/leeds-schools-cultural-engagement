@@ -3,7 +3,38 @@ title: Survey Responses Academic Year 2022/23
 ---
 
 {% comp 'figure', { min_width: "100%" } %}
-<p>This page is where survey responses for Phase 2 will be visualised.</p>
+
+<p>A pilot survey was sent to members of the senior leadership team at every school in Leeds in 2023, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. The pilot intended to gauge response and validate the approach and methodology for this second phase of work.</p>
+
+<p>Key findings from the second phase of survey responses are presented on this page, based on responses from 53 of the 293 schools included within the study, seeing an increased response rate after the pilot study.</p>
+
+<p>The headlines below represent the breakdown of survey respondents by school type.</p>
+
 {% endcomp %}
 
-
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.survey.phase_2.by_school_type",
+			title: "3_school_type",
+			value: "percent_respondents",
+			width: "20%",
+			units: {
+				postfix: "unit"
+			},
+			panels: [{
+				name: "Primary",
+				colour: "Primary"
+			},{
+				name: "Secondary",
+				colour: "Secondary"
+			},{
+				name: "Special School",
+				colour: "Special"
+			},{
+				name: "Through School",
+				colour: "Through"
+			}]
+		}
+	}) | safe
+}}
