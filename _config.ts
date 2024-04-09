@@ -32,7 +32,7 @@ site.use(oiCharts({
 		"names": {
 			"Academy & Free Schools": "#440d54",
 			"Academy & Free": "#440d54",
-			"Community": "#404788",
+			"Community": "#370496",
 			"Foundation": "#277d8e",
 			"Independent": "#29af7f",
 			"Special Schools": "#b8de29",
@@ -75,7 +75,6 @@ site.use(oiCharts({
 			"Heritage": "#2d708e",
 			"Gaming": "#39568c",
 			"Library": "#453781",
-			"Community": "#481567",
 			"Leeds City Council": "#440d54",
 			"Neither":  "#404788",
 			"Arts Council England": "#277d8e",
