@@ -52,10 +52,19 @@ if __name__ == '__main__':
     merged = (
         pd.merge(subject_entries_2021_2023, subject_entries_2017_2018, left_on='JCQ Code', right_on='JCQ_Code')
         .drop(columns={'JCQ Code', 'JCQ_Code', 'JCQ Title'})
-        .rename(columns={'JCQ_Title': 'subject', 'Total 2023': 'total_2023', 'Total 2022': '2022', 'Total_2021': '2021', 'Total_2020': '2020', 'Total_2019': '2019', 'Total_2018': '2018', 'Total_2017': '2017'})
+        .rename(columns={'JCQ_Title': 'subject', 'Total 2023': '2023', 'Total 2022': '2022', 'Total_2021': '2021', 'Total_2020': '2020', 'Total_2019': '2019', 'Total_2018': '2018', 'Total_2017': '2017'})
     ).set_index('subject')
 
-    merged.astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_all.csv'))
-    merged.iloc[[0]].astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_arts.csv'))
-
+    # Prepare for visualisation
+    merged = (
+        merged.T
+        .reset_index()
+        .rename(columns={'index': 'year'})
+        .astype(int)
+    ).set_index('year')
     
+    merged.to_csv(os.path.join(OUT_DIR, 'subject_entries_all.csv'))
+    merged['Art & design subjects'].astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_arts.csv'))
+
+
+        
