@@ -55,6 +55,7 @@ if __name__ == '__main__':
         .rename(columns={'JCQ_Title': 'subject', 'Total 2023': 'total_2023', 'Total 2022': '2022', 'Total_2021': '2021', 'Total_2020': '2020', 'Total_2019': '2019', 'Total_2018': '2018', 'Total_2017': '2017'})
     ).set_index('subject')
 
-    merged = merged.astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries.csv'))
+    merged.astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_all.csv'))
+    merged.iloc[[0]].astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_arts.csv'))
 
     
