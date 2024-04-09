@@ -28,7 +28,7 @@ site.process([".html"], autoDependency);
 // Import lume charts
 site.use(oiCharts({
 	"colour": {
-		"series": [ '#95d840','#440d54','#fde725','#404788','#29af7f','#277d8e'],
+		"series": [ '#95d840','#440d54','#fde725','#404788','#29af7f','#277d8e', '#370496'],
 		"names": {
 			"Academy & Free Schools": "#440d54",
 			"Academy & Free": "#440d54",
