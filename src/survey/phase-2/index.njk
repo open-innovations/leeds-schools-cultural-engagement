@@ -8,8 +8,52 @@ title: Survey Responses Academic Year 2022/23
 
 <p>Key findings from the second phase of survey responses are presented on this page, based on responses from 53 of the 293 schools included within the study, seeing an increased response rate after the pilot study.</p>
 
-
 {% endcomp %}
+
+<h2>Headlines</h2>
+
+<p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.survey.phase_2.headlines",
+			value: "Value",
+			title: 'Title',
+			width: "20%",
+            note: 'Note',
+			units: {
+				postfix: "Suffix"
+			},
+			panels: [{
+				name: "Arts curriculum",
+				colour: "Primary"
+			},{
+				name: "Arts entitlement",
+				colour: "Secondary"
+			},{
+				name: "Arts funding",
+				colour: "Special"
+			},{
+				name: "Signposting",
+				colour: "Through"
+			},{
+				name: "Extra-curricular offering",
+				colour: "Secondary"
+			},{
+				name: "Arts award",
+				colour: "Through"
+			},{
+				name: "External practitioners",
+				colour: "Primary"
+			},{
+				name: "Local partnerships",
+				colour: "Special"
+			}]
+		}
+	}) | safe
+}}
+
 
 <h2 id="Reponses">Overview of Respondents</h2>
 
@@ -92,13 +136,12 @@ title: Survey Responses Academic Year 2022/23
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.arts_commitment_headlines",
-			title: "3_school_type",
-			value: "percent_responded_yes",
+			data: "viz.survey.phase_2.06_pupil_arts_entitlement",
+			title: "School Type",
+			value: "Yes",
 			width: "20%",
-			note: "notes",
 			units: {
-				postfix: "unit"
+				postfix: "suffix"
 			},
 			panels: [{
 				name: "Primary",
@@ -118,7 +161,7 @@ title: Survey Responses Academic Year 2022/23
 }}
 
 
-<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
+{# <ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
 
 <li>
 	<h3>How would you rate your school's arts curriculum offer?</h3>
@@ -194,7 +237,7 @@ title: Survey Responses Academic Year 2022/23
 			}
 		}) | safe
 	}}
-</li>
+</li> #}
 
 {# <li>
 	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
