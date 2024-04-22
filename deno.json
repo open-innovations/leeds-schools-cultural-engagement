@@ -3,6 +3,8 @@
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
     "build": "deno task lume",
-    "serve": "deno task lume -s"
+    "serve": "deno task lume -s",
+    "build:prod": "deno task build --location https://culturallearningleeds.com",
+    "deploy": "deno task build:prod && rsync --recursive --verbose --delete --rsh=\"sshpass -e ssh -o StrictHostKeyChecking=no -l $SSHUSER\" _site/ $SSHHOST:httpdocs/"
   }
 }
