@@ -116,3 +116,14 @@ SURVEY_QUESTION_MAPPER = {
 def load_raw_survey_data():
     data = pd.read_excel(SURVEY_PATH).rename(columns=SURVEY_QUESTION_MAPPER).drop(columns=['03a_other']).set_index('unique_response_number')
     return data
+
+def count_by_school_type(data):
+    school_counts = data.groupby('03_school_type').size().reset_index(name='Count')
+    return school_counts
+
+def calculate_percentage(row, counts_by_school_type):
+    school_type = row['School Type']
+    count = row['Count']
+    total_count = counts_by_school_type.loc[counts_by_school_type['03_school_type'] == school_type, 'Count'].iloc[0]
+    result = ((count/total_count)*100).round(0).astype(int)
+    return result
