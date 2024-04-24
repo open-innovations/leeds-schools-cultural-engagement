@@ -14,66 +14,6 @@ title: Cultural Engagement Impact Dashboard
     <p>Survey Data</p>
   {% endcomp %}
 
-	{{ comp.oi.chart.line({
-	 "config": {
-		"padding": {"right": 16},
-		"width": 1120,
-		"height": 600,
-	  "data": "data.dashboard.subject_entries_all",
-		"legend": {
-		  "show": true,
-		  "position": "top"
-		},
-		"axis": {
-		  "x": {
-			 "title": {
-				"label": "Year"
-			 },
-			 "grid": { "show": true },
-			"tick": {
-				"labels": "quarter_axis_label",
-				"align": "end",
-				"options": {"font-size":14}
-			}
-		  },
-		  "y": { "min": 0, "max": 80, tick: { spacing: 10 }, grid: { show: true }, "title": { "label": "Rate (%)" } }
-		},
-		 "columns": [
-			{
-				"name": "unemployment_rate_label",
-				"template": "{{quarter_label}}: {{age_16_to_24_unemployment_rate_sa | toFixed(1)}}%"
-			},
-			{
-				"name": "economically_inactive_rate_label",
-				"template": "{{quarter_label}}: {{age_16_to_24_economic_inactivity_rate_sa | toFixed(1)}}%"
-			},
-			{
-				"name": "employment_rate_label",
-				"template": "{{quarter_label}}: {{age_16_to_24_employment_rate_sa | toFixed(1)}}%"
-			}
-		],
-		"series": [
-			{
-				"title": "Overall unemployment",
-				"x": "quarter_index",
-				"y": "age_16_to_24_unemployment_rate_sa",
-				"tooltip": "unemployment_rate_label"
-			},
-			{
-				"title": "Economically inactive",
-				"x": "quarter_index",
-				"y": "age_16_to_24_economic_inactivity_rate_sa",
-				"tooltip": "economically_inactive_rate_label"
-			},
-			{
-				"title": "In employment",
-				"x": "quarter_index",
-				"y": "age_16_to_24_employment_rate_sa",
-				"tooltip": "employment_rate_label"
-			}
-		]
-	}
-	 }) | safe }}
-  {% endcomp %}
+{% endcomp %}
 
-  {% endcomp %}
+
