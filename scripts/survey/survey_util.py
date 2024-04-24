@@ -1,4 +1,6 @@
 import pandas as pd
+from fuzzywuzzy import fuzz
+from itertools import combinations
 
 SURVEY_PATH = ('../../data/survey/raw/Results-for-creative-arts-2024_no-personal-data.xlsx')
 
@@ -127,3 +129,15 @@ def calculate_percentage(row, counts_by_school_type):
     total_count = counts_by_school_type.loc[counts_by_school_type['03_school_type'] == school_type, 'Count'].iloc[0]
     result = ((count/total_count)*100).round(0).astype(int)
     return result
+
+def drop_duplicates(data):
+    # Manually select duplicate schools for now 
+    duplicates = [
+        '1132118-1132100-122057142',
+        '1132118-1132100-122043869',
+        '1132118-1132100-122294596',
+        '1132118-1132100-121181859'
+    ] 
+    deduped = data.drop(duplicates)
+
+    return deduped

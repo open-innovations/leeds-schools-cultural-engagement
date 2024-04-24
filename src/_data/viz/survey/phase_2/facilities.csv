@@ -1,23 +1,8 @@
-03_school_type,13_arts_facilities,Count,Total,Percent
-Primary,A music studio,1,50,2
-Primary,A theatre/hall space with production facilities,17,50,34
-Primary,Art studios,3,50,6
-Primary,Music lesson/practice rooms,14,50,28
-Primary,No arts/creative facilities,12,50,24
-Primary,Other arts/creative facilities,3,50,6
-Secondary,A drama studio,6,31,19
-Secondary,A music studio,5,31,16
-Secondary,A theatre/hall space with production facilities,6,31,19
-Secondary,Art studios,6,31,19
-Secondary,Music lesson/practice rooms,6,31,19
-Secondary,Other arts/creative facilities,2,31,6
-Special School,A theatre/hall space with production facilities,2,10,20
-Special School,Art studios,1,10,10
-Special School,Music lesson/practice rooms,2,10,20
-Special School,No arts/creative facilities,5,10,50
-Through School,A drama studio,2,10,20
-Through School,A music studio,2,10,20
-Through School,A theatre/hall space with production facilities,2,10,20
-Through School,Art studios,1,10,10
-Through School,Music lesson/practice rooms,2,10,20
-Through School,Other arts/creative facilities,1,10,10
+13_arts_facilities,Primary,Secondary,Special School,Through School
+A drama studio,0,19,0,20
+A music studio,2,16,0,20
+A theatre/hall space with production facilities,30,19,11,20
+Art studios,7,19,11,10
+Music lesson/practice rooms,28,19,22,20
+No arts/creative facilities,26,0,56,0
+Other arts/creative facilities,7,6,0,10

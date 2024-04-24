@@ -10,9 +10,15 @@ title: Survey Responses Academic Year 2022/23
 
 {% endcomp %}
 
+{% comp 'figure' %}
+{% comp 'contents' %}
+{% endcomp %}
+{% endcomp %}
+
+
 <h2>Headlines</h2>
 
-<p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
+<p>The headline statistics below refer to the headline findings from all survey responses provided.</p>
 
 {{
 	comp.oi.dashboard({
@@ -54,22 +60,16 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-{% comp 'figure', { min_width: "100%" } %}
-{% comp 'contents' %}
-{% endcomp %}
-{% endcomp %}
-
-
 <h2 id="Reponses">Overview of Respondents</h2>
 
-<p>The headlines below represent the breakdown of survey respondents by school type. Of the 53 schools used in this analysis:</p>
+<p>The headlines below represent the breakdown of survey respondents by school type. Of the 53 total responses from 49 schools:</p>
 
 
 {{
 	comp.oi.dashboard({
 		config: {
 			data: "viz.survey.phase_2.by_school_type",
-			title: "3_school_type",
+			title: "03_school_type",
 			value: "percent_respondents",
 			width: "20%",
             note: 'notes',
@@ -97,6 +97,7 @@ title: Survey Responses Academic Year 2022/23
 {# <ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;"> #}
 
 		<h3>Responses by school type</h3>
+		<p>Out of the 49 schools involved in the survey:</p>
             {{
                 comp.oi.chart.bar({
                     config: {
@@ -105,14 +106,14 @@ title: Survey Responses Academic Year 2022/23
                         width: 600,
                         columns: [{
                             name: "Tooltip",
-                            template: "{{ 3_school_type }}: {{ percent_respondents | toFixed(1) }}% responded"
+                            template: "{{ 03_school_type }}: {{ percent_respondents | toFixed(1) }}% responded"
                         }],
-                        category: "3_school_type",
+                        category: "03_school_type",
                         series: [{
                             title: "Percentage of this type of school responding",
                             value: "percent_respondents",
                             tooltip: "Tooltip",
-                            colour: "3_school_type"
+                            colour: "03_school_type"
                         }],
                         gap: 0.1,
                         axis: {
@@ -136,7 +137,7 @@ title: Survey Responses Academic Year 2022/23
 
 <p>The headlines below describe the responses given by staff when asked about their school's commitment to pupil entitlement in the arts. For example, every pupil learns a musical instrument, or has the opportunity to go on trips each year. 
 
-<p>These figures refer to the percentage of total responses <strong>from each school type</strong>, who said their school has a commitment to pupil entitlement in the arts.</p>
+<p>The percentages below refer to the proportion of each school type, out of 49 unique schools counted in the survey, who said their school has a commitment to pupil entitlement in the arts.</p>
 
 {{
 	comp.oi.dashboard({
@@ -157,7 +158,7 @@ title: Survey Responses Academic Year 2022/23
 			},{
 				name: "Special School",
 				colour: "Special School"
-            },{
+			},{
 				name: "Through School",
 				colour: "Through School"
 			}]
@@ -166,14 +167,12 @@ title: Survey Responses Academic Year 2022/23
 }}
 
 
-<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
-
-<li>
 	<h3>How would you rate your school's arts curriculum offer?</h3>
+	<p>Out of the 49 schools counted in the survey:</p>
 	 {{
 		comp.oi.chart.bar({	
 			config: {
-				data: "viz.survey.phase_2.05_overall_rating_arts_offer",
+				data: "viz.survey.phase_2.overall_rating_arts_offer",
 				height: 400,
 				width: 700,
 				legend: { show: true, position: "top" },
@@ -229,14 +228,13 @@ title: Survey Responses Academic Year 2022/23
 			}
 		}) | safe
 	}}
-	</li>
 
-	<li>
 	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+	<p>Out of the 49 schools counted in the survey:</p>
 	 {{
 		comp.oi.chart.bar({	
 			config: {
-				data: "viz.survey.phase_2.14_rating_extra_curricular_arts_enrichment_offering",
+				data: "viz.survey.phase_2.rating_extra_curricular_arts_enrichment_offering",
 				height: 400,
 				width: 700,
 				legend: { show: true, position: "top" },
@@ -292,8 +290,6 @@ title: Survey Responses Academic Year 2022/23
 			}
 		}) | safe
 	}}
-</li>
-</ul> 
 
 	{{
 		comp.oi.dashboard({
@@ -346,6 +342,8 @@ title: Survey Responses Academic Year 2022/23
 }}
 
 <h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
+
+<p>Out of the 49 unique schools used in this analysis:</p>
 
 {{
 	comp.oi.chart.bar({
@@ -451,20 +449,20 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-
 <h2 id="Facilities">Facilities</h2>
+<p>Out of the 49 unique schools included in the analysis:</p>
 
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey.phase_2.arts_facilities",
+			data: "viz.survey.phase_2.facilities",
 			height: 600,
 			columns: [{
-				name: "Primary School Tooltip",
-				template: "{{ 13_arts_facilities }}<br/>Primary: {{ Primary School }}%"
+				name: "Primary Tooltip",
+				template: "{{ 13_arts_facilities }}<br/>Primary: {{ Primary }}%"
 			},{
-				name: "Secondary School Tooltip",
-				template: "{{ 13_arts_facilities }}<br/>Secondary: {{ Secondary School }}%"
+				name: "Secondary Tooltip",
+				template: "{{ 13_arts_facilities }}<br/>Secondary: {{ Secondary }}%"
 			},{
 				name: "Special School School Tooltip",
 				template: "{{ 13_arts_facilities }}<br/>Special School: {{ Special School }}%"
@@ -475,15 +473,15 @@ title: Survey Responses Academic Year 2022/23
 			legend: { show: true, position: "top" },
 			category: "13_arts_facilities",
 			series: [{
-				title: "Primary School",
-				value: "Primary School",
+				title: "Primary",
+				value: "Primary",
 				colour: "Primary",
-				tooltip: "Primary School Tooltip"
+				tooltip: "Primary Tooltip"
 			},{
-				title: "Secondary School",
-				value: "Secondary School",
+				title: "Secondary",
+				value: "Secondary",
 				colour: "Secondary",
-				tooltip: "Secondary School Tooltip"
+				tooltip: "Secondary Tooltip"
 			},{
 				title: "Special School",
 				value: "Special School",
@@ -526,4 +524,4 @@ title: Survey Responses Academic Year 2022/23
 			}
 		}
 	}) | safe
-}}
+}}  

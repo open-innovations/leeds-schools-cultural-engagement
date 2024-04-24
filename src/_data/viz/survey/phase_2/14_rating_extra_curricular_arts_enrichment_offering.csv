@@ -1,6 +1,5 @@
-Rating,Primary,Secondary,Special School,Through School,Suffix
-Excellent,13,67,0,100,%
-Good,34,17,29,0,%
-Mixed,37,17,57,0,%
-Poor,11,0,0,0,%
-Prefer not to say,5,0,14,0,%
+School Type,Excellent,Good,Mixed,Poor,Prefer not to say,suffix
+Primary,11,37,34,11,6,%
+Secondary,67,17,17,0,0,%
+Special School,0,33,67,0,0,%
+Through School,100,0,0,0,0,%
