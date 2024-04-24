@@ -28,14 +28,15 @@ site.process([".html"], autoDependency);
 // Import lume charts
 site.use(oiCharts({
 	"colour": {
-		"series": [ '#95d840','#440d54','#fde725','#404788','#29af7f','#277d8e'],
+		"series": [ '#95d840','#440d54','#fde725','#404788','#29af7f','#277d8e', '#370496'],
 		"names": {
 			"Academy & Free Schools": "#440d54",
 			"Academy & Free": "#440d54",
-			"Community": "#404788",
+			"Community": "#370496",
 			"Foundation": "#277d8e",
 			"Independent": "#29af7f",
 			"Special Schools": "#b8de29",
+			"Special School": "#b8de29",
 			"Special": "#b8de29",
 			"Voluntary": "#fde725",
 			"Other": "#bbbbbb",
@@ -45,6 +46,7 @@ site.use(oiCharts({
 			"Primary": "#440d54",
 			"Secondary": "#73d055",
 			"Through": "#238a8d",
+			"Through School": "#238a8d",
 			"16+": "#fde725",
 			"Overall": "#19bc9c",
 			"School/teachers": "#D50C52",
@@ -73,7 +75,6 @@ site.use(oiCharts({
 			"Heritage": "#2d708e",
 			"Gaming": "#39568c",
 			"Library": "#453781",
-			"Community": "#481567",
 			"Leeds City Council": "#440d54",
 			"Neither":  "#404788",
 			"Arts Council England": "#277d8e",
