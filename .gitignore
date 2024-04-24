@@ -5,3 +5,9 @@ data/survey/raw/*
 
 # I've had problems with deno.lock. It's in my bad books.
 deno.lock
+
+.env
+
+__pycache__/
+*.py[cod]
+*$py.class

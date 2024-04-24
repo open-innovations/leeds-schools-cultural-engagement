@@ -1,6 +1,4 @@
 import pandas as pd
-from fuzzywuzzy import fuzz
-from itertools import combinations
 
 SURVEY_PATH = ('../../data/survey/raw/Results-for-creative-arts-2024_no-personal-data.xlsx')
 

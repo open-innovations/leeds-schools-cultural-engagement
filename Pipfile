@@ -7,6 +7,9 @@ name = "pypi"
 pandas = "*"
 jupyter = "*"
 ipykernel = "*"
+openpyxl = "*"
+xlsxwriter = "*"
+matplotlib = "*"
 
 [dev-packages]
 
