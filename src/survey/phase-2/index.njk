@@ -2,19 +2,33 @@
 title: Survey Responses Academic Year 2022/23
 ---
 
-{% comp 'figure', { min_width: "100%" } %}
+{% comp 'frontmatter' %}
+<div>
+  <p>
+    A pilot survey was sent to members of the senior leadership team at every school in Leeds in 2023,
+    designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and
+    cultural activities. The pilot intended to gauge response and validate the approach and methodology
+    for this second phase of work.
+  </p>
 
-<p>A pilot survey was sent to members of the senior leadership team at every school in Leeds in 2023, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. The pilot intended to gauge response and validate the approach and methodology for this second phase of work.</p>
+  <p>
+    Key findings from the second phase of survey responses are presented on this page, based on responses
+    from 53 of the 293 schools included within the study, seeing an increased response rate after the pilot study.
+  </p>
+</div>
 
-<p>Key findings from the second phase of survey responses are presented on this page, based on responses from 53 of the 293 schools included within the study, seeing an increased response rate after the pilot study.</p>
-
+<div>
+  {{ comp.contents({
+    links: {
+      "#Responses": "Responses",
+      "#Arts": "Arts Provision in Schools",
+      "#Practitioners": "External Practitioners",
+      "#Facilities": "Facilities",
+      "#Funding": "Funding & Support"
+    }
+  }) | safe }}
+</div>
 {% endcomp %}
-
-{% comp 'figure' %}
-{% comp 'contents' %}
-{% endcomp %}
-{% endcomp %}
-
 
 <h2>Headlines</h2>
 
@@ -64,7 +78,6 @@ title: Survey Responses Academic Year 2022/23
 
 <p>The headlines below represent the breakdown of survey respondents by school type. Of the 53 total responses from 49 schools:</p>
 
-
 {{
 	comp.oi.dashboard({
 		config: {
@@ -93,12 +106,11 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-
 {# <ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;"> #}
 
-		<h3>Responses by school type</h3>
-		<p>Out of the 49 schools involved in the survey:</p>
-            {{
+<h3>Responses by school type</h3>
+<p>Out of the 49 schools involved in the survey:</p>
+{{
                 comp.oi.chart.bar({
                     config: {
                         data: "viz.survey.phase_2.by_school_type",
@@ -131,7 +143,7 @@ title: Survey Responses Academic Year 2022/23
                 }) | safe
             }}
 
-<h2 id="Arts">Arts Provision in Schools</h2> 
+<h2 id="Arts">Arts Provision in Schools</h2>
 
 <h3>Commitment to the arts</h3>
 
@@ -139,7 +151,7 @@ title: Survey Responses Academic Year 2022/23
 
 <p>The percentages below refer to the proportion of each school type, out of 49 unique schools counted in the survey, who said their school has a commitment to pupil entitlement in the arts.</p>
 
-{{
+  {{
 	comp.oi.dashboard({
 		config: {
 			data: "viz.survey.phase_2.06_pupil_arts_entitlement",
@@ -166,10 +178,9 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-
-	<h3>How would you rate your school's arts curriculum offer?</h3>
-	<p>Out of the 49 schools counted in the survey:</p>
-	 {{
+  <h3>How would you rate your school's arts curriculum offer?</h3>
+  <p>Out of the 49 schools counted in the survey:</p>
+  {{
 		comp.oi.chart.bar({	
 			config: {
 				data: "viz.survey.phase_2.overall_rating_arts_offer",
@@ -229,9 +240,9 @@ title: Survey Responses Academic Year 2022/23
 		}) | safe
 	}}
 
-	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
-	<p>Out of the 49 schools counted in the survey:</p>
-	 {{
+  <h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+  <p>Out of the 49 schools counted in the survey:</p>
+  {{
 		comp.oi.chart.bar({	
 			config: {
 				data: "viz.survey.phase_2.rating_extra_curricular_arts_enrichment_offering",
@@ -291,7 +302,7 @@ title: Survey Responses Academic Year 2022/23
 		}) | safe
 	}}
 
-	{{
+  {{
 		comp.oi.dashboard({
 			config: {
 				data: "viz.survey.phase_2.signposting_headlines",
@@ -313,10 +324,9 @@ title: Survey Responses Academic Year 2022/23
 		}) | safe
 	}}
 
+  <h2 id="Practitioners">External Practitioners</h2>
 
-<h2 id="Practitioners">External Practitioners</h2> 
-
-{{
+  {{
 	comp.oi.dashboard({
 		config: {
 			data: "viz.survey.phase_2.external_partnerships_headlines",
@@ -341,11 +351,11 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-<h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
+  <h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
 
-<p>Out of the 49 unique schools used in this analysis:</p>
+  <p>Out of the 49 unique schools used in this analysis:</p>
 
-{{
+  {{
 	comp.oi.chart.bar({
 		config: {
 			data: "viz.survey.phase_2.subject_areas_headlines",
@@ -425,9 +435,9 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-<h3>Community Programmes:</h3>
+  <h3>Community Programmes:</h3>
 
-{{
+  {{
 	comp.oi.dashboard({
 		config: {
 			data: "viz.survey.phase_2.community_programs_headlines",
@@ -449,10 +459,10 @@ title: Survey Responses Academic Year 2022/23
 	}) | safe
 }}
 
-<h2 id="Facilities">Facilities</h2>
-<p>Out of the 49 unique schools included in the analysis:</p>
+  <h2 id="Facilities">Facilities</h2>
+  <p>Out of the 49 unique schools included in the analysis:</p>
 
-{{
+  {{
 	comp.oi.chart.bar({
 		config: {
 			data: "viz.survey.phase_2.facilities",
@@ -524,4 +534,4 @@ title: Survey Responses Academic Year 2022/23
 			}
 		}
 	}) | safe
-}}  
+}}

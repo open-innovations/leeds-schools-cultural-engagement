@@ -1,18 +1,8 @@
----
-css: |
-  .table-of-contents {
-    padding-top: 2rem;
-    min-width: 20rem;
-  }
----
-
 <nav class='table-of-contents'>
   <h2>{{ title or 'Contents' }}</h2>
   <ul>
-    <li><a href="#Responses">Responses</a></li>
-    <li><a href="#Arts">Arts Provision in Schools</a></li>
-    <li><a href="#Practitioners">External Practitioners</a></li>
-    <li><a href="#Facilities">Facilities</a></li>
-    <li><a href="#Funding">Funding & Support</a></li>
+    {% for href, title in links %}
+      <li><a href="{{ href }}">{{ title }}</a></li>  
+    {% endfor %}
   </ul>
 </nav>
