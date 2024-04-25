@@ -107,5 +107,6 @@ site.use(postcss({}));
 site.copy('CNAME');
 site.copy('.nojekyll');
 site.copy([".woff2"]);
+site.copy([".png"]);
 
 export default site;
