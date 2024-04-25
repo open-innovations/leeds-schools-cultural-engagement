@@ -9,7 +9,7 @@ name: Deploy live site
     branches: [ main ]
     paths:
       - 'src/**'
-      - '_config.js'
+      - '_config.ts'
       - 'deno.json'
       - 'import_map.json'
       - '.github/workflows/deploy-via-ssh.yml'
@@ -18,7 +18,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-
+    env:
+      DENO_ENV: live
 
     steps:
       - uses: actions/checkout@v4

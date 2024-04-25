@@ -42,4 +42,9 @@ site.copy('.nojekyll');
 site.copy([".woff2"]);
 site.copy([".png"]);
 
+site.data('build', {
+  date: new Date(),
+  env: Deno.env.get('DENO_ENV')
+});
+
 export default site;
