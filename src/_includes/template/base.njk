@@ -20,7 +20,9 @@
 	</div>
 
 	{% include 'partials/header.njk' %}
-
+  {% if build.env == 'dev' -%}
+  {{- comp.dev_banner() | safe -}}
+  {%- endif %}
 	<div class="b6-bg">
 		<div class="holder padded tallpadded stack">
 		{{ content | safe }}
