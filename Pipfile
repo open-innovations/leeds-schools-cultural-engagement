@@ -10,6 +10,7 @@ ipykernel = "*"
 openpyxl = "*"
 xlsxwriter = "*"
 matplotlib = "*"
+dvc = "*"
 
 [dev-packages]
 
