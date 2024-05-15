@@ -11,6 +11,7 @@ openpyxl = "*"
 xlsxwriter = "*"
 matplotlib = "*"
 dvc = "*"
+dvc-s3 = "*"
 
 [dev-packages]
 
