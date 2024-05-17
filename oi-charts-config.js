@@ -52,7 +52,8 @@ export default {
 			"Arts Council England": "#277d8e",
 			"Both": "#29af7f", 
 			"ArtsMark": "#404788",
-			"Arts Award": "#277d8e"
+			"Arts Award": "#277d8e",
+			"Purple": "#370b45"
 		}
 	},
 	"font": {

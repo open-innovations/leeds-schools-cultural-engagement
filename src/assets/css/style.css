@@ -80,6 +80,11 @@ footer { padding: 0; }
 .organisations li svg { width: 100%; height: auto; color: #a8b6be; filter: grayscale(1) brightness(2); }
 .organisations.supporter li svg { width: 100%; height: 4em; color: #a8b6be; filter: grayscale(1) brightness(2); }
 
-.oi-dashboard .panel h3 { font-size: 1.5em!important; font-weight: normal!important; }
-.oi-dashboard .panel { padding: 2em!important; }
+.oi-dashboard { grid-gap: 0.5rem!important;}
+.oi-dashboard .panel h3 { font-size: 1.5em!important; font-weight: normal!important; text-align: center; }
+.oi-dashboard .panel { display: grid; padding: 3em!important; }
+
 .oi-legend-inner .oi-legend-icon { float: left; }
+
+.oi-graph text { fill: #ffff!important; } 
+/* TODO: Make this more specific */

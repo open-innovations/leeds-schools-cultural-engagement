@@ -8,7 +8,7 @@ from thefuzz import process
 SCHOOLS_DATA = os.path.join('working', 'upstream', 'schools_events.csv')
 SCHOOLS_REF_DATA = os.path.join('data', 'schools.csv')
 WARD_REFERENCE = os.path.join('data', 'leeds_wards.csv')
-DATA_DIR = os.path.join('src', '_data', 'viz', 'leeds-2023')
+DATA_DIR = os.path.join('src', '_data', 'viz', 'leeds_2023')
 UNIQUE_SCHOOLS_OVERRIDE = 228
 TOTAL_SCHOOL_ENGAGEMENTS_OVERRIDE=501
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     summary['Engagements with pupils not assigned to ward'] = (data.pupil_count.sum() - engagements_by_ward.pupil_engagements.sum()).astype(int)
 
     engagements_by_ward.index.names = ['ward_code', 'ward']
-    engagements_by_ward['percent_of_schools_in_ward_engaged'] = (engagements_by_ward.schools_engaged / engagements_by_ward.count_of_schools * 100).round(1)
+    engagements_by_ward['percent_of_schools_in_ward_engaged'] = (engagements_by_ward.schools_engaged / engagements_by_ward.count_of_schools * 100).astype(int)
 
     engagements_by_ward.to_csv(os.path.join(DATA_DIR, 'engagements_by_ward.csv'))
 

@@ -1,0 +1,127 @@
+---
+title: LEEDS 2023 Legacy Dashboard
+---
+{% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
+
+{% comp "grid.autogrid", { columns: 1 } %}
+
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.leeds_2023.headlines",
+			title: "title",
+			value: "value",
+			width: "20%",
+			panels: [{
+				name: "Unique schools",
+				colour: "Purple"
+			},{
+				name: "Total school engagements",
+				colour: "Purple"
+			},{
+				name: "Total pupil engagements",
+				colour: "Purple"
+			},{
+				name: "Schools in Leeds",
+				colour: "Purple"
+			}]
+		}
+	}) | safe
+}}
+
+{% comp "dashboard.panel", { bg: '#370b45', fg: 'white' }%}
+<h3>Number of engagements with pupils</h3>
+{{ comp.oi.graph.line({ config: {
+    categories: viz.leeds_2023.engagements_by_week.columns.date,
+    width: 25,
+    colours: 'white',
+    height: 15,
+    padding: { left: 4 },
+    series: [
+      {
+        label: 'Engagements (cumulative)',
+        yValues: viz.leeds_2023.engagements_by_week.columns.cumulative_pupil_engagements,
+        markerOptions: { s: 5 },
+        colour: 'white'
+      }
+    ],
+    xAxis: {
+      title: 'Date',
+      majorTick: 10,
+      colour: 'white'
+    },
+    plotArea: {
+      yMax: 40000,
+      colour: 'white'
+    },
+    yAxis: {
+      title: 'Number of engagements',
+      titleOffset: 3,
+      majorTick: 2000,
+      formatter: dateFormatter
+    },
+    legend: {
+      width: '30em'
+    }, 
+    line: {
+        "stroke-dasharray": [6,2]
+    }
+  } }) | safe }}
+  {% endcomp %}
+
+
+{% comp "grid.autogrid", { columns: 2 } %}
+
+{% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
+<h3>School engagements by ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'total_engagements',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+	}
+  }) | safe }}
+  <p>The LEEDS 2023 program engaged with schools in every ward of Leeds...</p>
+{% endcomp %}
+
+{% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
+<h3>Pupil engagements by ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'pupil_engagements',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ pupil_engagements }}</strong>'
+	}
+  }) | safe }}
+  <p>The LEEDS 2023 program engaged with schools in every ward of Leeds...</p>
+  {% endcomp %}
+  {% endcomp %}
+
+
+
+{% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
+<h3>Percentage of schools engaged with in each ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'percent_of_schools_in_ward_engaged',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ percent_of_schools_in_ward_engaged }}%</strong>'
+	}
+  }) | safe }}
+  <p>The LEEDS 2023 program engaged with schools in every ward of Leeds...</p>
+
+  {% endcomp %}
+  {% endcomp %}
+
+
+
