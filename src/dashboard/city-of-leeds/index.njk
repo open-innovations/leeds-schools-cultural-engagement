@@ -1,0 +1,129 @@
+---
+title: City of Leeds
+---
+
+{% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
+
+
+<p><strong>This page is under development. Styling and data may be missing or incorrect.</strong></p> 
+
+{% comp "grid.autogrid", { columns: 1 } %}
+
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.leeds_2023.headlines",
+			title: "title",
+			value: "value",
+			width: "20%",
+			panels: [{
+				name: "Unique schools",
+				colour: "Blue"
+			},{
+				name: "Total school engagements",
+				colour: "Blue"
+			},{
+				name: "Total pupil engagements",
+				colour: "Blue"
+			},{
+				name: "Schools in Leeds",
+				colour: "Blue"
+			}]
+		}
+	}) | safe
+}}
+
+
+
+{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+<h3>Number of engagements with pupils</h3>
+{{ comp.oi.graph.line({ config: {
+    categories: viz.leeds_2023.engagements_by_week.columns.date,
+    width: 25,
+    colours: 'white',
+    height: 15,
+    padding: { left: 4 },
+    series: [
+      {
+        label: 'Engagements (cumulative)',
+        yValues: viz.leeds_2023.engagements_by_week.columns.cumulative_pupil_engagements,
+        markerOptions: { s: 5 },
+        colour: 'white'
+      }
+    ],
+    xAxis: {
+      title: 'Date',
+      majorTick: 10
+    },
+    plotArea: {
+      yMax: 40000,
+      colour: 'white'
+    },
+    yAxis: {
+      title: 'Number of engagements',
+      titleOffset: 3,
+      majorTick: 2000,
+      formatter: dateFormatter
+    },
+    legend: {
+      width: '30em'
+    }, 
+    line: {
+        "stroke-dasharray": [6,2]
+    }
+  } }) | safe }}
+  {% endcomp %}
+
+
+{% comp "grid.autogrid", { columns: 2 } %}
+
+{% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+<h3>School engagements by ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'total_engagements',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+	}
+  }) | safe }}
+  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
+{% endcomp %}
+
+{% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+<h3>Pupil engagements by ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'pupil_engagements',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ pupil_engagements }}</strong>'
+	}
+  }) | safe }}
+  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
+  {% endcomp %}
+  {% endcomp %}
+
+
+
+{% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+<h3>Percentage of schools engaged with in each ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'percent_of_schools_in_ward_engaged',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ percent_of_schools_in_ward_engaged }}%</strong>'
+	}
+  }) | safe }}
+  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
+
+  {% endcomp %}
+  {% endcomp %}
