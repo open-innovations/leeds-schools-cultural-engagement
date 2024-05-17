@@ -53,7 +53,8 @@ export default {
 			"Both": "#29af7f", 
 			"ArtsMark": "#404788",
 			"Arts Award": "#277d8e",
-			"Purple": "#370b45"
+			"Purple": "#370b45",
+			"Blue": "#125164"
 		}
 	},
 	"font": {

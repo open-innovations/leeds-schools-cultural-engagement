@@ -61,10 +61,11 @@ header .holder {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 2em;
 }
 footer { padding: 0; }
 
-.grid li h2 { font-weight: normal; }
+.grid li h2 { font-weight: bold; text-align: center; padding-bottom: 0.5em; }
 
 .oi-viz { margin-bottom: 1em; }
 .oi-viz:last-child { margin-bottom: 0; }
@@ -72,7 +73,7 @@ footer { padding: 0; }
 
 .l23-green { background: #b8de29; color: black!important; }
 .l23-green { background: #b8de29; color: black!important; }
-.l23-light-blue { background: #166178; color: white!important; }
+.l23-light-blue { background: #125164; color: white!important; }
 .l23-purple { background: #370b45; color: white!important; }
 .l23-light-purple { background: #b463cc; color: white!important; }
 .l23-head { background: var(--background-colour); color: black!important; }
@@ -89,3 +90,5 @@ footer { padding: 0; }
 
 .oi-graph text { fill: #ffff!important; } 
 /* TODO: Make this more specific */
+
+ul .panel { justify-content: normal; }
