@@ -2,13 +2,41 @@
 title: Dashboards
 ---
 
+<p>
+	Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.
+</p>
+
 <ul class="grid dashboard" style ="grid-template-columns: repeat( 2, minmax(0, 1fr));">
-	<li><a href="/dashboard/leeds-2023-legacy/" class="l23-purple">
+	{% comp "dashboard.pane", { bg: "#370b45", fg: 'white' }%}
+	<li><a href="/dashboard/leeds-2023-legacy/">
 		<h2>LEEDS 2023 Legacy</h2>
 		<p>A dashboard visualising data that reflects the impact and legacy left behind by the LEEDS 2023 Year of Culture.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.leeds_2023.engagements_by_ward,
+				matchKey: 'ward_code',
+				value: 'total_engagements',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+			}
+		}) | safe }}
+		{% endcomp %}
 	</a></li>
-	<li><a href="/dashboard/leeds/" class="l23-light-blue">
+	{% comp "dashboard.pane", { bg: "#125164", fg: 'white' }%}
+	<li><a href="/dashboard/city-of-leeds/">
 		<h2>The City of Leeds</h2>
 		<p>A dashboard that presents how Leeds fits into the national landscape of arts and cultural engagement.</p>
+			{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.leeds_2023.engagements_by_ward,
+				matchKey: 'ward_code',
+				value: 'total_engagements',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+			}
+		}) | safe }}
+		{% endcomp %}
 	</a></li>
 </ul>
