@@ -134,9 +134,11 @@ header h1 { margin-top: 0; }
 
 .grid { display: grid; grid-template-columns: 50% 50%; grid-gap: 1em; }
 ul.grid { list-style: none; margin-left: 0em; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
-ul.grid > li > a { display: block; text-decoration: none; padding: 2em; }
+ul.grid > li > a { display: block; text-decoration: none; padding: 3em;}
 ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .grid .pane { background: #f9f9f9; }
+
+.dashboard { padding-top: 2em; }
 
 .legend { margin-bottom: 1em; text-align: center; }
 .legend .legend-item { display: inline-block; line-height: 1em; margin-right: 1em; cursor: pointer; }
