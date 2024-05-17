@@ -14,6 +14,7 @@
 --header-height: 112px;
 }
 
+
 /*h1, h2, h3, h4, .title {
 	letter-spacing: -0.12em;
 	font-family: Bungee Hairline;
@@ -64,6 +65,8 @@ header .holder {
 	padding: 2em;
 }
 footer { padding: 0; }
+
+.text-wrap { border-style: groove; padding: 2em; border-width: 1.5px; box-shadow: 0.5px 0.5px #bbbb; margin: 1em;}
 
 .grid li h2 { font-weight: bold; text-align: center; padding-bottom: 0.5em; }
 

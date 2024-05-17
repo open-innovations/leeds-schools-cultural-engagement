@@ -20,17 +20,17 @@ title: Survey Summary
 					width: "70%",
 					panels: [{
 						name: "Responses",
-						colour: "Purple"
+						colour: "UoL-purple"
 					},{
 						name: "Schools",
-						colour: "Blue"
+						colour: "UoL-purple"
 					}]
 				}
 			}) | safe
 		}}
 	</a></li>
 	{%endcomp%}
-	{% comp "dashboard.pane", { bg: "white", fg: 'black' }%}
+	{% comp "dashboard.pane", { bg: "white", fg: 'black', border: 'groove' }%}
 	<li><a href="/survey/phase-2/">
 		<h2>Academic Year 2022/23</h2>
 		<p>Responses to the Phase 2 survey covering academic year 2022/23.</p>
@@ -43,10 +43,10 @@ title: Survey Summary
 					width: "70%",
 					panels: [{
 						name: "Responses",
-						colour: "Purple"
+						colour: "UoL-purple"
 					},{
 						name: "Schools",
-						colour: "Blue"
+						colour: "UoL-blue"
 					}]
 				}
 			}) | safe

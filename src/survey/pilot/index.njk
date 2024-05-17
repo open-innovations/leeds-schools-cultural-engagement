@@ -31,13 +31,13 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Through"
 			},{
 				name: "Local schools partnerships",
-				colour: "16+"
+				colour: "Secondary"
 			},{
 				name: "Sign-posting opportunities",
-				colour: "Drama"
+				colour: "UoL-blue"
 			},{
 				name: "Local arts programmes",
-				colour: "Music"
+				colour: "Primary"
 			}]
 		}
 	}) | safe
@@ -81,17 +81,14 @@ title: Survey Responses Academic Year 2021/22
 }}
 
 
-	
-<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
-
-	<li>
+<div>
 		<h3>Responses by school type</h3>
 		{{
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-type",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
 					columns: [{
 						name: "Tooltip",
 						template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
@@ -118,16 +115,16 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
+	</div>
 
-	<li>
+<div>
 		<h3>By school size</h3>
 		{{
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-size",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
 					columns: [{
 						name: "Tooltip",
 						template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
@@ -153,9 +150,8 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
+		</div>
 
-	<li>
 		<h3>By Artsmark</h3>
 		<p>The percentage of survey respondents who have been awarded, or who are working towards, an <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p>
 
@@ -163,8 +159,8 @@ title: Survey Responses Academic Year 2021/22
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-artsmark",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
 					columns: [{
 						name: "Tooltip",
 						template: "{{ ArtsMark }}: {{ Percentage | toFixed(1) }}% responded"
@@ -173,7 +169,8 @@ title: Survey Responses Academic Year 2021/22
 					series: [{
 						title: "Percentage",
 						value: "Percentage",
-						tooltip: "Tooltip"
+						tooltip: "Tooltip",
+						colour: '#125164'
 					}],
 					gap: 0.1,
 					axis: {
@@ -190,17 +187,16 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
 
-	<li>
 		<h3>By Arts Award Centres</h3>
 		<p>The percentage of survey respondents who are registered as an <a href="https://www.artsaward.org.uk/site/">Arts Award centre</a>.</p>
 		{{
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-artsaward",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
+					color: 'black',
 					columns: [{
 						name: "Tooltip",
 						template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
@@ -209,7 +205,8 @@ title: Survey Responses Academic Year 2021/22
 					series: [{
 						title: "Percentage",
 						value: "Percentage",
-						tooltip: "Tooltip"
+						tooltip: "Tooltip",
+						colour: '#440d54'
 					}],
 					gap: 0.1,
 					axis: {
@@ -226,8 +223,6 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
-</ul>
 
 <h2 id="Arts">Arts Provision in Schools</h2> 
 
@@ -436,10 +431,10 @@ title: Survey Responses Academic Year 2021/22
 				},
 				panels: [{
 					name: "Arts opportunities",
-					colour: "Drama"
+					colour: "UoL-green"
 				},{
 					name: "Competitions & showcases",
-					colour: "Dance"
+					colour: "UoL-teal"
 				}]
 			}
 		}) | safe
@@ -471,7 +466,7 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Secondary"
 			},{
 				name: "Special schools",
-				colour: "Special"
+				colour: "UoL-blue"
 			}]
 		}
 	}) | safe
@@ -492,8 +487,8 @@ title: Survey Responses Academic Year 2021/22
   {% endcomp %}
 
     {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#277d8e"
+    fg: "black",
+    bg: "#b2c929"
   } %}
     <p>Theatre</p>
   {% endcomp %}
@@ -508,14 +503,14 @@ title: Survey Responses Academic Year 2021/22
 
   {% comp "grid.block.impact", {
     fg: "white",
-    bg: "#238a8d"
+    bg: "#125164"
   } %}
     <p>Museums/Heritage</p>
   {% endcomp %}
 
     {% comp "grid.block.impact", {
     fg: "white",
-    bg: "#2d708e"
+    bg: "#3895bf"
   } %}
     <p>Art</p>
   {% endcomp %}
@@ -772,7 +767,7 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Secondary"
 			},{
 				name: "Fundraising events or activities",
-				colour: "Special"
+				colour: "UoL-teal"
 			}]
 		}
 	}) | safe
@@ -790,10 +785,10 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Parents",
-				colour: "Drama"
+				colour: "Special"
 			},{
 				name: "Other sources",
-				colour: "Music"
+				colour: "Other"
 			}]
 		}
 	}) | safe
