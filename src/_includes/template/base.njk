@@ -27,7 +27,9 @@
 		<div class="holder padded tallpadded stack">
 		{{ content | safe }}
 		</div>
+  	{{- comp.data_banner() | safe -}}
 	</div>
+
 
 	{% include 'partials/footer.njk' %}
 
