@@ -2,15 +2,60 @@
 title: Survey Summary
 ---
 
+  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
 
 
 <ul class="grid dashboard" style ="grid-template-columns: repeat( 2, minmax(0, 1fr));">
-	<li><a href="/survey/pilot/" class="l23-light-blue">
+	{% comp "dashboard.pane", { bg: "8f1f73", fg: 'black', border: groove }%}
+	<li><a href="/survey/pilot/">
 		<h2>Academic Year 2021/22</h2>
 		<p>A breakdown of responses to the pilot survey covering 2021/22.</p>
+
+		{{
+			comp.oi.dashboard({
+				config: {
+					data: "viz.survey.survey-dashboard.pilot",
+					title: "title",
+					value: "value",
+					width: "70%",
+					panels: [{
+						name: "Responses",
+						colour: "Purple"
+					},{
+						name: "Schools",
+						colour: "Blue"
+					}]
+				}
+			}) | safe
+		}}
 	</a></li>
-	<li><a href="/survey/phase-2/" class="l23-light-purple">
+	{%endcomp%}
+	{% comp "dashboard.pane", { bg: "white", fg: 'black' }%}
+	<li><a href="/survey/phase-2/">
 		<h2>Academic Year 2022/23</h2>
 		<p>Responses to the Phase 2 survey covering academic year 2022/23.</p>
+		{{
+			comp.oi.dashboard({
+				config: {
+					data: "viz.survey.survey-dashboard.phase-2",
+					title: "title",
+					value: "value",
+					width: "70%",
+					panels: [{
+						name: "Responses",
+						colour: "Purple"
+					},{
+						name: "Schools",
+						colour: "Blue"
+					}]
+				}
+			}) | safe
+		}}
 	</a></li>
+	{%endcomp%}
 </ul>
+
+
+
+
+
