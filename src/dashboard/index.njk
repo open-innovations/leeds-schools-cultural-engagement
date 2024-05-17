@@ -1,19 +1,14 @@
 ---
-title: Cultural Engagement Impact Dashboard
+title: Dashboards
 ---
 
-{% comp "grid.autogrid", { columns: 3 } %}
-
-  {% comp "dashboard.panel" %}
-    <h2>Headline stats</h2>
-    <p>Survey Data</p>
-  {% endcomp %}
-
-    {% comp "dashboard.panel" %}
-    <h2>Headline stats</h2>
-    <p>Survey Data</p>
-  {% endcomp %}
-
-{% endcomp %}
-
-
+<ul class="grid dashboard" style ="grid-template-columns: repeat( 2, minmax(0, 1fr));">
+	<li><a href="/dashboard/leeds-2023-legacy/" class="l23-purple">
+		<h2>LEEDS 2023 Legacy</h2>
+		<p>A dashboard visualising data that reflects the impact and legacy left behind by the LEEDS 2023 Year of Culture.</p>
+	</a></li>
+	<li><a href="/dashboard/leeds/" class="l23-light-blue">
+		<h2>The City of Leeds</h2>
+		<p>A dashboard that presents how Leeds fits into the national landscape of arts and cultural engagement.</p>
+	</a></li>
+</ul>
