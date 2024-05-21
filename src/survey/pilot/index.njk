@@ -2,11 +2,29 @@
 title: Survey Responses Academic Year 2021/22
 ---
 
+{% comp 'frontmatter' %}
+
 {% comp 'figure', { min_width: "100%" } %}
 <p>This research serves to address the lack of data currently available on schools’ engagement with the arts in Leeds. A baseline understanding of how schools currently engage with local cultural organisations is needed to inform cultural strategy and funding priorities. It will support evaluation of the legacy of the LEEDS 2023 programme of activities across the city and will support other cultural organisations to perform their own evaluations and benchmarking activities.</p>
 <p>A pilot survey was sent to members of the senior leadership team at every school in Leeds, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. This will act as a pilot to gauge response and validate the approach and methodology for a future phase of work.</p>
 <p>Key findings from the survey responses are presented on this page, based on 40 responses from 35 schools, out of the total 293 schools in Leeds.</p>
 <p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
+{% endcomp %}
+
+<div>
+  {{ comp.contents({
+    links: {
+      "#Responses": "Responses",
+      "#Arts": "Arts Provision in Schools",
+      "#Practitioners": "External Practitioners",
+      "#Facilities": "Facilities",
+      "#Funding": "Funding & Support",
+      "#Funding": "Funding & Support",
+      "#Trips": "Trips",
+      "#Careers & Progression": "Careers & Progression"
+    }
+  }) | safe }}
+</div>
 {% endcomp %}
 
 {{
@@ -22,33 +40,28 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Arts commitment",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "Additional funding",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Local arts partnerships",
-				colour: "Through"
+				colour: "UoL-blue"
 			},{
 				name: "Local schools partnerships",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Sign-posting opportunities",
 				colour: "UoL-blue"
 			},{
 				name: "Local arts programmes",
-				colour: "Primary"
+				colour: "UoL-purple"
 			}]
 		}
 	}) | safe
 }}
+
 <p>The visualisations below provide a more detailed breakdown of survey responses. They give an insight into how schools in Leeds are engaging with arts and culture, their facilities and approaches to funding for schools wishing to engage with other organisations.</p>
-
-
-{% comp 'figure', { min_width: "100%" } %}
-{% comp 'contents' %}
-{% endcomp %}
-{% endcomp %}
 
 <h2 id="Reponses">Overview of Respondents</h2>
 
@@ -244,13 +257,13 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Overall",
-				colour: "Primary"
+				colour: "Overall"
 			},{
 				name: "Primary schools",
-				colour: "Secondary"
+				colour: "Primary"
 			},{
 				name: "Secondary schools",
-				colour: "Through"
+				colour: "Secondary"
 			}]
 		}
 	}) | safe
@@ -466,7 +479,7 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Secondary"
 			},{
 				name: "Special schools",
-				colour: "UoL-blue"
+				colour: "Special"
 			}]
 		}
 	}) | safe
@@ -494,8 +507,8 @@ title: Survey Responses Academic Year 2021/22
   {% endcomp %}
 
     {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#20a387"
+    fg: "black",
+    bg: "#fde725"
   } %}
     <p>Dance</p>
   {% endcomp %}
@@ -509,8 +522,8 @@ title: Survey Responses Academic Year 2021/22
   {% endcomp %}
 
     {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#3895bf"
+    fg: "black",
+    bg: "#20a387"
   } %}
     <p>Art</p>
   {% endcomp %}
@@ -625,13 +638,13 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Local arts organisations",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "School partnerships",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Local community arts programmes",
-				colour: "Special"
+				colour: "UoL-blue"
 			}]
 		}
 	}) | safe
@@ -761,10 +774,10 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Trusts and foundations",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "Leeds City Council",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Fundraising events or activities",
 				colour: "UoL-teal"
@@ -785,7 +798,7 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Parents",
-				colour: "Special"
+				colour: "UoL-blue"
 			},{
 				name: "Other sources",
 				colour: "Other"

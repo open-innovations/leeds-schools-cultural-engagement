@@ -33,10 +33,6 @@ title: Survey Responses Academic Year 2022/23
 </div>
 {% endcomp %}
 
-{% comp 'contents' %}
-{% endcomp %}
-
-
 <h2>Headlines</h2>
 
 <p>The headline statistics below refer to the headline findings from all survey responses provided.</p>
@@ -47,35 +43,29 @@ title: Survey Responses Academic Year 2022/23
 			data: "viz.survey.phase_2.headlines",
 			value: "Value",
 			title: 'Title',
-			width: "20%",
+			width: "30%",
             note: 'Note',
 			units: {
 				postfix: "Suffix"
 			},
 			panels: [{
-				name: "Arts curriculum",
-				colour: "Primary"
-			},{
 				name: "Arts entitlement",
-				colour: "Secondary"
+				colour: "UoL-purple"
 			},{
 				name: "Additional arts funding",
-				colour: "Special"
+				colour: "UoL-green"
 			},{
 				name: "Signposting",
-				colour: "Through"
-			},{
-				name: "Extra-curricular offering",
-				colour: "Secondary"
+				colour: "UoL-blue"
 			},{
 				name: "Arts award",
-				colour: "Through"
+				colour: "UoL-green"
 			},{
 				name: "External practitioners",
-				colour: "Primary"
+				colour: "UoL-blue"
 			},{
 				name: "Local partnerships",
-				colour: "Special"
+				colour: "UoL-purple"
 			}]
 		}
 	}) | safe
@@ -322,10 +312,10 @@ title: Survey Responses Academic Year 2022/23
 				},
 				panels: [{
 					name: "Signposting beyond the curriculum",
-					colour: "Drama"
+					colour: "UoL-green"
 				},{
 					name: "Competitions & Showcases",
-					colour: "Dance"
+					colour: "UoL-teal"
 				}]
 			}
 		}) | safe
@@ -346,13 +336,13 @@ title: Survey Responses Academic Year 2022/23
 			},
 			panels: [{
 				name: "Partnerships",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "Delivering activities",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "School partnerships",
-				colour: "Through School"
+				colour: "UoL-blue"
 			}]
 		}
 	}) | safe
@@ -457,10 +447,10 @@ title: Survey Responses Academic Year 2022/23
 			},
 			panels: [{
 				name: "Community-based arts programmes",
-				colour: "Primary"
+				colour: "UoL-green"
 			},{
 				name: "National arts programmes",
-				colour: "Secondary"
+				colour: "UoL-teal"
 			}]
 		}
 	}) | safe
@@ -676,11 +666,12 @@ title: Survey Responses Academic Year 2022/23
 				name: "Secondary",
 				colour: "Secondary"
 			},{
-				name: "Through Schools",
-				colour: "Through School"
-			},{
 				name: "Special Schools",
 				colour: "Special Schools"
+			},{
+				
+				name: "Through Schools",
+				colour: "Through School"
 			}]
 		}
 	}) | safe
@@ -868,10 +859,10 @@ title: Survey Responses Academic Year 2022/23
 				},
 				panels: [{
 					name: "Barriers with trips",
-					colour: "Primary"
+					colour: "UoL-purple"
 				},{
 					name: "Barriers with host venues",
-					colour: "Secondary"
+					colour: "UoL-green"
 				}]
 			}
 		}) | safe
@@ -890,7 +881,7 @@ title: Survey Responses Academic Year 2022/23
 				},
 				panels: [{
 					name: "Diversity challenges",
-					colour: "Through School"
+					colour: "UoL-blue"
 				}]
 			}
 		}) | safe
