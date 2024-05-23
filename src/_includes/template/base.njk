@@ -33,6 +33,10 @@
 
 	{% include 'partials/footer.njk' %}
 
+  <script src="https://open-innovations.org/resources/oi.log.js"></script>
+  <script>
+  OI.log.setup({'id':'leeds33','target':['open-innovations.github.io', 'culturallearningleeds.com']}).add('action=view');
+  </script>
 </body>
 <!-- Built {% if build.env %}from {{ build.env }} {% endif %}on {{ build.date }} -->
 </html>
