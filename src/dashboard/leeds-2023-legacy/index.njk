@@ -3,8 +3,13 @@ title: LEEDS 2023 Legacy Dashboard
 ---
 {% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
 
+<div class="holder padded">
 
-<p><strong>This page is under development. Styling and data may be missing or incorrect.</strong></p> 
+<p>
+  LEEDS 2023 worked across all 33 wards of the city and engaged with a wide range of participants across Leeds. The programme was designed to be as representative and inclusive as possible. The data and visualisations displayed on this page are drawn from the LEEDS 2023 Data Microsite, reflecting the impact and legacy of the programme by highlighting the ways in which LEEDS 2023 engaged with children and young people in Leeds. By doing this, we aim to advocate for the value of this and other similar cultural programmes, demonstrating how young people have been enriched by the programme.  
+</p>
+
+</div>
 
 {% comp "grid.autogrid", { columns: 1 } %}
 
@@ -37,6 +42,7 @@ title: LEEDS 2023 Legacy Dashboard
 
 {% comp "dashboard.panel", { bg: '#370b45', fg: 'white' }%}
 <h3>Number of engagements with pupils</h3>
+<p>The chart below presents the number of activities that were delivered with children in Leeds schools as part of the LEEDS 2023 programme.</p>
 {{ comp.oi.graph.line({ config: {
     categories: viz.leeds_2023.engagements_by_week.columns.date,
     width: 25,
@@ -91,7 +97,7 @@ title: LEEDS 2023 Legacy Dashboard
 		tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
 	}
   }) | safe }}
-  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
+  <p>The number of activities delivered with Leeds schools as part of the LEEDS 2023 programme, by ward. Lighter colours indicate that more engagement actvities took place in that ward.</p>
 {% endcomp %}
 
 {% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
@@ -106,7 +112,7 @@ title: LEEDS 2023 Legacy Dashboard
 		tooltip: '{{ n }}: <strong>{{ pupil_engagements }}</strong>'
 	}
   }) | safe }}
-  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
+  <p>The number of pupils engaged with as part of the LEEDS 2023 programme, by ward. Lighter colours indicate that more pupil engagements took place in that ward.</p>
   {% endcomp %}
   {% endcomp %}
 
@@ -124,8 +130,7 @@ title: LEEDS 2023 Legacy Dashboard
 		tooltip: '{{ n }}: <strong>{{ percent_of_schools_in_ward_engaged }}%</strong>'
 	}
   }) | safe }}
-  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
-
+  <p>The percentage of schools that were engaged with as part of LEEDS 2023 activities, per ward. A lighter colour indicates a higher percentage of schools in each ward were engaged with during the programme.</p>
   {% endcomp %}
   {% endcomp %}
 
