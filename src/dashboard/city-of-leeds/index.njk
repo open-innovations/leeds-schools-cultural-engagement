@@ -1,5 +1,7 @@
 ---
 title: City of Leeds
+
+
 ---
 
 {% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
@@ -13,61 +15,165 @@ title: City of Leeds
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.leeds_2023.headlines",
-			title: "title",
+			data: "viz.dashboard.headlines",
+			title: "headline",
 			value: "value",
-			width: "20%",
+			width: "30%",
 			panels: [{
-				name: "Unique schools",
-				colour: "UoL-blue"
-			},{
-				name: "Total school engagements",
-				colour: "UoL-blue"
-			},{
-				name: "Total pupil engagements",
+				name: "Leeds population",
 				colour: "UoL-blue"
 			},{
 				name: "Schools in Leeds",
-				colour: "UoL-blue"
+				colour: "UoL-green"
+      },{
+				name: "School age population",
+				colour: "UoL-purple"
 			}]
 		}
 	}) | safe
 }}
 
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.dashboard.headlines",
+			title: "headline",
+			value: "value",
+			width: "40%",
+			panels: [{
+				name: "Projected population 2025 - all ages",
+				colour: "UoL-blue"
+			},{
+				name: "Projected population 2025 - school age",
+				colour: "UoL-green"
+			}]
+		}
+	}) | safe
+}}
+{% endcomp %}
+
+
+
+<h2>Projected population in Leeds</h2>
+
+{% comp "grid.autogrid", { columns: 1 } %}
 
 
 {% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
-<h3>Number of engagements with pupils</h3>
+<h3>Estimated future population in Leeds</h3> 
 {{ comp.oi.graph.line({ config: {
-    categories: viz.leeds_2023.engagements_by_week.columns.date,
+    categories: viz.dashboard.projected_population.columns.PROJECTED_YEAR,
     width: 25,
-    colours: 'white',
     height: 15,
     padding: { left: 4 },
     series: [
       {
-        label: 'Engagements (cumulative)',
-        yValues: viz.leeds_2023.engagements_by_week.columns.cumulative_pupil_engagements,
+        label: 'All ages',
+        yValues: viz.dashboard.projected_population.columns['All Ages'],
         markerOptions: { s: 5 },
         colour: 'white'
+      },
+      {
+        label: 'Aged 0-19',
+        yValues: viz.dashboard.projected_population.columns['Aged 0-19'],
+        markerOptions: { s: 5 },
+        colour: '#b463cc'
       }
     ],
     xAxis: {
-      title: 'Date',
-      majorTick: 10
+      title: 'Year',
+      majorTick: 5,
+      colour: 'white'
     },
     plotArea: {
-      yMax: 40000,
+      yMax: 1000000,
       colour: 'white'
     },
     yAxis: {
-      title: 'Number of engagements',
-      titleOffset: 3,
-      majorTick: 2000,
-      formatter: dateFormatter
+      title: 'Population',
+      titleOffset: 3.5,
+      majorTick: 100000,
+      formatter: dateFormatter,
+      colour: 'white'
     },
     legend: {
-      width: '30em'
+      position: 'top',
+      direction:'horizontal'
+    }, 
+    line: {
+        "stroke-dasharray": [6,2]
+    }
+  } }) | safe }}
+  <p>
+  Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.
+  </p>
+  {% endcomp %}
+  
+  {% endcomp %}
+
+
+<h2>National Subject Entries</h2>
+{% comp "grid.autogrid", { columns: 1 } %}
+
+{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+
+<h3>National GCSE Subject Entries</h3>
+{{ comp.oi.graph.line({ config: {
+    categories: viz.dashboard.subject_entries_all_gcse.columns.year,
+    width: 30,
+    height: 13,
+    padding: { left: 4 },
+    series: [
+      {
+        label: 'Art & design subjects',
+        yValues: viz.dashboard.subject_entries_all_gcse.columns['Art & design subjects'],
+        markerOptions: { s: 5 },
+        colour: 'white'
+      },
+      {
+        label: 'Biology',
+        yValues: viz.dashboard.subject_entries_all_gcse.columns['Biology'],
+        markerOptions: { s: 5 },
+        colour: '#b463cc'
+      },
+      {
+        label: 'Business studies',
+        yValues: viz.dashboard.subject_entries_all_gcse.columns['Business studies'],
+        markerOptions: { s: 5 },
+        colour: '#b2c929'
+      },
+      {
+        label: 'Chemistry',
+        yValues: viz.dashboard.subject_entries_all_gcse.columns['Chemistry'],
+        markerOptions: { s: 5 },
+        colour: '#20a387'
+      },
+      {
+        label: 'Computing',
+        yValues: viz.dashboard.subject_entries_all_gcse.columns['Computing'],
+        markerOptions: { s: 5 },
+        colour: '#fde725'
+      }
+    ],
+    xAxis: {
+      title: 'Year',
+      majorTick: 1,
+      colour: 'white'
+    },
+    plotArea: {
+      yMax: 250000,
+      colour: 'white'
+    },
+    yAxis: {
+      title: 'Number of student entries',
+      titleOffset: 3.5,
+      majorTick: 50000,
+      formatter: dateFormatter,
+      colour: 'white'
+    },
+    legend: {
+      position: 'top',
+      direction:'horizontal'
     }, 
     line: {
         "stroke-dasharray": [6,2]
@@ -76,54 +182,79 @@ title: City of Leeds
   {% endcomp %}
 
 
-{% comp "grid.autogrid", { columns: 2 } %}
 
-{% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
-<h3>School engagements by ward</h3>
-{{ comp.oi.map.hex_cartogram({
-    config: {
-		hexjson: hex.wards_leeds,
-		data: viz.leeds_2023.engagements_by_ward,
-		matchKey: 'ward_code',
-		value: 'total_engagements',
-		label: '{{ n | slice(0,3) }}',
-		tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
-	}
-  }) | safe }}
-  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
-{% endcomp %}
+{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
 
-{% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
-<h3>Pupil engagements by ward</h3>
-{{ comp.oi.map.hex_cartogram({
-    config: {
-		hexjson: hex.wards_leeds,
-		data: viz.leeds_2023.engagements_by_ward,
-		matchKey: 'ward_code',
-		value: 'pupil_engagements',
-		label: '{{ n | slice(0,3) }}',
-		tooltip: '{{ n }}: <strong>{{ pupil_engagements }}</strong>'
-	}
-  }) | safe }}
-  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
+<h3>National A Level Subject Entries</h3>
+{{ comp.oi.graph.line({ config: {
+    categories: viz.dashboard.subject_entries_all_a_level.columns.year,
+    width: 30,
+    height: 13,
+    padding: { left: 4 },
+    series: [
+      {
+        label: 'Art & design subjects',
+        yValues: viz.dashboard.subject_entries_all_a_level.columns['Art & design subjects'],
+        markerOptions: { s: 5 },
+        colour: 'white'
+      },
+      {
+        label: 'Biology',
+        yValues: viz.dashboard.subject_entries_all_a_level.columns['Biology'],
+        markerOptions: { s: 5 },
+        colour: '#b463cc'
+      },
+      {
+        label: 'Business studies',
+        yValues: viz.dashboard.subject_entries_all_a_level.columns['Business studies'],
+        markerOptions: { s: 5 },
+        colour: '#b2c929'
+      },
+      {
+        label: 'Chemistry',
+        yValues: viz.dashboard.subject_entries_all_a_level.columns['Chemistry'],
+        markerOptions: { s: 5 },
+        colour: '#20a387'
+      },
+      {
+        label: 'Computing',
+        yValues: viz.dashboard.subject_entries_all_a_level.columns['Computing'],
+        markerOptions: { s: 5 },
+        colour: '#fde725'
+      }
+    ],
+    xAxis: {
+      title: 'Year',
+      majorTick: 1,
+      colour: 'white'
+    },
+    plotArea: {
+      yMax: 100000,
+      colour: 'white'
+    },
+    yAxis: {
+      title: 'Number of student entries',
+      titleOffset: 3.5,
+      majorTick: 50000,
+      formatter: dateFormatter,
+      colour: 'white'
+    },
+    legend: {
+      position: 'top',
+      direction:'horizontal'
+    }, 
+    line: {
+        "stroke-dasharray": [6,2]
+    }
+  } }) | safe }}
   {% endcomp %}
   {% endcomp %}
 
+</div>
 
-
-{% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
-<h3>Percentage of schools engaged with in each ward</h3>
-{{ comp.oi.map.hex_cartogram({
-    config: {
-		hexjson: hex.wards_leeds,
-		data: viz.leeds_2023.engagements_by_ward,
-		matchKey: 'ward_code',
-		value: 'percent_of_schools_in_ward_engaged',
-		label: '{{ n | slice(0,3) }}',
-		tooltip: '{{ n }}: <strong>{{ percent_of_schools_in_ward_engaged }}%</strong>'
-	}
-  }) | safe }}
-  <p>Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.</p>
-
-  {% endcomp %}
-  {% endcomp %}
+<div class='holder padded'>
+  <h3>Known Limitations & Issues<h3> 
+    <ul>
+      <li>This dashboard is under development and may not be accurate or up to date.</li>
+    </ul>
+</div>

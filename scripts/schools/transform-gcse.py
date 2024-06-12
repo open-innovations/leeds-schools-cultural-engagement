@@ -61,10 +61,10 @@ if __name__ == '__main__':
         .reset_index()
         .rename(columns={'index': 'year'})
         .astype(int)
-    ).set_index('year')
+    ).sort_values('year').set_index('year')
     
-    merged.to_csv(os.path.join(OUT_DIR, 'subject_entries_all.csv'))
-    merged['Art & design subjects'].astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_arts.csv'))
+    merged.to_csv(os.path.join(OUT_DIR, 'subject_entries_all_gcse.csv'))
+    merged['Art & design subjects'].astype(int).to_csv(os.path.join(OUT_DIR, 'subject_entries_arts_gcse.csv'))
 
 
         

@@ -53,7 +53,8 @@ title: LEEDS 2023 Legacy Dashboard
     ],
     xAxis: {
       title: 'Date',
-      majorTick: 10
+      majorTick: 10,
+      colour: 'white'
     },
     plotArea: {
       yMax: 40000,
@@ -63,7 +64,8 @@ title: LEEDS 2023 Legacy Dashboard
       title: 'Number of engagements',
       titleOffset: 3,
       majorTick: 2000,
-      formatter: dateFormatter
+      formatter: dateFormatter,
+      colour: 'white'
     },
     legend: {
       width: '30em'
@@ -126,6 +128,13 @@ title: LEEDS 2023 Legacy Dashboard
 
   {% endcomp %}
   {% endcomp %}
+
+  <div class='holder padded'>
+  <h3>Known Limitations & Issues<h3> 
+    <ul>
+      <li>This dashboard is under development and may not be accurate or up to date.</li>
+    </ul>
+</div>
 
 
 
