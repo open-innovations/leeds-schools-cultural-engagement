@@ -11,6 +11,7 @@ WARD_REFERENCE = os.path.join('data', 'leeds_wards.csv')
 DATA_DIR = os.path.join('src', '_data', 'viz', 'leeds_2023')
 UNIQUE_SCHOOLS_OVERRIDE = 228
 TOTAL_SCHOOL_ENGAGEMENTS_OVERRIDE=501
+SCHOOL_COUNT_OVERRIDE = 294
 
 def load_schools_data():
     return pd.read_csv(SCHOOLS_DATA, parse_dates=['date']).apply(literal_converter)
@@ -40,16 +41,16 @@ if __name__ == "__main__":
     
     # Count summary statistics
     summary = {}
-    summary['Schools in Leeds'] = len(all_schools)
+    summary['Schools in Leeds'] = SCHOOL_COUNT_OVERRIDE
     summary['Schools not assigned to ward'] = len(all_schools[all_schools.ward_name.isna()])
     summary['Total pupil engagements'] = data.pupil_count.sum().astype(int)
     summary['Total school engagements'] = TOTAL_SCHOOL_ENGAGEMENTS_OVERRIDE
     summary['Unique schools'] = UNIQUE_SCHOOLS_OVERRIDE
-    summary['Percentage of Leeds schools engaged'] = str(round((summary['Unique schools'] / summary['Schools in Leeds'] * 100),2)) + '%'
+    summary['Percentage of Leeds schools engaged'] = str(round((summary['Unique schools'] / SCHOOL_COUNT_OVERRIDE * 100),2)) + '%'
     summary['Date build'] = pd.Timestamp.today().floor('D').strftime('%Y-%m-%d')
     summary['Earliest date'] = data.date.min().strftime('%Y-%m-%d')
 
-    # Write engagements by week
+    # Write engagements by week 
     pupil_engagements = data.groupby('date').pupil_count.sum().resample('W-FRI').sum().astype(int)
     school_engagements = data.groupby('date').school_count.sum().resample('W-FRI').sum()
     cumulative_pupil_engagements = pupil_engagements.cumsum()
