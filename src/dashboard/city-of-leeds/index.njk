@@ -52,68 +52,90 @@ title: City of Leeds
 }}
 {% endcomp %}
 
-
-
-<h2>Projected population in Leeds</h2>
-
 {% comp "grid.autogrid", { columns: 1 } %}
 
-
+<div class="white-bg">
 {% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
 <h3>Estimated future population in Leeds</h3> 
-{{ comp.oi.graph.line({ config: {
-    categories: viz.dashboard.projected_population.columns.PROJECTED_YEAR,
-    width: 25,
-    height: 15,
-    padding: { left: 4 },
-    series: [
-      {
-        label: 'All ages',
-        yValues: viz.dashboard.projected_population.columns['All Ages'],
-        markerOptions: { s: 5 },
-        colour: 'white'
-      },
-      {
-        label: 'Aged 0-19',
-        yValues: viz.dashboard.projected_population.columns['Aged 0-19'],
-        markerOptions: { s: 5 },
-        colour: '#b463cc'
-      }
-    ],
-    xAxis: {
-      title: 'Year',
-      majorTick: 5,
-      colour: 'white'
-    },
-    plotArea: {
-      yMax: 1000000,
-      colour: 'white'
-    },
-    yAxis: {
-      title: 'Population',
-      titleOffset: 3.5,
-      majorTick: 100000,
-      formatter: dateFormatter,
-      colour: 'white'
-    },
-    legend: {
-      position: 'top',
-      direction:'horizontal'
-    }, 
-    line: {
-        "stroke-dasharray": [6,2]
-    }
-  } }) | safe }}
+
   <p>
   Lorem ipsum dolor sit amet. Qui voluptates sint non nobis amet et officiis officia est voluptate libero id ipsam totam rem expedita nihil in dolores voluptatum? Ab illo incidunt cum omnis maxime aut distinctio quos sed perferendis rerum eum quia molestiae. Qui repudiandae rerum est dolorum voluptas vel maiores nihil est perspiciatis quod.
   </p>
   {% endcomp %}
-  
+  </div>
+  {% endcomp %}
+
+  <h2>Creative engagement for young people in Leeds</h2>
+
+  {% comp "grid.autogrid", { columns: 2 } %}
+
+  {% comp "dashboard.panel", { bg: "#125164", fg: 'white', columns: 2 }%}
+  <div class="text-panel">
+  The maps below are beginning to paint a picture of the areas where young people are best served - or underserved - in terms of opportunities for creative engagement. We are beginning to answer questions such as - where is there a greater proportion of young people across the city? Where are the creative practitioners based, and where are the schools with the best offering for creative education? Explore the data below. 
+  </div>
+  {% endcomp %}
+  {% endcomp %}
+
+  {% comp "grid.autogrid", { columns: 2 } %}
+
+  {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+		<h2>Population of young people by ward</h2>
+		<p>This map represents the percentage of people in each ward whom are under 19 years old. Lighter colours indicate areas with a greater proportion of young people.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.ward_level_population,
+				matchKey: 'ward_code',
+				value: 'Percentage of population under 19',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ Percentage of population under 19 }}%</strong>'
+			}
+		}) | safe }}
+  {% endcomp %}
+
+    {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+		<h2>Number of cultural organisations by ward</h2>
+		<p>This map represents the number of cultural organisations with addresses in each ward. There are 6 cultural organisations in our dataset that were not assigned to a ward. Lighter colours indicate areas where more cultural organisations are based.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.organisations_by_ward,
+				matchKey: 'ward_code',
+				value: 'count_orgs',
+        min: 0,
+        max: 40,
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
+			}
+		}) | safe }}
+  {% endcomp %}
+
+  {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+		<h2>Indices of multiple deprivation by Leeds ward</h2>
+		<p>This map represents the indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.imd_by_ward,
+				matchKey: 'WD24CD',
+				value: 'imd_decile',
+        min: 0,
+        max: 10,
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ imd_decile }}</strong>'
+			}
+		}) | safe }}
+  {% endcomp %}
   {% endcomp %}
 
 
-<h2>National Subject Entries</h2>
+<h2>Creative Subject Entries</h2>
 {% comp "grid.autogrid", { columns: 1 } %}
+{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+<div class="text-panel">
+The data below explores the number of students who enter for creative subjects at GCSE and A Level. We want to understand how these trends change over time at a national level and how the attitudes of young people in Leeds compare with the national picture.
+</div>
+{% endcomp %}
 
 {% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
 
@@ -179,6 +201,9 @@ title: City of Leeds
         "stroke-dasharray": [6,2]
     }
   } }) | safe }}
+  <p>
+    The number of young people opting for arts and creative subjects at GCSE level has plateaued, and began to decline in the last two years relative to other subjects such as Business Studies.
+  </p>
   {% endcomp %}
 
 
@@ -247,10 +272,13 @@ title: City of Leeds
         "stroke-dasharray": [6,2]
     }
   } }) | safe }}
+    <p>
+    The number of young people opting for arts and creative subjects at A level has stayed roughly the same.
+  </p>
   {% endcomp %}
   {% endcomp %}
 
-</div>
+
 
 <div class='holder padded'>
   <h3>Known Limitations & Issues<h3> 
