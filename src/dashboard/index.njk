@@ -1,19 +1,43 @@
 ---
-title: Cultural Engagement Impact Dashboard
+title: Dashboards
 ---
 
-{% comp "grid.autogrid", { columns: 3 } %}
+<p>
+	The dashboards on this page present key information on the city of Leeds, enabling us to answer questions such as - who are the people that make up our city? How many of those are young people? How are young people in Leeds currently engaging in arts and culture, and how does this enrich their lives? By exploring this data, we can understand which areas of Leeds are currently underserved by the cultural organisations in the region, and how organisations can direct their efforts, investment priorities and interventions towards the areas that need it the most.
+</p>
 
-  {% comp "dashboard.panel" %}
-    <h2>Headline stats</h2>
-    <p>Survey Data</p>
-  {% endcomp %}
+<ul class="grid dashboard" style ="grid-template-columns: repeat( 2, minmax(0, 1fr));">
+		{% comp "dashboard.pane", { bg: "#125164", fg: 'white' }%}
+	<li><a href="/dashboard/city-of-leeds/">
+		<h2>The City of Leeds</h2>
+		<p>A dashboard that presents how Leeds fits into the national landscape of arts and cultural engagement.</p>
+			{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.leeds_2023.engagements_by_ward,
+				matchKey: 'ward_code',
+				value: 'total_engagements',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+			}
+		}) | safe }}
+		{% endcomp %}
+	</a></li>
+	{% comp "dashboard.pane", { bg: "#370b45", fg: 'white' }%}
+	<li><a href="/dashboard/leeds-2023-legacy/">
+		<h2>LEEDS 2023 Legacy</h2>
+		<p>A dashboard visualising data that reflects the impact and legacy left behind by the LEEDS 2023 Year of Culture.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.leeds_2023.engagements_by_ward,
+				matchKey: 'ward_code',
+				value: 'total_engagements',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+			}
+		}) | safe }}
+		{% endcomp %}
+	</a></li>
 
-    {% comp "dashboard.panel" %}
-    <h2>Headline stats</h2>
-    <p>Survey Data</p>
-  {% endcomp %}
-
-{% endcomp %}
-
-
+</ul>

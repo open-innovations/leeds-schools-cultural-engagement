@@ -2,11 +2,29 @@
 title: Survey Responses Academic Year 2021/22
 ---
 
+{% comp 'frontmatter' %}
+
 {% comp 'figure', { min_width: "100%" } %}
 <p>This research serves to address the lack of data currently available on schools’ engagement with the arts in Leeds. A baseline understanding of how schools currently engage with local cultural organisations is needed to inform cultural strategy and funding priorities. It will support evaluation of the legacy of the LEEDS 2023 programme of activities across the city and will support other cultural organisations to perform their own evaluations and benchmarking activities.</p>
 <p>A pilot survey was sent to members of the senior leadership team at every school in Leeds, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. This will act as a pilot to gauge response and validate the approach and methodology for a future phase of work.</p>
 <p>Key findings from the survey responses are presented on this page, based on 40 responses from 35 schools, out of the total 293 schools in Leeds.</p>
 <p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
+{% endcomp %}
+
+<div>
+  {{ comp.contents({
+    links: {
+      "#Responses": "Responses",
+      "#Arts": "Arts Provision in Schools",
+      "#Practitioners": "External Practitioners",
+      "#Facilities": "Facilities",
+      "#Funding": "Funding & Support",
+      "#Funding": "Funding & Support",
+      "#Trips": "Trips",
+      "#Careers & Progression": "Careers & Progression"
+    }
+  }) | safe }}
+</div>
 {% endcomp %}
 
 {{
@@ -22,33 +40,28 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Arts commitment",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "Additional funding",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Local arts partnerships",
-				colour: "Through"
+				colour: "UoL-blue"
 			},{
 				name: "Local schools partnerships",
-				colour: "16+"
+				colour: "UoL-green"
 			},{
 				name: "Sign-posting opportunities",
-				colour: "Drama"
+				colour: "UoL-blue"
 			},{
 				name: "Local arts programmes",
-				colour: "Music"
+				colour: "UoL-purple"
 			}]
 		}
 	}) | safe
 }}
+
 <p>The visualisations below provide a more detailed breakdown of survey responses. They give an insight into how schools in Leeds are engaging with arts and culture, their facilities and approaches to funding for schools wishing to engage with other organisations.</p>
-
-
-{% comp 'figure', { min_width: "100%" } %}
-{% comp 'contents' %}
-{% endcomp %}
-{% endcomp %}
 
 <h2 id="Reponses">Overview of Respondents</h2>
 
@@ -81,17 +94,14 @@ title: Survey Responses Academic Year 2021/22
 }}
 
 
-	
-<ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
-
-	<li>
+<div>
 		<h3>Responses by school type</h3>
 		{{
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-type",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
 					columns: [{
 						name: "Tooltip",
 						template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
@@ -118,16 +128,16 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
+	</div>
 
-	<li>
+<div>
 		<h3>By school size</h3>
 		{{
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-size",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
 					columns: [{
 						name: "Tooltip",
 						template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
@@ -153,9 +163,8 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
+		</div>
 
-	<li>
 		<h3>By Artsmark</h3>
 		<p>The percentage of survey respondents who have been awarded, or who are working towards, an <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p>
 
@@ -163,8 +172,8 @@ title: Survey Responses Academic Year 2021/22
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-artsmark",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
 					columns: [{
 						name: "Tooltip",
 						template: "{{ ArtsMark }}: {{ Percentage | toFixed(1) }}% responded"
@@ -173,7 +182,8 @@ title: Survey Responses Academic Year 2021/22
 					series: [{
 						title: "Percentage",
 						value: "Percentage",
-						tooltip: "Tooltip"
+						tooltip: "Tooltip",
+						colour: '#125164'
 					}],
 					gap: 0.1,
 					axis: {
@@ -190,17 +200,16 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
 
-	<li>
 		<h3>By Arts Award Centres</h3>
 		<p>The percentage of survey respondents who are registered as an <a href="https://www.artsaward.org.uk/site/">Arts Award centre</a>.</p>
 		{{
 			comp.oi.chart.bar({
 				config: {
 					data: "viz.survey.pilot.survey-response-by-artsaward",
-					height: 250,
-					width: 600,
+					height: 300,
+					width: 800,
+					color: 'black',
 					columns: [{
 						name: "Tooltip",
 						template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
@@ -209,7 +218,8 @@ title: Survey Responses Academic Year 2021/22
 					series: [{
 						title: "Percentage",
 						value: "Percentage",
-						tooltip: "Tooltip"
+						tooltip: "Tooltip",
+						colour: '#440d54'
 					}],
 					gap: 0.1,
 					axis: {
@@ -226,8 +236,6 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}) | safe
 		}}
-	</li>
-</ul>
 
 <h2 id="Arts">Arts Provision in Schools</h2> 
 
@@ -249,13 +257,13 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Overall",
-				colour: "Primary"
+				colour: "Overall"
 			},{
 				name: "Primary schools",
-				colour: "Secondary"
+				colour: "Primary"
 			},{
 				name: "Secondary schools",
-				colour: "Through"
+				colour: "Secondary"
 			}]
 		}
 	}) | safe
@@ -436,10 +444,10 @@ title: Survey Responses Academic Year 2021/22
 				},
 				panels: [{
 					name: "Arts opportunities",
-					colour: "Drama"
+					colour: "UoL-green"
 				},{
 					name: "Competitions & showcases",
-					colour: "Dance"
+					colour: "UoL-teal"
 				}]
 			}
 		}) | safe
@@ -492,15 +500,15 @@ title: Survey Responses Academic Year 2021/22
   {% endcomp %}
 
     {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#277d8e"
+    fg: "black",
+    bg: "#b2c929"
   } %}
     <p>Theatre</p>
   {% endcomp %}
 
     {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#20a387"
+    fg: "black",
+    bg: "#fde725"
   } %}
     <p>Dance</p>
   {% endcomp %}
@@ -508,14 +516,14 @@ title: Survey Responses Academic Year 2021/22
 
   {% comp "grid.block.impact", {
     fg: "white",
-    bg: "#238a8d"
+    bg: "#125164"
   } %}
     <p>Museums/Heritage</p>
   {% endcomp %}
 
     {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#2d708e"
+    fg: "black",
+    bg: "#20a387"
   } %}
     <p>Art</p>
   {% endcomp %}
@@ -630,13 +638,13 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Local arts organisations",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "School partnerships",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Local community arts programmes",
-				colour: "Special"
+				colour: "UoL-blue"
 			}]
 		}
 	}) | safe
@@ -766,13 +774,13 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Trusts and foundations",
-				colour: "Primary"
+				colour: "UoL-purple"
 			},{
 				name: "Leeds City Council",
-				colour: "Secondary"
+				colour: "UoL-green"
 			},{
 				name: "Fundraising events or activities",
-				colour: "Special"
+				colour: "UoL-teal"
 			}]
 		}
 	}) | safe
@@ -790,10 +798,10 @@ title: Survey Responses Academic Year 2021/22
 			},
 			panels: [{
 				name: "Parents",
-				colour: "Drama"
+				colour: "UoL-blue"
 			},{
 				name: "Other sources",
-				colour: "Music"
+				colour: "Other"
 			}]
 		}
 	}) | safe

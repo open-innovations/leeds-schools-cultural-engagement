@@ -28,17 +28,25 @@
 <p><a href="/about/">Read more about the research programme here</a>, or you can explore the data below.</p>
 
 <h2>Explore the data</h2>
-<ul class="grid">
-	<li><a href="/reports/schools/" class="l23-light-blue">
+<ul class="grid dashboard">
+	{% comp "dashboard.pane", { bg: '#125164', fg: 'white' }%}
+	<li><a href="/reports/schools/">
 		<h2>Schools</h2>
 		<p>A breakdown of schools in Leeds and their creative engagement.</p>
 	</a></li>
-	<li><a href="/survey/" class="l23-green">
+	{%endcomp%}
+
+	{% comp "dashboard.pane", { bg: "#b2c929", fg: 'black' }%}
+	<li><a href="/survey/">
 		<h2>Survey Responses</h2>
 		<p>A breakdown of responses to the research survey.</p>
 	</a></li>
-	<li><a href="/reports/organisations/" class="l23-light-purple">
+	{%endcomp%}
+
+	{% comp "dashboard.pane", { bg: "#370b45", fg: 'white' }%}
+	<li><a href="/reports/organisations/">
 		<h2>Organisations</h2>
 		<p>Cultural organisations engaging with schools in Leeds.</p>
 	</a></li>
+	{%endcomp%}
 </ul>

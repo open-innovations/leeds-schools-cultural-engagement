@@ -3,13 +3,13 @@
 css: |
   .auto-grid {
     --auto-grid-min-size: 16rem;
-    --auto-grid-gap: 1rem;
+    --auto-grid-gap: 0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--auto-grid-min-size)), 1fr));
     grid-gap: var(--auto-grid-gap);
+    margin-top: 0.5em;
     & > * {
       margin: 0;
-      padding-top: 2em;
     }
   }
 ---

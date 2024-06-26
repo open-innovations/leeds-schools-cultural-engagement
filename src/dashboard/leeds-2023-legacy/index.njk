@@ -1,0 +1,184 @@
+---
+title: LEEDS 2023 Legacy Dashboard
+---
+{% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
+
+<div class="holder padded">
+
+<p>
+  LEEDS 2023 worked across all 33 wards of the city and engaged with a wide range of participants across Leeds. The programme was designed to be as representative and inclusive as possible. The data and visualisations displayed on this page are drawn from the LEEDS 2023 Data Microsite, reflecting the impact and legacy of the programme by highlighting the ways in which LEEDS 2023 engaged with children and young people in Leeds. By doing this, we aim to advocate for the value of this and other similar cultural programmes, demonstrating how young people have been enriched by the programme.  
+</p>
+
+</div>
+
+{% comp "grid.autogrid", { columns: 1 } %}
+
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.leeds_2023.headlines",
+			title: "title",
+			value: "value",
+			width: "20%",
+			panels: [{
+				name: "Unique schools",
+				colour: "UoL-purple"
+			},{
+				name: "Total school engagements",
+				colour: "UoL-purple"
+			},{
+				name: "Total pupil engagements",
+				colour: "UoL-purple"
+			},{
+				name: "Schools in Leeds",
+				colour: "UoL-purple"
+			}]
+		}
+	}) | safe
+}}
+
+
+
+{% comp "dashboard.panel", { bg: '#370b45', fg: 'white' }%}
+<h3>Number of engagements with pupils</h3>
+<p>The chart below presents the number of activities that were delivered with children in Leeds schools as part of the LEEDS 2023 programme.</p>
+{{ comp.oi.graph.line({ config: {
+    categories: viz.leeds_2023.engagements_by_week.columns.date,
+    width: 25,
+    colours: 'white',
+    height: 15,
+    padding: { left: 4 },
+    series: [
+      {
+        label: 'Engagements (cumulative)',
+        yValues: viz.leeds_2023.engagements_by_week.columns.cumulative_pupil_engagements,
+        markerOptions: { s: 5 },
+        colour: 'white'
+      }
+    ],
+    xAxis: {
+      title: 'Date',
+      majorTick: 10,
+      colour: 'white'
+    },
+    plotArea: {
+      yMax: 40000,
+      colour: 'white'
+    },
+    yAxis: {
+      title: 'Number of engagements',
+      titleOffset: 3,
+      majorTick: 2000,
+      formatter: dateFormatter,
+      colour: 'white'
+    },
+    legend: {
+      width: '30em'
+    }, 
+    line: {
+        "stroke-dasharray": [6,2]
+    }
+  } }) | safe }}
+  {% endcomp %}
+
+
+{% comp "grid.autogrid", { columns: 2 } %}
+
+{% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
+<h3>School engagements by ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+    scale: 'rgb(240, 223, 244) 0%, rgb(111, 53, 136) 100%',
+		matchKey: 'ward_code',
+		value: 'total_engagements',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ total_engagements }}</strong>'
+	}
+  }) | safe }}
+<p>
+  This map shows the number of creative engagement activities carried out with schools as part of the LEEDS 2023 programme, by ward.
+  Darker colours mean more engagements were held in each ward.
+  Hover over the hexagon to see the count of engagements per ward.
+</p>
+{% endcomp %}
+
+{% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
+<h3>Pupil engagements by ward</h3>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+    scale: 'rgb(240, 223, 244) 0%, rgb(111, 53, 136) 100%',
+    legend: {
+      position: 'top',
+      continuous: true,
+      size: 400px,
+        items: [
+          { value: 100, label: '100%' },
+          { value: 75, label: '75%' },
+          { value: 50, label: '50%' },
+          { value: 25, label: '24%' },
+          { value: 0, label: '0%' }
+        ]
+      },
+		value: 'pupil_engagements',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ pupil_engagements }}</strong>'
+	}
+  }) | safe }}
+<p>
+  This map shows the number of pupils engaged with as part of the LEEDS 2023 programme, by ward.
+  Darker colours mean more engagement activities were held in each ward.
+  Hover over the hexagon to see the count of engagements in each ward.
+</p>
+  {% endcomp %}
+  {% endcomp %}
+
+
+
+{% comp "dashboard.panel", { bg: "#370b45", fg: 'white' }%}
+<h3>Percentage of schools engaged with in each ward</h3>
+<p>
+  This map shows the percentage of schools that were engaged with as part of LEEDS 2023 activities, out of the schools in each ward.
+  Darker colours mean more engagement activities were held in each ward.
+  Hover over the hexagon to see the percentage of schools engaged with in each ward.
+</p>
+{{ comp.oi.map.hex_cartogram({
+    config: {
+		hexjson: hex.wards_leeds,
+		data: viz.leeds_2023.engagements_by_ward,
+		matchKey: 'ward_code',
+		value: 'percent_of_schools_in_ward_engaged',
+    scale: 'rgb(240, 223, 244) 0%, rgb(111, 53, 136) 100%',
+    legend: {
+      position: 'top',
+      continuous: true,
+      size: 400px,
+        items: [
+          { value: 100, label: '100%' },
+          { value: 75, label: '75%' },
+          { value: 50, label: '50%' },
+          { value: 25, label: '24%' },
+          { value: 0, label: '0%' }
+        ]
+      },
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ percent_of_schools_in_ward_engaged }}%</strong>'
+	}
+  }) | safe }}
+  {% endcomp %}
+  {% endcomp %}
+
+  <div class='holder padded'>
+  <h3>Known Limitations & Issues<h3> 
+    <ul>
+      <li>This dashboard is under development and may not be accurate or up to date.</li>
+    </ul>
+</div>
+
+
+
