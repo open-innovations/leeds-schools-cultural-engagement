@@ -145,6 +145,8 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .legend .legend-item { display: inline-block; line-height: 1em; margin-right: 1em; cursor: pointer; }
 .legend .legend-item svg { float: left; }
 
+.text-panel { font-size:1.2em; padding: 1.5em; }
+
 .elsewhere { float: right; margin-top: 0; }
 .elsewhere li { display: inline-block; margin-left: 0.5em; }
 .elsewhere li a { line-height: 0; display: block; }

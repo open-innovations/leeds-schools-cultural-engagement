@@ -33,6 +33,8 @@ css: |
     {%- if bg %}--background: {{ bg }};{% endif -%}
     {%- if align %}--align: {{ align }};{% endif -%}
     {%- if min-height %}--min-height: {{ min-height }};{% endif -%}
+    {%- if columns %}grid-column:span {{ columns }};{% endif -%}
+    {%- if rows %}grid-row:auto/span {{ rows }};{% endif -%}
   ">
   {{ content | safe }}
 </div>

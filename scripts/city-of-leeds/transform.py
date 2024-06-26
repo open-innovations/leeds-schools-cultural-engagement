@@ -35,6 +35,7 @@ if __name__ == "__main__":
     headlines['School age population'] = school_age_population
     headlines['Projected population 2025 - all ages'] = projected_population_2025_all_ages
     headlines['Projected population 2025 - school age'] = projected_population_2025_0_19
+
     
     headlines = pd.DataFrame.from_dict(headlines, orient='index', columns=['value']).reset_index()
     headlines = headlines.rename(columns={'index':'headline'}).to_csv(os.path.join(OUT_DIR, 'headlines.csv'), index=False)

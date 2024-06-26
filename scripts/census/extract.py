@@ -44,3 +44,8 @@ if __name__ == '__main__':
     projected_population = get_data('https://www.nomisweb.co.uk/api/v01/dataset/NM_2006_1.data.csv?geography=1820328007&projected_year=2018...2043&gender=0&c_age=200,201,5&measures=20100')
 
     projected_population.reset_index().to_csv(os.path.join(DATA_DIR, 'projected_population.csv'), index=False)
+
+    ward_level_estimates = get_data('https://www.nomisweb.co.uk/api/v01/dataset/NM_2014_1.data.csv?geography=729813074,729813075,729811850,729811851,729812925,729811852...729811856,729812926,729813998,729811857...729811860,729811988,729811861...729811869,729811989,729811870...729811872,729813999,729811873,729811874&date=latest&gender=0&c_age=200,201,117...120&measures=20100')
+
+    ward_level_estimates.reset_index().to_csv(os.path.join(DATA_DIR, 'ward_level_estimates.csv'), index=False)
+

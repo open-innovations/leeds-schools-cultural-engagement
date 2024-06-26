@@ -3,6 +3,7 @@ import pandas as pd
 
 POPULATION_DATA = os.path.join('data', 'census', 'population.csv')
 PROJECTED_POP_DATA = os.path.join('data', 'census', 'projected_population.csv')
+WARD_LEVEL_ESTIMATES = os.path.join('data', 'census', 'ward_level_estimates.csv')
 OUT_DIR = os.path.join('src', '_data', 'viz', 'dashboard')
 
 POP_COLUMNS = {
@@ -17,6 +18,12 @@ PROJ_COLUMNS = {
     'PROJECTED_YEAR',
     'C_AGE_NAME',
     'MEASURES_NAME',
+    'OBS_VALUE'
+}
+
+WARD_COLUMNS = {
+    'GEOGRAPHY_CODE',
+    'C_AGE_NAME',
     'OBS_VALUE'
 }
 
@@ -66,6 +73,29 @@ if __name__ == '__main__':
     projected_data = projected_data.round(2)
 
     projected_data.to_csv(os.path.join(OUT_DIR, 'projected_population.csv'), index=True)
+
+
+    # WARD LEVEL ESTIMATES
+
+    ward_level_estimates = pd.read_csv(WARD_LEVEL_ESTIMATES, usecols=WARD_COLUMNS).rename(columns={
+        'GEOGRAPHY_CODE': 'ward_code',
+        'C_AGE_NAME': 'age',
+        'OBS_VALUE': 'value'
+        })
+    
+    ward_level_estimates = ward_level_estimates.pivot_table(columns='age', index='ward_code', values='value')
+
+    ward_level_estimates['Aged 16-19'] = ward_level_estimates['Age 16'] + ward_level_estimates['Age 17'] + ward_level_estimates['Age 18']
+
+    ward_level_estimates = ward_level_estimates.drop(columns={'Age 16', 'Age 17', 'Age 18', 'Age 19'})
+    ward_level_estimates['Aged 0-19'] = ward_level_estimates['Aged 0 to 15'] + ward_level_estimates['Aged 16-19']
+    ward_level_estimates=ward_level_estimates.drop(columns={'Aged 0 to 15', 'Aged 16-19'})
+
+    ward_level_estimates['Percentage of population under 19'] = ((ward_level_estimates['Aged 0-19'] / ward_level_estimates['All Ages']) * 100).round(2)
+
+    ward_level_estimates.to_csv(os.path.join(OUT_DIR, 'ward_level_population.csv'), index=True)
+
+
 
 
 
