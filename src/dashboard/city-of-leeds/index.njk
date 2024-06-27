@@ -97,7 +97,7 @@ title: City of Leeds
 		}) | safe }}
   {% endcomp %}
 
-  {% comp "dashboard.panel", { bg: "#125164", fg: 'white', columns: 2 }%}
+  {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
 		<p>This map represents the indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
 		{{ comp.oi.map.hex_cartogram({
@@ -110,6 +110,23 @@ title: City of Leeds
         max: 10,
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ imd_decile }}</strong>'
+			}
+		}) | safe }}
+  {% endcomp %}
+
+    {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+		<h2>Leeds City Council - funded organisations</h2>
+		<p>This map represents the organisations that have been awarded funding as part of the Leeds Cultural Investment Programme.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.lcip_funded_orgs_by_ward,
+				matchKey: 'ward_code',
+				value: 'organisations',
+        min: 0,
+        max: 20,
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ organisations }}</strong>'
 			}
 		}) | safe }}
   {% endcomp %}
