@@ -67,7 +67,7 @@ h3:first-child { text-align: left;}
 h1 + *, h2 + *, h3 + * { margin-top: 1em; }
 strong { font-weight: 700; }
 em { font-style: italic; }
-a { color: #722EA5; text-decoration: underline; }
+a { color: inherit; text-decoration: underline; }
 .bold { color: #722EA5; }
 p, time, li, td, th, footer, div { font-weight: 400; }
 p, iframe, h2, h3, figure, ul, ol, .block, .padded-bottom { margin-bottom: 16px; }
