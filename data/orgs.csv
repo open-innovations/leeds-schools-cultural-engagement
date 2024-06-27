@@ -102,7 +102,7 @@ URN,Name,Engagement,Address,Postcode,Latitude,Longitude,Funding,Type of organisa
 10100,This Green Moon,"Provider, CPD","Swillington Organic Farm, Coach Road, Leeds",LS26 8QA,53.76127,-1.42742,Neither,,https://www.thisgreenmoon.com/
 10101,Total Dance,Provider,"Alex House, South Parade Morley",LS27 8AJ,53.74469,-1.59459,Neither,,https://www.totaldanceleeds.co.uk/
 10102,Tribe Arts,Unknown,"Mabgate Mills, Mill 2, MacaulAy Street",LS9 7DZ,53.80237,-1.53031,Arts Council England,,https://tribearts.co.uk/
-10103,Tutti Frutti,Provider,"Shine, Harehills Road",LS8 5HS,53.81264,-1.51707,Both,NPO,https://tutti-frutti.org.uk/
+10103,Tutti Frutti Productions,Provider,"Shine, Harehills Road",LS8 5HS,53.81264,-1.51707,Both,NPO,https://tutti-frutti.org.uk/
 10104,UK Cheerleading Association,Unknown,"Armcon Business Park, London Rd S, Poynton, Stockport ",SK12 1LQ,53.34154,-2.12736,Neither,,https://ukca.org.uk/
 10105,University of Leeds - Cultural Institute,Unknown,Clothworkers' Building South,LS2 9JT,53.80795,-1.55332,Arts Council England,,https://www.leeds.ac.uk/cultural-institute
 10106,We are IVE,Network,"We Are IVE Ltd, The Half Roundhouse, Graingers Way, Leeds",LS12 1AH,53.79491,-1.5631,Neither,,https://weareive.org/
@@ -122,7 +122,7 @@ URN,Name,Engagement,Address,Postcode,Latitude,Longitude,Funding,Type of organisa
 10120,Golden Owl Awards,Competion/Showcase,"Leeds Film, Leeds City Council, Leeds Town Hall, the Headrow",LS13AD,53.79996,-1.54972,Neither,,https://www.leedsfilm.com/archive/leeds-young-filmmaker-golden-owl-awards/
 10121,Leeds Beckett University: Graphic and Design department,,"Leeds Beckett University - City Campus, Woodhouse Lane",LS1 3HE,53.80402,-1.54857,Neither,,Unknown
 10122,Leeds Beckett University: Leeds School of Arts,"Partner, Signposting","Leeds Beckett University - City Campus, Woodhouse Lane",LS1 3HE,53.80402,-1.54857,Neither,,https://www.leedsbeckett.ac.uk/schoolsandcolleges/
-10123,Leeds City College,?,"Park Ln, Woodhouse, Leeds",LS3 1AA,53.80044,-1.55901,Neither,,https://leedscitycollege.ac.uk/
+10123,Leeds City College,,"Park Ln, Woodhouse, Leeds",LS3 1AA,53.80044,-1.55901,Neither,,https://leedscitycollege.ac.uk/
 10124,Leeds International Concert Season,Event,"Leeds International Concert Season, Carriageworks Theatre, The Electric Press, 3 Millennium Square, Leeds",LS2 3AD,53.80117,-1.54835,Arts Council England,,https://www.leedsconcertseason.co.uk/
 10125,Leeds International Piano Competition,Competition/Showcase,"169b Woodhouse Lane, Leeds, United Kingdom",LS2 3AR,53.80595,-1.55003,Leeds City Council,,https://www.leedspiano.com/
 10126,Leeds Library and Information Service,Provider,"Central Library, Municipal Buildings, Calverley Street",LS1 3AB,53.80022,-1.54867,Arts Council England,,https://www.leeds.gov.uk/libraries
@@ -152,3 +152,15 @@ URN,Name,Engagement,Address,Postcode,Latitude,Longitude,Funding,Type of organisa
 10150,Otley Carnival,Event,"1-9 Market Pl, Otley",LS21 3AQ,53.90563,-1.69396,Neither,,https://www.otleycarnival.co.uk/
 10151,Pudsey Carnival,Event,"Victoria Road, Pudsey",LS28 7SR,53.79649,-1.67528,Neither,,https://www.pudseycarnival.org.uk/
 10152,real PE (real Dance),Provider,"120 429, 433 Pinner Rd, North Harrow, Harrow",HA1 4LB,51.58548,-0.36021,Neither,,https://realpe.co.uk/news/real-dance-is-here
+10153,Polite Rebellion (Formerly The Grief Series),Provider,,,,,Leeds City Council,,https://www.griefseries.co.uk/home
+10154,Royal Armouries,"Provider, Event","Armouries Driver, Leeds",LS10 1LT,53.79187,-1.53242,Leeds City Council,,https://royalarmouries.org/
+10155,The Performance Ensemble CIC,"Provider, Event",Dale House 64 Fink Hill,LS18 4DH,53.83545,-1.64435,Both,,https://theperformanceensemble.com/
+10156,Cloth Cat Studios limited,"Provider, Training/CPD, Network","The Holbeck, Jenkinson Lawn",LS11 9QX,53.78483,-1.55527,Leeds City Council,,https://clothcatleeds.org.uk/
+10157,Old Chapel Music CIC,"Provider, Training/CPD, Network","The Old Chapel, Crossland Court, Czar St, Holbeck",LS11 9PR,53.78813,-1.56124,Leeds City Council,,https://oldchapelleeds.org/
+10158,The Ascendance Repertory Company Limited,"Provider, Event, Training/CPD","153 Bradford Rd, Wakefield",WF1 2AP,53.78813,-1.51399,Both,,https://ascendance.org.uk/
+10159,Brave Words CIC,"Provider, Event","73 Blackmoor Court, Leeds, England",LS17 7RT,53.69559,-1.56004,Both,,https://bravewords.co.uk/
+10160,Milim CIC,"Provider, Training/CPD, Network","Ground Floor, 6 Queen Street",LS1 2TW,53.85601,-1.55425,Leeds City Council,,https://milim.org.uk/
+10161,St Luke's Community and Regeneration Enterprises,Provider,"Beeston Hill United Free Church, Malvern Road",LS11 8PD,53.7796,-1.5543,Leeds City Council,,https://stlukescares.org.uk/
+10162,Otley Courthouse,Provider,"Courthouse, Courthouse St",LS21 3AN,53.90623,-1.69281,Leeds City Council,,https://otleycourthouse.org.uk/
+10163,Yorkshire Dance,"Provider, Event, Training/CPD",3 St Peter's Square,LS9 8AH,53.79711,-1.53324,Leeds City Council,,https://yorkshiredance.com/
+10165,Transform Theatre Projects ,"Provider, Event, Training/CPD","Transform Theatre Projects, C/O Leeds Playhouse, Playhouse Square",LS2 7UP,53.79809,-1.53441,Leeds City Council,,https://transformfestival.org/
