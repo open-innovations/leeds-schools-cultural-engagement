@@ -82,7 +82,7 @@ title: City of Leeds
 
     {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
 		<h2>Number of cultural organisations by ward</h2>
-		<p>This map represents the number of cultural organisations with addresses in each ward. There are 6 cultural organisations in our dataset that were not assigned to a ward. Lighter colours indicate areas where more cultural organisations are based.</p>
+		<p>This map represents the number of cultural organisations with addresses in each ward. There are 7 cultural organisations in our dataset that were not assigned to a ward. Lighter colours indicate areas where more cultural organisations are based.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -198,8 +198,7 @@ The data below explores the number of students who enter for creative subjects a
       colour: 'white'
     },
     legend: {
-      position: 'top',
-      direction:'horizontal'
+      direction: horizontal
     }, 
     line: {
         "stroke-dasharray": [6,2]

@@ -142,7 +142,7 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .dashboard { padding-top: 2em; }
 
 .legend { margin-bottom: 1em; text-align: center; }
-.legend .legend-item { display: inline-block; line-height: 1em; margin-right: 1em; cursor: pointer; }
+.legend .legend-item { display: inline-block; line-height: 1em; margin-right: 1em; cursor: pointer; color:white;}
 .legend .legend-item svg { float: left; }
 
 .text-panel { font-size:1.2em; padding: 1.5em; }
