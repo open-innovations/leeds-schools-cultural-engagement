@@ -3,14 +3,19 @@ title: City of Leeds
 
 
 ---
-
 {% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
-
 
 <p><strong>This page is under development. Styling and data may be missing or incorrect.</strong></p> 
 
 {% comp "grid.autogrid", { columns: 1 } %}
+{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+<div class="text-panel">
+The data on this page aims to present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture.
+</div>
+{% endcomp %}
+{% endcomp %}
 
+{% comp "grid.autogrid", { columns: 1 } %}
 
 {{
 	comp.oi.dashboard({
