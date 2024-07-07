@@ -73,7 +73,10 @@ title: City of Leeds
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.ward_level_population,
 				matchKey: 'ward_code',
-				value: 'Percentage of population under 19',
+        scale: 'rgb(85, 126, 141) 0%, rgb(210, 224, 229) 100%',
+        min: 7,
+        max: 27,
+        value: 'Percentage of population under 19',
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ Percentage of population under 19 }}%</strong>'
 			}
@@ -88,9 +91,10 @@ title: City of Leeds
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.organisations_by_ward,
 				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
 				value: 'count_orgs',
         min: 0,
-        max: 40,
+        max: 10,
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
 			}
@@ -99,15 +103,16 @@ title: City of Leeds
 
   {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
-		<p>This map represents the indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
+		<p>The indices of multiple deprivation, by Leeds ward. Darker colours reflect areas with a higher deprivation index.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.imd_by_ward,
 				matchKey: 'WD24CD',
 				value: 'imd_decile',
+        scale: 'rgb(85, 126, 141) 0%, rgb(210, 224, 229) 100%',
         min: 0,
-        max: 10,
+        max: 8,
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ imd_decile }}</strong>'
 			}
@@ -116,15 +121,16 @@ title: City of Leeds
 
     {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
 		<h2>Leeds City Council - funded organisations</h2>
-		<p>This map represents the organisations that have been awarded funding as part of the Leeds Cultural Investment Programme.</p>
+		<p>The number of organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Darker colours represent areas where more grants were awarded.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.lcip_funded_orgs_by_ward,
 				matchKey: 'ward_code',
 				value: 'organisations',
+        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
         min: 0,
-        max: 20,
+        max: 5,
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ organisations }}</strong>'
 			}
@@ -140,14 +146,17 @@ title: City of Leeds
 The data below explores the number of students who enter for creative subjects at GCSE and A Level. We want to understand how these trends change over time at a national level and how the attitudes of young people in Leeds compare with the national picture.
 </div>
 {% endcomp %}
+{% endcomp %}
+
+{% comp "grid.autogrid", { columns: 1 } %}
 
 {% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
 
 <h3>National GCSE Subject Entries</h3>
 {{ comp.oi.graph.line({ config: {
     categories: viz.dashboard.subject_entries_all_gcse.columns.year,
-    width: 30,
-    height: 13,
+    width: 35,
+    height: 15,
     padding: { left: 4 },
     series: [
       {
@@ -208,7 +217,9 @@ The data below explores the number of students who enter for creative subjects a
     The number of young people opting for arts and creative subjects at GCSE level has plateaued, and began to decline in the last two years relative to other subjects such as Business Studies.
   </p>
   {% endcomp %}
+  {% endcomp %}
 
+{% comp "grid.autogrid", { columns: 1 } %}
 
 
 {% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
@@ -216,8 +227,8 @@ The data below explores the number of students who enter for creative subjects a
 <h3>National A Level Subject Entries</h3>
 {{ comp.oi.graph.line({ config: {
     categories: viz.dashboard.subject_entries_all_a_level.columns.year,
-    width: 30,
-    height: 13,
+    width: 35,
+    height: 15,
     padding: { left: 4 },
     series: [
       {
