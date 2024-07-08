@@ -1,19 +1,17 @@
 ---
 title: City of Leeds
-
-
 ---
 {% from 'macros.njk' import dateFormatterNoYear as dateFormatter %}
 
-<p><strong>This page is under development. Styling and data may be missing or incorrect.</strong></p> 
-
 {% comp "grid.autogrid", { columns: 1 } %}
-{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
-<div class="text-panel">
-The data on this page aims to present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture.
+
+<div class="holder padded">
+<p>
+  The visualisations on this page present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture. We are using data to answer questions such as - how many young people are there in Leeds, and where is there a greater proportion of young people across the city? Where are the creative hotspots, with creative practitioners who are able to offer engagement activities with schools and young people? Where are the schools in Leeds that have the best offering of creative curriculum and enrichment activities? Explore the data below.
+</p>
 </div>
-{% endcomp %}
-{% endcomp %}
+
+{% endcomp %} 
 
 {% comp "grid.autogrid", { columns: 1 } %}
 
@@ -58,15 +56,6 @@ The data on this page aims to present a picture of life in Leeds for young peopl
 {% endcomp %}
 
   <h2>Creative engagement for young people in Leeds</h2>
-
-  {% comp "grid.autogrid", { columns: 2 } %}
-
-  {% comp "dashboard.panel", { bg: "#125164", fg: 'white', columns: 2 }%}
-  <div class="text-panel">
-  The maps below are beginning to paint a picture of the areas where young people are best served - or underserved - in terms of opportunities for creative engagement. We are beginning to answer questions such as - where is there a greater proportion of young people across the city? Where are the creative practitioners based, and where are the schools with the best offering for creative education? Explore the data below. 
-  </div>
-  {% endcomp %}
-  {% endcomp %}
 
   {% comp "grid.autogrid", { columns: 2 } %}
 
