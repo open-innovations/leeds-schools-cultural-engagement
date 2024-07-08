@@ -49,6 +49,14 @@ h1, h2, h3, h4, .title {
 	font-weight: 700;
 }
 
+.subtitle {
+	font-family: Titillium Web;
+	font-weight: 600;
+	text-align: center; 
+	margin-top: 0.2em; 
+	margin-bottom: 1em;
+}
+
 * { 
 	font-family: Titillium Web;
 	font-weight: 600;
@@ -63,7 +71,6 @@ header .holder {
 	align-items: center;
 	justify-content: space-between;
 	padding: 2em;
-
 }
 footer { padding: 0; }
 
@@ -91,8 +98,7 @@ footer { padding: 0; }
 .oi-dashboard .panel { display: grid; padding: 3em!important; }
 
 .oi-legend-inner .oi-legend-icon { float: left; }
-.oi-legend-inner .oi-legend-item { color: inherit; }
-.white-bg { color: #ffff;}
+.oi-legend-inner .oi-legend-item { color: #ffff; }
 
 .oi-graph text { fill: #ffff!important; } 
 /* TODO: Make this more specific */
