@@ -55,7 +55,7 @@ title: City of Leeds
 }}
 {% endcomp %}
 
-  <h2>Populations of Leeds</h2>
+  <h2 class="underline">Populations of Leeds</h2>
 
   {% comp "grid.autogrid", { columns: 1 } %}
   {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
@@ -137,7 +137,7 @@ title: City of Leeds
 
   {% endcomp %}
 
-  <h2>Cultural organisations in Leeds</h2>
+  <h2 class="underline">Cultural organisations in Leeds</h2>
 
   {% comp "grid.autogrid", { columns: 1 } %}
   {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
@@ -160,28 +160,6 @@ title: City of Leeds
         scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
         min: 0,
         max: 50,
-        "legend": {
-          "position": "top",
-          "items": [{
-              "value": 0,
-              "label": "0"
-            },{
-              "value": 10,
-              "label": "10"
-            },{
-              "value": 20,
-              "label": "20"
-            },{
-              "value": 30,
-              "label": "30"
-            },{
-              "value": 40,
-              "label": "40"
-            },{
-              "value": 50,
-              "label": "50"
-            }]
-        },
 				value: 'count_orgs',
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
@@ -210,7 +188,7 @@ title: City of Leeds
   {% endcomp %}
 
 
-<h2>Creative Subject Entries</h2>
+<h2 class = "underline">Creative Subject Entries</h2>
 {% comp "grid.autogrid", { columns: 1 } %}
 {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 <div class="text-panel">
@@ -366,7 +344,7 @@ The data below explores the number of students who enter for creative subjects a
 
 
 <div class='limitations'>
-  <h3>Known Limitations & Issues<h3> 
+  <h3>Known Limitations & Issues</h3> 
     <ul>
       <li>This dashboard is under development and may not be accurate or up to date.</li>
     </ul>

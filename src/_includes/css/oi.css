@@ -71,7 +71,17 @@ h1, .title {
 	text-decoration-thickness: 3px;
 	text-align:center;
  }
-h2 { font-size: 1.7em; margin-top: 1.7647058823529411em;}
+h2 { font-size: 1.7em; margin-top: 1.7647058823529411em; }
+
+h2.underline { 	
+	text-decoration: underline; 
+	text-underline-offset: 8px; 
+	text-decoration-color: #440d54;
+	text-decoration-thickness: 3px;
+	text-align:center;
+	padding-bottom:1em;
+}
+
 h3 { font-size: 1.4em; margin-top: 1.428571em; }
 h1:first-child, h2:first-child, h3:first-child, .title { margin-top: 0; }
 h3:first-child { text-align: left;}
@@ -123,6 +133,8 @@ section { padding: 2em 0; }
 .feedback-bg { background-color: #440d54; color: white; text-align: center; }
 .feedback-bg a { color: #a951ed; text-decoration: underline; }
 
+.limitations { padding-top: 2em; margin-bottom: 0;}
+.limitations li { font-size: 1.1em; }
 
 .skip-to-content-link { position: absolute; top: -3rem; right: 0.5rem; z-index: 2000; transition: top 0.3s; padding: 0.5rem 1rem; }
 .skip-to-content-link:focus { top: 0.25rem; }
