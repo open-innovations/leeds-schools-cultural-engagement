@@ -55,21 +55,51 @@ title: City of Leeds
 }}
 {% endcomp %}
 
-  <h2>Creative engagement for young people in Leeds</h2>
+  <h2>Populations of Leeds</h2>
+
+  {% comp "grid.autogrid", { columns: 1 } %}
+  {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
+  <div class="text-panel">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  {% endcomp %}
+  {% endcomp %}
 
   {% comp "grid.autogrid", { columns: 2 } %}
 
-  {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+  {% comp "dashboard.panel", { bg: "#104454", fg: 'white' }%}
 		<h2>Population of young people by ward</h2>
-		<p>This map represents the percentage of people in each ward whom are under 19 years old. Lighter colours indicate areas with a greater proportion of young people.</p>
+		<p>This map represents the percentage of people in each ward whom are under 19 years old. Darker colours indicate areas with a greater proportion of young people.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.ward_level_population,
 				matchKey: 'ward_code',
-        scale: 'rgb(85, 126, 141) 0%, rgb(210, 224, 229) 100%',
-        min: 7,
+        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
+        min: 0,
         max: 27,
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 0,
+              "label": "0%"
+            },{
+              "value": 5,
+              "label": "5%"
+            },{
+              "value": 10,
+              "label": "10%"
+            },{
+              "value": 15,
+              "label": "15%"
+            },{
+              "value": 20,
+              "label": "20%"
+            },{
+              "value": 25,
+              "label": "25%"
+            }]
+        },
         value: 'Percentage of population under 19',
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ Percentage of population under 19 }}%</strong>'
@@ -77,27 +107,9 @@ title: City of Leeds
 		}) | safe }}
   {% endcomp %}
 
-    {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
-		<h2>Number of cultural organisations by ward</h2>
-		<p>This map represents the number of cultural organisations with addresses in each ward. There are 7 cultural organisations in our dataset that were not assigned to a ward. Lighter colours indicate areas where more cultural organisations are based.</p>
-		{{ comp.oi.map.hex_cartogram({
-			config: {
-				hexjson: hex.wards_leeds,
-				data: viz.dashboard.organisations_by_ward,
-				matchKey: 'ward_code',
-        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
-				value: 'count_orgs',
-        min: 0,
-        max: 10,
-				label: '{{ n | slice(0,3) }}',
-				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
-			}
-		}) | safe }}
-  {% endcomp %}
-
-  {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+  {% comp "dashboard.panel", { bg: "#104454", fg: 'white' }%}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
-		<p>The indices of multiple deprivation, by Leeds ward. Darker colours reflect areas with a higher deprivation index.</p>
+		<p>The indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -107,13 +119,77 @@ title: City of Leeds
         scale: 'rgb(85, 126, 141) 0%, rgb(210, 224, 229) 100%',
         min: 0,
         max: 8,
+                "legend": {
+          "position": "top",
+          "items": [{
+              "value": 0,
+              "label": "Highest Deprivation"
+            },{
+              "value": 10,
+              "label": "Lowest Deprivation"
+            }]
+        },
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ imd_decile }}</strong>'
 			}
 		}) | safe }}
   {% endcomp %}
 
-    {% comp "dashboard.panel", { bg: "#125164", fg: 'white' }%}
+  {% endcomp %}
+
+  <h2>Cultural organisations in Leeds</h2>
+
+  {% comp "grid.autogrid", { columns: 1 } %}
+  {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
+  <div class="text-panel">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  {% endcomp %}
+  {% endcomp %}
+
+  {% comp "grid.autogrid", { columns: 2 } %}
+
+      {% comp "dashboard.panel", { bg: "#104454", fg: 'white' }%}
+		<h2>Number of cultural organisations by ward</h2>
+		<p>This map represents the number of cultural organisations with addresses in each ward. There are 7 cultural organisations in our dataset that were not assigned to a ward. Darker colours indicate areas where more cultural organisations are based.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.organisations_by_ward,
+				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
+        min: 0,
+        max: 50,
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 0,
+              "label": "0"
+            },{
+              "value": 10,
+              "label": "10"
+            },{
+              "value": 20,
+              "label": "20"
+            },{
+              "value": 30,
+              "label": "30"
+            },{
+              "value": 40,
+              "label": "40"
+            },{
+              "value": 50,
+              "label": "50"
+            }]
+        },
+				value: 'count_orgs',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
+			}
+		}) | safe }}
+  {% endcomp %}
+
+      {% comp "dashboard.panel", { bg: "#104454", fg: 'white' }%}
 		<h2>Leeds City Council - funded organisations</h2>
 		<p>The number of organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Darker colours represent areas where more grants were awarded.</p>
 		{{ comp.oi.map.hex_cartogram({
@@ -130,12 +206,13 @@ title: City of Leeds
 			}
 		}) | safe }}
   {% endcomp %}
+
   {% endcomp %}
 
 
 <h2>Creative Subject Entries</h2>
 {% comp "grid.autogrid", { columns: 1 } %}
-{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+{% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 <div class="text-panel">
 The data below explores the number of students who enter for creative subjects at GCSE and A Level. We want to understand how these trends change over time at a national level and how the attitudes of young people in Leeds compare with the national picture.
 </div>
@@ -144,7 +221,7 @@ The data below explores the number of students who enter for creative subjects a
 
 {% comp "grid.autogrid", { columns: 1 } %}
 
-{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+{% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 
 <h3>National GCSE Subject Entries</h3>
 {{ comp.oi.graph.line({ config: {
@@ -216,7 +293,7 @@ The data below explores the number of students who enter for creative subjects a
 {% comp "grid.autogrid", { columns: 1 } %}
 
 
-{% comp "dashboard.panel", { bg: '#125164', fg: 'white' }%}
+{% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 
 <h3>National A Level Subject Entries</h3>
 {{ comp.oi.graph.line({ config: {
@@ -288,7 +365,7 @@ The data below explores the number of students who enter for creative subjects a
 
 
 
-<div class='holder padded'>
+<div class='limitations'>
   <h3>Known Limitations & Issues<h3> 
     <ul>
       <li>This dashboard is under development and may not be accurate or up to date.</li>
