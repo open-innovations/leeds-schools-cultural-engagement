@@ -100,7 +100,7 @@ footer { padding: 0; }
 .oi-legend-inner .oi-legend-icon { float: left; }
 .oi-legend-inner .oi-legend-item { color: #ffff; }
 
-.oi-graph text { fill: #ffff!important; } 
-/* TODO: Make this more specific */
+.oi-chart-main { padding-top: 2em; }
+.oi-chart-main text { fill: #ffff; } 
 
 ul .panel { justify-content: normal; }

@@ -43,45 +43,49 @@ title: LEEDS 2023 Legacy
 {% comp "dashboard.panel", { bg: '#370b45', fg: 'white' }%}
 <h3>Number of engagements with pupils</h3>
 <p>The chart below presents the number of activities that were delivered with children in Leeds schools as part of the LEEDS 2023 programme.</p>
-{{ comp.oi.graph.line({ config: {
-    categories: viz.leeds_2023.engagements_by_week.columns.date,
-    width: 25,
-    colours: 'white',
-    height: 15,
-    padding: { left: 4 },
+{{ comp.oi.chart.line({ config: {
+    data: viz.leeds_2023.engagements_by_week,
+    width: 950,
+    height: 600,
     series: [
       {
-        label: 'Engagements (cumulative)',
-        yValues: viz.leeds_2023.engagements_by_week.columns.cumulative_pupil_engagements,
-        markerOptions: { s: 5 },
-        colour: 'white'
+        title: 'Engagements (cumulative)',
+        x: "date_decimal",
+        y: "cumulative_pupil_engagements",
+        colour: '#ffffff'
       }
     ],
-    xAxis: {
-      title: 'Date',
-      majorTick: 10,
-      colour: 'white'
-    },
-    plotArea: {
-      yMax: 40000,
-      colour: 'white'
-    },
-    yAxis: {
-      title: 'Number of engagements',
-      titleOffset: 3,
-      majorTick: 2000,
-      formatter: dateFormatter,
-      colour: 'white'
-    },
     legend: {
-      width: '30em'
-    }, 
-    line: {
-        "stroke-dasharray": [6,2]
+      show: false
+    },
+    axis: {
+      x: {
+        title: {
+          label: 'Date'
+        },
+        tick: {
+          spacing: 2
+        },
+        min: 2022.841667,
+        max:2023.955556
+      },
+      y: {
+        grid: {
+          show: true,
+          'stroke-width': 0.5
+        },        
+        title: {
+          label: "Number of engagements"
+        },
+        tick: { 
+          spacing: 5000
+        },
+        max: 40000
+      }
     }
   } }) | safe }}
-  {% endcomp %}
 
+  {% endcomp %}
 
 {% comp "grid.autogrid", { columns: 2 } %}
 
@@ -96,7 +100,31 @@ title: LEEDS 2023 Legacy
     config: {
 		hexjson: hex.wards_leeds,
 		data: viz.leeds_2023.engagements_by_ward,
+    min:0,
+    max:30,
     scale: 'rgb(240, 223, 244) 0%, rgb(111, 53, 136) 100%',
+    "legend": {
+      "position": "top",
+      "items": [{
+          "value": 25,
+          "label": "25"
+        },{
+          "value": 20,
+          "label": "20"
+        },{
+          "value": 15,
+          "label": "15"
+        },{
+          "value": 10,
+          "label": "10"
+        },{
+          "value": 5,
+          "label": "5"
+        },{
+          "value": 0,
+          "label": "0"
+        }]
+    },
 		matchKey: 'ward_code',
 		value: 'total_engagements',
 		label: '{{ n | slice(0,3) }}',
@@ -118,6 +146,30 @@ title: LEEDS 2023 Legacy
 		data: viz.leeds_2023.engagements_by_ward,
 		matchKey: 'ward_code',
     scale: 'rgb(240, 223, 244) 0%, rgb(111, 53, 136) 100%',
+    min:0,
+    max: 2000,
+    "legend": {
+      "position": "top",
+      "items": [{
+          "value": 2500,
+          "label": "2500"
+        },{
+          "value": 2000,
+          "label": "2000"
+        },{
+          "value": 1500,
+          "label": "1500"
+        },{
+          "value": 1000,
+          "label": "1000"
+        },{
+          "value": 500,
+          "label": "500"
+        },{
+          "value": 0,
+          "label": "0"
+        }]
+    },
 		value: 'pupil_engagements',
 		label: '{{ n | slice(0,3) }}',
 		tooltip: '{{ n }}: <strong>{{ pupil_engagements }}</strong>'
@@ -143,6 +195,34 @@ title: LEEDS 2023 Legacy
 		matchKey: 'ward_code',
 		value: 'percent_of_schools_in_ward_engaged',
     scale: 'rgb(240, 223, 244) 0%, rgb(111, 53, 136) 100%',
+    min:30,
+    max:100,
+    width: 700,
+    height: 700,
+    "legend": {
+      "position": "top",
+      "items": [{
+          "value": 100,
+          "label": "100%"
+        },{
+          "value": 80,
+          "label": "80%"
+        },{
+          "value": 60,
+          "label": "60%"
+        },{
+          "value": 40,
+          "label": "40%"
+        },{
+          "value": 20,
+          "label": "20%",
+          "colour": '#f2e7f5'
+        },{
+          "value": 0,
+          "label": "0%",
+          "colour": '#ffffff'
+        }]
+    },
 		label: '{{ n | slice(0,3) }}',
 		tooltip: '{{ n }}: <strong>{{ percent_of_schools_in_ward_engaged }}%</strong>'
 	}
