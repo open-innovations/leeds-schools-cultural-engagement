@@ -47,6 +47,10 @@ title: LEEDS 2023 Legacy
     data: viz.leeds_2023.engagements_by_week,
     width: 950,
     height: 600,
+    "columns": [{
+      "name": "date_decimal",
+      "template": "{{ date | strptime(\"%Y-%m-%d\") | decimalYear() }}"
+		}],
     series: [
       {
         title: 'Engagements (cumulative)',
@@ -230,8 +234,8 @@ title: LEEDS 2023 Legacy
   {% endcomp %}
   {% endcomp %}
 
-  <div class='holder padded'>
-  <h3>Known Limitations & Issues<h3> 
+  <div class='limitations'>
+  <h3>Known Limitations & Issues</h3> 
     <ul>
       <li>This dashboard is under development and may not be accurate or up to date.</li>
     </ul>
