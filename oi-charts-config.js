@@ -1,6 +1,7 @@
 export default {
 	"colour": {
-		"series": [ '#b2c929','#440d54','#fde725','#404788','#29af7f','#277d8e', '#370496'],
+		"series": 
+			[ '#b2c929','#440d54','#fde725','#404788','#29af7f','#277d8e', '#370496'],
 		"names": {
 			"Academy & Free Schools": "#440d54",
 			"Academy & Free": "#440d54",

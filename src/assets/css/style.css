@@ -103,4 +103,7 @@ footer { padding: 0; }
 .oi-chart-main { padding-top: 2em; }
 .oi-chart-main text { fill: #ffff; } 
 
+.oi-legend-item { margin: 0.3em;}
+.oi-legend-item.oi-series-on { background: inherit!important; outline: 0.5px dashed #bbbbbb!important; }
+
 ul .panel { justify-content: normal; }

@@ -75,7 +75,7 @@ title: City of Leeds
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.ward_level_population,
 				matchKey: 'ward_code',
-        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
         min: 0,
         max: 27,
         "legend": {
@@ -116,7 +116,7 @@ title: City of Leeds
 				data: viz.dashboard.imd_by_ward,
 				matchKey: 'WD24CD',
 				value: 'imd_decile',
-        scale: 'rgb(85, 126, 141) 0%, rgb(210, 224, 229) 100%',
+        scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
         min: 0,
         max: 8,
                 "legend": {
@@ -157,7 +157,7 @@ title: City of Leeds
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.organisations_by_ward,
 				matchKey: 'ward_code',
-        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
         min: 0,
         max: 50,
 				value: 'count_orgs',
@@ -176,7 +176,7 @@ title: City of Leeds
 				data: viz.dashboard.lcip_funded_orgs_by_ward,
 				matchKey: 'ward_code',
 				value: 'organisations',
-        scale: 'rgb(210, 224, 229) 0%, rgb(85, 126, 141) 100%',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
         min: 0,
         max: 5,
 				label: '{{ n | slice(0,3) }}',
@@ -199,140 +199,157 @@ The data below explores the number of students who enter for creative subjects a
 
 {% comp "grid.autogrid", { columns: 1 } %}
 
+
 {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 
 <h3>National GCSE Subject Entries</h3>
-{{ comp.oi.graph.line({ config: {
-    categories: viz.dashboard.subject_entries_all_gcse.columns.year,
-    width: 35,
-    height: 15,
-    padding: { left: 4 },
+
+{{ comp.oi.chart.line({ config: {
+    data: viz.dashboard.subject_entries_all_gcse,
+    width: 950,
+    height: 600,
     series: [
       {
-        label: 'Art & design subjects',
-        yValues: viz.dashboard.subject_entries_all_gcse.columns['Art & design subjects'],
-        markerOptions: { s: 5 },
-        colour: 'white'
+        title: 'Art & design subjects',
+        x: "year",
+        y: 'Art & design subjects',
+        colour: '#ffffff'
       },
       {
-        label: 'Biology',
-        yValues: viz.dashboard.subject_entries_all_gcse.columns['Biology'],
-        markerOptions: { s: 5 },
-        colour: '#b463cc'
+        title: 'Biology',
+        x: "year",
+        y: 'Biology',
+        colour: '#51deee'
       },
       {
-        label: 'Business studies',
-        yValues: viz.dashboard.subject_entries_all_gcse.columns['Business studies'],
-        markerOptions: { s: 5 },
-        colour: '#b2c929'
-      },
-      {
-        label: 'Chemistry',
-        yValues: viz.dashboard.subject_entries_all_gcse.columns['Chemistry'],
-        markerOptions: { s: 5 },
-        colour: '#20a387'
-      },
-      {
-        label: 'Computing',
-        yValues: viz.dashboard.subject_entries_all_gcse.columns['Computing'],
-        markerOptions: { s: 5 },
+        title: 'Business studies',
+        x: "year",
+        y: 'Business studies',
         colour: '#fde725'
+      },
+      {
+        title: 'Chemistry',
+        x: "year",
+        y: 'Chemistry',
+        colour: '#f734ed'
+      },
+      {
+        title: 'Computing',
+        x: "year",
+        y: 'Computing',
+        colour: '#25f52c'
       }
     ],
-    xAxis: {
-      title: 'Year',
-      majorTick: 1,
-      colour: 'white'
-    },
-    plotArea: {
-      yMax: 250000,
-      colour: 'white'
-    },
-    yAxis: {
-      title: 'Number of student entries',
-      titleOffset: 3.5,
-      majorTick: 50000,
-      formatter: dateFormatter,
-      colour: 'white'
-    },
     legend: {
-      direction: horizontal
-    }, 
-    line: {
-        "stroke-dasharray": [6,2]
+      show: true
+    },
+    axis: {
+      x: {
+        title: {
+          label: 'Date'
+        },
+        tick: {
+          spacing: 2
+        },
+        min:2017,
+        max:2023
+      },
+      y: {
+        grid: {
+          show: true,
+          'stroke-width': 0.5
+        },        
+        title: {
+          label: "Number of subject entries"
+        },
+        tick: { 
+          spacing: 20000
+        },
+        min:0,
+        max: 250000
+      }
     }
   } }) | safe }}
   <p>
     The number of young people opting for arts and creative subjects at GCSE level has plateaued, and began to decline in the last two years relative to other subjects such as Business Studies.
   </p>
-  {% endcomp %}
-  {% endcomp %}
+  
+  {% endcomp %} 
+
+  {% endcomp %} 
 
 {% comp "grid.autogrid", { columns: 1 } %}
 
 
 {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 
+
 <h3>National A Level Subject Entries</h3>
-{{ comp.oi.graph.line({ config: {
-    categories: viz.dashboard.subject_entries_all_a_level.columns.year,
-    width: 35,
-    height: 15,
-    padding: { left: 4 },
+
+{{ comp.oi.chart.line({ config: {
+    data:viz.dashboard.subject_entries_all_a_level,
+    width: 950,
+    height: 600,
     series: [
       {
-        label: 'Art & design subjects',
-        yValues: viz.dashboard.subject_entries_all_a_level.columns['Art & design subjects'],
-        markerOptions: { s: 5 },
-        colour: 'white'
+        title: 'Art & design subjects',
+        x: "year",
+        y: 'Art & design subjects',
+        colour: '#ffffff'
       },
       {
-        label: 'Biology',
-        yValues: viz.dashboard.subject_entries_all_a_level.columns['Biology'],
-        markerOptions: { s: 5 },
-        colour: '#b463cc'
+        title: 'Biology',
+        x: "year",
+        y: 'Biology',
+        colour: '#51deee'
       },
       {
-        label: 'Business studies',
-        yValues: viz.dashboard.subject_entries_all_a_level.columns['Business studies'],
-        markerOptions: { s: 5 },
-        colour: '#b2c929'
-      },
-      {
-        label: 'Chemistry',
-        yValues: viz.dashboard.subject_entries_all_a_level.columns['Chemistry'],
-        markerOptions: { s: 5 },
-        colour: '#20a387'
-      },
-      {
-        label: 'Computing',
-        yValues: viz.dashboard.subject_entries_all_a_level.columns['Computing'],
-        markerOptions: { s: 5 },
+        title: 'Business studies',
+        x: "year",
+        y: 'Business studies',
         colour: '#fde725'
+      },
+      {
+        title: 'Chemistry',
+        x: "year",
+        y: 'Chemistry',
+        colour: '#f734ed'
+      },
+      {
+        title: 'Computing',
+        x: "year",
+        y: 'Computing',
+        colour: '#25f52c'
       }
     ],
-    xAxis: {
-      title: 'Year',
-      majorTick: 1,
-      colour: 'white'
-    },
-    plotArea: {
-      yMax: 100000,
-      colour: 'white'
-    },
-    yAxis: {
-      title: 'Number of student entries',
-      titleOffset: 3.5,
-      majorTick: 50000,
-      formatter: dateFormatter,
-      colour: 'white'
-    },
     legend: {
-      position: 'top',
-      direction:'horizontal'
-    }, 
-    line: {
-        "stroke-dasharray": [6,2]
+      show: true
+    },
+    axis: {
+      x: {
+        title: {
+          label: 'Date'
+        },
+        tick: {
+          spacing: 2
+        },
+        min:2017,
+        max:2023
+      },
+      y: {
+        grid: {
+          show: true,
+          'stroke-width': 0.5
+        },        
+        title: {
+          label: "Number of subject entries"
+        },
+        tick: { 
+          spacing: 10000
+        },
+        min:0,
+        max: 80000
+      }
     }
   } }) | safe }}
     <p>
@@ -340,7 +357,6 @@ The data below explores the number of students who enter for creative subjects a
   </p>
   {% endcomp %}
   {% endcomp %}
-
 
 
 <div class='limitations'>
