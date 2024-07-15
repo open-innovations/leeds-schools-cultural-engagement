@@ -7,8 +7,11 @@ title: City of Leeds
 
 <div class="holder padded">
 <p>
-  The visualisations on this page present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture. We are using data to answer questions such as - how many young people are there in Leeds, and where is there a greater proportion of young people across the city? Where are the creative hotspots, with creative practitioners who are able to offer engagement activities with schools and young people? Where are the schools in Leeds that have the best offering of creative curriculum and enrichment activities? Explore the data below.
+  The visualisations on this page present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture. We are using open data to support evidence-based policy decisions by answering questions such as - how many young people are there in Leeds, and where is there a greater proportion of young people across the city? Where are the creative hotspots, with creative practitioners who are able to offer engagement activities with schools and young people? Where are the schools in Leeds that have the best offering of creative curriculum and enrichment activities? Explore the data below.
 </p>
+<p><strong>
+  This page is still under development. If you have any comments on the data below, <a href="https://forms.office.com/e/yycfqGLkSb">get in touch with us</a>. 
+</strong></p>
 </div>
 
 {% endcomp %} 
@@ -121,7 +124,7 @@ title: City of Leeds
         scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
         min: 0,
         max: 8,
-                "legend": {
+        "legend": {
           "position": "top",
           "items": [{
               "value": 0,
@@ -139,6 +142,94 @@ title: City of Leeds
 
   {% endcomp %}
 
+  <h2 class="underline">School Engagement</h2>
+
+  {% comp "grid.autogrid", { columns: 1 } %}
+  {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
+  <div class="text-panel">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  {% endcomp %}
+  {% endcomp %}
+
+  {% comp "grid.autogrid", { columns: 2 } %}
+  {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
+  	<h2>Schools awarded Artsmark</h2>
+		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.artsmark_by_ward,
+				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 2,
+              "label": "2"
+            },{
+              "value": 1,
+              "label": "1"
+            },{
+              "value": 0,
+              "label": "0"
+            }]
+        },
+        min: 0,
+        max: 2,
+				value: 'count_schools',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+			}
+		}) | safe }}
+
+  {% endcomp %}
+
+  {# TODO #}
+  {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
+  	<h2>Arts Award centres</h2>
+    <p>
+      The Arts Award centres by ward who are known to have engaged with schools and young people as part of their activities. Darker colours indicate there are more organisations in that ward.
+    </p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.arts_award_leeds,
+				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 5,
+              "label": "5"
+            },{
+              "value": 4,
+              "label": "4"
+            },{
+              "value": 3,
+              "label": "3"
+            },{
+              "value": 2,
+              "label": "2"
+            },{
+              "value": 1,
+              "label": "1"
+            },{
+              "value": 0,
+              "label": "0"
+            }]
+        },
+        min: 0,
+        max: 5,
+				value: 'count_orgs',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
+			}
+		}) | safe }}
+
+  {% endcomp %}
+  {% endcomp %}
+
   <h2 class="underline">Cultural organisations in Leeds</h2>
 
   {% comp "grid.autogrid", { columns: 1 } %}
@@ -152,14 +243,36 @@ title: City of Leeds
   {% comp "grid.autogrid", { columns: 2 } %}
 
       {% comp "dashboard.panel", { bg: "#104454", fg: 'white' }%}
-		<h2>Number of cultural organisations by ward</h2>
-		<p>This map represents the number of cultural organisations with addresses in each ward. There are 7 cultural organisations in our dataset that were not assigned to a ward. Darker colours indicate areas where more cultural organisations are based.</p>
+		<h2>Cultural organisations by ward</h2>
+		<p>The cultural organisations with addresses in each ward - there are 7 organisations in our dataset that were not assigned to a ward. Darker colours indicate areas where more cultural organisations are based.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.organisations_by_ward,
 				matchKey: 'ward_code',
         scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 50,
+              "label": "50"
+            },{
+              "value": 40,
+              "label": "40"
+            },{
+              "value": 30,
+              "label": "30"
+            },{
+              "value": 20,
+              "label": "20"
+            },{
+              "value": 10,
+              "label": "10"
+            },{
+              "value": 0,
+              "label": "0"
+            }]
+        },
         min: 0,
         max: 50,
 				value: 'count_orgs',
@@ -170,8 +283,8 @@ title: City of Leeds
   {% endcomp %}
 
       {% comp "dashboard.panel", { bg: "#104454", fg: 'white' }%}
-		<h2>Leeds City Council - funded organisations</h2>
-		<p>The number of organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Darker colours represent areas where more grants were awarded.</p>
+		<h2>Leeds City Council funded organisations</h2>
+		<p>The organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Darker colours represent areas where more grants were awarded.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -179,8 +292,27 @@ title: City of Leeds
 				matchKey: 'ward_code',
 				value: 'organisations',
         scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 20,
+              "label": "20"
+            },{
+              "value": 15,
+              "label": "15"
+            },{
+              "value": 10,
+              "label": "10"
+            },{
+              "value": 5,
+              "label": "5"
+            },{
+              "value": 0,
+              "label": "0"
+            }]
+        },
         min: 0,
-        max: 5,
+        max: 15,
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ organisations }}</strong>'
 			}
@@ -194,13 +326,12 @@ title: City of Leeds
 {% comp "grid.autogrid", { columns: 1 } %}
 {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 <div class="text-panel">
-The data below explores the number of students who enter for creative subjects at GCSE and A Level. We want to understand how these trends change over time at a national level and how the attitudes of young people in Leeds compare with the national picture.
+The data below explores the students who enter for creative subjects at GCSE and A Level. We want to understand how these trends change over time at a national level and how the attitudes of young people in Leeds compare with the national picture.
 </div>
 {% endcomp %}
 {% endcomp %}
 
 {% comp "grid.autogrid", { columns: 1 } %}
-
 
 {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
 
@@ -262,7 +393,7 @@ The data below explores the number of students who enter for creative subjects a
           'stroke-width': 0.5
         },        
         title: {
-          label: "Number of subject entries"
+          label: "Subject entries"
         },
         tick: { 
           spacing: 20000
@@ -273,7 +404,7 @@ The data below explores the number of students who enter for creative subjects a
     }
   } }) | safe }}
   <p>
-    The number of young people opting for arts and creative subjects at GCSE level has plateaued, and began to decline in the last two years relative to other subjects such as Business Studies.
+    The young people opting for arts and creative subjects at GCSE level has plateaued, and began to decline in the last two years relative to other subjects such as Business Studies.
   </p>
   
   {% endcomp %} 
@@ -344,7 +475,7 @@ The data below explores the number of students who enter for creative subjects a
           'stroke-width': 0.5
         },        
         title: {
-          label: "Number of subject entries"
+          label: "Subject entries"
         },
         tick: { 
           spacing: 10000
@@ -355,7 +486,7 @@ The data below explores the number of students who enter for creative subjects a
     }
   } }) | safe }}
     <p>
-    The number of young people opting for arts and creative subjects at A level has stayed roughly the same.
+    The young people opting for arts and creative subjects at A level has stayed roughly the same.
   </p>
   {% endcomp %}
   {% endcomp %}
