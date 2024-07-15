@@ -100,6 +100,7 @@ footer { padding: 0; }
 .oi-dashboard .panel { display: grid; padding: 3em!important; }
 
 .oi-legend-inner .oi-legend-icon { float: left; }
+.oi-legend-inner { color: inherit!important; }
 .oi-legend-inner .oi-legend-item { color: inherit; }
 
 .oi-chart-main { padding-top: 2em; }
@@ -109,6 +110,7 @@ footer { padding: 0; }
 .oi-legend-item.oi-series-on { background: inherit!important; outline: 0.5px dashed #bbbbbb!important; }
 
 .oi-table table * { padding-left: 1em; padding-right: 1em; border-width: thin; border-color: #e0dfdf; border-style: dashed;}
-.oi-table table tr:first-child { background: #bbbbbb; }
+.oi-table table tr:first-child { background: #171853; color: #ffffff; }
+.oi-table table tr:first-child th { padding:0.8em; }
 
 ul .panel { justify-content: normal; }
