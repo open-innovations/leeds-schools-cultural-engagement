@@ -234,6 +234,54 @@ title: LEEDS 2023 Legacy
   {% endcomp %}
   {% endcomp %}
 
+  <h2>Youth Development Projects</h2>
+
+  {{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.leeds_2023.youth_development_projects",
+			title: "title",
+      note: "note",
+			value: "value",
+			width: "90%",
+			panels: [{
+				name: "Total engagements",
+				colour: "UoL-purple"
+			}]
+		}
+	}) | safe
+}}
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.leeds_2023.youth_development_projects",
+			title: "title",
+      note: "note",
+			value: "value",
+			width: "30%",
+			panels: [{
+				name: "2022 Youth Summit",
+				colour: "UoL-purple"
+			},{
+				name: "The WOW Barn Festival",
+				colour: "UoL-purple"
+			},{
+				name: "Music workshops",
+				colour: "UoL-purple"
+			},{
+				name: "Lift the Lid",
+				colour: "UoL-purple"
+			},{
+				name: "Children's Day Reimagined",
+				colour: "UoL-purple"
+			},{
+				name: "Grants Scheme",
+				colour: "UoL-purple"
+			}]
+		}
+	}) | safe
+}}
+
   <div class='limitations'>
   <h3>Known Limitations & Issues</h3> 
     <ul>
