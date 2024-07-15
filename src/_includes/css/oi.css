@@ -107,7 +107,7 @@ ul { list-style: disc; }
 ol { list-style: decimal; }
 ul, ol { margin-left: 2em; }
 .msg { text-align:center; padding: 0.5em; }
-.footnote { font-size: 0.85em!important; }
+.footnote { font-size: 1em!important; }
 
 .holder { position: relative; width: 1080px; max-width: 100%; margin: auto; }
 .holder.padded > *:last-child { margin-bottom: 0;}
@@ -133,6 +133,10 @@ section { padding: 2em 0; }
 
 .limitations { padding-top: 2em; margin-bottom: 0;}
 .limitations li { font-size: 1.1em; }
+
+.new {
+	color: #b2c929,#440d54,#fde725,#404788,#51deee,#f734ed,rgb(204, 241, 254), rgb(67, 129, 151)
+}
 
 .skip-to-content-link { position: absolute; top: -3rem; right: 0.5rem; z-index: 2000; transition: top 0.3s; padding: 0.5rem 1rem; }
 .skip-to-content-link:focus { top: 0.25rem; }
