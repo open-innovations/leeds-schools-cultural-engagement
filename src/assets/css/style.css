@@ -78,13 +78,7 @@ footer { padding: 0; }
 
 .grid li h2 { font-weight: bold; text-align: center; padding-bottom: 0.5em; }
 
-
-.l23-green { background: #b8de29; color: black!important; }
-.l23-green { background: #b8de29; color: black!important; }
-.l23-light-blue { background: #125164; color: white!important; }
-.l23-purple { background: #370b45; color: white!important; }
-.l23-light-purple { background: #b463cc; color: white!important; }
-.l23-head { background: var(--background-colour); color: black!important; border-bottom: groove; border-width: 3px; }
+.head_colour { background: var(--background-colour); color: black!important; border-bottom: groove; border-width: 3px; }
 
 .organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); column-gap: 2em; row-gap: 0.5em; }
 .organisations li svg { width: 100%; height: auto; color: #a8b6be; filter: grayscale(1) brightness(2); }

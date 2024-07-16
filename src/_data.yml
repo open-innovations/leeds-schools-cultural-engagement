@@ -5,7 +5,7 @@ date: Git Last Modified
 logo_colour: black
 
 # Override the header class here. See https://open-innovations.org/brand for colour classes
-header_class: l23-head
+header_class: head_colour
 
 # Automatically adds meta and social tags 
 # See https://lume.land/plugins/metas/
