@@ -166,9 +166,24 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .elsewhere { float: right; margin-top: 0; }
 .elsewhere li { display: inline-block; margin-left: 0.5em; }
 .elsewhere li a { line-height: 0; display: block; }
-footer .address { margin-top: 1em; }
 footer a { color: inherit; }
 footer hr.about { margin: 32px 0; border: 0; border-top:1px solid #444; }
+
+footer .address { 
+	padding-top:1em;
+	display: grid; 
+	list-style: none; 
+	float: left;
+	margin-left: 0;
+	grid-gap: 0.5em;
+	margin:0;
+	line-height:1em;
+	padding-bottom:2em;
+	border-right: solid 3px; 
+}
+.address li { font-size: 1em; margin-top:0; }
+.address h3 { font-size: 1.3em; text-decoration: underline; text-underline-offset: 8px;  text-decoration-color: #ffffff; text-decoration-thickness: 2px;}
+.address li a { font-size: 1.1em; color:#8436bf; text-decoration: underline; align-items: center; }
 
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
