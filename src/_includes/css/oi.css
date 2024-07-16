@@ -143,7 +143,7 @@ section { padding: 2em 0; }
 
 .grid { display: grid; grid-template-columns: 50% 50%; grid-gap: 1em; }
 ul.grid { list-style: none; margin-left: 0em; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
-ul.grid > li > a { display: block; text-decoration: none;}
+ul.grid > li > a { display: block; text-decoration: none; }
 ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .grid .pane { background: #f9f9f9; }
 
@@ -181,9 +181,12 @@ footer .address {
 	padding-bottom:2em;
 	border-right: solid 3px; 
 }
+.grid.organisations.funder { grid-template-columns:repeat(2, 20% 80%); align-items:center;}
 .address li { font-size: 1em; margin-top:0; }
 .address h3 { font-size: 1.3em; text-decoration: underline; text-underline-offset: 8px;  text-decoration-color: #ffffff; text-decoration-thickness: 2px;}
-.address li a { font-size: 1.1em; color:#8436bf; text-decoration: underline; align-items: center; }
+.address li a { font-size: 1.1em; color:#8436bf; text-decoration: underline; align-items: center; max-width: 300px; }
+.footer-logos { display: grid; grid-template-columns:repeat(2, 1fr); align-items:center;list-style:none; grid-gap:1em; margin-bottom:0;}
+.footer-logos li { max-width: 300px; }
 
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
