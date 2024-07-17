@@ -185,7 +185,7 @@ footer .address {
 .address li { font-size: 1em; margin-top:0; }
 .address h3 { font-size: 1.3em; text-decoration: underline; text-underline-offset: 8px;  text-decoration-color: #ffffff; text-decoration-thickness: 2px;}
 .address li a { font-size: 1.1em; color:#8436bf; text-decoration: underline; align-items: center; max-width: 300px; }
-.footer-logos { display: grid; grid-template-columns:repeat(2, 1fr); align-items:center;list-style:none; grid-gap:1em; margin-bottom:0;}
+.footer-logos { display: flex; align-items:center; list-style:none; margin-left: 0; gap:1em; margin-bottom:0; }
 .footer-logos li { max-width: 300px; }
 
 @media only screen and (max-width: 1080px) {

@@ -1,4 +1,3 @@
-
 // Some boiler plate to make a function that waits until the page is ready
 (function(root){
 	if(!root.OI) root.OI = {};
@@ -49,7 +48,7 @@ OI.ready(function(){
 				var label = document.createElement('label');
 				label.innerHTML = attr.label;
 				label.setAttribute('for','filter');
-				dropdown.before(label)
+				dropdown.before(label);
 			}
 
 			// If there are no filters we add some
@@ -120,22 +119,20 @@ OI.ready(function(){
 		// Define a function to deal with the visitor changing the dropdown
 		this.update = function(){
 		
-			if(id in list){
-				var map = list[id];
-
-				// Here we have an array of "markers"
-				var engagement,i,ok,tip,matches;
-				for(i = 0; i < markers.length; i++){
-					ok = false;
-					if(dropdown.value==""){
-						ok = true;
-					}else{
-						if(markers[i].engagement.includes(dropdown.value)) ok = true;
-					}
-					if(ok) markers[i].el.style.visibility = 'visible';
-					else markers[i].el.style.visibility = 'hidden';
+			// Here we have an array of "markers"
+			var engagement,i,ok,tip,matches;
+			for(i = 0; i < markers.length; i++){
+				ok = false;
+				if(dropdown.value==""){
+					ok = true;
+				}else{
+					if(markers[i].engagement.includes(dropdown.value)) ok = true;
 				}
+				if(ok) markers[i].el.style.visibility = 'visible';
+				else markers[i].el.style.visibility = 'hidden';
 			}
+
+			return this;
 		};
 
 		this.init();
