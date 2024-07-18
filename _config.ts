@@ -38,6 +38,7 @@ site.use(date());
 site.use(postcss({}));
 
 site.copy('CNAME');
+site.copy('assets/images');
 site.copy('.nojekyll');
 site.copy([".woff2"]);
 site.copy([".png"]);
