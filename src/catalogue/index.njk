@@ -2,38 +2,59 @@
 title: Data Catalogue
 ---
 
+{# Set up a cycler for block colouring #}
+{% set bg = cycler("#104454", "#440d54") %}
+
 <p>
-    This is a placeholder for a page to catalogue data used to build this data microsite. Data has been processed from
-    a number of open sources and stored in the <a href="https://github.com/open-innovations/leeds-schools-cultural-engagement">Leeds Cultural Engagement Github Repository</a>.
+  This page catalogues the data used to build this data microsite.
+  All the data is extracted from open data sources, and stored in the <a href="https://github.com/open-innovations/leeds-2023">Mapping Creative Education GitHub repository</a>.
+  To obtain a copy of the data, please use the link direct to GitHub.
 </p>
 
 <h2>Datasets</h2>
 
 <p>
-    Download links will be added below for each of the open datasets used to power this site.
+  Each dataset is listed below grouped with associated datasets.
 </p>
 
-{% comp "grid.autogrid", { columns: 3 } %}
+{%- comp 'grid.autogrid', {columns: 4} -%}
 
-  {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#440d54"
-  } %}
-    <p>Survey Data</p>
-  {% endcomp %}
+{% for catalogue in search.pages('catalogue') %}
+  {% comp "dashboard.panel", { bg: bg.next(), fg: 'white' }%}
+    <h3>{{catalogue.data.title}}</h3>
 
-    {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#20a387"
-  } %}
-    <p>Schools Data</p>
-  {% endcomp %}
+    <p>{{catalogue.data.description}}</p>
 
-    {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#277d8e"
-  } %}
-    <p>Cultural Organisations</p>
-  {% endcomp %}
+    <ul class="catalogue-links">
 
-  {% endcomp %}
+    <li>
+      {{ comp.catalogue.icon_link({
+        url: catalogue.data.id,
+        title: "View " + catalogue.data.title + " page",
+        icon: "/assets/images/icons/info.svg"
+      }) | safe }}
+    </li>
+
+    <li>
+        {{ comp.catalogue.download({
+          url: catalogue.data.download,
+          title: catalogue.data.title
+      }) | safe }}
+      </li>
+
+      <li>
+      {{ comp.catalogue.github_link({
+        url: catalogue.data.github,
+        title: catalogue.data.title
+      }) | safe }}
+    </li>
+
+    </ul>
+
+
+    <p>Updated: {{ catalogue.data.updated | date('HUMAN_DATE') }}</p>
+
+  {%- endcomp -%}
+{% endfor %}
+
+{%- endcomp -%}
