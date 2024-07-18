@@ -5,7 +5,7 @@ import metas from "lume/plugins/metas.ts";
 import postcss from "lume/plugins/postcss.ts";
 
 // Importing the OI Lume charts and utilities
-import oiCharts from "https://deno.land/x/oi_lume_viz@v0.15.10/mod.ts";
+import oiCharts from "https://deno.land/x/oi_lume_viz@v0.15.11/mod.ts";
 import autoDependency from "https://deno.land/x/oi_lume_utils@v0.3.0/processors/auto-dependency.ts";
 import csvLoader from "https://deno.land/x/oi_lume_utils@v0.3.0/loaders/csv-loader.ts";
 import jsonLoader from "lume/core/loaders/json.ts";
@@ -42,6 +42,7 @@ site.copy('assets/images');
 site.copy('.nojekyll');
 site.copy([".woff2"]);
 site.copy([".png"]);
+site.copy([".js"]);
 
 site.data('build', {
   date: new Date(),

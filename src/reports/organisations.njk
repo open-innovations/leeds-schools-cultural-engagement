@@ -74,15 +74,14 @@ visualisations:
 
 <p>Hover over the data points on the map below to view more information on each organisation.</p>
 
-<br>
+<section id="filtered-map">
 
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
 	}) | safe
 }}
-
-<br/>
+</section>
 
 <p>The visualisation above presents data on the organisations for which address data was available. Freelance artists, and organisations for which we do not have address information, are mentioned below.</p>
 
@@ -102,3 +101,19 @@ visualisations:
 </ul> 
 
 <p>There are therefore some limitations to consider when using this data. Organisations have been included in the dataset where evidence of young people and school engagement could be found online. Organisations may not be counted if they have not mentioned their school engagements online and were not mentioned in the survey. Some of the information in the dataset may be out of date or inaccurate - if you know this to be the case, get in touch with us and let us know what's missing.
+
+
+<script src="/assets/js/filteredMap.js"></script>
+<script>
+OI.ready(function(){
+	var map = new OI.FilteredMap('filtered-map',{
+		'label':'Limit markers to: ',
+		'position':'after',
+		'parseTooltip': function(text){
+			var matches = text.match(/Type of engagement: ?([^\<\n\r]*)/);
+			if(matches) return matches[1].replace(/ $/,'').split(/, /);
+			return [];
+		}
+	});
+});
+</script>
