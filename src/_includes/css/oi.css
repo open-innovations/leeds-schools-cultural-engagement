@@ -207,3 +207,34 @@ footer .address {
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
 }
+
+@media only screen and (max-width: 800px) {
+	ul.grid.dashboard {
+		display: flex;
+		flex-direction: column;
+	}
+
+	ul.grid.grid.organisations.funder, ul.grid.grid.organisations.supporter{
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer .address {
+		border-right: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	}
+
+	.footer-logos {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer h3, p { 
+		text-align:center;
+	}
+
+}
+
+
