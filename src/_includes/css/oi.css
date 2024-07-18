@@ -146,8 +146,8 @@ section { padding: 2em 0; }
 	}
 
 .icon-link { 
-	max-height:2em;
-	max-width: 2em;
+	height:30px;
+	width: 30px;
 }
 
 .new {
@@ -215,6 +215,11 @@ footer .address {
 	}
 
 	ul.grid.grid.organisations.funder, ul.grid.grid.organisations.supporter{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.auto-grid {
 		display: flex;
 		flex-direction: column;
 	}

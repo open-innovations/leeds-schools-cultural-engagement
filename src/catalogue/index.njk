@@ -17,7 +17,7 @@ title: Data Catalogue
   Each dataset is listed below grouped with associated datasets.
 </p>
 
-{%- comp 'grid.autogrid', {columns: 4} -%}
+<ul class="grid dashboard" style ="grid-template-columns: repeat( 4, minmax(0, 1fr)); grid-gap: 0.5em;">
 
 {% for catalogue in search.pages('catalogue') %}
   {% comp "dashboard.panel", { bg: bg.next(), fg: 'white' }%}
@@ -56,5 +56,4 @@ title: Data Catalogue
 
   {%- endcomp -%}
 {% endfor %}
-
-{%- endcomp -%}
+</ul>
