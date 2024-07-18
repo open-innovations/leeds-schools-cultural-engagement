@@ -134,6 +134,22 @@ section { padding: 2em 0; }
 .limitations { padding-top: 2em; margin-bottom: 0;}
 .limitations li { font-size: 1.1em; }
 
+/* Catalogue */
+
+.catalogue-links { list-style: none;
+	text-align: center;
+	display: grid;
+	margin:0;
+	padding:2em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0em;
+	}
+
+.icon-link { 
+	height:30px;
+	width: 30px;
+}
+
 .new {
 	color: #b2c929,#440d54,#fde725,#404788,#51deee,#f734ed,rgb(204, 241, 254), rgb(67, 129, 151)
 }
@@ -191,3 +207,39 @@ footer .address {
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
 }
+
+@media only screen and (max-width: 800px) {
+	ul.grid.dashboard {
+		display: flex;
+		flex-direction: column;
+	}
+
+	ul.grid.grid.organisations.funder, ul.grid.grid.organisations.supporter{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.auto-grid {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer .address {
+		border-right: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	}
+
+	.footer-logos {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer h3, p { 
+		text-align:center;
+	}
+
+}
+
+
