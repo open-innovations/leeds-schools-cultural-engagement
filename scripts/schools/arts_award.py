@@ -3,6 +3,7 @@ import pandas as pd
 from pathlib import Path
 import re
 
+# NOTE: This data is manually extracted from https://www.artsaward.org.uk/centre/lookup.php - need to find an alternative source or write a script to scrape the data. 
 RAW_DATA = os.path.join('data', 'schools', 'arts_award.json')
 OUT_DIR = os.path.join('src', '_data', 'viz', 'dashboard')
 WARD_DATA = os.path.join('data', 'postcodes.csv')
