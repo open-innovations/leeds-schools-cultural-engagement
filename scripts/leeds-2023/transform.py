@@ -8,7 +8,8 @@ from thefuzz import process
 SCHOOLS_DATA = os.path.join('working', 'upstream', 'schools_events.csv')
 SCHOOLS_REF_DATA = os.path.join('data', 'schools.csv')
 WARD_REFERENCE = os.path.join('data', 'leeds_wards.csv')
-DATA_DIR = os.path.join('src', '_data', 'viz', 'leeds_2023')
+DATA_DIR = os.path.join('data', 'leeds-2023')
+VIZ_DIR = os.path.join('src', '_data', 'viz', 'leeds_2023')
 UNIQUE_SCHOOLS_OVERRIDE = 228
 TOTAL_SCHOOL_ENGAGEMENTS_OVERRIDE=501
 SCHOOL_COUNT_OVERRIDE = 294
@@ -36,6 +37,7 @@ def fuzzy_match_leeds_wards(data, ward_name_col="ward", ward_code_col="ward_code
 if __name__ == "__main__":
     # Load data
     data = load_schools_data()
+    data.to_csv(os.path.join(DATA_DIR, 'schools_events.csv'), index=False)
     all_schools = pd.read_csv(SCHOOLS_REF_DATA, usecols=['school_name', 'ward_name', 'ward_code']).set_index('school_name')
     leeds_wards = pd.read_csv(WARD_REFERENCE)
     
@@ -61,7 +63,7 @@ if __name__ == "__main__":
         'school_engagements': school_engagements,
         'cumulative_school_engagements': cumulative_school_engagements,
     })
-    engagements_by_week.to_csv(os.path.join(DATA_DIR, 'engagements_by_week.csv'))
+    engagements_by_week.to_csv(os.path.join(VIZ_DIR, 'engagements_by_week.csv'))
 
     # Write school engagement counts
     schools_counts = data.schools.explode().value_counts().to_frame().reset_index()
@@ -72,7 +74,7 @@ if __name__ == "__main__":
         right_on='school_name',
         how='left' 
     )
-    schools_counts.to_csv(os.path.join(DATA_DIR, 'school_engagement_counts.csv'), index=False)
+    schools_counts.to_csv(os.path.join(VIZ_DIR, 'school_engagement_counts.csv'), index=False)
 
     # Write engagements by ward
     ward_stats = leeds_wards.merge(
@@ -101,12 +103,12 @@ if __name__ == "__main__":
     engagements_by_ward.index.names = ['ward_code', 'ward']
     engagements_by_ward['percent_of_schools_in_ward_engaged'] = (engagements_by_ward.schools_engaged / engagements_by_ward.count_of_schools * 100).astype(int)
 
-    engagements_by_ward.to_csv(os.path.join(DATA_DIR, 'engagements_by_ward.csv'))
+    engagements_by_ward.to_csv(os.path.join(VIZ_DIR, 'engagements_by_ward.csv'))
 
     # Write summary JSON
     summary = pd.DataFrame.from_dict(summary, orient="index", columns=['value']).sort_index()
-    summary.value.to_json(os.path.join(DATA_DIR, 'summary.json'), indent=2)
+    summary.value.to_json(os.path.join(VIZ_DIR, 'summary.json'), indent=2)
 
     # Write summary CSV
     summary = summary.reset_index().rename(columns={'index': 'title'})
-    summary.to_csv(os.path.join(DATA_DIR, 'headlines.csv'), index=False)
+    summary.to_csv(os.path.join(VIZ_DIR, 'headlines.csv'), index=False)
