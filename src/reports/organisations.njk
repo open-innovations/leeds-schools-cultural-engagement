@@ -75,7 +75,6 @@ visualisations:
 <p>Hover over the data points on the map below to view more information on each organisation.</p>
 
 <section id="filtered-map">
-
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
@@ -107,8 +106,8 @@ visualisations:
 <script>
 OI.ready(function(){
 	var map = new OI.FilteredMap('filtered-map',{
-		'label':'Limit markers to: ',
-		'position':'after',
+		'label':'Filter by engagement type: ',
+		'position':'before',
 		'parseTooltip': function(text){
 			var matches = text.match(/Type of engagement: ?([^\<\n\r]*)/);
 			if(matches) return matches[1].replace(/ $/,'').split(/, /);
