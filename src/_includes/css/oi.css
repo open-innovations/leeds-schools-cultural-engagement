@@ -134,6 +134,22 @@ section { padding: 2em 0; }
 .limitations { padding-top: 2em; margin-bottom: 0;}
 .limitations li { font-size: 1.1em; }
 
+/* Catalogue */
+
+.catalogue-links { list-style: none;
+	text-align: center;
+	display: grid;
+	margin:0;
+	padding:2em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0em;
+	}
+
+.icon-link { 
+	max-height:2em;
+	max-width: 2em;
+}
+
 .new {
 	color: #b2c929,#440d54,#fde725,#404788,#51deee,#f734ed,rgb(204, 241, 254), rgb(67, 129, 151)
 }
