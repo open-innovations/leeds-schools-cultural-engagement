@@ -224,7 +224,7 @@ footer .address {
 	padding-bottom:2em;
 	border-right: solid 3px; 
 }
-.grid.organisations.funder { grid-template-columns:repeat(2, 20% 80%); align-items:center;}
+.grid.organisations.funder {grid-template-columns: repeat(2, 1fr); grid-gap: 4em; }
 .address li { font-size: 1em; margin-top:0; }
 .address h3 { font-size: 1.3em; text-decoration: underline; text-underline-offset: 8px;  text-decoration-color: #ffffff; text-decoration-thickness: 2px;}
 .address li a { font-size: 1.1em; color:#8436bf; text-decoration: underline; align-items: center; max-width: 300px; }
