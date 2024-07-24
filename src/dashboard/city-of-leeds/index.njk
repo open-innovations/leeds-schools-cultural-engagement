@@ -147,7 +147,7 @@ title: City of Leeds
   {% comp "grid.autogrid", { columns: 1 } %}
   {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
   <div class="text-panel">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Schools across Leeds vary in their arts offering for students. To support findings from our research - <a href="/survey/phase-2/">view the survey outputs here</a> - we have extracted open data on Artsmark status and Arts Award offering in schools across Leeds. This provides an indication of which areas of Leeds are underserved by creative education and can be used to inform policy, develop interventions and facilitate new partnerships between schools and creative providers.
   </div>
   {% endcomp %}
   {% endcomp %}
@@ -157,7 +157,7 @@ title: City of Leeds
   {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
   	<h2>Schools offering Arts Award</h2>
     <p>
-      The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. 
+      The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.
     </p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
@@ -201,7 +201,7 @@ title: City of Leeds
   {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
   	<h2>Arts Award centres</h2>
     <p>
-      The Arts Award centres by ward who are known to have engaged with schools and young people as part of their activities. Darker colours indicate there are more organisations in that ward.
+      The Arts Award centres by ward who are known to have engaged with schools and young people as part of their activities. Darker colours indicate there are more Arts Award centres that engage with schools in that ward.
     </p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
