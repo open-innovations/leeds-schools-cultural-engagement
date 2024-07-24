@@ -7,6 +7,7 @@ import re
 RAW_DATA = os.path.join('data', 'schools', 'arts_award.json')
 OUT_DIR = os.path.join('src', '_data', 'viz', 'dashboard')
 WARD_DATA = os.path.join('data', 'postcodes.csv')
+SCHOOLS_DATA = os.path.join('data', 'leeds_schools_public.csv')
 
 def match_ward(data, postcode_field='postcode', ward_column='ward_code'):
     data[postcode_field] = data[postcode_field].apply(postcode_formatter)
@@ -38,7 +39,7 @@ if __name__ == '__main__':
     leeds = arts_award_centres[arts_award_centres['address2'].apply(lambda x: ', LS' in x)].copy()
 
     # leeds.contactfrom = leeds.contactfrom.str.split(',')
-    leeds = leeds[leeds['contactfrom'].apply(lambda x: 'Young people' in x)].copy()
+    # leeds = leeds[leeds['contactfrom'].apply(lambda x: 'Young people' in x)].copy()
 
     # Create a table of Leeds Arts Award centres
     leeds_table = leeds.drop(columns={'placeId', 'coords.lat', 'coords.lng', 'address1', 'address2'}).rename(columns={
@@ -57,3 +58,12 @@ if __name__ == '__main__':
     arts_award_by_ward = match_ward(leeds)
     arts_award_by_ward = arts_award_by_ward.groupby('ward_code').size().reset_index(name='count_orgs')   
     arts_award_by_ward.to_csv(os.path.join(OUT_DIR, 'arts_award_leeds.csv'), index=False)
+
+    # SCHOOLS BY ARTS AWARD STATUS
+
+    schools_public = pd.read_csv(SCHOOLS_DATA, usecols={'school_name', 'ward_code', 'ward_name', 'school_postcode', 'artsaward'}).fillna('').rename(columns={'school_postcode':'postcode'})
+    schools_public = schools_public.groupby('ward_code').size().reset_index(name="count_schools")
+
+    schools_public.to_csv(os.path.join(OUT_DIR, 'arts_award_schools_by_ward.csv'), index=False)
+
+
