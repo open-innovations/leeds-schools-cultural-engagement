@@ -10,7 +10,7 @@ title: Dashboards
 		{% comp "dashboard.pane", { bg: "#104454", fg: 'white' }%}
 	<li><a href="/dashboard/city-of-leeds/">
 		<h2>The City of Leeds</h2>
-		<p>A dashboard that presents how Leeds fits into the national landscape of arts and cultural engagement.</p>
+		<p>A dashboard that explores creative education across Leeds and how it compares with the national picture.</p>
 			{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -27,7 +27,7 @@ title: Dashboards
 	{% comp "dashboard.pane", { bg: "#370b45", fg: 'white' }%}
 	<li><a href="/dashboard/leeds-2023-legacy/">
 		<h2>LEEDS 2023 Legacy</h2>
-		<p>A dashboard visualising data that reflects the impact and legacy left behind by the LEEDS 2023 Year of Culture.</p>
+		<p>The impact and legacy left behind by the LEEDS 2023 Year of Culture and its engagement with children and young people.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
