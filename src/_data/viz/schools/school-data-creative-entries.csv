@@ -1,4 +1,4 @@
-type,school_name,total_KS4_KS5_pupils,total_creative_subject_entered,artsaward,artsmark,artsmark_progress
+type,school_name,total_KS4_KS5_pupils,total_creative_subject_entered,artsaward,Artsmark,Artsmark_progress
 Academy & Free Schools,Abbey Grange Church of England Academy,938,234,No,No,Not involved in Artsmark
 Academy & Free Schools,Bishop Young Church of England Academy,294,50,No,No,Not involved in Artsmark
 Academy & Free Schools,Boston Spa Academy,604,136,No,No,Not involved in Artsmark
@@ -6,13 +6,13 @@ Academy & Free Schools,Brigshaw High School and Language College,627,271,No,No,N
 Academy & Free Schools,Bruntcliffe Academy,433,131,No,No,Not involved in Artsmark
 Academy & Free Schools,Co-op Academy Priesthorpe,521,181,No,No,Not involved in Artsmark
 Academy & Free Schools,Co-operative Academy of Leeds,352,157,No,No,Not involved in Artsmark
-Academy & Free Schools,Cockburn John Charles Academy,462,326,No,Yes,Registered for ArtsMark
+Academy & Free Schools,Cockburn John Charles Academy,462,326,No,Yes,Registered for Artsmark
 Academy & Free Schools,Cockburn Laurence Calvert Academy,0,0,No,No,Not involved in Artsmark
-Academy & Free Schools,Cockburn School,458,275,No,Yes,Working Towards ArtsMark
+Academy & Free Schools,Cockburn School,458,275,No,Yes,Working Towards Artsmark
 Academy & Free Schools,Corpus Christi Catholic College,342,120,Yes,No,Not involved in Artsmark
 Academy & Free Schools,Crawshaw Academy,438,177,No,No,Not involved in Artsmark
 Academy & Free Schools,Dixons Trinity Chapeltown(Secondary Campus) ,224,0,No,No,Not involved in Artsmark
-Academy & Free Schools,Dixons Unity Academy,303,84,No,Yes,Registered for ArtsMark
+Academy & Free Schools,Dixons Unity Academy,303,84,No,Yes,Registered for Artsmark
 Academy & Free Schools,Elliott Hudson College,1061,155,No,No,Not involved in Artsmark
 Academy & Free Schools,Garforth Academy,970,215,No,No,Not involved in Artsmark
 Academy & Free Schools,Horsforth School,731,282,Yes,No,Not involved in Artsmark
@@ -21,36 +21,36 @@ Academy & Free Schools,Leeds City Academy,304,133,No,No,Not involved in Artsmark
 Academy & Free Schools,Leeds East Academy,404,147,No,No,Not involved in Artsmark
 Academy & Free Schools,Leeds Jewish Free School,57,32,No,No,Not involved in Artsmark
 Academy & Free Schools,Leeds West Academy,510,236,No,No,Not involved in Artsmark
-Academy & Free Schools,Oulton Academy,382,207,No,Yes,Registered for ArtsMark
+Academy & Free Schools,Oulton Academy,382,207,No,Yes,Registered for Artsmark
 Academy & Free Schools,Prince Henry's Grammar School,893,291,No,No,Not involved in Artsmark
 Academy & Free Schools,Rodillian Academy,716,224,No,No,Not involved in Artsmark
 Academy & Free Schools,St. Mary's Menston Catholic Voluntary Academy,623,253,No,No,Not involved in Artsmark
 Academy & Free Schools,Temple Learning Academy,235,95,No,No,Not involved in Artsmark
 Academy & Free Schools,Temple Moor High School,599,223,No,No,Not involved in Artsmark
-Academy & Free Schools,The Elland Academy,2,0,No,Yes,Working Towards ArtsMark
+Academy & Free Schools,The Elland Academy,2,0,No,Yes,Working Towards Artsmark
 Academy & Free Schools,The Farnley Academy,581,169,No,No,Not involved in Artsmark
 Academy & Free Schools,The Morley Academy,570,226,No,No,Not involved in Artsmark
 Academy & Free Schools,The Ruth Gorse Academy,515,127,No,No,Not involved in Artsmark
 Academy & Free Schools,The Stephen Longfellow Academy,0,0,No,No,Not involved in Artsmark
-Academy & Free Schools,Trinity Academy Leeds,0,0,No,Yes,Registered for ArtsMark
+Academy & Free Schools,Trinity Academy Leeds,0,0,No,Yes,Registered for Artsmark
 Academy & Free Schools,University Technical College Leeds,425,215,No,No,Not involved in Artsmark
 Academy & Free Schools,Woodkirk Academy,923,259,No,No,Not involved in Artsmark
 Community,Allerton Grange School,806,106,No,No,Not involved in Artsmark
 Community,Allerton High Business and Enterprise Specialist School,837,194,Yes,No,Not involved in Artsmark
 Community,Benton Park School,719,320,No,No,Not involved in Artsmark
-Community,Lawnswood School,680,151,No,Yes,Awarded ArtsMark
+Community,Lawnswood School,680,151,No,Yes,Awarded Artsmark
 Community,Roundhay School,1185,245,No,No,Not involved in Artsmark
-Foundation,Carr Manor Community School,407,136,No,Yes,Working Towards ArtsMark
-Foundation,Guiseley School,683,271,Yes,Yes,Working Towards ArtsMark
+Foundation,Carr Manor Community School,407,136,No,Yes,Working Towards Artsmark
+Foundation,Guiseley School,683,271,Yes,Yes,Working Towards Artsmark
 Foundation,Pudsey Grammar School,656,277,No,No,Not involved in Artsmark
 Foundation,Ralph Thoresby School,500,178,No,No,Not involved in Artsmark
 Foundation,Wetherby High School,258,123,No,No,Not involved in Artsmark
 Special Schools,Broomfield South SILC,117,0,No,No,Not involved in Artsmark
 Special Schools,Green Meadows Academy,69,2,No,No,Not involved in Artsmark
-Special Schools,John Jamieson School,128,0,Yes,Yes,Registered for ArtsMark
+Special Schools,John Jamieson School,128,0,Yes,Yes,Registered for Artsmark
 Special Schools,Lighthouse School Leeds,50,0,Yes,No,Not involved in Artsmark
 Special Schools,Penny Field School,6,0,No,No,Not involved in Artsmark
-Special Schools,Springwell Leeds Academy,102,2,Yes,Yes,Working Towards ArtsMark
+Special Schools,Springwell Leeds Academy,102,2,Yes,Yes,Working Towards Artsmark
 Special Schools,West Oaks School,127,0,No,No,Not involved in Artsmark
 Special Schools,West Specialist Inclusive Learning Centre,109,9,No,No,Not involved in Artsmark
 Voluntary,Cardinal Heenan Catholic High School,362,75,No,No,Not involved in Artsmark

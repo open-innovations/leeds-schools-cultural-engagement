@@ -248,7 +248,7 @@ title: City of Leeds
 
   {% comp "dashboard.panel", { bg: '#104454', fg: 'white' }%}
   	<h2>Schools awarded Artsmark</h2>
-		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award.</p>
+		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
