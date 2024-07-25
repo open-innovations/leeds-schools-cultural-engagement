@@ -119,10 +119,11 @@ a.button:hover, button:hover, button:focus, a.button:focus { background-color: #
 .b3-bg, .github:hover { background-color: #999999; color: black!important; }
 .b4-bg { background-color: #bbbbbb; color: black!important; }
 .b5-bg, .off label { background-color: #dfdfdf; color: black!important; }
-.b6-bg { background-color: #ffffff; color: black!important; }
+.b6-bg { background-color: #ffffff; color: black!important; colour: #8d1a8f;}
 .warning { color: rgb(95, 82, 7); background-color: rgb(251, 245, 208); filter: drop-shadow(0px 0px 1px rgb(95, 82, 7)); }
 .padded { padding: 1em; }
 .padded-bottom { padding: 1em; margin-bottom: 1em; }
+.padded-top { padding-top: 2em; }
 .doublepadded { padding: 2em; }
 .spaced { margin-bottom: 1em; }
 .centred { text-align: center; }

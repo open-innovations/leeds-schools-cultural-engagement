@@ -1,7 +1,7 @@
 export default {
 	"colour": {
 		"series": 
-			[ '#b2c929','#440d54','#fde725','#404788','#29af7f','#277d8e', '#370496'],
+			[ '#b2c929','#440d54','#8d1a8f','#404788','#29af7f','#277d8e', '#370496'],
 		"names": {
 			"Academy & Free Schools": "#440d54",
 			"Academy & Free": "#440d54",
@@ -11,7 +11,7 @@ export default {
 			"Special Schools": "#104454",
 			"Special School": "#104454",
 			"Special": "#104454",
-			"Voluntary": "#fde725",
+			"Voluntary": "#8d1a8f",
 			"Other": "#171853",
 			"Working towards": "#440d54",
 			"Registered": "#39568c",
@@ -20,8 +20,8 @@ export default {
 			"Secondary": "#b2c929",
 			"Through": "#20a387",
 			"Through School": "#20a387",
-			"16+": "#fde725",
-			"Overall": "#fde725",
+			"16+": "#8d1a8f",
+			"Overall": "#8d1a8f",
 			"School/teachers": "#D50C52",
 			"External providers": "#2DB8C5",
 			"Orchestra": "#440d54",
@@ -39,7 +39,7 @@ export default {
 			"Key Stage 5": "#95d840",
 			"Yes": "#54c667",
 			"No": "#440d54",
-			"Theatre": "#fde725",
+			"Theatre": "#8d1a8f",
 			"Concerts": "#b8de29",
 			"Cinema": "#73d055",
 			"Gallery": "#3cbb75",
@@ -58,7 +58,7 @@ export default {
 			"UoL-blue": "#104454",
 			"UoL-green": "#b2c929",
 			"UoL-teal": '#20a387',
-			"UoL-yellow": '#fde725'
+			"UoL-yellow": '#8d1a8f'
 		}
 	},
 	"font": {

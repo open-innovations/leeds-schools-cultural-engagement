@@ -2,8 +2,9 @@ import os
 import pandas as pd 
 from pathlib import Path
 
-RAW_DATA = os.path.join('data', 'dfe', 'key-stage-4-performance_2022-23', '2223_subject_pupil_level_la_data_revised.csv')
+RAW_DATA = os.path.join('data', 'dfe', 'ks4-performance', '2223_subject_pupil_level_la_data_revised.csv')
 OUT_DIR = os.path.join('src', '_data', 'viz', 'dashboard')
+SCHOOL_ENTRY_DATA = os.path.join('src', '_data', 'viz', 'schools', 'school-data-creative-entries.csv')
 
 subjects = {
     'Any modern language',
@@ -24,6 +25,8 @@ subjects = {
 
 if __name__ == '__main__':
 
+    # LOCAL AUTHORITY ENTRIES
+
     raw_data = pd.read_csv(RAW_DATA).drop(columns={
         'time_identifier',
         'country_code',
@@ -42,3 +45,8 @@ if __name__ == '__main__':
     leeds_gcse_subject_entries = leeds_gcse_data.loc[leeds_gcse_data['subject'].isin(subjects)]
 
     leeds_gcse_subject_entries.to_csv(os.path.join(OUT_DIR, 'leeds_GCSE_entries.csv'), index=False)
+
+    # SCHOOL LEVEL ENTRIES
+
+    school_entry_data = pd.read_csv(SCHOOL_ENTRY_DATA)
+    print(school_entry_data)

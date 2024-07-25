@@ -108,6 +108,7 @@ footer { padding: 0; }
 .oi-table table tr:first-child { background: #171853; color: #ffffff; }
 .oi-table table tr:first-child th { padding:0.8em; }
 
-.oi-map { margin-top: 2em; }
+/* .oi-map { margin-top: 2em; } */
+.oi-zoomable-map { border-style: dashed; border-width: thin; border-color: #bbbbbb; padding: 2em; }
 
 ul .panel { justify-content: normal; }

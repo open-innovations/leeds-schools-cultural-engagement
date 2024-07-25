@@ -4,7 +4,7 @@ visualisations:
   map:
     geojson:
       key: "URN"
-      data: viz.schools.school-map
+      data: viz.schools.schools_map_centroid
     data: viz.schools.schools
     columns:
       - name: "Tooltip label"
@@ -92,8 +92,7 @@ visualisations:
 	}) | safe
 }}
 
-<p>Hover over the data points on the map below to view more information on each school.</p>
-<br>
+<p class="padded-top">Hover over the data points on the map below to view more information on each school.</p>
 
 {{
 	comp.oi.map.zoomable({
