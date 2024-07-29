@@ -76,6 +76,8 @@ footer { padding: 0; }
 
 .text-wrap { border-style: dashed; padding: 2em; border-width: thin; box-shadow: 0.5px 0.5px #bbbb; margin: 1em;}
 
+.quote-title { font-style: italic; padding-bottom:1em; font-size:1.2em; padding-top:1em;}
+
 .grid li h2 { font-weight: bold; text-align: center; padding-bottom: 0.5em; }
 
 .head_colour { background: var(--background-colour); color: black!important; border-bottom: groove; border-width: 3px; }

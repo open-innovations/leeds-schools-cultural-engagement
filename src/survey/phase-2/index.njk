@@ -237,6 +237,20 @@ title: Survey Responses Academic Year 2022/23
 		}) | safe
 	}}
 
+<h4 class="quote-title">Why do you rate your school's arts curriculum as excellent/good?</h4>
+{% comp "survey.dash-quote" %}
+	{% comp "survey.panel-quote" %}
+	<p>
+		"Having balanced/ art-enhanced/comprehensive curriculum including design and technology, digital media, art, music, drama, playing musical instruments, singing, drama clubs, dance, multi-media art, animation."
+	</p>
+	{% endcomp %}
+	{% comp "survey.panel-quote" %}
+	<p>
+		"Connecting with local art organisations, such as Artforms, Northern Dance, Drama North, Leeds Playhouse, The Arts People, Leeds Lieder, Opera North."
+	</p>
+	{% endcomp %}
+{% endcomp %}
+
   <h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
   <p>Out of the 49 schools counted in the survey:</p>
   {{
@@ -298,6 +312,25 @@ title: Survey Responses Academic Year 2022/23
 			}
 		}) | safe
 	}}
+
+<h4 class="quote-title">Why do you rate your school's extra-curricular arts offer as excellent/good?</h4>
+{% comp "survey.dash-quote", { columns: 3 } %}
+	{% comp "survey.panel-quote" %}
+	<p>
+		"The school offers various extra-curricular activities, e.g. art, music, dance, drama, choir, cheerleaders."
+	</p>
+	{% endcomp %}
+	{% comp "survey.panel-quote" %}
+	<p>
+		"Successful outcomes of the activities, e.g. installation art works, fashion shows." "High attendance from pupils."
+	</p>
+	{% endcomp %}
+	{% comp "survey.panel-quote" %}
+	<p>
+		"Pupils receive teaching from experts." "Schools organise art-related clubs by staff in different area."
+	</p>
+	{% endcomp %}
+{% endcomp %}
 
   {{
 		comp.oi.dashboard({
