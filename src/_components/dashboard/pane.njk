@@ -8,6 +8,9 @@ css: |
     background: var(--background);
     padding-top: 0em;
     padding: 3em;
+    border-style: var(--border);
+    border-width: thin;
+    border-color: #bbbbbb;
   }
 ---
 
@@ -15,7 +18,7 @@ css: |
   style="
     {%- if fg %}--foreground: {{ fg }};{% endif -%}
     {%- if bg %}--background: {{ bg }};{% endif -%}
-    {%- if border %}--border-style: {{ border }};{% endif -%}
+    {%- if border %}border-style: {{ border }}!important;{% endif -%}
   ">
   {{ content | safe }}
 </div>
