@@ -1,5 +1,5 @@
 id: 'reports/schools'
-download: /data/schools/primary_schools_2024.csv
+download: https://raw.githubusercontent.com/open-innovations/leeds-schools-cultural-engagement/main/data/schools/primary_schools_2024.csv
 github: https://github.com/open-innovations/leeds-schools-cultural-engagement/blob/main/data/schools/primary_schools_2024.csv
 title: Primary Schools
 group: Schools
