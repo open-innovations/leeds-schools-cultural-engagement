@@ -82,7 +82,7 @@ footer { padding: 0; }
 
 .head_colour { background: var(--background-colour); color: black!important; border-bottom: groove; border-width: 3px; }
 
-.organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); column-gap: 2em; row-gap: 0.5em; }
+.organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); grid-gap:0; row-gap: 0.5em; }
 .organisations li svg { width: 100%; height: auto; color: #a8b6be; filter: grayscale(1) brightness(2); }
 .organisations.supporter li svg { width: 100%; height: 4em; color: #a8b6be; filter: grayscale(1) brightness(2); }
 
