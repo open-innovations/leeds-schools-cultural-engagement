@@ -128,7 +128,6 @@ a.button:hover, button:hover, button:focus, a.button:focus { background-color: #
 .spaced { margin-bottom: 1em; }
 .centred { text-align: center; }
 .tallpadded { padding-top: 3em; padding-bottom: 3em; }
-section { padding: 2em 0; }	
 .feedback-bg { background-color: #440d54; color: white; text-align: center; }
 .feedback-bg a { color: #a951ed; text-decoration: underline; }
 
@@ -181,12 +180,8 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 /* Filtered map */
 
 #filtered-map {
-	border-style: dashed;
-	border-color: #bbbbbb;
-	border-width: thin;
-	padding:2em;
-	margin-bottom:3em;
 	margin-top: 1em;
+	padding-top:1em;
 }
 
 #filtered-map .oi-viz { 
@@ -206,14 +201,15 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 	padding-right:1em;
 }
 
-#school-map { 
+.zoomable-map { 
 	border-style: dashed; 
 	border-width: thin; 
 	border-color: #bbbbbb; 
-	padding: 2em; 
+	padding:2em;
+	margin-bottom:1em;
 }
 
-#school-map h3 {
+.zoomable-map h3 {
 	text-align:center; 
 	font-size:1.6em; 
 	padding-bottom:1em;

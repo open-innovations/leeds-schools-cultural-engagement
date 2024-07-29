@@ -72,18 +72,22 @@ visualisations:
 	}) | safe
 }}
 
-<p style="padding-top:2em;"><strong>Hover over the data points on the map below to view more information on each organisation. If you are looking for a provider that offers a particular type of activity, use the drop-down to filter the organisations by the services they provide.</strong>
+
+<section class="zoomable-map">
+<h3>Organisations map</h3>
+<p><strong>Hover over the data points on the map below to view more information on each organisation. If you are looking for a provider that offers a particular type of activity, use the drop-down to filter the organisations by the services they provide.</strong>
 </p>
 <p>
 	Note: this is a provisional dataset, and will be developed over time. If you think this data could be improved, <a href="mailto:hello@open-innovations.org">get in touch with us</a>.
 </p>
-
 <section id="filtered-map">
+
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
 	}) | safe
 }}
+</section>
 </section>
 
 <p>The visualisation above presents data on the organisations for which address data was available. Freelance artists, and organisations for which we do not have address information, are mentioned below.</p>
