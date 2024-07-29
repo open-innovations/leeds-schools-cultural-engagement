@@ -92,13 +92,16 @@ visualisations:
 	}) | safe
 }}
 
-<p class="padded-top">Hover over the data points on the map below to view more information on each school.</p>
 
+<section id="school-map">
+<h3>Schools map</h3>
+<p>Hover over the data points on the map below to view more information on each school in Leeds.</p>
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
 	}) | safe
 }}
+</section>
 
 <h2>Schools Overview</h2>
 <p>The visualisations on this page present a picture of the types of schools in Leeds, and to understand how they are engaging with arts and culture.</p>

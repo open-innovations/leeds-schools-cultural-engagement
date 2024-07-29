@@ -206,6 +206,19 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 	padding-right:1em;
 }
 
+#school-map { 
+	border-style: dashed; 
+	border-width: thin; 
+	border-color: #bbbbbb; 
+	padding: 2em; 
+}
+
+#school-map h3 {
+	text-align:center; 
+	font-size:1.6em; 
+	padding-bottom:1em;
+}
+
 /* Footer */ 
 .elsewhere { float: right; margin-top: 0; }
 .elsewhere li { display: inline-block; margin-left: 0.5em; }
