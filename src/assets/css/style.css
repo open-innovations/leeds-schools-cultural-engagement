@@ -74,7 +74,7 @@ header .holder {
 }
 footer { padding: 0; }
 
-.text-wrap { border-style: dashed; padding: 2em; border-width: thin; box-shadow: 0.5px 0.5px #bbbb; margin: 1em;}
+.text-wrap { border-style: solid; padding: 2em; border-width: thin; border-color: #bbbb; margin: 1em;}
 
 .quote-title { font-style: italic; padding-bottom:1em; font-size:1.2em; padding-top:1em;}
 
@@ -104,9 +104,9 @@ footer { padding: 0; }
 .oi-chart-main text { fill: inherit; } 
 
 .oi-legend-item { margin: 0.3em;}
-.oi-legend-item.oi-series-on { background: inherit!important; outline: 0.5px dashed #bbbbbb!important; }
+.oi-legend-item.oi-series-on { background: inherit!important; outline: 0.5px solid #bbbbbb!important; }
 
-.oi-table table * { padding-left: 1em; padding-right: 1em; border-width: thin; border-color: #e0dfdf; border-style: dashed;}
+.oi-table table * { padding-left: 1em; padding-right: 1em; border-width: thin; border-color: #e0dfdf; border-style: solid;}
 .oi-table table tr:first-child { background: #171853; color: #ffffff; }
 .oi-table table tr:first-child th { padding:0.8em; }
 
