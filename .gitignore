@@ -1,7 +1,8 @@
 # Lume site
 _site/
 
-data/survey/raw/*
+data/survey/*
+
 
 # I've had problems with deno.lock. It's in my bad books.
 deno.lock
