@@ -3,7 +3,6 @@ _site/
 
 data/survey/*
 
-
 # I've had problems with deno.lock. It's in my bad books.
 deno.lock
 
