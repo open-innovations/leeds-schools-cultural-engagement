@@ -8,7 +8,7 @@ visualisations:
     data: viz.schools.schools
     columns:
       - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}</p>"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ type }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}</p>"
     key: "URN"
     tooltip: "Tooltip label"
     value: "type"
@@ -17,16 +17,12 @@ visualisations:
       items:
         - label: "Academy & Free Schools"
           colour: "Academy & Free Schools"
-        - label: "Community"
-          colour: "Community"
-        - label: "Foundation"
-          colour: "Foundation"
+        - label: "Maintained"
+          colour: "Maintained"
         - label: "Independent"
           colour: "Independent"
         - label: "Special Schools"
           colour: "Special Schools"
-        - label: "Voluntary"
-          colour: "Voluntary"
   fsm:
     geojson:
       key: "URN"
@@ -34,7 +30,7 @@ visualisations:
     data: viz.schools.schools
     columns:
       - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ phase_type_grouping }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%<br>Number of creative subjects entered: {{ total_creative_subject_entered }}"
+        template: "<h3>{{ Name }}</h3><p>{{ type }}<br />{{ type }} (ages {{ StatutoryLowAge }}-{{ StatutoryHighAge }})<br />Pupils: {{ total_pupils | toLocaleString() }}<br />Artsmark: {{ artsmark_progress }} {{ most_recent_award }}<br />Arts Award: {{ artsaward }}<br/>Percentage of pupils eligible for free school meals: {{ %_pupils_eligible_FSMs | toFixed(1) }}%<br>Number of creative subjects entered: {{ total_creative_subject_entered }}"
     key: "URN"
     tooltip: "Tooltip label"
     value: "%_pupils_eligible_FSMs"
@@ -65,19 +61,13 @@ visualisations:
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.schools.school-data-by-type",
-			title: "Type",
+			data: "viz.schools.school-data-by-type-maintained",
+			title: "type",
 			value: "Number",
-			width: "30%",
+			width: "20%",
 			panels: [{
 				name: "Academy & Free Schools",
 				colour: "Academy & Free Schools"
-			},{
-				name: "Community",
-				colour: "Community"
-			},{
-				name: "Foundation",
-				colour: "Foundation"
 			},{
 				name: "Independent",
 				colour: "Independent"
@@ -85,8 +75,8 @@ visualisations:
 				name: "Special Schools",
 				colour: "Special Schools"
 			},{
-				name: "Voluntary",
-				colour: "Voluntary"
+				name: "Maintained",
+				colour: "Maintained"
 			}]
 		}
 	}) | safe
@@ -142,16 +132,16 @@ visualisations:
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.schools.school-data-artsmark",
+			data: "viz.schools.school_data_artsmark_maintained",
 			columns: [{
 				name: "Working towards Tooltip",
 				template: "{{ type }}\nWorking towards: {{ working_towards_percent | toFixed(1) }}%"
 			},{
 				name: "Registered Tooltip",
-				template: "{{ type }}\nRegistered: {{ Registered_percent | toFixed(1) }}%"
+				template: "{{ type }}\nRegistered: {{ registered_percent | toFixed(1) }}%"
 			},{
 				name: "Awarded Tooltip",
-				template: "{{ type }}\nAwarded: {{ Awarded_percent | toFixed(1) }}%"
+				template: "{{ type }}\nAwarded: {{ awarded_percent | toFixed(1) }}%"
 			}],
 			category: "type",
 			height: 300,
@@ -166,12 +156,12 @@ visualisations:
 			},{
 				title: "Registered",
 				colour: 'Registered',
-				value: "Registered_percent",
+				value: "registered_percent",
 				tooltip: "Registered Tooltip"
 			},{
 				title: "Awarded",
 				colour: 'Awarded',
-				value: "Awarded_percent",
+				value: "awarded_percent",
 				tooltip: "Awarded Tooltip"
 			}],
 			gap: 0.1,
@@ -197,7 +187,7 @@ visualisations:
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.schools.school-data-artsaward",
+			data: "viz.schools.arts_award_data_maintained",
 			columns: [{
 				name: "Tooltip",
 				template: "{{ type }}\nArts Award: {{ Percentage of schools of this type signed up for Arts Award | toFixed(1) }}%"
@@ -210,8 +200,7 @@ visualisations:
 			series: [{
 				title: "Percent",
 				value: "Percentage of schools of this type signed up for Arts Award",
-				tooltip: "Tooltip",
-				colour: "type"
+				tooltip: "Tooltip"
 			}],
 			gap: 0.1,
 			axis: {
@@ -229,14 +218,13 @@ visualisations:
 	}) | safe
 }}
 
-
+{# 
 <h3>Creative subject entries in KS4 / KS5 (coloured by school type)</h3>
 <p>The chart below explores the relationship between the size, type and number of students enrolled in creative subjects at GCSE level. Hover over the data points to view information about each school.</p>
 <p>In the chart, you would expect that the number of students enrolled in creative subjects is greater in larger schools. There is an overall positive trend, however some schools are obvious outliers. There must therefore be some other factors that influence the uptake of creative subjects by students in schools. We have started some initial exploration of this data below.</p>
 <br><br>
 
-{{
-	comp.oi.chart.scatter({
+{% comp 'oi.chart.scatter', {
 		config: {
 			data: "viz.schools.school-data-creative-entries",
 			height: 500,
@@ -249,11 +237,11 @@ visualisations:
 				title: "Creative entries",
 				x: "total_KS4_KS5_pupils",
 				y: "total_creative_subject_entered",
-				colour: "type",
 				tooltip: "Tooltip",
-				points: { size: 10 }
+				points: { size: 10 },
+				colour: "type"
 			}],
-			legend: { show: false },
+			legend: { show: true },
 			axis: {
 				x: {
 					grid: {show:true,"stroke-width": 1},
@@ -267,8 +255,8 @@ visualisations:
 				}
 			}
 		}
-	}) | safe
-}}
+	}
+%}{% endcomp %}
 
 <h3>Creative subject entries in KS4 / KS5 (coloured by Artsmark)</h3>
 <p>The chart below explores the relationship between the size, creative subject offering and Artsmark accreditation of schools in Leeds. Hover over the data points to view information about each school. Whilst the chart shows that some schools with Artsmark accreditation have a higher take-up of creative subjects, this is not always the case.</p>
@@ -306,7 +294,7 @@ visualisations:
 			}
 		}
 	}) | safe
-}}
+}} #}
 
 
 <h2>Social factors & arts provision</h2>
