@@ -1,0 +1,69 @@
+A level and other 16 to 18 results
+2022/23 Academic year
+
+Description
+
+This document describes the data included in the ‘A level and other 16 to 18 results: 2022/23’ National Statistics release's underlying data files.  The statistical publication complements the 16-18 school and college performance tables. This data is released under the terms of the Open Government License (http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) and is intended to meet at least 3 stars for Open Data (https://www.gov.uk/government/publications/2010-to-2015-government-policy-government-transparency-and-accountability/2010-to-2015-government-policy-government-transparency-and-accountability#appendix-3-releasing-data-in-open-and-anonymised-formats).
+
+The publication methodology, available on the publication report, should be referenced alongside this data. It provides information on the data sources, their coverage and quality as well as explaining methodology used in producing the data.
+
+Coverage
+
+This release provides information on A level and other 16-18 results in:
+
+- Students who have completed their 16-18 phase of education
+- Students who have entered an approved qualification in the reporting year
+
+Approved qualifications are those that are eligible for reporting in the 16-18 school and college performance tables, listed in the 16 to 18 qualifications, discount codes and point scores (https://www.gov.uk/government/publications/16-to-19-qualifications-discount-codes-and-point-scores).
+
+The information is based on data collected via awarding organisations, the school census, and the Individualised Learner Record.
+
+File formats and conventions
+
+Rounding
+
+This dataset has not had rounding applied.
+
+Suppression is applied to protect the disclosure of personal information or characteristics.
+
+Conventions
+
+The following convention is used throughout the underlying data.
+
+‘z’ Not applicable.
+
+Data files
+
+Time-series - A level subject entries and grade by gender
+
+Filename: alevel_timeseries_subject_entries_results.csv
+Geographic levels: National
+Time period: 1995/96 to 2022/23
+Content summary: This data is available  through the ‘Explore data and files’ section in the file called  ‘Time series - A level subject entries and grade by gender’.
+
+In addition it is accessible through the dashboard linked below. The dashboard combines data from this statistical release (covering the latest  2022/23  provisional data ) with selected older data compiled from previous versions of the ‘A level and other 16 to 18 results’ statistical release:
+
+16-18 Time-series attainment and single year entries (https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries/)
+
+On the left-hand  side, clicking  on the  link ‘ A level  entries and grade distribution'  brings up the dashboard with  A level entries and A level grades -  comparison by subject and gender.
+
+These data cover A level entries by students aged 16 to 18 within each academic year from 1995/96.
+
+Variable names and descriptions for this file are provided below:
+
+Variable name                |  Variable description
+---------------------------  |  ------------------------------
+characteristic_value         |  Characteristic
+entry_count                  |  Exam entries
+perc_astar_a_grade_achieved  |  Percent achieving grade A* - A
+perc_astar_b_grade_achieved  |  Percent achieving grade A* - B
+perc_astar_c_grade_achieved  |  Percent achieving grade A* - C
+perc_astar_d_grade_achieved  |  Percent achieving grade A* - D
+perc_astar_e_grade_achieved  |  Percent achieving grade A* - E
+perc_astar_grade_achieved    |  Percent achieving grade A*
+subject_name                 |  Subject
+
+Footnotes:
+
+1. Figures for the total number of students may not match the sum of females and males, as not all institutions recorded the gender for every student.
+2. A change to the trigger rules was introduced in 2020/21  such that students were no longer automatically reported after two years in 16-18 study. The introduction caused a fall in cohort size, particular within the vocational and technical cohorts. A full impact analysis can be found in the methodology document (https://explore-education-statistics.service.gov.uk/methodology/a-level-and-other-16-to-18-results).
