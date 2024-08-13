@@ -8,6 +8,7 @@ export default {
 			"Community": "#171853",
 			"Foundation": "#b2c929",
 			"Independent": "#29af7f",
+			"Maintained": "#8d1a8f",
 			"Special Schools": "#104454",
 			"Special School": "#104454",
 			"Special": "#104454",
