@@ -6,16 +6,6 @@ import pandas as pd
 import http.client
 from time import sleep
 
-# print('cwd is %s' %(os.getcwd()))
-# scriptdir = os.path.dirname(os.path.realpath(__file__))
-# print('dir containing script is %s' % (scriptdir))
-# print('============\ncwd is %s' %(os.getcwd()))
-# os.chdir(scriptdir)
-# print('============\ncwd after change to script dir is %s' %(os.getcwd()))
-
-# TOP_DIR=os.path.abspath("..")
-# sys.path.append("../..")
-
 DATA_DIR = os.path.join('data', 'census')
 
 def get_data(url):
