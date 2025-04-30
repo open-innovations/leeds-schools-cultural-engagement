@@ -4,6 +4,7 @@ import date from "lume/plugins/date.ts";
 import metas from "lume/plugins/metas.ts";
 import postcss from "lume/plugins/postcss.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
+import inline from "lume/plugins/inline.ts";
 
 // Importing the OI Lume charts and utilities
 import oiCharts from "https://deno.land/x/oi_lume_viz@v0.15.11/mod.ts";
@@ -18,6 +19,7 @@ const site = lume({
 });
 
 site.use(nunjucks());
+site.use(inline(/* Options */));
 
 // Register a series of extensions to be loaded by the OI CSV loader
 // https://lume.land/docs/core/loaders/
