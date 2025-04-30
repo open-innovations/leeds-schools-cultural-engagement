@@ -1,0 +1,52 @@
+---
+title: Data Catalogue
+---
+
+<style>
+    .dashboard > *:nth-child(2n){ background: #440d54; color: white; }
+    .dashboard > *:nth-child(2n+1){ background: #104454; color: white; }
+</style>
+
+<p>This page catalogues the data used to build this data microsite. All the data is extracted from open data sources, and stored in the <a href="https://github.com/open-innovations/leeds-schools-cultural-engagement">Mapping Creative Education GitHub repository</a>. To obtain a copy of the data, please use the link direct to GitHub.</p>
+
+<h2>Datasets</h2>
+
+<p>Each dataset is listed below grouped with associated datasets.</p>
+
+<div class="grid dashboard" style ="grid-template-columns: repeat( 4, minmax(0, 1fr)); grid-gap: 0.5em;">
+{{ for entry of entries.sort(function(a,b){ return a.title > b.title ? 1 : -1 }) }}
+	{{ comp dashboard.panel { } }}
+		<h3>{{entry.title}}</h3>
+
+		<p>{{entry.description}}</p>
+
+		<ul class="catalogue-links">
+		<li>
+			<a
+				href='{{ entry.page }}'
+				title='View {{ entry.title }} page'
+				class='icon-link'
+				tabindex='0'
+			><img src="/assets/images/icons/info.svg" class="icon-link" inline></a>
+		</li>
+		<li>
+			<a
+				href='{{ entry.download }}'
+				title='Download {{ entry.title }} dataset'
+				class='icon-link'
+				tabindex='0'
+			><img src="/assets/images/icons/file-download.svg" class="icon-link" inline></a>
+		</li>
+		<li>
+			<a
+				href='https://github.com/open-innovations/leeds-schools-cultural-engagement/blob/main{{ entry.data }}'
+				title='View {{ entry.title }} dataset on GitHub'
+				class='icon-link'
+				tabindex='0'
+			><img src="/assets/images/icons/github.png" class="icon-link" inline></a>
+		</li>
+		</ul>
+	{{ /comp }}
+{{ /for }}
+</div>
+

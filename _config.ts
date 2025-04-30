@@ -42,8 +42,20 @@ site.use(postcss({}));
 
 // Copy orgs file to use in visualisation
 site.remoteFile("_data/viz/organisations/orgs.csv","./data/orgs.csv");
-// Copy orgs file to download
-site.remoteFile("./reports/organisations/orgs.csv","./data/orgs.csv");
+
+
+// Section to process catalogue
+import { parse } from "jsr:@std/yaml";
+const yaml = await Deno.readTextFile("./src/catalogue/_data.yml");
+const catalogue = parse(yaml);
+catalogue.entries.forEach((entry: any) => {
+	site.remoteFile(entry.download,"."+entry.data);
+});
+site.copy(['.csv']);
+
+
+
+
 
 site.copy('CNAME');
 site.copy('assets/images');

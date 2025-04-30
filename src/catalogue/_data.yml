@@ -1,0 +1,29 @@
+entries:
+  - page: /dashboard/leeds-2023-legacy
+    title: LEEDS 2023 Events
+    description: A dataset of school engagement activities delivered by LEEDS 2023.
+    data: /data/leeds-2023/schools_events.csv
+    download: /downloads/schools_events.csv
+    group: LEEDS 2023
+    updated: 2022-12-02T12:57:00+00:00
+  - page: /reports/organisations
+    title: Organisations
+    description: A dataset of Leeds-based cultural organisations.
+    data: /data/orgs.csv
+    download: /downloads/organisations.csv
+    group: Organisations
+    updated: 2022-12-02T12:57:00+00:00
+  - page: /reports/schools
+    title: Primary Schools
+    description: A dataset of Leeds-based Primary schools.
+    data: /data/schools/primary_schools_2024.csv
+    download: https://raw.githubusercontent.com/open-innovations/leeds-schools-cultural-engagement/main/data/schools/primary_schools_2024.csv
+    group: Schools
+    updated: 2022-12-02T12:57:00+00:00
+  - page: /reports/schools
+    title: Secondary Schools
+    description: A dataset of Leeds-based Secondary schools.
+    data: /data/schools/secondary_schools_2024.csv
+    download: https://raw.githubusercontent.com/open-innovations/leeds-schools-cultural-engagement/main/data/schools/secondary_schools_2024.csv
+    group: Schools
+    updated: 2022-12-02T12:57:00+00:00
