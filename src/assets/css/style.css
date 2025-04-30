@@ -82,9 +82,15 @@ footer { padding: 0; }
 
 .head_colour { background: var(--background-colour); color: black!important; border-bottom: groove; border-width: 3px; }
 
-.organisations.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); grid-gap:0; row-gap: 0.5em; }
+
+.organisations { list-style: none; margin: 0; display: flex; gap: 2rem; }
 .organisations li svg { width: 100%; height: auto; color: #a8b6be; filter: grayscale(1) brightness(2); }
-.organisations.supporter li svg { width: 100%; height: 4em; color: #a8b6be; filter: grayscale(1) brightness(2); }
+.organisations.supporter li svg { width: 100%; height: 5em; color: #a8b6be; filter: grayscale(1) brightness(2); }
+@media only screen and (max-width: 800px) {
+	.organisations {
+		flex-direction: column;
+	}
+}
 
 .oi-viz { margin-bottom: 0.5em; }
 .oi-viz:last-child { margin-bottom: 1em; }
