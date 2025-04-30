@@ -1,4121 +1,4121 @@
 {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "137083",
-        "name": "Abbey Grange Church of England Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.611941361330213,
-          53.834744081480125
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107985",
-        "name": "Aberford Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.344934210298758,
-          53.82775122435232
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107892",
-        "name": "Adel Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5762948976532407,
-          53.849291432625435
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108041",
-        "name": "Adel St John the Baptist Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5813531127491351,
-          53.85285861211154
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147945",
-        "name": "Alder Tree Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5494099667225862,
-          53.8232236026951
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108048",
-        "name": "All Saint's Richmond Hill Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.519690954956876,
-          53.79692489339153
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143242",
-        "name": "Allerton Bywater Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3701322981168829,
-          53.74768952663656
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "135210",
-        "name": "Allerton Church Of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5474527865218617,
-          53.8497069058995
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108058",
-        "name": "Allerton Grange School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5209447104964564,
-          53.84011259719723
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108057",
-        "name": "Allerton High Business and Enterprise Specialist School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.551444655286248,
-          53.85051733974778
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107912",
-        "name": "Alwoodley Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.556531491461571,
-          53.8503804594728
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "149399",
-        "name": "Armley Grange School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6082301871924247,
-          53.80192508212094
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147632",
-        "name": "Armley Park Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5895137554873686,
-          53.80102408767599
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107877",
-        "name": "Ashfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7079419824249917,
-          53.91188228921314
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "132795",
-        "name": "Asquith Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6105662265701894,
-          53.75562713959437
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146213",
-        "name": "Austhorpe Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4360504391926496,
-          53.79802748475814
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107901",
-        "name": "Bankside Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5219157753957606,
-          53.81462915614981
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107868",
-        "name": "Bardsey Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.448403432840038,
-          53.886380186488296
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107987",
-        "name": "Barwick-in-Elmet Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3902580100025905,
-          53.82978015486957
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107920",
-        "name": "Beechwood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4678040586934185,
-          53.818891937410406
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107883",
-        "name": "Beecroft Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5958937731983083,
-          53.81242701168722
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108052",
-        "name": "Beeston Hill St Luke's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.553180170800748,
-          53.78278306326033
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107946",
-        "name": "Beeston Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5731980328981483,
-          53.772163239391055
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108083",
-        "name": "Benton Park School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6827975105692778,
-          53.85699146754079
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107863",
-        "name": "Birchfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6355200495892148,
-          53.75616867952913
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "144809",
-        "name": "Bishop Young Church of England Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6355200495892148,
-          53.75616867952913
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146102",
-        "name": "Blackgates Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5657070038972447,
-          53.72874784678332
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107884",
-        "name": "Blenheim Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5469559605970884,
-          53.80679223257939
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146217",
-        "name": "Boston Spa Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3636273987428242,
-          53.899904889394975
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107909",
-        "name": "Bracken Edge Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5269871135107107,
-          53.8207092595773
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107844",
-        "name": "Bramham Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3517548441572949,
-          53.88723575507299
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147554",
-        "name": "Bramhope Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.61817105982903,
-          53.881989785734795
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146542",
-        "name": "Bramley Park Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6420923524497946,
-          53.810252094103916
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108003",
-        "name": "Bramley St Peter's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6301120223200698,
-          53.8094365965506
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143238",
-        "name": "Brigshaw High School and Language College"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3790130130847522,
-          53.75701528937089
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107874",
-        "name": "Broadgate Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6331569963282544,
-          53.841143587583694
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108054",
-        "name": "Brodetsky Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.542544344404003,
-          53.85441609321114
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108123",
-        "name": "Broomfield South SILC"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5232155771488947,
-          53.756560960730475
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107885",
-        "name": "Brudenell Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.571759849479124,
-          53.81363844709607
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142056",
-        "name": "Bruntcliffe Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6187419477749092,
-          53.74369042176009
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108001",
-        "name": "Burley St Matthias Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5811408282792767,
-          53.80814535084155
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107996",
-        "name": "Calverley Church of England Voluntary Aided Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.685071800999716,
-          53.8311658068287
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146540",
-        "name": "Calverley Parkside Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6883098329407016,
-          53.82787615744317
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108095",
-        "name": "Cardinal Heenan Catholic High School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5601408399521992,
-          53.838039359766796
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107830",
-        "name": "Carlton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4916656211348438,
-          53.739739062483146
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108059",
-        "name": "Carr Manor Community School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5542594233141314,
-          53.83332312506609
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107962",
-        "name": "Castleton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.576000273174936,
-          53.7928461173964
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107903",
-        "name": "Chapel Allerton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5371913643712363,
-          53.82683417752843
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146306",
-        "name": "Christ Church Upper Armley Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5967932115748114,
-          53.799408842848884
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "144824",
-        "name": "Christ The King Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6182099992826906,
-          53.80577780796052
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107820",
-        "name": "Churwell Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5966622075843642,
-          53.75860099548883
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107958",
-        "name": "Clapgate Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.519918896431282,
-          53.751279929429614
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145306",
-        "name": "Co-op Academy Beckfield"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7008675864696077,
-          53.788592913416366
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138986",
-        "name": "Co-op Academy Brownhill"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.510639228451891,
-          53.80202303882327
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139701",
-        "name": "Co-op Academy Nightingale"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5140774692822687,
-          53.808438594237145
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139077",
-        "name": "Co-op Academy Oakwood"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4982406114495468,
-          53.813376153497565
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "144588",
-        "name": "Co-op Academy Priesthorpe"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6879132074623289,
-          53.80932916325178
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139015",
-        "name": "Co-op Academy Woodlands"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5056456856228297,
-          53.811718313736044
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "137065",
-        "name": "Co-operative Academy of Leeds"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5220517997090912,
-          53.80253190520229
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107963",
-        "name": "Cobden Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6107507414900535,
-          53.78262718162146
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147271",
-        "name": "Cockburn Haigh Road Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4830027998392723,
-          53.75569471880802
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145927",
-        "name": "Cockburn John Charles Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5374755716663346,
-          53.76476201131625
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148616",
-        "name": "Cockburn Laurence Calvert Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5321812477179004,
-          53.74662846928295
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142585",
-        "name": "Cockburn School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.556464923874999,
-          53.76083828072213
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108011",
-        "name": "Collingham Lady Elizabeth Hastings Church of England Voluntary Aided Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4176274413647627,
-          53.90909894350787
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146233",
-        "name": "Colton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4370142874395007,
-          53.79190598401005
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108042",
-        "name": "Cookridge Holy Trinity Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6235250559274044,
-          53.858335570774514
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107894",
-        "name": "Cookridge Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6153379458880992,
-          53.855164992100335
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148759",
-        "name": "Core Training and Development"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6153379458880992,
-          53.855164992100335
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148294",
-        "name": "Corpus Christi Catholic College"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4844835477365197,
-          53.7972552905201
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108024",
-        "name": "Corpus Christi Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4860868004899803,
-          53.79692698018863
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138973",
-        "name": "Cottingley Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.585043702589882,
-          53.76846468456605
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138304",
-        "name": "Crawshaw Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6551174578029892,
-          53.792994613636765
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107934",
-        "name": "Cross Gates Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4618694685933251,
-          53.805917751606
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107854",
-        "name": "Crossley Street Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.389840462400377,
-          53.931203266313126
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107876",
-        "name": "Deighton Gates Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3897366909189794,
-          53.94056612883731
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "144743",
-        "name": "Dixons Trinity Chapeltown"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5280826353931576,
-          53.81126045304928
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146363",
-        "name": "Dixons Unity Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6070363391552012,
-          53.794878804915314
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134407",
-        "name": "Drighlington Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6612285554522845,
-          53.75306082922227
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142423",
-        "name": "East Ardsley Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5353336810062672,
-          53.72468124008138
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "140068",
-        "name": "East Garforth Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3684853923627256,
-          53.797902015058106
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142629",
-        "name": "Ebor Gardens Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5220578555207254,
-          53.79962428849822
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145879",
-        "name": "Elements Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5384779318439314,
-          53.74481152828891
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "141940",
-        "name": "Elliott Hudson College"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5765202958803386,
-          53.76143924235379
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107981",
-        "name": "Farsley Farfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6824182085704398,
-          53.80997929790631
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107849",
-        "name": "Farsley Springbank Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6683666765420342,
-          53.81341686621916
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107945",
-        "name": "Fieldhead Carr Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4570112473936283,
-          53.83753585769307
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107968",
-        "name": "Five Lanes Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5886654981311803,
-          53.790443155241924
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134973",
-        "name": "Fountain Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6094374914459544,
-          53.73910360833181
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108117",
-        "name": "Fulneck School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.665286007908258,
-          53.78415463116652
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "136343",
-        "name": "Garforth Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3901404972600668,
-          53.78749679355484
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108104",
-        "name": "Gateways School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.508856757829332,
-          53.898315962249875
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107848",
-        "name": "Gildersome Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6310795906615858,
-          53.75769069356327
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107904",
-        "name": "Gledhow Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5215828477125033,
-          53.83311479316094
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107923",
-        "name": "Grange Farm Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4726463660157365,
-          53.82761275616304
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134913",
-        "name": "Great Preston Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3883716340454766,
-          53.75742567287031
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "136326",
-        "name": "Green Lane Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3663549705908657,
-          53.789428051663
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148654",
-        "name": "Green Meadows Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7208890168904627,
-          53.874827097542344
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107975",
-        "name": "Greenhill Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.622388742158108,
-          53.79891808884797
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107949",
-        "name": "Greenmount Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5529161903494328,
-          53.777378650619866
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107828",
-        "name": "Greenside Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.66781029833556,
-          53.79174238170276
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107924",
-        "name": "Grimes Dyke Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.445960777934347,
-          53.825919352734395
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107809",
-        "name": "Guiseley Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.710939087967132,
-          53.87638891582183
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108085",
-        "name": "Guiseley School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.717972273870273,
-          53.87150620731935
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107925",
-        "name": "Harehills Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5137377495426927,
-          53.81191200463356
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107989",
-        "name": "Harewood Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5111486955177291,
-          53.901059732905274
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108009",
-        "name": "Hawksworth Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7504655491934809,
-          53.871659644983175
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107893",
-        "name": "Hawksworth Wood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6174106307527232,
-          53.83160806366245
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107914",
-        "name": "Highfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5263139535755852,
-          53.851260939652406
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142427",
-        "name": "Hill Top Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5763434425775213,
-          53.71650077988116
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "140413",
-        "name": "Hillcrest Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5263577185778148,
-          53.81502158603792
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134513",
-        "name": "Hollybush Primary"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.617118561923355,
-          53.813991882974456
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108026",
-        "name": "Holy Family Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5805458336062395,
-          53.79637061004344
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142004",
-        "name": "Holy Name Catholic Voluntary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6052065456282285,
-          53.84690832932661
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147487",
-        "name": "Holy Rosary and St Anne's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.533499171553124,
-          53.81173239207789
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "140399",
-        "name": "Holy Trinity Church of England Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.47835396071195,
-          53.75243176114458
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107817",
-        "name": "Horsforth Featherbank Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6413260440837576,
-          53.833202211983156
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107860",
-        "name": "Horsforth Newlaithes Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.648296550543683,
-          53.828135481314945
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "137775",
-        "name": "Horsforth School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6411780263771416,
-          53.8420794971589
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107926",
-        "name": "Hovingham Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5089891739382768,
-          53.81631900163552
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107959",
-        "name": "Hugh Gaitskell Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5677083062778812,
-          53.76995296552165
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107950",
-        "name": "Hunslet Carr Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5280314041192298,
-          53.771917025819754
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107951",
-        "name": "Hunslet Moor Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5438369501419829,
-          53.77792197053196
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147486",
-        "name": "Immaculate Heart Of Mary Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5360283153943335,
-          53.83765683474868
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107952",
-        "name": "Ingram Road Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.563875918745578,
-          53.78415494368259
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107896",
-        "name": "Ireland Wood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6043476372183094,
-          53.85251609137733
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107886",
-        "name": "Iveson Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6049935128215078,
-          53.84330328683199
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108119",
-        "name": "John Jamieson School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4942132179518919,
-          53.82316571632926
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148793",
-        "name": "John Smeaton Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4342622753462588,
-          53.814754858052126
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107910",
-        "name": "Kerr Mackie Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.513569592441011,
-          53.828806269498564
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143240",
-        "name": "Kippax Ash Tree Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3656292534248986,
-          53.76899978840271
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143241",
-        "name": "Kippax Greenfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.37279645648106,
-          53.76988760716128
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143243",
-        "name": "Kippax North Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.381054875498984,
-          53.77894295893992
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108043",
-        "name": "Kirkstall St Stephen's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.600176730007391,
-          53.81791892097313
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107887",
-        "name": "Kirkstall Valley Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.587143221083964,
-          53.80832612871922
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108100",
-        "name": "Lady Elizabeth Hastings Church of England Primary School (Ledston)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3461332034453826,
-          53.75348397492906
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108010",
-        "name": "Lady Elizabeth Hastings Church of England Primary School (Thorpe Arch)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3409851498440903,
-          53.910273518560786
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138893",
-        "name": "Lane End Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5503183348546774,
-          53.783890779749534
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107973",
-        "name": "Lawns Park Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6204438151248086,
-          53.785793156042274
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108055",
-        "name": "Lawnswood School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5959563093824183,
-          53.83586676852656
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139646",
-        "name": "Leeds City Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5577226257679342,
-          53.81799906825532
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "136826",
-        "name": "Leeds East Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4627900574275503,
-          53.81515351629066
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139773",
-        "name": "Leeds Jewish Free School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4627900574275503,
-          53.81515351629066
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108110",
-        "name": "Leeds Menorah School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4627900574275503,
-          53.81515351629066
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "135935",
-        "name": "Leeds West Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.652045941622595,
-          53.814838917987636
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138380",
-        "name": "Lighthouse School Leeds"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6135101945371795,
-          53.84543175891165
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107888",
-        "name": "Little London Community Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.539702811691125,
-          53.80868484868874
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107957",
-        "name": "Low Road Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.524129799317358,
-          53.77871785257114
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107972",
-        "name": "Lower Wortley Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5992851294905028,
-          53.78300733216515
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107862",
-        "name": "Lowtown Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6537132277316131,
-          53.796810261076445
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148255",
-        "name": "LS-TEN"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6537132277316131,
-          53.796810261076445
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107913",
-        "name": "Manor Wood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5517835596085978,
-          53.835331312982234
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107940",
-        "name": "Manston Primary"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4453104935883982,
-          53.813500371648914
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138824",
-        "name": "Manston St James Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4448260791980903,
-          53.81113263689846
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146215",
-        "name": "Meadowfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4900373261624824,
-          53.79394535347918
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108046",
-        "name": "Meanwood Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4900373261624824,
-          53.79394535347918
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145733",
-        "name": "Methley Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3956455093995734,
-          53.73840498682659
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "149025",
-        "name": "Micklefield Church of England Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.328982819507362,
-          53.79431945332775
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146297",
-        "name": "Middleton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5489510029885436,
-          53.74256463090797
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108002",
-        "name": "Middleton St Mary's Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5449820885466556,
-          53.75018120944546
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107915",
-        "name": "Moor Allerton Hall Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5232616952552838,
-          53.83906560049743
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108102",
-        "name": "Moorlands School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5806000117675008,
-          53.84038036554302
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107916",
-        "name": "Moortown Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5320581691772561,
-          53.84487963421525
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "141797",
-        "name": "Morley Newlands Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5820283036821339,
-          53.747697395798205
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107866",
-        "name": "Morley Victoria Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6071343526056405,
-          53.75064878270159
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108097",
-        "name": "Mount St Mary's Catholic High School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5266024814550687,
-          53.79347256019773
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "121791",
-        "name": "New Bewerley Community School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.545614233436524,
-          53.780073290445614
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "130274",
-        "name": "New Horizon Community School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5313877891265317,
-          53.823899845653465
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107873",
-        "name": "Ninelands Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.378739805972496,
-          53.788788919664924
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "133555",
-        "name": "Otley All Saints Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.682257802770545,
-          53.90261178580569
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107881",
-        "name": "Otley the Whartons Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.682257802770545,
-          53.90261178580569
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148527",
-        "name": "Oulton Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.459563228700378,
-          53.73770856530401
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107842",
-        "name": "Oulton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4581841495439936,
-          53.754031605363046
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108030",
-        "name": "Our Lady of Good Counsel Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4681693628136236,
-          53.825307346774494
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107964",
-        "name": "Park Spring Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6367740575311938,
-          53.79914467518921
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138673",
-        "name": "Park View Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5536499665952832,
-          53.773447668175805
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107943",
-        "name": "Parklands Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4623227684669056,
-          53.813713500307756
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145732",
-        "name": "Penny Field School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.561420718862112,
-          53.84032869383853
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108000",
-        "name": "Pool-in-Wharfedale Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6233356971705613,
-          53.90166823726875
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139688",
-        "name": "Primley Wood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5377278562983796,
-          53.8493438636558
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107869",
-        "name": "Primrose Lane Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.351793319931439,
-          53.9030214068558
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "137704",
-        "name": "Prince Henry's Grammar School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.694361253536011,
-          53.9126510366927
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107845",
-        "name": "Pudsey Bolton Royd Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6951842364279532,
-          53.80126534289194
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108079",
-        "name": "Pudsey Grammar School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.660060737722698,
-          53.80038708849449
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145526",
-        "name": "Pudsey Primrose Hill Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6681907974441423,
-          53.802099863808586
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145525",
-        "name": "Pudsey Waterloo Primary"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6768680856025917,
-          53.794971196976434
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107889",
-        "name": "Quarry Mount Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5543783741492003,
-          53.81557610421742
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107858",
-        "name": "Queensway Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6928133286275278,
-          53.87272787572794
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108109",
-        "name": "Queenswood School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6007320741649733,
-          53.74365721609053
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108075",
-        "name": "Ralph Thoresby School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.610267909080126,
-          53.85447257421384
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107810",
-        "name": "Rawdon Littlemoor Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6892330684175647,
-          53.85516697585705
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107986",
-        "name": "Rawdon St Peter's Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6695831260154712,
-          53.85057987020172
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146927",
-        "name": "Raynville Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6184138055154875,
-          53.80773432178376
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "145178",
-        "name": "Richmond Hill Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5182049842863534,
-          53.79237731065831
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108103",
-        "name": "Richmond House School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.587082505061552,
-          53.83121019663472
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107831",
-        "name": "Robin Hood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.508114140837731,
-          53.73758250731134
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138336",
-        "name": "Rodillian Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5036680823678699,
-          53.73044009616577
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107891",
-        "name": "Rosebank Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5669086632623968,
-          53.8036318575078
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107982",
-        "name": "Rothwell Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.485436974204842,
-          53.74555441006399
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108018",
-        "name": "Rothwell St Mary's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4743197756086432,
-          53.74592825837664
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107851",
-        "name": "Rothwell Victoria Junior School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.489486088675832,
-          53.754380194493805
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108076",
-        "name": "Roundhay School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5113396675853659,
-          53.83003118970185
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108007",
-        "name": "Roundhay St John's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.496106725196089,
-          53.82716042662987
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134317",
-        "name": "Rufford Park Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6844034969944293,
-          53.86286046044894
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "140824",
-        "name": "Ryecroft Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6183616535556928,
-          53.79074933625132
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147484",
-        "name": "Sacred Heart Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5955009035754335,
-          53.8119383672335
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107813",
-        "name": "Scholes (Elmet) Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4304059713022257,
-          53.825602335922014
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107928",
-        "name": "Seacroft Grange Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4727852781191024,
-          53.81114310405679
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107824",
-        "name": "Seven Hills Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5967769652716246,
-          53.74693371641604
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107917",
-        "name": "Shadwell Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4746362593601445,
-          53.8515308309302
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107938",
-        "name": "Shakespeare Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.526900160764499,
-          53.80529040336853
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107984",
-        "name": "Sharp Lane Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.527080672763347,
-          53.748887054614904
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "131570",
-        "name": "Shire Oak Church Of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5741278146781348,
-          53.822149209963676
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107847",
-        "name": "Southroyd Primary and Nursery School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6631091769396587,
-          53.78845016885043
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146633",
-        "name": "Southway Independant School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6631091769396587,
-          53.78845016885043
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107890",
-        "name": "Spring Bank Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5756918983387809,
-          53.81702581870987
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142630",
-        "name": "Springwell Leeds Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.525402977403065,
-          53.76130754480398
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139354",
-        "name": "Ss. Peter and Paul Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.525402977403065,
-          53.76130754480398
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108120",
-        "name": "St John's Catholic Specialist School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3511048665004288,
-          53.898913480060045
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147485",
-        "name": "St Paul's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5575275750335582,
-          53.851924111046195
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108021",
-        "name": "St. Anthony's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5625350442648898,
-          53.771330039158045
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147482",
-        "name": "St. Augustine's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5063726140608302,
-          53.81411699047417
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108005",
-        "name": "St. Bartholomew's CofE Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5847190860349942,
-          53.79360877831008
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "138945",
-        "name": "St. Benedict's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3838624121571104,
-          53.795522621320025
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "141521",
-        "name": "St. Chad's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5977813279430724,
-          53.8326812080251
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108012",
-        "name": "St. Edward's Catholic Primary School, Boston Spa"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3534565440915052,
-          53.904483596652206
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108016",
-        "name": "St. Francis Catholic Primary School, Morley"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6098984318203264,
-          53.747213323868266
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148739",
-        "name": "St. Francis of Assisi Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.547579379071996,
-          53.7788806965386
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139350",
-        "name": "St. Joseph's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.657803693071844,
-          53.8001286298015
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108028",
-        "name": "St. Joseph's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5292769113146012,
-          53.78179620406059
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139355",
-        "name": "St. Joseph's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6960132007373365,
-          53.9066034289491
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108020",
-        "name": "St. Joseph's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3912113021123624,
-          53.93335866593832
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107990",
-        "name": "St. Margaret's Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6395021962868264,
-          53.83958630854776
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139352",
-        "name": "St. Mary's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6317614134236962,
-          53.84043188280055
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107997",
-        "name": "St. Mary's Church of England Controlled Primary School Boston Spa"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3471673299855633,
-          53.90185544305835
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "139351",
-        "name": "St. Mary's Menston Catholic Voluntary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7269060533924632,
-          53.88384204279
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147633",
-        "name": "St. Marys Church of England Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5287597474905468,
-          53.777584696856636
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108047",
-        "name": "St. Matthew's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5423463066712049,
-          53.83116349041545
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108029",
-        "name": "St. Nicholas Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4885850959188314,
-          53.81127297594231
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108008",
-        "name": "St. Oswald's CofE Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7053380176808046,
-          53.872873087288866
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108036",
-        "name": "St. Patrick Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5122603397100887,
-          53.800791657500305
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108050",
-        "name": "St. Peter's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5300108370046426,
-          53.80040364186934
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108033",
-        "name": "St. Philip's Catholic Primary and Nursery School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5468012360491996,
-          53.75005705633106
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108039",
-        "name": "St. Theresa's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4494439829222927,
-          53.814098977229214
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "147483",
-        "name": "St. Urban's Catholic Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5597768770835434,
-          53.83971347934667
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107966",
-        "name": "Stanningley Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6522962396097194,
-          53.80994033531059
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134405",
-        "name": "Strawberry Fields Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3923443799223028,
-          53.79022289770247
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107967",
-        "name": "Summerfield Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6532257994936703,
-          53.813609775069196
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107944",
-        "name": "Swarcliffe Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.450221352332816,
-          53.82062267613634
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143239",
-        "name": "Swillington Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.418235459298628,
-          53.77024858456777
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107979",
-        "name": "Swinnow Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6507328685877665,
-          53.80112780206473
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107908",
-        "name": "Talbot Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5168743818863064,
-          53.84180777183165
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "141883",
-        "name": "Temple Learning Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4825055986020708,
-          53.79541087170826
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146247",
-        "name": "Temple Moor High School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4611273576329205,
-          53.795576212475446
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146218",
-        "name": "Templenewsam Halton Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4652285288723095,
-          53.79794003490234
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "141140",
-        "name": "The Elland Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5810038102595223,
-          53.78068475151282
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "137577",
-        "name": "The Farnley Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6191954288803265,
-          53.78376024031805
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108108",
-        "name": "The Froebelian School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6382280892300622,
-          53.83103392070299
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108113",
-        "name": "The Grammar School At Leeds"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5199383186548185,
-          53.86443072476327
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "136392",
-        "name": "The Morley Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6077866872037596,
-          53.74312862871687
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146339",
-        "name": "The Pivot Academy LS East"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6077866872037596,
-          53.74312862871687
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "140565",
-        "name": "The Ruth Gorse Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5350115679026826,
-          53.79070458869573
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "143761",
-        "name": "The Stephen Longfellow Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5733056927178508,
-          53.76639193468551
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146003",
-        "name": "Thorner Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4200485500267068,
-          53.85995382824929
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107832",
-        "name": "Thorpe Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.524821103183779,
-          53.734352937576524
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107855",
-        "name": "Tranmere Park Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7270427130126007,
-          53.87151443472041
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "148560",
-        "name": "Trinity Academy Leeds"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.7270427130126007,
-          53.87151443472041
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142604",
-        "name": "University Technical College Leeds"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5339163088451413,
-          53.78818148398971
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "131111",
-        "name": "Valley View Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6583786922375212,
-          53.81642961743534
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142450",
-        "name": "Victoria Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5018392018960196,
-          53.80002330654046
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107897",
-        "name": "Weetwood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5828138962039564,
-          53.82949663631633
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107846",
-        "name": "West End Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6531114458964016,
-          53.84139110585632
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108133",
-        "name": "West Oaks School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3538531307493153,
-          53.90367308390069
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "134884",
-        "name": "West Specialist Inclusive Learning Centre"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.658609895555799,
-          53.80882726885831
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107861",
-        "name": "Westbrook Lane Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6416764366195198,
-          53.84698998548329
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "142452",
-        "name": "Westerton Primary Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5791148372536588,
-          53.72446190822816
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107879",
-        "name": "Westgate Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.702882142705261,
-          53.90308634833534
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107827",
-        "name": "Westroyd Primary School and Nursery"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6720789627487094,
-          53.809254592690486
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107954",
-        "name": "Westwood Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5558179404472978,
-          53.747336252111
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108088",
-        "name": "Wetherby High School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3803217387697426,
-          53.92973926150381
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107995",
-        "name": "Wetherby St James' Church of England Voluntary Controlled Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.3788412778582118,
-          53.9310870620566
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107969",
-        "name": "Whingate Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.603834228630857,
-          53.79380443448285
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108051",
-        "name": "Whinmoor St Paul's Church of England Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4633285128703195,
-          53.83635025190523
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107932",
-        "name": "White Laith Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.453774775958828,
-          53.83104390469395
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107970",
-        "name": "Whitecote Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6268372489397187,
-          53.8174869511938
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "146219",
-        "name": "Whitkirk Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4553925215876455,
-          53.79346456283194
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107870",
-        "name": "Wigton Moor Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.5177930401601596,
-          53.85600066410209
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107947",
-        "name": "Windmill Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.530820222708562,
-          53.76165010875452
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "108114",
-        "name": "Woodhouse Grove School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6988136740356783,
-          53.839306882613116
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "137383",
-        "name": "Woodkirk Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.584922227899078,
-          53.730438822366736
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107834",
-        "name": "Woodlesford Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4472877629075391,
-          53.75682736290349
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107933",
-        "name": "Wykebeck Primary School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4902691285546776,
-          53.80664493675367
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107859",
-        "name": "Yeadon Westfield Infant School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.701241836223637,
-          53.86334838606338
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "URN": "107840",
-        "name": "Yeadon Westfield Junior School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6989627952043052,
-          53.86450647306907
-        ]
-      }
-    }
-  ]
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "137083",
+				"name": "Abbey Grange Church of England Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61194,
+					53.83474
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107985",
+				"name": "Aberford Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.34493,
+					53.82775
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107892",
+				"name": "Adel Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57629,
+					53.84929
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108041",
+				"name": "Adel St John the Baptist Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58135,
+					53.85285
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147945",
+				"name": "Alder Tree Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54940,
+					53.82322
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108048",
+				"name": "All Saint's Richmond Hill Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51969,
+					53.79692
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143242",
+				"name": "Allerton Bywater Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.37013,
+					53.74768
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "135210",
+				"name": "Allerton Church Of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54745,
+					53.84970
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108058",
+				"name": "Allerton Grange School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52094,
+					53.84011
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108057",
+				"name": "Allerton High Business and Enterprise Specialist School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55144,
+					53.85051
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107912",
+				"name": "Alwoodley Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55653,
+					53.85038
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "149399",
+				"name": "Armley Grange School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60823,
+					53.80192
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147632",
+				"name": "Armley Park Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58951,
+					53.80102
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107877",
+				"name": "Ashfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.70794,
+					53.91188
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "132795",
+				"name": "Asquith Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61056,
+					53.75562
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146213",
+				"name": "Austhorpe Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.43605,
+					53.79802
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107901",
+				"name": "Bankside Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52191,
+					53.81462
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107868",
+				"name": "Bardsey Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.44840,
+					53.88638
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107987",
+				"name": "Barwick-in-Elmet Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.39025,
+					53.82978
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107920",
+				"name": "Beechwood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46780,
+					53.81889
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107883",
+				"name": "Beecroft Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59589,
+					53.81242
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108052",
+				"name": "Beeston Hill St Luke's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55318,
+					53.78278
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107946",
+				"name": "Beeston Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57319,
+					53.77216
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108083",
+				"name": "Benton Park School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68279,
+					53.85699
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107863",
+				"name": "Birchfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63552,
+					53.75616
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "144809",
+				"name": "Bishop Young Church of England Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63552,
+					53.75616
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146102",
+				"name": "Blackgates Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56570,
+					53.72874
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107884",
+				"name": "Blenheim Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54695,
+					53.80679
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146217",
+				"name": "Boston Spa Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.36362,
+					53.89990
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107909",
+				"name": "Bracken Edge Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52698,
+					53.82070
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107844",
+				"name": "Bramham Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.35175,
+					53.88723
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147554",
+				"name": "Bramhope Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61817,
+					53.88198
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146542",
+				"name": "Bramley Park Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.64209,
+					53.81025
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108003",
+				"name": "Bramley St Peter's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63011,
+					53.80943
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143238",
+				"name": "Brigshaw High School and Language College"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.37901,
+					53.75701
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107874",
+				"name": "Broadgate Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63315,
+					53.84114
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108054",
+				"name": "Brodetsky Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54254,
+					53.85441
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108123",
+				"name": "Broomfield South SILC"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52321,
+					53.75656
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107885",
+				"name": "Brudenell Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57175,
+					53.81363
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142056",
+				"name": "Bruntcliffe Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61874,
+					53.74369
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108001",
+				"name": "Burley St Matthias Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58114,
+					53.80814
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107996",
+				"name": "Calverley Church of England Voluntary Aided Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68507,
+					53.83116
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146540",
+				"name": "Calverley Parkside Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68830,
+					53.82787
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108095",
+				"name": "Cardinal Heenan Catholic High School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56014,
+					53.83803
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107830",
+				"name": "Carlton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49166,
+					53.73973
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108059",
+				"name": "Carr Manor Community School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55425,
+					53.83332
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107962",
+				"name": "Castleton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57600,
+					53.79284
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107903",
+				"name": "Chapel Allerton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53719,
+					53.82683
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146306",
+				"name": "Christ Church Upper Armley Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59679,
+					53.79940
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "144824",
+				"name": "Christ The King Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61820,
+					53.80577
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107820",
+				"name": "Churwell Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59666,
+					53.75860
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107958",
+				"name": "Clapgate Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51991,
+					53.75127
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145306",
+				"name": "Co-op Academy Beckfield"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.70086,
+					53.78859
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138986",
+				"name": "Co-op Academy Brownhill"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51063,
+					53.80202
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139701",
+				"name": "Co-op Academy Nightingale"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51407,
+					53.80843
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139077",
+				"name": "Co-op Academy Oakwood"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49824,
+					53.81337
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "144588",
+				"name": "Co-op Academy Priesthorpe"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68791,
+					53.80932
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139015",
+				"name": "Co-op Academy Woodlands"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50564,
+					53.81171
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "137065",
+				"name": "Co-operative Academy of Leeds"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52205,
+					53.80253
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107963",
+				"name": "Cobden Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61075,
+					53.78262
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147271",
+				"name": "Cockburn Haigh Road Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48300,
+					53.75569
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145927",
+				"name": "Cockburn John Charles Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53747,
+					53.76476
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148616",
+				"name": "Cockburn Laurence Calvert Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53218,
+					53.74662
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142585",
+				"name": "Cockburn School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55646,
+					53.76083
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108011",
+				"name": "Collingham Lady Elizabeth Hastings Church of England Voluntary Aided Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.41762,
+					53.90909
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146233",
+				"name": "Colton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.43701,
+					53.79190
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108042",
+				"name": "Cookridge Holy Trinity Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.62352,
+					53.85833
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107894",
+				"name": "Cookridge Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61533,
+					53.85516
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148759",
+				"name": "Core Training and Development"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61533,
+					53.85516
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148294",
+				"name": "Corpus Christi Catholic College"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48448,
+					53.79725
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108024",
+				"name": "Corpus Christi Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48608,
+					53.79692
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138973",
+				"name": "Cottingley Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58504,
+					53.76846
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138304",
+				"name": "Crawshaw Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65511,
+					53.79299
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107934",
+				"name": "Cross Gates Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46186,
+					53.80591
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107854",
+				"name": "Crossley Street Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.38984,
+					53.93120
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107876",
+				"name": "Deighton Gates Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.38973,
+					53.94056
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "144743",
+				"name": "Dixons Trinity Chapeltown"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52808,
+					53.81126
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146363",
+				"name": "Dixons Unity Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60703,
+					53.79487
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134407",
+				"name": "Drighlington Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66122,
+					53.75306
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142423",
+				"name": "East Ardsley Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53533,
+					53.72468
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "140068",
+				"name": "East Garforth Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.36848,
+					53.79790
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142629",
+				"name": "Ebor Gardens Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52205,
+					53.79962
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145879",
+				"name": "Elements Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53847,
+					53.74481
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "141940",
+				"name": "Elliott Hudson College"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57652,
+					53.76143
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107981",
+				"name": "Farsley Farfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68241,
+					53.80997
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107849",
+				"name": "Farsley Springbank Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66836,
+					53.81341
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107945",
+				"name": "Fieldhead Carr Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.45701,
+					53.83753
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107968",
+				"name": "Five Lanes Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58866,
+					53.79044
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134973",
+				"name": "Fountain Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60943,
+					53.73910
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108117",
+				"name": "Fulneck School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66528,
+					53.78415
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "136343",
+				"name": "Garforth Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.39014,
+					53.78749
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108104",
+				"name": "Gateways School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50885,
+					53.89831
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107848",
+				"name": "Gildersome Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63107,
+					53.75769
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107904",
+				"name": "Gledhow Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52158,
+					53.83311
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107923",
+				"name": "Grange Farm Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.47264,
+					53.82761
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134913",
+				"name": "Great Preston Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.38837,
+					53.75742
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "136326",
+				"name": "Green Lane Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.36635,
+					53.78942
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148654",
+				"name": "Green Meadows Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.72088,
+					53.87482
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107975",
+				"name": "Greenhill Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.62238,
+					53.79891
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107949",
+				"name": "Greenmount Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55291,
+					53.77737
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107828",
+				"name": "Greenside Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66781,
+					53.79174
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107924",
+				"name": "Grimes Dyke Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.44596,
+					53.82591
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107809",
+				"name": "Guiseley Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.71093,
+					53.87638
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108085",
+				"name": "Guiseley School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.71797,
+					53.87150
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107925",
+				"name": "Harehills Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51373,
+					53.81191
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107989",
+				"name": "Harewood Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51114,
+					53.90105
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108009",
+				"name": "Hawksworth Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.75046,
+					53.87165
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107893",
+				"name": "Hawksworth Wood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61741,
+					53.83160
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107914",
+				"name": "Highfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52631,
+					53.85126
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142427",
+				"name": "Hill Top Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57634,
+					53.71650
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "140413",
+				"name": "Hillcrest Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52635,
+					53.81502
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134513",
+				"name": "Hollybush Primary"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61711,
+					53.81399
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108026",
+				"name": "Holy Family Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58054,
+					53.79637
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142004",
+				"name": "Holy Name Catholic Voluntary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60520,
+					53.84690
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147487",
+				"name": "Holy Rosary and St Anne's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53349,
+					53.81173
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "140399",
+				"name": "Holy Trinity Church of England Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.47835,
+					53.75243
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107817",
+				"name": "Horsforth Featherbank Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.64132,
+					53.83320
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107860",
+				"name": "Horsforth Newlaithes Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.64829,
+					53.82813
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "137775",
+				"name": "Horsforth School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.64117,
+					53.84207
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107926",
+				"name": "Hovingham Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50898,
+					53.81631
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107959",
+				"name": "Hugh Gaitskell Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56770,
+					53.76995
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107950",
+				"name": "Hunslet Carr Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52803,
+					53.77191
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107951",
+				"name": "Hunslet Moor Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54383,
+					53.77792
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147486",
+				"name": "Immaculate Heart Of Mary Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53602,
+					53.83765
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107952",
+				"name": "Ingram Road Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56387,
+					53.78415
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107896",
+				"name": "Ireland Wood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60434,
+					53.85251
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107886",
+				"name": "Iveson Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60499,
+					53.84330
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108119",
+				"name": "John Jamieson School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49421,
+					53.82316
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148793",
+				"name": "John Smeaton Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.43426,
+					53.81475
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107910",
+				"name": "Kerr Mackie Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51356,
+					53.82880
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143240",
+				"name": "Kippax Ash Tree Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.36562,
+					53.76899
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143241",
+				"name": "Kippax Greenfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.37279,
+					53.76988
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143243",
+				"name": "Kippax North Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.38105,
+					53.77894
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108043",
+				"name": "Kirkstall St Stephen's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60017,
+					53.81791
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107887",
+				"name": "Kirkstall Valley Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58714,
+					53.80832
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108100",
+				"name": "Lady Elizabeth Hastings Church of England Primary School (Ledston)"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.34613,
+					53.75348
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108010",
+				"name": "Lady Elizabeth Hastings Church of England Primary School (Thorpe Arch)"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.34098,
+					53.91027
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138893",
+				"name": "Lane End Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55031,
+					53.78389
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107973",
+				"name": "Lawns Park Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.62044,
+					53.78579
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108055",
+				"name": "Lawnswood School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59595,
+					53.83586
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139646",
+				"name": "Leeds City Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55772,
+					53.81799
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "136826",
+				"name": "Leeds East Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46279,
+					53.81515
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139773",
+				"name": "Leeds Jewish Free School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46279,
+					53.81515
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108110",
+				"name": "Leeds Menorah School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46279,
+					53.81515
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "135935",
+				"name": "Leeds West Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65204,
+					53.81483
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138380",
+				"name": "Lighthouse School Leeds"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61351,
+					53.84543
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107888",
+				"name": "Little London Community Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53970,
+					53.80868
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107957",
+				"name": "Low Road Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52412,
+					53.77871
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107972",
+				"name": "Lower Wortley Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59928,
+					53.78300
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107862",
+				"name": "Lowtown Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65371,
+					53.79681
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148255",
+				"name": "LS-TEN"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65371,
+					53.79681
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107913",
+				"name": "Manor Wood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55178,
+					53.83533
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107940",
+				"name": "Manston Primary"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.44531,
+					53.81350
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138824",
+				"name": "Manston St James Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.44482,
+					53.81113
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146215",
+				"name": "Meadowfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49003,
+					53.79394
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108046",
+				"name": "Meanwood Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49003,
+					53.79394
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145733",
+				"name": "Methley Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.39564,
+					53.73840
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "149025",
+				"name": "Micklefield Church of England Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.32898,
+					53.79431
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146297",
+				"name": "Middleton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54895,
+					53.74256
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108002",
+				"name": "Middleton St Mary's Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54498,
+					53.75018
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107915",
+				"name": "Moor Allerton Hall Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52326,
+					53.83906
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108102",
+				"name": "Moorlands School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58060,
+					53.84038
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107916",
+				"name": "Moortown Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53205,
+					53.84487
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "141797",
+				"name": "Morley Newlands Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58202,
+					53.74769
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107866",
+				"name": "Morley Victoria Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60713,
+					53.75064
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108097",
+				"name": "Mount St Mary's Catholic High School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52660,
+					53.79347
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "121791",
+				"name": "New Bewerley Community School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54561,
+					53.78007
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "130274",
+				"name": "New Horizon Community School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53138,
+					53.82389
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107873",
+				"name": "Ninelands Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.37873,
+					53.78878
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "133555",
+				"name": "Otley All Saints Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68225,
+					53.90261
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107881",
+				"name": "Otley the Whartons Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68225,
+					53.90261
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148527",
+				"name": "Oulton Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.45956,
+					53.73770
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107842",
+				"name": "Oulton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.45818,
+					53.75403
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108030",
+				"name": "Our Lady of Good Counsel Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46816,
+					53.82530
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107964",
+				"name": "Park Spring Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63677,
+					53.79914
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138673",
+				"name": "Park View Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55364,
+					53.77344
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107943",
+				"name": "Parklands Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46232,
+					53.81371
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145732",
+				"name": "Penny Field School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56142,
+					53.84032
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108000",
+				"name": "Pool-in-Wharfedale Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.62333,
+					53.90166
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139688",
+				"name": "Primley Wood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53772,
+					53.84934
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107869",
+				"name": "Primrose Lane Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.35179,
+					53.90302
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "137704",
+				"name": "Prince Henry's Grammar School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.69436,
+					53.91265
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107845",
+				"name": "Pudsey Bolton Royd Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.69518,
+					53.80126
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108079",
+				"name": "Pudsey Grammar School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66006,
+					53.80038
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145526",
+				"name": "Pudsey Primrose Hill Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66819,
+					53.80209
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145525",
+				"name": "Pudsey Waterloo Primary"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.67686,
+					53.79497
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107889",
+				"name": "Quarry Mount Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55437,
+					53.81557
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107858",
+				"name": "Queensway Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.69281,
+					53.87272
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108109",
+				"name": "Queenswood School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60073,
+					53.74365
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108075",
+				"name": "Ralph Thoresby School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61026,
+					53.85447
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107810",
+				"name": "Rawdon Littlemoor Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68923,
+					53.85516
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107986",
+				"name": "Rawdon St Peter's Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66958,
+					53.85057
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146927",
+				"name": "Raynville Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61841,
+					53.80773
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "145178",
+				"name": "Richmond Hill Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51820,
+					53.79237
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108103",
+				"name": "Richmond House School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58708,
+					53.83121
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107831",
+				"name": "Robin Hood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50811,
+					53.73758
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138336",
+				"name": "Rodillian Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50366,
+					53.73044
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107891",
+				"name": "Rosebank Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56690,
+					53.80363
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107982",
+				"name": "Rothwell Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48543,
+					53.74555
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108018",
+				"name": "Rothwell St Mary's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.47431,
+					53.74592
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107851",
+				"name": "Rothwell Victoria Junior School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48948,
+					53.75438
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108076",
+				"name": "Roundhay School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51133,
+					53.83003
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108007",
+				"name": "Roundhay St John's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49610,
+					53.82716
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134317",
+				"name": "Rufford Park Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.68440,
+					53.86286
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "140824",
+				"name": "Ryecroft Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61836,
+					53.79074
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147484",
+				"name": "Sacred Heart Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59550,
+					53.81193
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107813",
+				"name": "Scholes (Elmet) Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.43040,
+					53.82560
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107928",
+				"name": "Seacroft Grange Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.47278,
+					53.81114
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107824",
+				"name": "Seven Hills Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59677,
+					53.74693
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107917",
+				"name": "Shadwell Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.47463,
+					53.85153
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107938",
+				"name": "Shakespeare Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52690,
+					53.80529
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107984",
+				"name": "Sharp Lane Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52708,
+					53.74888
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "131570",
+				"name": "Shire Oak Church Of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57412,
+					53.82214
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107847",
+				"name": "Southroyd Primary and Nursery School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66310,
+					53.78845
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146633",
+				"name": "Southway Independant School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.66310,
+					53.78845
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107890",
+				"name": "Spring Bank Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57569,
+					53.81702
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142630",
+				"name": "Springwell Leeds Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52540,
+					53.76130
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139354",
+				"name": "Ss. Peter and Paul Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52540,
+					53.76130
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108120",
+				"name": "St John's Catholic Specialist School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.35110,
+					53.89891
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147485",
+				"name": "St Paul's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55752,
+					53.85192
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108021",
+				"name": "St. Anthony's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.56253,
+					53.77133
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147482",
+				"name": "St. Augustine's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50637,
+					53.81411
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108005",
+				"name": "St. Bartholomew's CofE Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58471,
+					53.79360
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "138945",
+				"name": "St. Benedict's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.38386,
+					53.79552
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "141521",
+				"name": "St. Chad's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.59778,
+					53.83268
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108012",
+				"name": "St. Edward's Catholic Primary School, Boston Spa"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.35345,
+					53.90448
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108016",
+				"name": "St. Francis Catholic Primary School, Morley"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60989,
+					53.74721
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148739",
+				"name": "St. Francis of Assisi Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54757,
+					53.77888
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139350",
+				"name": "St. Joseph's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65780,
+					53.80012
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108028",
+				"name": "St. Joseph's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52927,
+					53.78179
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139355",
+				"name": "St. Joseph's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.69601,
+					53.90660
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108020",
+				"name": "St. Joseph's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.39121,
+					53.93335
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107990",
+				"name": "St. Margaret's Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63950,
+					53.83958
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139352",
+				"name": "St. Mary's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63176,
+					53.84043
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107997",
+				"name": "St. Mary's Church of England Controlled Primary School Boston Spa"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.34716,
+					53.90185
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "139351",
+				"name": "St. Mary's Menston Catholic Voluntary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.72690,
+					53.88384
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147633",
+				"name": "St. Marys Church of England Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52875,
+					53.77758
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108047",
+				"name": "St. Matthew's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54234,
+					53.83116
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108029",
+				"name": "St. Nicholas Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48858,
+					53.81127
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108008",
+				"name": "St. Oswald's CofE Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.70533,
+					53.87287
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108036",
+				"name": "St. Patrick Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51226,
+					53.80079
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108050",
+				"name": "St. Peter's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53001,
+					53.80040
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108033",
+				"name": "St. Philip's Catholic Primary and Nursery School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.54680,
+					53.75005
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108039",
+				"name": "St. Theresa's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.44944,
+					53.81409
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "147483",
+				"name": "St. Urban's Catholic Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55977,
+					53.83971
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107966",
+				"name": "Stanningley Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65229,
+					53.80994
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134405",
+				"name": "Strawberry Fields Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.39234,
+					53.79022
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107967",
+				"name": "Summerfield Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65322,
+					53.81360
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107944",
+				"name": "Swarcliffe Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.45022,
+					53.82062
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143239",
+				"name": "Swillington Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.41823,
+					53.77024
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107979",
+				"name": "Swinnow Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65073,
+					53.80112
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107908",
+				"name": "Talbot Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51687,
+					53.84180
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "141883",
+				"name": "Temple Learning Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.48250,
+					53.79541
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146247",
+				"name": "Temple Moor High School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46112,
+					53.79557
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146218",
+				"name": "Templenewsam Halton Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46522,
+					53.79794
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "141140",
+				"name": "The Elland Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58100,
+					53.78068
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "137577",
+				"name": "The Farnley Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.61919,
+					53.78376
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108108",
+				"name": "The Froebelian School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.63822,
+					53.83103
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108113",
+				"name": "The Grammar School At Leeds"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51993,
+					53.86443
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "136392",
+				"name": "The Morley Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60778,
+					53.74312
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146339",
+				"name": "The Pivot Academy LS East"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60778,
+					53.74312
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "140565",
+				"name": "The Ruth Gorse Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53501,
+					53.79070
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "143761",
+				"name": "The Stephen Longfellow Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57330,
+					53.76639
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146003",
+				"name": "Thorner Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.42004,
+					53.85995
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107832",
+				"name": "Thorpe Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.52482,
+					53.73435
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107855",
+				"name": "Tranmere Park Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.72704,
+					53.87151
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "148560",
+				"name": "Trinity Academy Leeds"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.72704,
+					53.87151
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142604",
+				"name": "University Technical College Leeds"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53391,
+					53.78818
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "131111",
+				"name": "Valley View Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65837,
+					53.81642
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142450",
+				"name": "Victoria Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.50183,
+					53.80002
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107897",
+				"name": "Weetwood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58281,
+					53.82949
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107846",
+				"name": "West End Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65311,
+					53.84139
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108133",
+				"name": "West Oaks School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.35385,
+					53.90367
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "134884",
+				"name": "West Specialist Inclusive Learning Centre"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.65860,
+					53.80882
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107861",
+				"name": "Westbrook Lane Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.64167,
+					53.84698
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "142452",
+				"name": "Westerton Primary Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.57911,
+					53.72446
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107879",
+				"name": "Westgate Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.70288,
+					53.90308
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107827",
+				"name": "Westroyd Primary School and Nursery"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.67207,
+					53.80925
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107954",
+				"name": "Westwood Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.55581,
+					53.74733
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108088",
+				"name": "Wetherby High School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.38032,
+					53.92973
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107995",
+				"name": "Wetherby St James' Church of England Voluntary Controlled Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.37884,
+					53.93108
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107969",
+				"name": "Whingate Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.60383,
+					53.79380
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108051",
+				"name": "Whinmoor St Paul's Church of England Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.46332,
+					53.83635
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107932",
+				"name": "White Laith Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.45377,
+					53.83104
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107970",
+				"name": "Whitecote Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.62683,
+					53.81748
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "146219",
+				"name": "Whitkirk Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.45539,
+					53.79346
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107870",
+				"name": "Wigton Moor Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.51779,
+					53.85600
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107947",
+				"name": "Windmill Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.53082,
+					53.76165
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "108114",
+				"name": "Woodhouse Grove School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.69881,
+					53.83930
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "137383",
+				"name": "Woodkirk Academy"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.58492,
+					53.73043
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107834",
+				"name": "Woodlesford Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.44728,
+					53.75682
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107933",
+				"name": "Wykebeck Primary School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.49026,
+					53.80664
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107859",
+				"name": "Yeadon Westfield Infant School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.70124,
+					53.86334
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"URN": "107840",
+				"name": "Yeadon Westfield Junior School"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-1.69896,
+					53.86450
+				]
+			}
+		}
+	]
 }
