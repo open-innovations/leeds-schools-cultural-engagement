@@ -1,0 +1,1 @@
+The source of `orgs.csv` is `data/orgs.csv`. It gets copied over in `_config.ts`.

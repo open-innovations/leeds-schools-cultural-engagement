@@ -37,12 +37,17 @@ site.use(metas({
 site.use(date());
 site.use(postcss({}));
 
+site.remoteFile("_data/viz/organisations/orgs.csv","./data/orgs.csv");
+site.remoteFile("./reports/organisations/orgs.csv","./data/orgs.csv");
+
 site.copy('CNAME');
 site.copy('assets/images');
 site.copy('.nojekyll');
 site.copy([".woff2"]);
 site.copy([".png"]);
 site.copy([".js"]);
+site.copy([".csv"]);
+
 
 site.data('build', {
   date: new Date(),
