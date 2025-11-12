@@ -1,0 +1,17 @@
+---
+css: |
+    .dash-quote {
+        display: flex;
+        grid-gap: 1em;
+        margin: 0;
+        padding-bottom: 1em;
+    }
+    .dash-quote figure {
+        flex-basis: 100%;
+    }
+---
+<div class="dash-quote" style="
+    {{- if columns }}grid-column:span {{ columns }};{{ endif -}}
+">
+  {{ content }}
+</div>

@@ -1,0 +1,35 @@
+---
+css: |
+    .panel-quote {
+        list-style: none;
+        border-style: solid;
+        border-width: thin;
+        border-color: #bbbbbb;
+        padding:2em;
+    }
+    .panel-quote blockquote::before, .panel-quote blockquote::after {
+        content: "\201c";
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .panel-quote blockquote::after {
+        content: "\201d";
+    }
+    .panel-quote blockquote {
+        font-weight: 400;
+    }
+    .panel-quote figcaption::before {
+        content: "— ";
+    }
+    .panel-quote figcaption {
+        font-style: italic;
+        font-weight: 700;
+    }
+---
+
+<figure class="panel-quote">
+	<blockquote>
+	{{ content }}
+	</blockquote>
+	{{ if author }}<figcaption>{{ author }}</figcaption>{{ /if }}
+</figure>

@@ -1,37 +1,39 @@
 ---
-title: Survey Responses Academic Year 2022/23
+title: Survey Responses Academic Year 2023/24
 ---
+<style>
+.flex .oi-dashboard .oi-dashboard-inner { display: flex; gap: 1em; flex-wrap: wrap; }
+.flex .oi-dashboard .panel { flex-basis: 45%; flex-grow: 1; }
+</style>
+{{>
+	const year = "2023/24";
+	const schools = viz.survey.phase_3.by_school_type.rows.reduce( function(a, b){ return a + b.total_respondents; }, 0);
+}}
 
-{% comp 'frontmatter' %}
-<div>
-  <p>
-    A pilot survey was sent to members of the senior leadership team at every school in Leeds in 2023,
-    designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and
-    cultural activities. The pilot intended to gauge response and validate the approach and methodology
-    for this second phase of work.
-  </p>
-
-  <p>
-    Key findings from the second phase of survey responses are presented on this page, based on responses
-    from 53 of the 293 schools included within the study, seeing an increased response rate after the pilot study.
-  </p>
+<div class="warning padded">
+	This is a draft analysis of the phase 3 survey responses. The text and numbers have not been finalised yet.
 </div>
 
+{{ comp frontmatter }}
 <div>
-  {{ comp.contents({
-    links: {
-      "#Responses": "Responses",
-      "#Arts": "Arts Provision in Schools",
-      "#Practitioners": "External Practitioners",
-      "#Facilities": "Facilities",
-      "#Funding": "Funding & Support",
-      "#Funding": "Funding & Support",
-      "#Trips": "Trips",
-      "#Careers & Progression": "Careers & Progression"
-    }
-  }) | safe }}
+	<p>A <a href="../pilot/">pilot survey</a> was sent to members of the senior leadership team at every school in Leeds in 2022, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. The pilot intended to gauge response and validate the approach and methodology for this second phase of work. In subsequent years <a href="../phase-2/">second</a> and third phase surveys were sent out.</p>
+	<p>Key findings from the third phase of survey responses are presented on this page, based on responses from {{ schools }} of the 293 schools included within the study, seeing a decreased response rate since the second phase.</p>
 </div>
-{% endcomp %}
+<div>
+	{{ comp.contents({
+		links: {
+			"#Responses": "Responses",
+			"#Arts": "Arts Provision in Schools",
+			"#Practitioners": "External Practitioners",
+			"#Facilities": "Facilities",
+			"#Funding": "Funding & Support",
+			"#Funding": "Funding & Support",
+			"#Trips": "Trips",
+			"#Careers & Progression": "Careers & Progression"
+		}
+	}) }}
+</div>
+{{ /comp }}
 
 <h2>Headlines</h2>
 
@@ -40,11 +42,11 @@ title: Survey Responses Academic Year 2022/23
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.headlines",
+			data: "viz.survey.phase_3.headlines",
 			value: "Value",
 			title: 'Title',
 			width: "30%",
-            note: 'Note',
+						note: 'Note',
 			units: {
 				postfix: "Suffix"
 			},
@@ -68,21 +70,21 @@ title: Survey Responses Academic Year 2022/23
 				colour: "UoL-purple"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 <h2 id="Reponses">Overview of Respondents</h2>
 
-<p>The headlines below represent the breakdown of survey respondents by school type. Of the responses from 49 unique schools responding to the survey:</p>
+<p>The headlines below represent the breakdown of survey respondents by school type. Of the responses from {{ schools }} unique schools responding to the survey:</p>
 
 {{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.by_school_type",
-			title: "03_school_type",
+			data: "viz.survey.phase_3.by_school_type",
+			title: "school_type",
 			value: "percent_respondents",
 			width: "20%",
-            note: 'notes',
+						note: 'notes',
 			units: {
 				postfix: "unit"
 			},
@@ -100,58 +102,55 @@ title: Survey Responses Academic Year 2022/23
 				colour: "Through"
 			}]
 		}
-	}) | safe
+	})
 }}
 
-{# <ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;"> #}
-
 <h3>Responses by school type</h3>
-<p>Out of the 49 schools involved in the survey:</p>
+<p>Out of the {{ schools }} schools involved in the survey:</p>
 {{
-                comp.oi.chart.bar({
-                    config: {
-                        data: "viz.survey.phase_2.by_school_type",
-                        height: 250,
-                        width: 600,
-                        columns: [{
-                            name: "Tooltip",
-                            template: "{{ 03_school_type }}: {{ percent_respondents | toFixed(1) }}% responded"
-                        }],
-                        category: "03_school_type",
-                        series: [{
-                            title: "Percentage of this type of school responding",
-                            value: "percent_respondents",
-                            tooltip: "Tooltip",
-                            colour: "03_school_type"
-                        }],
-                        gap: 0.1,
-                        axis: {
-                            x: {
-                                min: 0,
-                                max: 100,
-                                grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-                                ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-                            },
-                            y: {
-                                grid: {"stroke-width": 0.5}
-                            }
-                        }
-                    }
-                }) | safe
-            }}
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey.phase_3.by_school_type",
+			height: 250,
+			width: 600,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ school_type }}: {{ percent_respondents | toFixed(1) }}% responded"
+			}],
+			category: "school_type",
+			series: [{
+				title: "Percentage of this type of school responding",
+				value: "percent_respondents",
+				tooltip: "Tooltip",
+				colour: "school_type"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
+				}
+			}
+		}
+	})
+}}
 
 <h2 id="Arts">Arts Provision in Schools</h2>
 
 <h3>Commitment to the arts</h3>
 
-<p>The headlines below describe the responses given by staff when asked about their school's commitment to pupil entitlement in the arts. For example, every pupil learns a musical instrument, or has the opportunity to go on trips each year. 
+<p>The headlines below describe the responses given by staff when asked about their school's commitment to pupil entitlement in the arts. For example, every pupil learns a musical instrument, or has the opportunity to go on trips each year.</p>
+<p>The percentages below refer to the proportion of each school type, out of {{ schools }} unique schools counted in the survey, who said their school has a commitment to pupil entitlement in the arts.</p>
 
-<p>The percentages below refer to the proportion of each school type, out of 49 unique schools counted in the survey, who said their school has a commitment to pupil entitlement in the arts.</p>
-
-  {{
+{{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.pupil_arts_entitlement",
+			data: "viz.survey.phase_3.pupil_arts_entitlement",
 			title: "School Type",
 			value: "Yes",
 			width: "20%",
@@ -172,218 +171,203 @@ title: Survey Responses Academic Year 2022/23
 				colour: "Through School"
 			}]
 		}
-	}) | safe
+	})
 }}
 
-  <h3>How would you rate your school's arts curriculum offer?</h3>
-  <p>Out of the 49 schools counted in the survey:</p>
-  {{
-		comp.oi.chart.bar({	
-			config: {
-				data: "viz.survey.phase_2.overall_rating_arts_offer",
-				height: 400,
-				width: 700,
-				legend: { show: true, position: "top" },
-				category: "05_overall_rating_arts_offer",
-				series: [{
-					"title": "Primary",
-					"value": "Primary"
-				},{
-					"title": "Secondary",
-					"value": "Secondary"
-				},{
-					"title": "Special School",
-					"value": "Special School"
-				},{
-					"title": "Through School",
-					"value": "Through School"
-				}],
-				gap: 0.1,
-				axis: {
-					x: {
-						min: 0,
-						max: 100,
-						grid: {
-							"stroke-dasharray": [6,2],
-							"stroke-width": 1
-						},
-						ticks: [{
-							value: 0,
-							label: "0"
-						},{
-							value: 20,
-							label: "20%"
-						},{
-							value: 40,
-							label: "40%"
-						},{
-							value: 60,
-							label: "60%"
-						},{
-							value: 80,
-							label: "80%"
-						},{
-							value: 100,
-							label: "100%"
-						}]
+<p>Overall, 79% of all respondents said their school has a commitment to pupil entitlement in the arts.</p>
+
+<h3>How would you rate your school's arts curriculum offer?</h3>
+<p>Out of the {{ schools }} schools counted in the survey:</p>
+{{
+	comp.oi.chart.bar({	
+		config: {
+			data: "viz.survey.phase_3.rating_arts_offer",
+			height: 400,
+			width: 700,
+			legend: { show: true, position: "top" },
+			category: "rating_arts_offer",
+			series: [{
+				"title": "Primary",
+				"value": "Primary"
+			},{
+				"title": "Secondary",
+				"value": "Secondary"
+			},{
+				"title": "Special School",
+				"value": "Special School"
+			},{
+				"title": "Through School",
+				"value": "Through School"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {
+						"stroke-dasharray": [6,2],
+						"stroke-width": 1
 					},
-					y: {
-						grid: {
-							"stroke-width": 0.5
-						}
+					ticks: [{
+						value: 0,
+						label: "0"
+					},{
+						value: 20,
+						label: "20%"
+					},{
+						value: 40,
+						label: "40%"
+					},{
+						value: 60,
+						label: "60%"
+					},{
+						value: 80,
+						label: "80%"
+					},{
+						value: 100,
+						label: "100%"
+					}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
 					}
 				}
 			}
-		}) | safe
-	}}
+		}
+	})
+}}
 
 <h4 class="quote-title">Why do you rate your school's arts curriculum as excellent/good?</h4>
-{% comp "survey.dashQuote" %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"Having balanced/ art-enhanced/comprehensive curriculum including design and technology, digital media, art, music, drama, playing musical instruments, singing, drama clubs, dance, multi-media art, animation."
-	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"Connecting with local art organisations, such as Artforms, Northern Dance, Drama North, Leeds Playhouse, The Arts People, Leeds Lieder, Opera North."
-	</p>
-	{% endcomp %}
-{% endcomp %}
+{{ comp survey.blockQuote }}
+	{{ comp survey.panelQuote { author: 'Primary school respondent' } }}There is a wide variety across the school with strong progression. Children are engaged and feel successful and can continuously talk about different artists.{{ /comp }}
+	{{ comp survey.panelQuote { author: 'Primary school respondent' } }}We have a dedicated hour per week to all KS3 students for Drama, Dance, Music and Art. Uptake to extra-curricular clubs and KS4 courses are strong in all four disciplines{{ /comp }}
+	{{ comp survey.panelQuote { author: 'Secondary school respondent' } }}We offer music, drama and art each week to all students, with a wide enrichment offer and many local, national, and international trips.”{{ /comp }}
+{{ /comp }}
 
-  <h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
-  <p>Out of the 49 schools counted in the survey:</p>
-  {{
-		comp.oi.chart.bar({	
-			config: {
-				data: "viz.survey.phase_2.rating_extra_curricular_arts_enrichment_offering",
-				height: 400,
-				width: 700,
-				legend: { show: true, position: "top" },
-				category: "14_rating_extra_curricular_arts_enrichment_offering",
-				series: [{
-					"title": "Primary",
-					"value": "Primary"
-				},{
-					"title": "Secondary",
-					"value": "Secondary"
-				},{
-					"title": "Special School",
-					"value": "Special School"
-				},{
-					"title": "Through School",
-					"value": "Through School"
-				}],
-				gap: 0.1,
-				axis: {
-					x: {
-						min: 0,
-						max: 100,
-						grid: {
-							"stroke-dasharray": [6,2],
-							"stroke-width": 1
-						},
-						ticks: [{
-							value: 0,
-							label: "0"
-						},{
-							value: 20,
-							label: "20%"
-						},{
-							value: 40,
-							label: "40%"
-						},{
-							value: 60,
-							label: "60%"
-						},{
-							value: 80,
-							label: "80%"
-						},{
-							value: 100,
-							label: "100%"
-						}]
+<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+<p>Out of the {{ schools }} schools counted in the survey:</p>
+{{
+	comp.oi.chart.bar({	
+		config: {
+			data: "viz.survey.phase_3.rating_extra_curricular_arts_enrichment_offering",
+			height: 400,
+			width: 700,
+			legend: { show: true, position: "top" },
+			category: "question_31_rating_extra_curricular",
+			series: [{
+				"title": "Primary",
+				"value": "Primary"
+			},{
+				"title": "Secondary",
+				"value": "Secondary"
+			},{
+				"title": "Special School",
+				"value": "Special School"
+			},{
+				"title": "Through School",
+				"value": "Through School"
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 100,
+					grid: {
+						"stroke-dasharray": [6,2],
+						"stroke-width": 1
 					},
-					y: {
-						grid: {
-							"stroke-width": 0.5
-						}
+					ticks: [{
+						value: 0,
+						label: "0"
+					},{
+						value: 20,
+						label: "20%"
+					},{
+						value: 40,
+						label: "40%"
+					},{
+						value: 60,
+						label: "60%"
+					},{
+						value: 80,
+						label: "80%"
+					},{
+						value: 100,
+						label: "100%"
+					}]
+				},
+				y: {
+					grid: {
+						"stroke-width": 0.5
 					}
 				}
 			}
-		}) | safe
-	}}
+		}
+	})
+}}
 
 <h4 class="quote-title">Why do you rate your school's extra-curricular arts offer as excellent/good?</h4>
-{% comp "survey.dashQuote", { columns: 3 } %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"The school offers various extra-curricular activities, e.g. art, music, dance, drama, choir, cheerleaders."
-	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"Successful outcomes of the activities, e.g. installation art works, fashion shows." "High attendance from pupils."
-	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"Pupils receive teaching from experts." "Schools organise art-related clubs by staff in different area."
-	</p>
-	{% endcomp %}
-{% endcomp %}
+{{ comp survey.blockQuote { columns: 3 } }}
+	{{ comp survey.panelQuote {author:"Through school respondent"} }}We offer so much! And because we have just been OFSTED inspected and they commented on the width and breadth of extra curricular.{{ /comp }}
+	{{ comp survey.panelQuote {author:"Primary school respondent"} }}We have had clay workshop trips and workshops at in sketchbooks at Leeds gallery. We have our set up our own museum which all children access for foundation subjects. We have had dance workshops and performances in schools provided by a range of providers.{{ /comp }}
+	{{ comp survey.panelQuote {author:"Secondary school respondent"}}}Very well attended. Large numbers participating. Wide range on offer from small scale clubs to large major production. We also track disadvantaged participation rates which are also strong.{{ /comp }}
+{{ /comp }}
 
-  {{
-		comp.oi.dashboard({
-			config: {
-				data: "viz.survey.phase_2.signposting_headlines",
-				title: "Headlines",
-				value: "Value",
-				note: "Note",
-				width: "40%",
-				units: {
-					postfix: "Suffix"
-				},
-				panels: [{
-					name: "Signposting beyond the curriculum",
-					colour: "UoL-green"
-				},{
-					name: "Competitions & Showcases",
-					colour: "UoL-teal"
-				}]
-			}
-		}) | safe
-	}}
+<h2>Competitions &amp; Showcases</h2>
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.survey.phase_3.signposting_headlines",
+			title: "Headlines",
+			value: "Value",
+			note: "Note",
+			width: "40%",
+			units: {
+				postfix: "Suffix"
+			},
+			panels: [{
+				name: "Signposting beyond the curriculum",
+				colour: "UoL-green"
+			},{
+				name: "Competitions & Showcases",
+				colour: "UoL-teal"
+			}]
+		}
+	})
+}}
 
+{{# DEPRECATED
 <h4 class="quote-title">Challenges with the arts curriculum and extra-curricular offering:</h4>
-{% comp "survey.dashQuote", { columns: 4 } %}
-	{% comp "survey.panelQuote" %}
+{{ comp survey.blockQuote { columns: 4 }	}}
+	{{ comp survey.panelQuote }}
 	<p>
 		"Frequent changes, redesign and need for constant improvement in the arts curriculum."
 	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
+	{{ /comp }}
+	{{ comp survey.panelQuote }}
 	<p>
 		"Lack of physical space." "Lack of financial support." 
 	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
+	{{ /comp }}
+	{{ comp survey.panelQuote }}
 	<p>
 		"Lack of experienced/skilled/confident teachers in art."
 	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
+	{{ /comp }}
+	{{ comp survey.panelQuote }}
 	<p>
 		"Lack of opportunities and support in arts for SEND and PMLD students."
 	</p>
-	{% endcomp %}
-{% endcomp %}
+	{{ /comp }}
+{{ /comp }}
+#}}
 
-  <h2 id="Practitioners">External Practitioners</h2>
-
-  {{
+<h2 id="Practitioners">External Practitioners</h2>
+{{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.external_partnerships_headlines",
+			data: "viz.survey.phase_3.external_partnerships_headlines",
 			title: "Headlines",
 			value: "Value",
 			note: "Note",
@@ -402,35 +386,27 @@ title: Survey Responses Academic Year 2022/23
 				colour: "UoL-blue"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 <h4 class="quote-title">Tell us about these partnerships and their benefit to your school:</h4>
-{% comp "survey.dashQuote", { columns: 3 } %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"They provide opportunity to exhibit pupils' work at a local enterprise center e.g. Thakaray Medical Museum."
-	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"They expand the school's network or other organisations and artists." "They deliver workshops, after-school clubs, art clubs etc."
-	</p>
-	{% endcomp %}
-	{% comp "survey.panelQuote" %}
-	<p>
-		"They support teaching e.g. of music, and allow students to learn musical instruments."
-	</p>
-	{% endcomp %}
-{% endcomp %}
-  <h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
+{{ comp survey.blockQuote { columns: 2 }	}}
+	{{ comp survey.panelQuote { author: "Primary school respondent" } }}Artforms have supported our musical education for many years and this has enabled our pupils to gain access to a varied musical world at primary school and beyond.<br />Leeds Library Service- school assemblies informing children of upcoming book events and competitions, which encourage children to read different genres and engage in books in different ways outside of school.{{ /comp }}
+	{{ comp survey.panelQuote { author: "Secondary school respondent" } }}
+		Increased participation in the arts in and out of school.
+		<br />We have the opportunity to gain skills from other members of the industry that we cannot offer ourselves. 
+		<br />We gain essential CPD and have the opportunity to apply for funding and bursaries. 
+		<br />Our students have the opportunity to work with people external to the school and we are also assisted with the organisation of bigger projects. We are also offered opportunities to see live music for free/reduced cost to develop the cultural capital of our students.”
+	{{ /comp }}
+{{ /comp }}
 
-  <p>Out of the 49 unique schools used in this analysis:</p>
 
-  {{
+<h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
+<p>Out of the {{ schools }} unique schools used in this analysis:</p>
+{{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey.phase_2.subject_areas_headlines",
+			data: "viz.survey.phase_3.subject_areas_headlines",
 			height: 600,
 			columns: [{
 				name: "Primary Tooltip",
@@ -504,15 +480,15 @@ title: Survey Responses Academic Year 2022/23
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
-  <h3>Community Programmes:</h3>
 
-  {{
+<h3>Community Programmes:</h3>
+{{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.community_programs_headlines",
+			data: "viz.survey.phase_3.community_programs_headlines",
 			title: "Headlines",
 			value: "Value",
 			note: "Note",
@@ -528,13 +504,13 @@ title: Survey Responses Academic Year 2022/23
 				colour: "UoL-teal"
 			}]
 		}
-	}) | safe
+	})
 }}
 
-  <h2 id="Facilities">Facilities</h2>
-  <p>Out of the 49 unique schools included in the analysis:</p>
 
-  {{
+<h2 id="Facilities">Facilities</h2>
+<p>Out of the {{ schools }} unique schools included in the analysis:</p>
+{{
 	comp.oi.chart.bar({
 		config: {
 			data: "viz.survey.phase_2.facilities",
@@ -605,17 +581,16 @@ title: Survey Responses Academic Year 2022/23
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
+
 <h2 id="Funding">Funding & Support</h2> 
-
 <p>The section below provides an overview of the survey responses when school staff were asked about the funding and support they have accessed to enable arts and enrichment activities in their school.</p>
-
-  {{
+{{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.funding_headlines",
+			data: "viz.survey.phase_3.funding_headlines",
 			title: "Headlines",
 			value: "Value",
 			note: "Note",
@@ -637,16 +612,15 @@ title: Survey Responses Academic Year 2022/23
 				colour: "Special Schools"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 
 <h3>Funding sources for provision of art curriculum and enrichment activity:</h3>
-
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey.phase_2.funding_sources_headlines",
+			data: "viz.survey.phase_3.funding_sources_headlines",
 			height: 600,
 			columns: [{
 				name: "Primary Tooltip",
@@ -714,19 +688,20 @@ title: Survey Responses Academic Year 2022/23
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
-<h2 id="Trips">Trips</h2> 
 
+
+<h2 id="Trips">Trips</h2> 
 <p>The section below provides an overview of the survey responses when school staff were asked about arts trips.</p>
 
-<h3>Does your school take pupils on arts trips outside the school?</h3>
 
-  {{
+<h3>Does your school take pupils on arts trips outside the school?</h3>
+{{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.arts_trips_headlines",
+			data: "viz.survey.phase_3.arts_trips_headlines",
 			title: "Headlines",
 			value: "Value",
 			note: "Note",
@@ -749,16 +724,15 @@ title: Survey Responses Academic Year 2022/23
 				colour: "Through School"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 
 <h3>Typically, how are your school's arts trips funded?</h3>
-
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey.phase_2.arts_trips_funding_headlines",
+			data: "viz.survey.phase_3.arts_trips_funding_headlines",
 			height: 600,
 			columns: [{
 				name: "Primary Tooltip",
@@ -832,15 +806,14 @@ title: Survey Responses Academic Year 2022/23
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
-<h3>Which of the following did you undertake in academic year 2022/23?</h3>
-
+<h3>Which of the following did you undertake in academic year {{ year }}?</h3>
 {{
 	comp.oi.chart.bar({
 		config: {
-			data: "viz.survey.phase_2.trip_types_headlines",
+			data: "viz.survey.phase_3.trip_types_headlines",
 			height: 600,
 			columns: [{
 				name: "Primary Tooltip",
@@ -914,17 +887,18 @@ title: Survey Responses Academic Year 2022/23
 				}
 			}
 		}
-	}) | safe
+	})
 }}
+
 
 <h2 id="Careers">Barriers & Challenges</h2>
 
 <h3>Regarding access, diversity, and inclusion, does your school experience any barriers or challenges:</h3>
-
-  {{
+<div class="flex">
+	{{
 		comp.oi.dashboard({
 			config: {
-				data: "viz.survey.phase_2.barriers_headlines",
+				data: "viz.survey.phase_3.barriers_diversity_headlines",
 				title: "Headlines",
 				value: "Value",
 				note: "Note",
@@ -938,36 +912,21 @@ title: Survey Responses Academic Year 2022/23
 				},{
 					name: "Barriers with host venues",
 					colour: "UoL-green"
-				}]
-			}
-		}) | safe
-	}}
-
-	{{
-		comp.oi.dashboard({
-			config: {
-				data: "viz.survey.phase_2.diversity_challenges_headline",
-				title: "Headlines",
-				value: "Value",
-				note: "Note",
-				width: "90%",
-				units: {
-					postfix: "Suffix"
-				},
-				panels: [{
+				},{
 					name: "Diversity challenges",
 					colour: "UoL-blue"
 				}]
 			}
-		}) | safe
+		})
 	}}
+</div>
+
 
 <h2 id="Careers & Progression">Careers & Progression</h2> 
-
-  {{
+{{
 	comp.oi.dashboard({
 		config: {
-			data: "viz.survey.phase_2.careers_headlines",
+			data: "viz.survey.phase_3.careers_headlines",
 			title: "Headlines",
 			value: "Value",
 			note: "Note",
@@ -989,5 +948,5 @@ title: Survey Responses Academic Year 2022/23
 				colour: "Through School"
 			}]
 		}
-	}) | safe
+	})
 }}

@@ -1,0 +1,59 @@
+---
+title: Survey Summary
+---
+<style>
+.dashboard .pane { padding: 1rem; }
+</style>
+<p>As part of the Mapping Creative Education project, a survey was designed to understand how schools in Leeds are engaging with arts and culture. The survey has been shared with all schools across Leeds, and is now being delivered annually. The dashboards below visualise responses from each year of the survey. Over time, results of the survey will be analysed to understand how attitudes, facilities and delivery of creative education is changing over time, and where intervention might be needed.</p>
+
+<h2>Explore the data</h2>
+
+<ul class="grid dashboard" style ="grid-template-columns: repeat(2, minmax(0, 1fr));">
+	{{ comp dashboard.pane { bg: "8f1f73", fg: 'black', border: 'solid' } }}
+	<li><a href="/survey/pilot/">
+		<h2>Academic Year 2021/22</h2>
+		<p>A breakdown of responses to the pilot survey covering 2021/22.</p>
+
+		{{
+			comp.oi.dashboard({
+				config: {
+					data: viz.survey['survey-dashboard'].pilot,
+					title: "title",
+					value: "value",
+					width: "70%",
+					panels: [{
+						name: "Responses",
+						colour: "UoL-purple"
+					},{
+						name: "Schools",
+						colour: "UoL-green"
+					}]
+				}
+			})
+		}}
+	</a></li>
+	{{ /comp }}
+	{{ comp dashboard.pane { bg: "white", fg: 'black', border: 'solid' } }}
+	<li><a href="/survey/phase-2/">
+		<h2>Academic Year 2022/23</h2>
+		<p>Responses to the Phase 2 survey covering academic year 2022/23.</p>
+		{{
+			comp.oi.dashboard({
+				config: {
+					data: viz.survey['survey-dashboard']['phase-2'],
+					title: "title",
+					value: "value",
+					width: "70%",
+					panels: [{
+						name: "Responses",
+						colour: "UoL-purple"
+					},{
+						name: "Schools",
+						colour: "UoL-green"
+					}]
+				}
+			})
+		}}
+	</a></li>
+	{{ /comp }}
+</ul>
