@@ -1,49 +1,12 @@
 ---
 title: Cultural Organisations
-
-visualisations:
-  map:
-    geojson:
-      key: "URN"
-      data: viz.organisations.organisations-map
-    data: viz.organisations.orgs
-    columns:
-      - name: "Tooltip label"
-        template: "<h3>{{ Name }}</h3><p>Funded by {{ Funding }}</br>Type of engagement: {{ Engagement }} </br>Website: <a href='{{ Website }}' target='_blank'>{{ Website }}</a></br>Address: <br/> {{ Address }}<br/>{{ Postcode }}<br/>"
-    key: "URN"
-    tooltip: "Tooltip label"
-    value: "Funding"
-    legend:
-      position: top
-      items:
-        - label: "Leeds City Council"
-          value: "Leeds City Council"
-          colour: "Leeds City Council"
-        - label: "Arts Council England"
-          value: "Arts Council England"
-          colour: "Arts Council England"
-        - label: "Funded by neither organisation"
-          value: "Neither"
-          colour: "Neither"
-        - label: "Funded by both organisations"
-          value: "Both"
-          colour: "Both"
-    bounds:
-      lat:
-        min: 53.74
-        max: 53.85
-      lon:
-        min: -1.59
-        max: -1.49
-
 ---
 
 <p>There is a lack of data available on the arts and cultural individuals and organisations engaging with schools in Leeds.</p>
 
 <p>This page presents, for the first time, an overview of how these people and organisations are currently engaging with schools, an description of the type of engagement offered by each organisation and provides contact details for schools to reach out and initiate their own engagement programmes.</p>
 
-<p>The data on this page is indicative only and has been collected through research and analysis of open data sources. If you see any problems with the data on this page, get in touch with us at hello@open-innovations.org.</p>
-
+<p>The data on this page is indicative only and has been collected through research and analysis of open data sources.</p>
 
 {{
 	comp.oi.dashboard({
@@ -69,25 +32,70 @@ visualisations:
 				colour: "Independent"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 
 <section class="zoomable-map">
-<h3>Organisations map</h3>
-<p><strong>Hover over the data points on the map below to view more information on each organisation. If you are looking for a provider that offers a particular type of activity, use the drop-down to filter the organisations by the services they provide.</strong>
-</p>
-<p>
-	Note: this is a provisional dataset, and will be developed over time. If you think this data could be improved, <a href="mailto:hello@open-innovations.org">get in touch with us</a>.
-</p>
-<section id="filtered-map">
-
-{{
-	comp.oi.map.zoomable({
-		config: visualisations.map
-	}) | safe
-}}
-</section>
+	<h3>Organisations map</h3>
+	<p><strong>Hover over the data points on the map below to view more information on each organisation. If you are looking for a provider that offers a particular type of activity, use the drop-down to filter the organisations by the services they provide.</strong></p>
+	<p>Note: this is a provisional dataset, and will be developed over time.</p>
+	<section id="filtered-map">
+		{{ comp.oi.map.zoomable({
+			config: {
+				"geojson": {
+					"key": "URN",
+					"data": "viz.organisations.organisations-map"
+				},
+				"data": "viz.organisations.orgs",
+				"columns": [
+					{
+						"name": "Tooltip label",
+						"template": "<h3>{{ Name }}</h3><p>Funded by {{ Funding }}</br>Type of engagement: {{ Engagement }} </br>Website: <a href='{{ Website }}' target='_blank'>{{ Website }}</a></br>Address: <br/> {{ Address }}<br/>{{ Postcode }}<br/>"
+					}
+				],
+				"key": "URN",
+				"tooltip": "Tooltip label",
+				"value": "Funding",
+				"legend": {
+					"position": "top",
+					"items": [
+						{
+							"label": "Leeds City Council",
+							"value": "Leeds City Council",
+							"colour": "Leeds City Council"
+						},
+						{
+							"label": "Arts Council England",
+							"value": "Arts Council England",
+							"colour": "Arts Council England"
+						},
+						{
+							"label": "Funded by neither organisation",
+							"value": "Neither",
+							"colour": "Neither"
+						},
+						{
+							"label": "Funded by both organisations",
+							"value": "Both",
+							"colour": "Both"
+						}
+					]
+				},
+				"bounds": {
+					"lat": {
+						"min": 53.74,
+						"max": 53.85
+					},
+					"lon": {
+						"min": -1.59,
+						"max": -1.49
+					}
+				},
+				"mapOptions": {"scrollWheelZoom": false }
+			}
+		}) }}
+	</section>
 </section>
 
 <p>The visualisation above presents data on the organisations for which address data was available. Freelance artists, and organisations for which we do not have address information, are mentioned below.</p>

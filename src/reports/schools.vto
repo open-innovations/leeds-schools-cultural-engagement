@@ -23,6 +23,8 @@ visualisations:
           colour: "Independent"
         - label: "Special Schools"
           colour: "Special Schools"
+    mapOptions:
+      scrollWheelZoom: false
   fsm:
     geojson:
       key: "URN"
@@ -52,6 +54,8 @@ visualisations:
           value: 50
         - label: "&lt;60%"
           value: 60
+    mapOptions:
+      scrollWheelZoom: false
 ---
 
 <p>This page provides an overview of the schools in Leeds and their engagements with arts and culture.</p>
@@ -79,7 +83,7 @@ visualisations:
 				colour: "Maintained"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 
@@ -89,7 +93,7 @@ visualisations:
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.map
-	}) | safe
+	})
 }}
 </section>
 
@@ -119,7 +123,7 @@ visualisations:
 				colour: "Arts Award"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 
@@ -177,7 +181,7 @@ visualisations:
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
 <h3>Arts Award percentage by school type</h3>
@@ -215,10 +219,10 @@ visualisations:
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
-{# 
+{{# 
 <h3>Creative subject entries in KS4 / KS5 (coloured by school type)</h3>
 <p>The chart below explores the relationship between the size, type and number of students enrolled in creative subjects at GCSE level. Hover over the data points to view information about each school.</p>
 <p>In the chart, you would expect that the number of students enrolled in creative subjects is greater in larger schools. There is an overall positive trend, however some schools are obvious outliers. There must therefore be some other factors that influence the uptake of creative subjects by students in schools. We have started some initial exploration of this data below.</p>
@@ -294,7 +298,7 @@ visualisations:
 			}
 		}
 	}) | safe
-}} #}
+}} #}}
 
 
 <h2>Social factors & arts provision</h2>
@@ -308,7 +312,7 @@ visualisations:
 {{
 	comp.oi.map.zoomable({
 		config: visualisations.fsm
-	}) | safe
+	})
 }}
 
 

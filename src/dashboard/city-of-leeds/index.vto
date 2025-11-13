@@ -1,0 +1,527 @@
+---
+title: City of Leeds
+---
+
+{{ comp grid.autogrid { columns: 1 } }}
+
+	<div class="holder padded">
+		<p>The visualisations on this page present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture. We are using open data to support evidence-based policy decisions by answering questions such as - how many young people are there in Leeds, and where is there a greater proportion of young people across the city? Where are the creative hotspots, with creative practitioners who are able to offer engagement activities with schools and young people? Where are the schools in Leeds that have the best offering of creative curriculum and enrichment activities? Explore the data below.</p>
+		<p><strong>This page is still under development. If you have any comments on the data below, <a href="https://forms.office.com/e/yycfqGLkSb">get in touch with us</a>. </strong></p>
+	</div>
+
+{{ /comp }} 
+
+{{ comp grid.autogrid { columns: 1 } }}
+
+	{{
+		comp.oi.dashboard({
+			config: {
+				data: "viz.dashboard.headlines",
+				title: "headline",
+				value: "value",
+				width: "30%",
+				panels: [{
+					name: "Leeds population",
+					colour: "UoL-blue"
+				},{
+					name: "Schools in Leeds",
+					colour: "UoL-green"
+		  },{
+					name: "School age population",
+					colour: "UoL-purple"
+				}]
+			}
+		})
+	}}
+
+	{{
+		comp.oi.dashboard({
+			config: {
+				data: "viz.dashboard.headlines",
+				title: "headline",
+				value: "value",
+				width: "40%",
+				panels: [{
+					name: "Projected population 2025 - all ages",
+					colour: "UoL-blue"
+				},{
+					name: "Projected population 2025 - school age",
+					colour: "UoL-green"
+				}]
+			}
+		})
+	}}
+{{ /comp }}
+
+<h2 class="centred">Populations of Leeds</h2>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing creative education.</div>
+	{{ /comp }}
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 2 } }}
+
+	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
+		<h2>Population of young people by ward</h2>
+		<p>This map represents the percentage of people in each ward whom are under 19 years old. Darker colours indicate areas with a greater proportion of young people.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.ward_level_population,
+				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        min: 10,
+        max: 35,
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 0,
+              "label": "0%",
+              "colour": '#ffffff'
+            },{
+              "value": 5,
+              "label": "5%",
+              "colour": '#e8eff1'
+            },{
+              "value": 10,
+              "label": "10%"
+            },{
+              "value": 15,
+              "label": "15%"
+            },{
+              "value": 20,
+              "label": "20%"
+            },{
+              "value": 25,
+              "label": "25%"
+            }]
+        },
+        value: 'Percentage of population under 19',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ Percentage of population under 19 }}%</strong>'
+			}
+		}) }}
+	{{ /comp }}
+
+	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
+		<h2>Indices of multiple deprivation by Leeds ward</h2>
+		<p>The indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.imd_by_ward,
+				matchKey: 'WD24CD',
+				value: 'imd_decile',
+        scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+        min: 0,
+        max: 8,
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 0,
+              "label": "Highest Deprivation"
+            },{
+              "value": 10,
+              "label": "Lowest Deprivation"
+            }]
+        },
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ imd_decile }}</strong>'
+			}
+		}) }}
+	{{ /comp }}
+
+{{ /comp }}
+
+
+<h2 class="centred">School Engagement</h2>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">Schools across Leeds vary in their arts offering for students. To support findings from our research - <a href="/survey/phase-2/">view the survey outputs here</a> - we have extracted open data on Artsmark status and Arts Award offering in schools across Leeds. This provides an indication of which areas of Leeds are underserved by creative education and can be used to inform policy, develop interventions and facilitate new partnerships between schools and creative providers. To view this data in more detail, <a href="/reports/schools/">visit the Schools page</a>. To download the data, <a href="/catalogue">visit the Data Catalogue</a>.</div>
+	{{ /comp }}
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 2 } }}
+
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<h2>Schools offering Arts Award</h2>
+		<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.arts_award_schools_by_ward,
+				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 15,
+              "label": "15"
+            },{
+              "value": 12,
+              "label": "12"
+            },{
+              "value": 9,
+              "label": "9"
+            },{
+              "value": 6,
+              "label": "6"
+            },{
+              "value": 3,
+              "label": "3"
+            },{
+              "value": 0,
+              "label": "0"
+            }]
+        },
+        min: 0,
+        max: 17,
+				value: 'count_schools',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+			}
+		}) }}
+	{{ /comp }}
+
+	{{# TODO #}}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<h2>Arts Award centres</h2>
+		<p>The Arts Award centres by ward who are known to have engaged with schools and young people as part of their activities. Darker colours indicate there are more Arts Award centres that engage with schools in that ward.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.arts_award_leeds,
+				matchKey: 'ward_code',
+				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				"legend": {
+				  "position": "top",
+				  "items": [{
+					  "value": 5,
+					  "label": "5"
+					},{
+					  "value": 4,
+					  "label": "4"
+					},{
+					  "value": 3,
+					  "label": "3"
+					},{
+					  "value": 2,
+					  "label": "2"
+					},{
+					  "value": 1,
+					  "label": "1"
+					},{
+					  "value": 0,
+					  "label": "0"
+					}]
+				},
+				min: 0,
+				max: 5,
+				value: 'count_orgs',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
+			}
+		}) }}
+	{{ /comp }}
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 1 } }}
+
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<h2>Schools awarded Artsmark</h2>
+		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.artsmark_by_ward,
+        width: 500,
+				matchKey: 'ward_code',
+        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+        "legend": {
+          "position": "top",
+          "items": [{
+              "value": 2,
+              "label": "2"
+            },{
+              "value": 1,
+              "label": "1"
+            },{
+              "value": 0,
+              "label": "0"
+            }]
+        },
+        min: 0,
+        max: 2,
+				value: 'count_schools',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+			}
+		}) }}
+
+	{{ /comp }}
+{{ /comp }}
+
+<h2 class="centred">Cultural organisations in Leeds</h2>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">Many schools in Leeds partner with local creative organisations and freelancers, who engage with young people and provide arts enrichment through training, workshops, performances and more. <a href="/reports/schools/">Schools who responded to our survey</a> mentioned a number of creative partners by name, and we combined these with open data sources to give a more comprehensive picture of the creative practitioners that are based in Leeds and available to partner and deliver arts activities in schools. To explore the data in more detail, <a href="/reports/organisations/">visit the Organisations page</a>.</div>
+	{{ /comp }}
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 2 } }}
+
+	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
+		<h2>Cultural organisations by ward</h2>
+		<p>The cultural organisations with addresses in each ward - there are 7 organisations in our dataset that were not assigned to a ward. Darker colours indicate areas where more cultural organisations are based.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.organisations_by_ward,
+				matchKey: 'ward_code',
+				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				"legend": {
+				  "position": "top",
+				  "items": [{
+					  "value": 50,
+					  "label": "50"
+					},{
+					  "value": 40,
+					  "label": "40"
+					},{
+					  "value": 30,
+					  "label": "30"
+					},{
+					  "value": 20,
+					  "label": "20"
+					},{
+					  "value": 10,
+					  "label": "10"
+					},{
+					  "value": 0,
+					  "label": "0"
+					}]
+				},
+				min: 0,
+				max: 50,
+				value: 'count_orgs',
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ count_orgs }}</strong>'
+			}
+		}) }}
+	{{ /comp }}
+
+	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
+		<h2>Leeds City Council funded organisations</h2>
+		<p>The organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Darker colours represent areas where more grants were awarded.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.lcip_funded_orgs_by_ward,
+				matchKey: 'ward_code',
+				value: 'organisations',
+				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				"legend": {
+				  "position": "top",
+				  "items": [{
+					  "value": 20,
+					  "label": "20"
+					},{
+					  "value": 15,
+					  "label": "15"
+					},{
+					  "value": 10,
+					  "label": "10"
+					},{
+					  "value": 5,
+					  "label": "5"
+					},{
+					  "value": 0,
+					  "label": "0"
+					}]
+				},
+				min: 0,
+				max: 15,
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ organisations }}</strong>'
+			}
+		}) }}
+	{{ /comp }}
+{{ /comp }}
+
+
+<h2 class="centred">Creative Subject Entries</h2>
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">The data below explores the creative curriculum at GCSE and A Level nationally. We used open data sources to explore the number of creative subject entries in Leeds schools and nationally, to understand how this has changed over time. We want to use this data to understand how creative programmes and interventions might influence pupils’ attitudes towards arts and culture, and how attitudes of young people in Leeds compare with the national picture. In the future, we aim to present more detailed information on the path young people take through education and how engagement activities can positively impact on young peoples’ attitudes towards arts subjects.</div>
+	{{ /comp }}
+{{ /comp }}
+
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<h3>National Arts GCSE Entries</h3>
+		<p>
+		  The number of young people opting for Drama, Music, Design & Technology, Media and Dance has been steadily declining since 2010, whereas the number of students taking Arts & Design is roughly the same. Individual subject entries are presented as a percentage of total entries. 
+		</p>
+		{{ comp.oi.chart.line({ config: {
+			data: viz.dashboard.arts_percentage,
+			width: 950,
+			height: 600,
+			series: [
+			  {
+				title: 'Art and Design',
+				x: "Year",
+				y: 'Art and Design',
+				colour: '#ffffff'
+			  },
+			  {
+				title: 'Dance',
+				x: "Year",
+				y: 'Dance',
+				colour: '#c90d0d'
+			  },
+			  {
+				title: 'Design & Technology',
+				x: "Year",
+				y: 'Design & Technology',
+				colour: '#51deee'
+			  },
+			  {
+				title: 'Drama',
+				x: "Year",
+				y: 'Drama',
+				colour: '#8d1a8f'
+			  },
+			  {
+				title: 'Media/Film/TV',
+				x: "Year",
+				y: 'Media/Film/TV',
+				colour: '#ff7b40'
+			  },
+			  {
+				title: 'Music',
+				x: "Year",
+				y: 'Music',
+				colour: '#b2c929'
+			  }
+			],
+			legend: {
+			  show: true
+			},
+			axis: {
+			  x: {
+				title: {
+				  label: 'Year'
+				},
+				tick: {
+				  spacing: 2
+				},
+				min:2010,
+				max:2023
+			  },
+			  y: {
+				grid: {
+				  show: true,
+				  'stroke-width': 0.5
+				},        
+				title: {
+				  label: "Percentage of total GCSE entries"
+				},
+				tick: { 
+				  spacing: 0.5 
+				},
+				min:0,
+				max: 5
+			  }
+			}
+		  } }) }}
+		  <p>
+			 Data were taken from <a href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/f378b6bf-5e72-4867-87fa-83baf102ecad">the Department for Education's Key Stage 4 Performance tables</a>. Design & Technology subject-level data is only available from Academic Year 2018-19.
+		  </p>	  
+	{{ /comp }} 
+{{ /comp }} 
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<h3>National A Level Subject Entries</h3>
+		<p>Following a similar trend as GCSE level entries, the overall takeup of Arts subjects at A Level has declined since 2010. Figures are presented as a percentage of total entries across all subjects.</p>
+		{{ comp.oi.chart.line({ config: {
+			data:viz.dashboard.a_level_arts_subject_timeseries_percent,
+			width: 950,
+			height: 600,
+			series: [
+			  {
+				title: 'Art & design',
+				x: "Year",
+				y: 'Art & design',
+				colour: '#ffffff'
+			  },
+			  {
+				title: 'Design & technology',
+				x: "Year",
+				y: 'Design & technology',
+				colour: '#ffffff'
+			  },
+			  {
+				title: 'Drama',
+				x: "Year",
+				y: 'Drama',
+				colour: '#51deee'
+			  },
+			  {
+				title: 'Media/Film/TV',
+				x: "Year",
+				y: 'Media film tv',
+				colour: '#fde725'
+			  },
+			  {
+				title: 'Music',
+				x: "Year",
+				y: 'Total Music',
+				colour: '#f734ed'
+			  }
+			],
+			legend: {
+			  show: true
+			},
+			axis: {
+			  x: {
+				title: {
+				  label: 'Date'
+				},
+				tick: {
+				  spacing: 1
+				},
+				min:2010,
+				max:2023
+			  },
+			  y: {
+				grid: {
+				  show: true,
+				  'stroke-width': 0.5
+				},        
+				title: {
+				  label: "Percentage of total A Level entries"
+				},
+				tick: { 
+				  spacing: 0.5
+				},
+				min:0,
+				max: 6
+			  }
+			}
+		  } }) }}
+		<p>Data were taken from <a href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/2f6bffba-735d-4801-8ae3-f0f058044da4">the Department for Education's A level and other 16 to 18 results publication</a>.</p>
+	{{ /comp }}
+{{ /comp }}
+
+<div class='limitations'>
+	<h3>Known Limitations & Issues</h3> 
+	<ul>
+		<li>This dashboard is under development and may not be accurate or up to date.</li>
+	</ul>
+</div>

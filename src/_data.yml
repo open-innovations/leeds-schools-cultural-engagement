@@ -1,4 +1,4 @@
-layout: template/page.njk
+layout: template/page.vto
 date: Git Last Modified
 
 # Override the site logo colour here. Any CSS colour will work.
@@ -18,3 +18,15 @@ metas:
   # twitter: openinnovates
   lang: en
   # keywords: [open, data, leeds, innovation]
+  
+menu:
+  - url: "/about"
+    title: "About"
+  - url: "/dashboard"
+    title: "Dashboards"
+  - url: "/survey/"
+    title: "Survey"
+  - url: "/reports/schools"
+    title: "Schools"
+  - url: "/reports/organisations"
+    title: "Organisations"

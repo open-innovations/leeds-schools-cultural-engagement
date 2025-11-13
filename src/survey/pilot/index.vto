@@ -2,27 +2,25 @@
 title: Survey Responses Academic Year 2021/22
 ---
 
-{% comp 'frontmatter' %}
-
-{% comp 'figure', { min_width: "100%" } %}
-<p>This research serves to address the lack of data currently available on schools’ engagement with the arts in Leeds. A baseline understanding of how schools currently engage with local cultural organisations is needed to inform cultural strategy and funding priorities. It will support evaluation of the legacy of the LEEDS 2023 programme of activities across the city and will support other cultural organisations to perform their own evaluations and benchmarking activities.</p>
-<p>A pilot survey was sent to members of the senior leadership team at every school in Leeds, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. This will act as a pilot to gauge response and validate the approach and methodology for a future phase of work.</p>
-<p>Key findings from the survey responses are presented on this page, based on 40 responses from 35 schools, out of the total 293 schools in Leeds.</p>
-<p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
-{% endcomp %}
-
-<div>
-  {{ comp.contents({
-    links: {
-      "#Responses": "Responses",
-      "#Arts": "Arts Provision in Schools",
-      "#Practitioners": "External Practitioners",
-      "#Facilities": "Facilities",
-      "#Funding": "Funding & Support"
-    }
-  }) | safe }}
-</div>
-{% endcomp %}
+{{ comp frontmatter }}
+	<div>
+		<p>This research serves to address the lack of data currently available on schools’ engagement with the arts in Leeds. A baseline understanding of how schools currently engage with local cultural organisations is needed to inform cultural strategy and funding priorities. It will support evaluation of the legacy of the LEEDS 2023 programme of activities across the city and will support other cultural organisations to perform their own evaluations and benchmarking activities.</p>
+		<p>A pilot survey was sent to members of the senior leadership team at every school in Leeds, designed to collect data about schools’ arts curriculum and extra-curricular delivery of arts and cultural activities. This will act as a pilot to gauge response and validate the approach and methodology for a future phase of work.</p>
+		<p>Key findings from the survey responses are presented on this page, based on 40 responses from 35 schools, out of the total 293 schools in Leeds.</p>
+		<p>The headline statistics below refer to the headline findings from the survey responses provided.</p>
+	</div>
+	<div>
+		{{ comp.contents({
+			links: {
+			  "#Responses": "Responses",
+			  "#Arts": "Arts Provision in Schools",
+			  "#Practitioners": "External Practitioners",
+			  "#Facilities": "Facilities",
+			  "#Funding": "Funding & Support"
+			}
+		}) }}
+	</div>
+{{ /comp }}
 
 {{
 	comp.oi.dashboard({
@@ -55,7 +53,7 @@ title: Survey Responses Academic Year 2021/22
 				colour: "UoL-purple"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 <p>The visualisations below provide a more detailed breakdown of survey responses. They give an insight into how schools in Leeds are engaging with arts and culture, their facilities and approaches to funding for schools wishing to engage with other organisations.</p>
@@ -87,155 +85,154 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Through"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 
 <div>
-		<h3>Responses by school type</h3>
-		{{
-			comp.oi.chart.bar({
-				config: {
-					data: "viz.survey.pilot.survey-response-by-type",
-					height: 300,
-					width: 800,
-					columns: [{
-						name: "Tooltip",
-						template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
-					}],
-					category: "School type",
-					series: [{
-						title: "Percentage of this type of school responding",
-						value: "Percentage of this type of school responding",
-						tooltip: "Tooltip",
-						colour: "School type"
-					}],
-					gap: 0.1,
-					axis: {
-						x: {
-							min: 0,
-							max: 40,
-							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-						},
-						y: {
-							grid: {"stroke-width": 0.5}
-						}
+	<h3>Responses by school type</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.pilot.survey-response-by-type",
+				height: 300,
+				width: 800,
+				columns: [{
+					name: "Tooltip",
+					template: "{{ School type }}: {{ Percentage of this type of school responding | toFixed(1) }}% responded"
+				}],
+				category: "School type",
+				series: [{
+					title: "Percentage of this type of school responding",
+					value: "Percentage of this type of school responding",
+					tooltip: "Tooltip",
+					colour: "School type"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 40,
+						grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+						ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+					},
+					y: {
+						grid: {"stroke-width": 0.5}
 					}
 				}
-			}) | safe
-		}}
-	</div>
+			}
+		})
+	}}
+</div>
 
 <div>
-		<h3>By school size</h3>
-		{{
-			comp.oi.chart.bar({
-				config: {
-					data: "viz.survey.pilot.survey-response-by-size",
-					height: 300,
-					width: 800,
-					columns: [{
-						name: "Tooltip",
-						template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
-					}],
-					category: "School size",
-					series: [{
-						title: "Percentage of this school size responding",
-						value: "Percentage of this school size responding",
-						tooltip: "Tooltip"
-					}],
-					gap: 0.1,
-					axis: {
-						x: {
-							min: 0,
-							max: 40,
-							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-						},
-						y: {
-							grid: {"stroke-width": 0.5}
-						}
+	<h3>By school size</h3>
+	{{
+		comp.oi.chart.bar({
+			config: {
+				data: "viz.survey.pilot.survey-response-by-size",
+				height: 300,
+				width: 800,
+				columns: [{
+					name: "Tooltip",
+					template: "{{ School size }}: {{ Percentage of this school size responding | toFixed(1) }}% responded"
+				}],
+				category: "School size",
+				series: [{
+					title: "Percentage of this school size responding",
+					value: "Percentage of this school size responding",
+					tooltip: "Tooltip"
+				}],
+				gap: 0.1,
+				axis: {
+					x: {
+						min: 0,
+						max: 40,
+						grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+						ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+					},
+					y: {
+						grid: {"stroke-width": 0.5}
 					}
 				}
-			}) | safe
-		}}
-		</div>
+			}
+		})
+	}}
+</div>
 
-		<h3>By Artsmark</h3>
-		<p>The percentage of survey respondents who have been awarded, or who are working towards, an <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p>
+<h3>By Artsmark</h3>
+<p>The percentage of survey respondents who have been awarded, or who are working towards, an <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p>
 
-		{{
-			comp.oi.chart.bar({
-				config: {
-					data: "viz.survey.pilot.survey-response-by-artsmark",
-					height: 300,
-					width: 800,
-					columns: [{
-						name: "Tooltip",
-						template: "{{ Artsmark }}: {{ Percentage | toFixed(1) }}% responded"
-					}],
-					category: "Artsmark",
-					series: [{
-						title: "Percentage",
-						value: "Percentage",
-						tooltip: "Tooltip",
-						colour: '#104454'
-					}],
-					gap: 0.1,
-					axis: {
-						x: {
-							min: 0,
-							max: 60,
-							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-						},
-						y: {
-							grid: {"stroke-width": 0.5}
-						}
-					}
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey.pilot.survey-response-by-artsmark",
+			height: 300,
+			width: 800,
+			columns: [{
+				name: "Tooltip",
+				template: "{{ Artsmark }}: {{ Percentage | toFixed(1) }}% responded"
+			}],
+			category: "Artsmark",
+			series: [{
+				title: "Percentage",
+				value: "Percentage",
+				tooltip: "Tooltip",
+				colour: '#104454'
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 60,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
 				}
-			}) | safe
-		}}
+			}
+		}
+	})
+}}
 
-		<h3>By Arts Award Centres</h3>
-		<p>The percentage of survey respondents who are registered as an <a href="https://www.artsaward.org.uk/site/">Arts Award centre</a>.</p>
-		{{
-			comp.oi.chart.bar({
-				config: {
-					data: "viz.survey.pilot.survey-response-by-artsaward",
-					height: 300,
-					width: 800,
-					color: 'black',
-					columns: [{
-						name: "Tooltip",
-						template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
-					}],
-					category: "Arts Award Centres",
-					series: [{
-						title: "Percentage",
-						value: "Percentage",
-						tooltip: "Tooltip",
-						colour: '#440d54'
-					}],
-					gap: 0.1,
-					axis: {
-						x: {
-							min: 0,
-							max: 40,
-							grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
-							ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
-						},
-						y: {
-							grid: {"stroke-width": 0.5}
-						}
-					}
+<h3>By Arts Award Centres</h3>
+<p>The percentage of survey respondents who are registered as an <a href="https://www.artsaward.org.uk/site/">Arts Award centre</a>.</p>
+{{
+	comp.oi.chart.bar({
+		config: {
+			data: "viz.survey.pilot.survey-response-by-artsaward",
+			height: 300,
+			width: 800,
+			color: 'black',
+			columns: [{
+				name: "Tooltip",
+				template: "{{ Arts Award Centres }}: {{ Percentage | toFixed(1) }}% responded"
+			}],
+			category: "Arts Award Centres",
+			series: [{
+				title: "Percentage",
+				value: "Percentage",
+				tooltip: "Tooltip",
+				colour: '#440d54'
+			}],
+			gap: 0.1,
+			axis: {
+				x: {
+					min: 0,
+					max: 40,
+					grid: {"stroke-dasharray": [6,2],"stroke-width": 1},
+					ticks: [{value: 0,label: "0"},{value: 20,label: "20%"},{value: 40,label: "40%"},{value: 60,label: "60%"},{value: 80,label: "80%"},{value: 100,label: "100%"}]
+				},
+				y: {
+					grid: {"stroke-width": 0.5}
 				}
-			}) | safe
-		}}
+			}
+		}
+	})
+}}
 
 <h2 id="Arts">Arts Provision in Schools</h2> 
-
 
 <h3>Commitment to the arts</h3>
 
@@ -263,195 +260,191 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Secondary"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 <p>Primary schools were three times more likely to report that they had a particular commitment. However, when asked about their school's arts curriculum, secondary schools were more likely to consider their school's offering as 'Excellent'.</p>
 
 <p>Secondary schools were also more likely to report their extra-curricular offering as 'Good'.</p>
 
-
 <ul class="grid" style="grid-template-columns: repeat( 2, minmax(0, 1fr)); padding-top:2em;">
-
-<li>
-	<h3>How would you rate your school's arts curriculum offer?</h3>
-	{{
-		comp.oi.chart.bar({
-			config: {
-				data: "viz.survey.pilot.survey-rate-school-arts-offer",
-				height: 400,
-				width: 700,
-				columns: [{
-					name: "Overall Tooltip",
-					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
-				},{
-					name: "Primary Tooltip",
-					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
-				},{
-					name: "Secondary Tooltip",
-					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
-				}],
-				legend: { show: true, position: "top" },
-				category: "Rating",
-				series: [{
-					title: "Overall",
-					value: "Overall (%)",
-					colour: "Overall",
-					tooltip: "Overall Tooltip"
-				},{
-					title: "Primary",
-					value: "Primary (%)",
-					colour: "Primary",
-					tooltip: "Primary Tooltip"
-				},{
-					title: "Secondary",
-					value: "Secondary (%)",
-					colour: "Secondary",
-					tooltip: "Secondary Tooltip"
-				}],
-				gap: 0.1,
-				axis: {
-					x: {
-						min: 0,
-						max: 100,
-						grid: {
-							"stroke-dasharray": [6,2],
-							"stroke-width": 1
+	<li>
+		<h3>How would you rate your school's arts curriculum offer?</h3>
+		{{
+			comp.oi.chart.bar({
+				config: {
+					data: "viz.survey.pilot.survey-rate-school-arts-offer",
+					height: 400,
+					width: 700,
+					columns: [{
+						name: "Overall Tooltip",
+						template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+					},{
+						name: "Primary Tooltip",
+						template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+					},{
+						name: "Secondary Tooltip",
+						template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+					}],
+					legend: { show: true, position: "top" },
+					category: "Rating",
+					series: [{
+						title: "Overall",
+						value: "Overall (%)",
+						colour: "Overall",
+						tooltip: "Overall Tooltip"
+					},{
+						title: "Primary",
+						value: "Primary (%)",
+						colour: "Primary",
+						tooltip: "Primary Tooltip"
+					},{
+						title: "Secondary",
+						value: "Secondary (%)",
+						colour: "Secondary",
+						tooltip: "Secondary Tooltip"
+					}],
+					gap: 0.1,
+					axis: {
+						x: {
+							min: 0,
+							max: 100,
+							grid: {
+								"stroke-dasharray": [6,2],
+								"stroke-width": 1
+							},
+							ticks: [{
+								value: 0,
+								label: "0"
+							},{
+								value: 20,
+								label: "20%"
+							},{
+								value: 40,
+								label: "40%"
+							},{
+								value: 60,
+								label: "60%"
+							},{
+								value: 80,
+								label: "80%"
+							},{
+								value: 100,
+								label: "100%"
+							}]
 						},
-						ticks: [{
-							value: 0,
-							label: "0"
-						},{
-							value: 20,
-							label: "20%"
-						},{
-							value: 40,
-							label: "40%"
-						},{
-							value: 60,
-							label: "60%"
-						},{
-							value: 80,
-							label: "80%"
-						},{
-							value: 100,
-							label: "100%"
-						}]
-					},
-					y: {
-						grid: {
-							"stroke-width": 0.5
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
 						}
 					}
 				}
-			}
-		}) | safe
-	}}
-</li>
-
-<li>
-	<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
-	{{
-		comp.oi.chart.bar({
-			config: {
-				data: "viz.survey.pilot.survey-rate-school-extra-curricula-offer",
-				height: 400,
-				width: 700,
-				columns: [{
-					name: "Overall Tooltip",
-					template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
-				},{
-					name: "Primary Tooltip",
-					template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
-				},{
-					name: "Secondary Tooltip",
-					template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
-				}],
-				legend: { show: true, position: "top" },
-				category: "Rating",
-				series: [{
-					title: "Overall",
-					value: "Overall (%)",
-					colour: "Overall",
-					tooltip: "Overall Tooltip"
-				},{
-					title: "Primary",
-					value: "Primary (%)",
-					colour: "Primary",
-					tooltip: "Primary Tooltip"
-				},{
-					title: "Secondary",
-					value: "Secondary (%)",
-					colour: "Secondary",
-					tooltip: "Secondary Tooltip"
-				}],
-				gap: 0.1,
-				axis: {
-					x: {
-						min: 0,
-						max: 100,
-						grid: {
-							"stroke-dasharray": [6,2],
-							"stroke-width": 1
+			})
+		}}
+	</li>
+	<li>
+		<h3>How would you rate your school's extra-curricular and arts enrichment offer?</h3>
+		{{
+			comp.oi.chart.bar({
+				config: {
+					data: "viz.survey.pilot.survey-rate-school-extra-curricula-offer",
+					height: 400,
+					width: 700,
+					columns: [{
+						name: "Overall Tooltip",
+						template: "{{ Rating }}<br />Overall: {{ Overall (%) }}%"
+					},{
+						name: "Primary Tooltip",
+						template: "{{ Rating }}<br />Primary: {{ Primary (%) }}%"
+					},{
+						name: "Secondary Tooltip",
+						template: "{{ Rating }}<br />Secondary: {{ Secondary (%) }}%"
+					}],
+					legend: { show: true, position: "top" },
+					category: "Rating",
+					series: [{
+						title: "Overall",
+						value: "Overall (%)",
+						colour: "Overall",
+						tooltip: "Overall Tooltip"
+					},{
+						title: "Primary",
+						value: "Primary (%)",
+						colour: "Primary",
+						tooltip: "Primary Tooltip"
+					},{
+						title: "Secondary",
+						value: "Secondary (%)",
+						colour: "Secondary",
+						tooltip: "Secondary Tooltip"
+					}],
+					gap: 0.1,
+					axis: {
+						x: {
+							min: 0,
+							max: 100,
+							grid: {
+								"stroke-dasharray": [6,2],
+								"stroke-width": 1
+							},
+							ticks: [{
+								value: 0,
+								label: "0"
+							},{
+								value: 20,
+								label: "20%"
+							},{
+								value: 40,
+								label: "40%"
+							},{
+								value: 60,
+								label: "60%"
+							},{
+								value: 80,
+								label: "80%"
+							},{
+								value: 100,
+								label: "100%"
+							}]
 						},
-						ticks: [{
-							value: 0,
-							label: "0"
-						},{
-							value: 20,
-							label: "20%"
-						},{
-							value: 40,
-							label: "40%"
-						},{
-							value: 60,
-							label: "60%"
-						},{
-							value: 80,
-							label: "80%"
-						},{
-							value: 100,
-							label: "100%"
-						}]
-					},
-					y: {
-						grid: {
-							"stroke-width": 0.5
+						y: {
+							grid: {
+								"stroke-width": 0.5
+							}
 						}
 					}
 				}
-			}
-		}) | safe
-	}}
-</li>
+			})
+		}}
+	</li>
 </ul>
 
 
 
-	{{
-		comp.oi.dashboard({
-			config: {
-				data: "viz.survey.pilot.sign-posting-headlines",
-				title: "Headlines",
-				value: "Percent",
-				note: "Note",
-				width: "40%",
-				units: {
-					postfix: "Units"
-				},
-				panels: [{
-					name: "Arts opportunities",
-					colour: "UoL-green"
-				},{
-					name: "Competitions & showcases",
-					colour: "UoL-teal"
-				}]
-			}
-		}) | safe
-	}}
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "viz.survey.pilot.sign-posting-headlines",
+			title: "Headlines",
+			value: "Percent",
+			note: "Note",
+			width: "40%",
+			units: {
+				postfix: "Units"
+			},
+			panels: [{
+				name: "Arts opportunities",
+				colour: "UoL-green"
+			},{
+				name: "Competitions & showcases",
+				colour: "UoL-teal"
+			}]
+		}
+	})
+}}
 
 <p>Schools are therefore actively promoting involvement with art and culture and sign-posting students to organisations and opportunities outside their normal curriculum.</p>
-
 
 <h2 id="Practitioners">External Practitioners</h2> 
 
@@ -479,55 +472,23 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Special"
 			}]
 		}
-	}) | safe
+	})
 }}
 
 <p>Partnership organisations offer a range of services, including workshops in the schools, after school clubs, music provision, performances in schools, meeting artists, trips for performances.</p>
 
 <h4>External practitioners offered programmes across many artforms...</h4>
-</br>
+<br />
 
-{% comp "grid.autogrid", { columns: 5 } %}
+{{ comp grid.autogrid { columns: 5 } }}
+	{{ comp grid.block.impact { fg: "white", bg: "#440d54" } }}<p>Music</p>{{ /comp }}
+    {{ comp grid.block.impact { fg: "black", bg: "#b2c929" } }}<p>Theatre</p>{{ /comp }}
+    {{ comp grid.block.impact { fg: "black", bg: "#fde725" } }}<p>Dance</p>{{ /comp }}
+	{{ comp grid.block.impact { fg: "white", bg: "#104454" } }}<p>Museums/Heritage</p>{{ /comp }}
+    {{ comp grid.block.impact { fg: "black", bg: "#20a387" } }}<p>Art</p>{{ /comp }}
+{{ /comp }}
 
-  {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#440d54"
-  } %}
-    <p>Music</p>
-  {% endcomp %}
-
-    {% comp "grid.block.impact", {
-    fg: "black",
-    bg: "#b2c929"
-  } %}
-    <p>Theatre</p>
-  {% endcomp %}
-
-    {% comp "grid.block.impact", {
-    fg: "black",
-    bg: "#fde725"
-  } %}
-    <p>Dance</p>
-  {% endcomp %}
-
-
-  {% comp "grid.block.impact", {
-    fg: "white",
-    bg: "#104454"
-  } %}
-    <p>Museums/Heritage</p>
-  {% endcomp %}
-
-    {% comp "grid.block.impact", {
-    fg: "black",
-    bg: "#20a387"
-  } %}
-    <p>Art</p>
-  {% endcomp %}
-
-  {% endcomp %}
-
-</br>
+<br />
 <p>Overall, <strong>2 in 3 schools</strong> said that they invited organisations and creative practitioners into their school to deliver arts performances and workshops - 75% of primary schools, and 40% of secondary schools. The subject areas of these organisations are broken down below. Practitioners were mostly brought into schools for <strong>theatre, music and dance</strong> programmes. Regular <strong>music and dance groups</strong> were most often delivered by external providers.</p> 
 
 <h3>Subject areas of the organisations and creative practitioners engaging with schools:</h3>
@@ -617,7 +578,7 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
 <h3>Local partnerships:</h3>
@@ -644,11 +605,8 @@ title: Survey Responses Academic Year 2021/22
 				colour: "UoL-blue"
 			}]
 		}
-	}) | safe
+	})
 }}
-
-
-
 
 
 
@@ -745,12 +703,11 @@ title: Survey Responses Academic Year 2021/22
 				}
 			}
 		}
-	}) | safe
+	})
 }}
 
 
 <h2 id="Funding">Funding & Support</h2> 
-
 
 <p>The section below provides an overview of the survey responses when school staff were asked about the funding and support they have accessed to enable arts and enrichment activities in their school.</p>
 
@@ -780,7 +737,7 @@ title: Survey Responses Academic Year 2021/22
 				colour: "UoL-teal"
 			}]
 		}
-	}) | safe
+	})
 }}
 {{
 	comp.oi.dashboard({
@@ -801,6 +758,6 @@ title: Survey Responses Academic Year 2021/22
 				colour: "Other"
 			}]
 		}
-	}) | safe
+	})
 }}
 

@@ -16,6 +16,10 @@
 	font-size: 1.25em;
 	color: inherit;
 }
+.menu-items [aria-selected=true] {
+	background: black;
+	color: var(--background-colour);
+}
 .menu-toggle[aria-expanded=false] ~ .menu-items {
 	height: 0;
 	overflow: hidden;

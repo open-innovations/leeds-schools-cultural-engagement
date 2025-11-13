@@ -46,6 +46,8 @@ site.add([".css"]); // add the files explicitly
 // Copy orgs file to use in visualisation
 site.remoteFile("_data/viz/organisations/orgs.csv","./data/orgs.csv");
 
+// Filter to strip any links (useful if within a link)
+site.filter("striplinks", (value) => { return value.replace(/<a[^\>]*>[^\<]*<\/a>/g,''); });
 
 // Section to process catalogue
 import { parse } from "jsr:@std/yaml";

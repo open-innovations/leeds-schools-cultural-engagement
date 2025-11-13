@@ -194,9 +194,8 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 	padding-right:1em;
 }
 
-.zoomable-map { 
-	padding:2em;
-	margin-bottom:1em;
+.zoomable-map {
+	margin-bottom:1rem;
 }
 
 .zoomable-map h3 {
@@ -232,6 +231,7 @@ footer .address {
 
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
+	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 45%!important; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -239,6 +239,8 @@ footer .address {
 		display: flex;
 		flex-direction: column;
 	}
+
+	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 100%!important; }
 
 	.auto-grid {
 		display: flex;
@@ -260,7 +262,4 @@ footer .address {
 	footer h3, p { 
 		text-align:center;
 	}
-
 }
-
-
