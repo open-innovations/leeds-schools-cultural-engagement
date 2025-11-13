@@ -40,7 +40,8 @@ site.use(metas({
   },
 }));
 site.use(date());
-site.use(postcss({}));
+site.use(postcss());
+site.add([".css"]); // add the files explicitly
 
 // Copy orgs file to use in visualisation
 site.remoteFile("_data/viz/organisations/orgs.csv","./data/orgs.csv");
