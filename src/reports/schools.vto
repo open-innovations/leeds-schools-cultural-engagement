@@ -58,8 +58,13 @@ visualisations:
       scrollWheelZoom: false
 ---
 
-<p>This page provides an overview of the schools in Leeds and their engagements with arts and culture.</p>
-<p>The information on this page is a combination of data collected from <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/survey/">the survey responses from this research</a> in combination with open sources - <a href="https://datamillnorth.org/dataset/primary-school-allocations">Primary</a> and <a href="https://datamillnorth.org/dataset/secondary-school-allocations">Secondary</a> school allocations can be accessed via Data Mill North. The Department for Education publishes yearly statistics on <a href="https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics">school pupils and their characteristics</a>.</p>
+
+<p>This page summarises key evidence about how schools in Leeds are engaging with arts and culture, drawing on the annual school survey and publicly available data.</p>
+
+<p>It is designed to help cultural organisations, commissioners and schools understand patterns of provision, identify strengths and gaps, and inform strategic action to improve cultural opportunities for all pupils in the city.</p>
+
+<p>The information on this page is a combination of data collected from <a href="https://open-innovations.github.io/leeds-schools-cultural-engagement/reports/survey/" target="_new">the survey responses from this research</a> in combination with open sources - <a href="https://datamillnorth.org/dataset/primary-school-allocations" target="_new">Primary</a> and <a href="https://datamillnorth.org/dataset/secondary-school-allocations" target="_new">Secondary</a> school allocations can be accessed via Data Mill North. The Department for Education publishes yearly statistics on <a href="https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics" target="_new">school pupils and their characteristics</a>.</p>
+
 <p>The headlines below show the number of schools in Leeds of each type.</p>
 
 {{
@@ -97,7 +102,7 @@ visualisations:
 }}
 </section>
 
-<h2>Schools Overview</h2>
+<h2>Arts provision</h2>
 <p>The visualisations on this page present a picture of the types of schools in Leeds, and to understand how they are engaging with arts and culture.</p>
 
 
@@ -129,7 +134,7 @@ visualisations:
 
 
 
-<h3>Artsmark percentage by school type</h3>
+<h3>Artsmark accredited schools</h3>
 <p>Artsmark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p> 
 <br>
 
@@ -184,7 +189,36 @@ visualisations:
 	})
 }}
 
-<h3>Arts Award percentage by school type</h3>
+<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
+{{ comp.oi.map.hex_cartogram({
+	config: {
+		hexjson: hex.wards_leeds,
+		data: viz.dashboard.artsmark_by_ward,
+		matchKey: 'ward_code',
+		scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+		"legend": {
+			"position": "top",
+			"items": [{
+				"value": 2,
+				"label": "2"
+			},{
+				"value": 1,
+				"label": "1"
+			},{
+				"value": 0,
+				"label": "0"
+			}]
+		},
+		min: 0,
+		max: 2,
+		value: 'count_schools',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+	}
+}) }}
+
+
+<h3>Schools offering Arts Award</h3>
 <p>The visualisation below shows a breakdown of schools in Leeds that provide an <a href="https://www.artsaward.org.uk/site/">Arts Award</a> offering to young people. Arts Award is a suite of arts-based qualifications available to young people aged 25 and under. It is managed by Trinity College London and Arts Council England.</p>
 <br>
 
@@ -221,6 +255,44 @@ visualisations:
 		}
 	})
 }}
+
+<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.</p>
+{{ comp.oi.map.hex_cartogram({
+	config: {
+		hexjson: hex.wards_leeds,
+		data: viz.dashboard.arts_award_schools_by_ward,
+		matchKey: 'ward_code',
+		scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+		"legend": {
+			"position": "top",
+			"items": [{
+				"value": 15,
+				"label": "15"
+			},{
+				"value": 12,
+				"label": "12"
+			},{
+				"value": 9,
+				"label": "9"
+			},{
+				"value": 6,
+				"label": "6"
+			},{
+				"value": 3,
+				"label": "3"
+			},{
+				"value": 0,
+				"label": "0"
+			}]
+		},
+		min: 0,
+		max: 17,
+		value: 'count_schools',
+		label: '{{ n | slice(0,3) }}',
+		tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+	}
+}) }}
+
 
 {{# 
 <h3>Creative subject entries in KS4 / KS5 (coloured by school type)</h3>
