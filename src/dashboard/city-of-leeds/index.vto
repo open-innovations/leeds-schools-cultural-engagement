@@ -5,12 +5,18 @@ title: City of Leeds
 {{ comp grid.autogrid { columns: 1 } }}
 
 	<div class="holder padded">
-		<p>The visualisations on this page present a picture of life in Leeds for young people, and the opportunities that exist for them to engage with arts and culture. We are using open data to support evidence-based policy decisions by answering questions such as - how many young people are there in Leeds, and where is there a greater proportion of young people across the city? Where are the creative hotspots, with creative practitioners who are able to offer engagement activities with schools and young people? Where are the schools in Leeds that have the best offering of creative curriculum and enrichment activities? Explore the data below.</p>
-		<p><strong>This page is still under development. If you have any comments on the data below, <a href="https://forms.office.com/e/yycfqGLkSb">get in touch with us</a>. </strong></p>
+	
+		<p>This page presents selected city-level data to help interpret findings from the Cultural Learning Leeds School Survey.</p>
+
+		<p>While the survey captures how schools engage with arts and cultural activity, the data below provides essential context on population, deprivation and participation patterns that shape access to creative opportunities for children and young people across Leeds.</p>
+
+		<p>The focus is not to describe the city in full, but to highlight structural factors that influence cultural engagement in schools.</p>
+
 	</div>
 
 {{ /comp }} 
 
+<!--
 {{ comp grid.autogrid { columns: 1 } }}
 
 	{{
@@ -33,7 +39,6 @@ title: City of Leeds
 			}
 		})
 	}}
-
 	{{
 		comp.oi.dashboard({
 			config: {
@@ -52,17 +57,31 @@ title: City of Leeds
 		})
 	}}
 {{ /comp }}
+-->
 
-<h2 class="centred">Populations of Leeds</h2>
+<h2 class="centred">Where are children and young people in Leeds?</h2>
+<p>To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing cultural education.</p>
+
 
 {{ comp grid.autogrid { columns: 1 } }}
-	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
-		<div class="text-panel">To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing creative education.</div>
-	{{ /comp }}
-{{ /comp }}
 
-{{ comp grid.autogrid { columns: 2 } }}
-
+	{{
+		comp.oi.dashboard({
+			config: {
+				data: "viz.dashboard.headlines",
+				title: "headline",
+				value: "value",
+				width: "45%",
+				panels: [{
+					name: "Leeds population",
+					colour: "UoL-blue"
+				},{
+					name: "School age population",
+					colour: "UoL-purple"
+				}]
+			}
+		})
+	}}
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Population of young people by ward</h2>
 		<p>This map represents the percentage of people in each ward whom are under 19 years old. Darker colours indicate areas with a greater proportion of young people.</p>
@@ -105,6 +124,19 @@ title: City of Leeds
 		}) }}
 	{{ /comp }}
 
+{{ /comp }}
+
+<h2 class="centred">What structural factors shape access to culture?</h2>
+<p>Evidence shows that children in more deprived areas face additional barriers to cultural participation, including cost, transport and availability of provision.</p>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing creative education.</div>
+	{{ /comp }}
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 2 } }}
+
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
 		<p>The indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
@@ -133,18 +165,12 @@ title: City of Leeds
 		}) }}
 	{{ /comp }}
 
-{{ /comp }}
-
-
-<h2 class="centred">School Engagement</h2>
-
-{{ comp grid.autogrid { columns: 1 } }}
-	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
-		<div class="text-panel">Schools across Leeds vary in their arts offering for students. To support findings from our research - <a href="/survey/phase-2/">view the survey outputs here</a> - we have extracted open data on Artsmark status and Arts Award offering in schools across Leeds. This provides an indication of which areas of Leeds are underserved by creative education and can be used to inform policy, develop interventions and facilitate new partnerships between schools and creative providers. To view this data in more detail, <a href="/reports/schools/">visit the Schools page</a>. To download the data, <a href="/catalogue">visit the Data Catalogue</a>.</div>
+<!--
+	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
+		<h2>Pupil premium map</h2>
+		<div class="warning padded">TEXT + HEXMAP TBA</div>
 	{{ /comp }}
-{{ /comp }}
-
-{{ comp grid.autogrid { columns: 2 } }}
+-->
 
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Schools offering Arts Award</h2>
@@ -226,9 +252,6 @@ title: City of Leeds
 			}
 		}) }}
 	{{ /comp }}
-{{ /comp }}
-
-{{ comp grid.autogrid { columns: 1 } }}
 
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Schools awarded Artsmark</h2>
@@ -262,13 +285,24 @@ title: City of Leeds
 		}) }}
 
 	{{ /comp }}
+
 {{ /comp }}
 
-<h2 class="centred">Cultural organisations in Leeds</h2>
+
+<h2 class="centred">School Engagement</h2>
 
 {{ comp grid.autogrid { columns: 1 } }}
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
-		<div class="text-panel">Many schools in Leeds partner with local creative organisations and freelancers, who engage with young people and provide arts enrichment through training, workshops, performances and more. <a href="/reports/schools/">Schools who responded to our survey</a> mentioned a number of creative partners by name, and we combined these with open data sources to give a more comprehensive picture of the creative practitioners that are based in Leeds and available to partner and deliver arts activities in schools. To explore the data in more detail, <a href="/reports/organisations/">visit the Organisations page</a>.</div>
+		<div class="text-panel">Schools across Leeds vary in their arts offering for students. To support findings from our research - <a href="/survey/phase-2/">view the survey outputs here</a> - we have extracted open data on Artsmark status and Arts Award offering in schools across Leeds. This provides an indication of which areas of Leeds are underserved by creative education and can be used to inform policy, develop interventions and facilitate new partnerships between schools and creative providers. To view this data in more detail, <a href="/reports/schools/">visit the Schools page</a>. To download the data, <a href="/catalogue">visit the Data Catalogue</a>.</div>
+	{{ /comp }}
+{{ /comp }}
+
+
+<h2 class="centred">Where is cultural participation distributed?</h2>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">Many schools in Leeds partner with local creative organisations and freelancers, who engage with young people and provide arts enrichment through training, workshops, performances and more. Schools who responded to our survey mentioned a number of creative partners by name, and we combined these with open data sources to give a more comprehensive picture of the creative practitioners that are based in Leeds and available to partner and deliver arts activities in schools.</div>
 	{{ /comp }}
 {{ /comp }}
 
@@ -350,6 +384,12 @@ title: City of Leeds
 			}
 		}) }}
 	{{ /comp }}
+<!--
+	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
+		<h2>Practitioner activity by ward</h2>
+		<div class="warning padded">TEXT + HEXMAP TBA</div>
+	{{ /comp }}
+-->
 {{ /comp }}
 
 
