@@ -28,5 +28,3 @@ menu:
     title: "Survey"
   - url: "/reports/schools"
     title: "Schools"
-  - url: "/reports/organisations"
-    title: "Organisations"
