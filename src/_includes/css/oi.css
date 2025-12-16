@@ -229,6 +229,8 @@ footer .address {
 .footer-logos { display: flex; align-items:center; list-style:none; margin-left: 0; gap:1em; margin-bottom:0; }
 .footer-logos li { max-width: 300px; }
 
+.oi-map-hex svg, .oi-chart-line svg { max-height: 80vh!important; }
+
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
 	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 45%!important; }
