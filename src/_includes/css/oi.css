@@ -231,9 +231,12 @@ footer .address {
 
 .oi-map-hex svg, .oi-chart-line svg { max-height: 80vh!important; }
 
+.oi-dashboard .panel { padding: 3rem!important; }
+	
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
 	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 45%!important; }
+	.oi-dashboard .panel { padding: 2rem!important; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -243,6 +246,7 @@ footer .address {
 	}
 
 	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 100%!important; }
+	.oi-dashboard .panel { padding: 1rem!important; }
 
 	.auto-grid {
 		display: flex;
