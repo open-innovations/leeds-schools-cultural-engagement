@@ -2,17 +2,18 @@
 title: Dashboards
 ---
 
-<p>
-	The dashboards on this page present key information on the city of Leeds, enabling us to answer questions such as - who are the people that make up our city? How many of those are young people? How are young people in Leeds currently engaging in arts and culture, and how does this enrich their lives? By exploring this data, we can understand which areas of Leeds are currently underserved by the cultural organisations in the region, and how organisations can direct their efforts, investment priorities and interventions towards the areas that need it the most.
-</p>
+<p>These dashboards provide contextual city-level data to support and interpret findings from the schools' survey.</p>
+
+<p>While the survey captures how Leeds schools engage with arts and cultural activity, the dashboards help situate those findings within the wider social, demographic and participation landscape of the city. Together, this enables us to understand who young people in Leeds are, where cultural engagement is uneven, and how local patterns and social factors contribute to national trends in declining creative participation.</p>
+
+<p>These data are intended to support cultural organisations, schools and policymakers to make evidence-informed decisions about where investment, outreach, and partnership activity could have the greatest impact.</p>
 
 <h2>Explore the data</h2>
 
 <ul class="grid dashboard" style ="grid-template-columns: repeat( 2, minmax(0, 1fr));">
-	{{ comp dashboard.pane { bg: "#104454", fg: 'white' } }}
-	<li><a href="/dashboard/city-of-leeds/">
+	<li class="dashboard pane" style="--background:#104454;--foreground:white"><a href="/dashboard/city-of-leeds/">
 		<h2>The City of Leeds</h2>
-		<p>A dashboard that explores creative education across Leeds and how it compares with the national picture.</p>
+		<p>A dashboard that explores cultural education across Leeds and how it compares with the national picture.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -25,11 +26,9 @@ title: Dashboards
 			}
 		}) |> striplinks }}
 	</a></li>
-	{{ /comp }}
-	{{ comp dashboard.pane { bg: "#370b45", fg: 'white' } }}
-	<li><a href="/dashboard/leeds-2023-legacy/">
+	<li class="dashboard pane" style="--background:#370b45;--foreground:white"><a href="/dashboard/leeds-2023-legacy/">
 		<h2>LEEDS 2023 Legacy</h2>
-		<p>The impact and legacy left behind by the LEEDS 2023 Year of Culture and its engagement with children and young people.</p>
+		<p>The impact of the LEEDS 2023 Year of Culture and its engagement with children and young people.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -42,5 +41,4 @@ title: Dashboards
 			}
 		}) |> striplinks }}
 	</a></li>
-	{{ /comp }}
 </ul>
