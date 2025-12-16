@@ -1,44 +1,29 @@
 <h2 class="subtitle">Data Microsite</h2>
 
-<p>
-	Cultural engagement enriches the lives of individuals, local communities and entire nations. Schools provide a common environment for ensuring provision 
-	of high-value cultural education for children and young people from across different backgrounds. However, there is a lack of data available to understand 
-	the cultural offering and engagement of schools. This evidence is needed for learning providers, the cultural sector, and the creative industries to work 
-	together to support delivering an arts-rich education for every child.
-</p> 
-<p>
-	Within the city of Leeds, there is a need to understand the current levels of cultural engagement in schools to inform Leeds City Council’s priority for 
-	Culture, particularly for the legacy planning of the LEEDS 2023 Year of Culture, and also the current Cultural Investment priorities for Children, Families 
-	and Young People.
-</p>
-<p>
-	This collaborative research project funded by <a href = "https://www.ukri.org/councils/research-england/">Research England</a>, is being led 
-	by the <a href = "https://eps.leeds.ac.uk/mechanical-engineering/staff/344/dr-briony-thomas">University of Leeds</a> working in partnership with 
-	<a href = "https://www.leeds.gov.uk/">Leeds City Council</a>, <a href = "https://leeds2023.co.uk/">LEEDS 2023</a>, <a href = "https://open-innovations.org/">
-	Open Innovations</a>.
-</p>
+<p>Cultural engagement enriches the lives of individuals, local communities and entire nations. Schools provide a common environment for ensuring provision of high-value cultural education for children and young people from across different backgrounds.</p>
+ 
+<p>Nationally, cultural engagement has declined within education. However, there is a lack of data available to understand the cultural offering and engagement of schools. This evidence is needed for learning providers, the cultural sector, and the creative industries to work together to support delivering an arts-rich education for every child.</p>
+
+<p>Locally, this data is needed to inform Leeds City Council's priority for Culture, particularly for the legacy planning of the LEEDS 2023 Year of Culture, and the Cultural Investment priorities for Children, Families and Young People.</p>
+
+<p>This collaborative research project was funded by <a href="https://www.ukri.org/councils/research-england/" target="_new">Research England</a> and the <a href="https://www.ukri.org/what-we-do/supporting-collaboration/supporting-collaboration-esrc/impact-acceleration-accounts/" target="_new">ESRC IAA</a>, is being led by the <a href="https://eps.leeds.ac.uk/mechanical-engineering/staff/344/dr-briony-thomas" target="_new">University of Leeds</a> working in partnership with <a href="https://www.leeds.gov.uk/" target="_new">Leeds City Council</a>, LEEDS 2023, <a href="https://open-innovations.org/" target="_new">Open Innovations</a>.
+
 <p><a href="/about/">Read more about the research programme here</a>, or you can explore the data below.</p>
 
 <h2>Explore the data</h2>
-<ul class="grid dashboard">
-	{% comp "dashboard.pane", { bg: '#104454', fg: 'white' }%}
-	<li><a href="/reports/schools/">
+<ul class="grid dashboard" style="grid-template-columns:repeat(auto-fill, minmax(min(100%, 500px), 1fr));">
+	<li class="dashboard pane" style="--foreground:white;--background:#104454;"><a href="/reports/schools/">
 		<h2>Schools</h2>
 		<p>A breakdown of schools in Leeds and their creative engagement.</p>
 	</a></li>
-	{%endcomp%}
-
-	{% comp "dashboard.pane", { bg: "#b2c929", fg: 'black' }%}
-	<li><a href="/survey/">
+	<li class="dashboard pane" style="--foreground:black;--background:#b2c929;"><a href="/survey/">
 		<h2>Survey Responses</h2>
 		<p>A breakdown of responses to the research survey.</p>
 	</a></li>
-	{%endcomp%}
-
-	{% comp "dashboard.pane", { bg: "#370b45", fg: 'white' }%}
-	<li><a href="/reports/organisations/">
+	<!--
+	<li class="dashboard pane" style="--foreground:white;--background:#370b45;"><a href="/reports/organisations/">
 		<h2>Organisations</h2>
 		<p>Cultural organisations engaging with schools in Leeds.</p>
 	</a></li>
-	{%endcomp%}
+	-->
 </ul>
