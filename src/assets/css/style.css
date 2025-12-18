@@ -83,14 +83,11 @@ footer { padding: 0; }
 .head_colour { background: var(--background-colour); color: black!important; border-bottom: groove; border-width: 3px; }
 
 
-.organisations { list-style: none; margin: 0; display: flex; gap: 2rem; }
-.organisations li svg { width: 100%; height: auto; color: #a8b6be; filter: grayscale(1) brightness(2); }
-.organisations.supporter li svg { width: 100%; height: 5em; color: #a8b6be; filter: grayscale(1) brightness(2); }
-@media only screen and (max-width: 800px) {
-	.organisations {
-		flex-direction: column;
-	}
-}
+.organisations { list-style: none; margin: 0; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+.organisations li { flex-grow: 1; text-align: left; }
+.organisations li svg { width: 100%; height: 3em; color: #a8b6be; filter: grayscale(1) brightness(2); }
+.organisations.supporter li { flex-grow: 1; }
+.organisations.supporter li svg { width: auto; height: 4em; color: #a8b6be; filter: grayscale(1) brightness(2); }
 
 .oi-viz { margin-bottom: 0.5em; }
 .oi-viz:last-child { margin-bottom: 1em; }
@@ -110,12 +107,14 @@ footer { padding: 0; }
 .oi-chart-main text { fill: inherit; } 
 
 .oi-legend-item { margin: 0.3em;}
-.oi-legend-item.oi-series-on { background: inherit!important; outline: 0.5px solid #bbbbbb!important; }
+.oi-legend-item.oi-series-on { background: inherit!important; }
 
 .oi-table table * { padding-left: 1em; padding-right: 1em; border-width: thin; border-color: #e0dfdf; border-style: solid;}
 .oi-table table tr:first-child { background: #171853; color: #ffffff; }
 .oi-table table tr:first-child th { padding:0.8em; }
 
+.text-panel { font-size:1.2em; padding: 1.5em; }
+.text-panel > *:last-child { margin-bottom: 0; }
 
 
 ul .panel { justify-content: normal; }

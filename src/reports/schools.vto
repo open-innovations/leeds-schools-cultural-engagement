@@ -189,33 +189,35 @@ visualisations:
 	})
 }}
 
-<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
-{{ comp.oi.map.hex_cartogram({
-	config: {
-		hexjson: hex.wards_leeds,
-		data: viz.dashboard.artsmark_by_ward,
-		matchKey: 'ward_code',
-		scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
-		"legend": {
-			"position": "top",
-			"items": [{
-				"value": 2,
-				"label": "2"
-			},{
-				"value": 1,
-				"label": "1"
-			},{
-				"value": 0,
-				"label": "0"
-			}]
-		},
-		min: 0,
-		max: 2,
-		value: 'count_schools',
-		label: '{{ n | slice(0,3) }}',
-		tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
-	}
-}) }}
+{{ comp dashboard.panel { bg: '#2e3059', fg: 'white' } }}
+	<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
+	{{ comp.oi.map.hex_cartogram({
+		config: {
+			hexjson: hex.wards_leeds,
+			data: viz.dashboard.artsmark_by_ward,
+			matchKey: 'ward_code',
+			scale: '#dfdeeb 0%, #404788 100%',
+			"legend": {
+				"position": "top",
+				"items": [{
+					"value": 2,
+					"label": "2"
+				},{
+					"value": 1,
+					"label": "1"
+				},{
+					"value": 0,
+					"label": "0"
+				}]
+			},
+			min: 0,
+			max: 2,
+			value: 'count_schools',
+			label: '{{ n | slice(0,3) }}',
+			tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+		}
+	}) }}
+{{ /comp }}
 
 
 <h3>Schools offering Arts Award</h3>
@@ -256,42 +258,45 @@ visualisations:
 	})
 }}
 
-<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.</p>
-{{ comp.oi.map.hex_cartogram({
-	config: {
-		hexjson: hex.wards_leeds,
-		data: viz.dashboard.arts_award_schools_by_ward,
-		matchKey: 'ward_code',
-		scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
-		"legend": {
-			"position": "top",
-			"items": [{
-				"value": 15,
-				"label": "15"
-			},{
-				"value": 12,
-				"label": "12"
-			},{
-				"value": 9,
-				"label": "9"
-			},{
-				"value": 6,
-				"label": "6"
-			},{
-				"value": 3,
-				"label": "3"
-			},{
-				"value": 0,
-				"label": "0"
-			}]
-		},
-		min: 0,
-		max: 17,
-		value: 'count_schools',
-		label: '{{ n | slice(0,3) }}',
-		tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
-	}
-}) }}
+
+{{ comp dashboard.panel { bg: '#21525d', fg: 'white' } }}
+	<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.</p>
+	{{ comp.oi.map.hex_cartogram({
+		config: {
+			hexjson: hex.wards_leeds,
+			data: viz.dashboard.arts_award_schools_by_ward,
+			matchKey: 'ward_code',
+			scale: '#bbd2d8 0%, #277d8e 100%',
+			"legend": {
+				"position": "top",
+				"items": [{
+					"value": 15,
+					"label": "15"
+				},{
+					"value": 12,
+					"label": "12"
+				},{
+					"value": 9,
+					"label": "9"
+				},{
+					"value": 6,
+					"label": "6"
+				},{
+					"value": 3,
+					"label": "3"
+				},{
+					"value": 0,
+					"label": "0"
+				}]
+			},
+			min: 0,
+			max: 17,
+			value: 'count_schools',
+			label: '{{ n | slice(0,3) }}',
+			tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
+		}
+	}) }}
+{{ /comp }}
 
 
 {{# 

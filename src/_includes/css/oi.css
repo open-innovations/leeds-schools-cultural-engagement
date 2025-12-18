@@ -161,7 +161,9 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .legend .legend-item { display: inline-block; line-height: 1em; margin-right: 1em; cursor: pointer; color:white;}
 .legend .legend-item svg { float: left; }
 
-.text-panel { font-size:1.2em; padding: 1.5em; }
+.oi-legend-items { display: flex; gap: 1rem; flex-direction: row-reverse; }
+.oi-legend-inner .oi-legend-item { margin: 0; padding: 0!important; display: flex!important; gap: 0.3rem; }
+.oi-legend-inner .oi-legend-item svg.oi-legend-icon { display: inline-block!important; float: unset; margin-right: 0; }
 
 .impact-block g.hex text { 
     fill: inherit;

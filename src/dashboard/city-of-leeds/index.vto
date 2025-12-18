@@ -133,9 +133,6 @@ title: City of Leeds
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<div class="text-panel">To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing creative education.</div>
 	{{ /comp }}
-{{ /comp }}
-
-{{ comp grid.autogrid { columns: 2 } }}
 
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
@@ -171,6 +168,25 @@ title: City of Leeds
 		<div class="warning padded">TEXT + HEXMAP TBA</div>
 	{{ /comp }}
 -->
+
+{{ /comp }}
+
+
+<h2 class="centred">School Engagement</h2>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">
+		
+			<p>Schools across Leeds offer varying levels of arts opportunities for students. <a href="https://www.artsmark.org.uk/" target="_new">Artsmark</a> is the national creative quality standard for schools in England, accredited by Arts Council England, while <a href="https://www.artsaward.org.uk/" target="_new">Arts Award</a> provides recognised qualifications that inspire young people to their creativity and leadership skills. Together, these programmes serve as key indicators of young people’s access to high-quality arts education.</p>
+
+			<p>To support findings from our research, we have extracted open data on Artsmark status and Arts Award provision in schools across Leeds. This helps identify areas that are underserved by creative education and can inform policy, shape targeted interventions, and foster new partnerships between schools and cultural providers. To view this data in more detail, <a href="/reports/schools/">visit the Schools page</a>. To download the data, <a href="/catalogue">visit the Data Catalogue</a>.</p>
+		
+		</div>
+	{{ /comp }}
+	
+{{ /comp }}
+{{ comp grid.autogrid { columns: 2 } }}
 
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Schools offering Arts Award</h2>
@@ -253,6 +269,10 @@ title: City of Leeds
 		}) }}
 	{{ /comp }}
 
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 1 } }}
+
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Schools awarded Artsmark</h2>
 		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
@@ -286,15 +306,6 @@ title: City of Leeds
 
 	{{ /comp }}
 
-{{ /comp }}
-
-
-<h2 class="centred">School Engagement</h2>
-
-{{ comp grid.autogrid { columns: 1 } }}
-	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
-		<div class="text-panel">Schools across Leeds vary in their arts offering for students. To support findings from our research - <a href="/survey/phase-2/">view the survey outputs here</a> - we have extracted open data on Artsmark status and Arts Award offering in schools across Leeds. This provides an indication of which areas of Leeds are underserved by creative education and can be used to inform policy, develop interventions and facilitate new partnerships between schools and creative providers. To view this data in more detail, <a href="/reports/schools/">visit the Schools page</a>. To download the data, <a href="/catalogue">visit the Data Catalogue</a>.</div>
-	{{ /comp }}
 {{ /comp }}
 
 
@@ -385,8 +396,12 @@ title: City of Leeds
 		}) }}
 	{{ /comp }}
 
+{{ /comp }}
+
+{{ comp grid.autogrid { columns: 1 } }}
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Practitioner activity by ward</h2>
+		<p>The wards where organisations funded by the Leeds Cultural Investment Programme deliver activities. Darker shades indicate areas with a higher concentration of cultural activity.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
@@ -424,7 +439,7 @@ title: City of Leeds
 <h2 class="centred">Creative Subject Entries</h2>
 {{ comp grid.autogrid { columns: 1 } }}
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
-		<div class="text-panel">The data below explores the creative curriculum at GCSE and A Level nationally. We used open data sources to explore the number of creative subject entries in Leeds schools and nationally, to understand how this has changed over time. We want to use this data to understand how creative programmes and interventions might influence pupils’ attitudes towards arts and culture, and how attitudes of young people in Leeds compare with the national picture. In the future, we aim to present more detailed information on the path young people take through education and how engagement activities can positively impact on young peoples’ attitudes towards arts subjects.</div>
+		<div class="text-panel">The data below examines the creative curriculum at GCSE and A Level on a national scale. Looking ahead, we plan to use open data sources to compare creative subject entries in Leeds schools with the national picture and track how this changes over time. Our goal is to understand how creative programmes and interventions influence pupils’ attitudes toward arts and culture. In the future, we aim to present more detailed insights into the educational pathways young people take and how engagement activities can positively shape their perceptions of arts subjects.</div>
 	{{ /comp }}
 {{ /comp }}
 
@@ -532,25 +547,25 @@ title: City of Leeds
 				title: 'Design & technology',
 				x: "Year",
 				y: 'Design & technology',
-				colour: '#ffffff'
+				colour: '#51deee'
 			  },
 			  {
 				title: 'Drama',
 				x: "Year",
 				y: 'Drama',
-				colour: '#51deee'
+				colour: '#8d1a8f'
 			  },
 			  {
 				title: 'Media/Film/TV',
 				x: "Year",
 				y: 'Media film tv',
-				colour: '#fde725'
+				colour: '#ff7b40'
 			  },
 			  {
 				title: 'Music',
 				x: "Year",
 				y: 'Total Music',
-				colour: '#f734ed'
+				colour: '#b2c929'
 			  }
 			],
 			legend: {
