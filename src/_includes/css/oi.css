@@ -119,7 +119,7 @@ a.button:hover, button:hover, button:focus, a.button:focus { background-color: #
 .padded-top { padding-top: 2em; }
 .doublepadded { padding: 2em; }
 .spaced { margin-bottom: 1em; }
-.centred { text-align: center; }
+.centred { text-align: center; text-wrap: balance; }
 .tallpadded { padding-top: 3em; padding-bottom: 3em; }
 .feedback-bg { background-color: #440d54; color: white; text-align: center; }
 .feedback-bg a { color: #a951ed; text-decoration: underline; }
@@ -160,10 +160,6 @@ ul.grid > li > a > *:last-child { margin-bottom: 0; }
 .legend { margin-bottom: 1em; text-align: center; }
 .legend .legend-item { display: inline-block; line-height: 1em; margin-right: 1em; cursor: pointer; color:white;}
 .legend .legend-item svg { float: left; }
-
-.oi-legend-items { display: flex; gap: 1rem; flex-direction: row-reverse; }
-.oi-legend-inner .oi-legend-item { margin: 0; padding: 0!important; display: flex!important; gap: 0.3rem; }
-.oi-legend-inner .oi-legend-item svg.oi-legend-icon { display: inline-block!important; float: unset; margin-right: 0; }
 
 .impact-block g.hex text { 
     fill: inherit;
@@ -233,12 +229,8 @@ footer .address {
 
 .oi-map-hex svg, .oi-chart-line svg { max-height: 80vh!important; }
 
-.oi-dashboard .panel { padding: 3rem!important; }
-	
 @media only screen and (max-width: 1080px) {
 	.grid { grid-template-columns: 100%; }
-	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 45%!important; }
-	.oi-dashboard .panel { padding: 1rem!important; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -246,8 +238,6 @@ footer .address {
 		display: flex;
 		flex-direction: column;
 	}
-
-	.oi-dashboard .oi-dashboard-inner { --auto-dashboard-min-size: 100%!important; }
 
 	.auto-grid {
 		display: flex;
@@ -266,7 +256,7 @@ footer .address {
 		flex-direction: column;
 	}
 
-	footer h3, p { 
+	footer h3, footer p { 
 		text-align:center;
 	}
 }
