@@ -136,7 +136,6 @@ visualisations:
 
 <h3>Artsmark accredited schools</h3>
 <p>Artsmark is the creative quality standard for schools and education providers in England, accredited by Arts Council England. The visualisation below shows the schools in Leeds that have been awarded, or are working towards, the <a href="https://www.artsmark.org.uk/">Artsmark award</a>.</p> 
-<br>
 
 {{
 	comp.oi.chart.bar({
@@ -190,6 +189,7 @@ visualisations:
 }}
 
 {{ comp dashboard.panel { bg: '#2e3059', fg: 'white' } }}
+	<h4>Artsmark accredited schools by ward</h4>
 	<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
 	{{ comp.oi.map.hex_cartogram({
 		config: {
@@ -222,8 +222,6 @@ visualisations:
 
 <h3>Schools offering Arts Award</h3>
 <p>The visualisation below shows a breakdown of schools in Leeds that provide an <a href="https://www.artsaward.org.uk/site/">Arts Award</a> offering to young people. Arts Award is a suite of arts-based qualifications available to young people aged 25 and under. It is managed by Trinity College London and Arts Council England.</p>
-<br>
-
 {{
 	comp.oi.chart.bar({
 		config: {
@@ -258,8 +256,8 @@ visualisations:
 	})
 }}
 
-
 {{ comp dashboard.panel { bg: '#21525d', fg: 'white' } }}
+	<h4>Schools offering Arts Award by ward</h4>
 	<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.</p>
 	{{ comp.oi.map.hex_cartogram({
 		config: {

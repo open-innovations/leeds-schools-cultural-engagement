@@ -56,7 +56,15 @@ title: City of Leeds
 -->
 
 <h2 class="centred">Where are children and young people in Leeds?</h2>
-<p>To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing cultural education.</p>
+
+{{ comp grid.autogrid { columns: 1 } }}
+	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
+		<div class="text-panel">
+			<p>To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing cultural education.</p>
+		</div>
+	{{ /comp }}
+	
+{{ /comp }}
 
 
 {{ comp grid.autogrid { columns: 1 } }}
@@ -73,7 +81,7 @@ title: City of Leeds
 					colour: "UoL-blue"
 				},{
 					name: "School age population",
-					colour: "UoL-purple"
+					colour: "UoL-blue"
 				}]
 			}
 		})
@@ -126,9 +134,6 @@ title: City of Leeds
 <p>Evidence shows that children in more deprived areas face additional barriers to cultural participation, including cost, transport and availability of provision.</p>
 
 {{ comp grid.autogrid { columns: 1 } }}
-	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
-		<div class="text-panel">To understand life for young people in Leeds, we are starting to bring together various open data sources that represent the populations of Leeds and where they are spread out across the city. The visualisations below represent the wards in Leeds where there is a greater population of young people, as well as the wards experiencing greater levels of deprivation. These factors give us an indication of the barriers young people might be facing to accessing creative education.</div>
-	{{ /comp }}
 
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
@@ -139,31 +144,53 @@ title: City of Leeds
 				data: viz.dashboard.imd_by_ward,
 				matchKey: 'WD24CD',
 				value: 'imd_decile',
-        scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
-        min: 0,
-        max: 8,
-        "legend": {
-          "position": "top",
-          "items": [{
-              "value": 0,
-              "label": "Highest Deprivation"
-            },{
-              "value": 10,
-              "label": "Lowest Deprivation"
-            }]
-        },
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+				min: 0,
+				max: 8,
+				"legend": {
+					"position": "top",
+					"items": [{
+						"value": 0,
+						"label": "Highest Deprivation"
+					},{
+						"value": 10,
+						"label": "Lowest Deprivation"
+					}]
+				},
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ imd_decile }}</strong>'
 			}
 		}) }}
 	{{ /comp }}
 
-<!--
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Pupil premium map</h2>
-		<div class="warning padded">TEXT + HEXMAP TBA</div>
+		<p>This map shows the estimated proportion of pupils eligible for free school meals (FSM) across Leeds, used as an indicator of socio-economic context. School-level data has been mapped to wards and combined based on pupil numbers, so larger schools contribute more to the ward-level figure. Figures are indicative and reflect school location rather than pupils’ home addresses.</p>
+		{{ comp.oi.map.hex_cartogram({
+			config: {
+				hexjson: hex.wards_leeds,
+				data: viz.dashboard.fsm_pct_weighted,
+				matchKey: 'ward_code',
+				value: 'fsm_pct_weighted',
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+				min: 0,
+				max: 50,
+				"legend": {
+					"position": "top",
+					"continuous": true,
+					"items": [{
+						"value": 50,
+						"label": "50%"
+					},{
+						"value": 0,
+						"label": "0%"
+					}]
+				},
+				label: '{{ n | slice(0,3) }}',
+				tooltip: '{{ n }}: <strong>{{ fsm_pct_weighted | toFixed(1) }}%</strong>'
+			}
+		}) }}
 	{{ /comp }}
--->
 
 {{ /comp }}
 
