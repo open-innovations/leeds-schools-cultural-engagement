@@ -28,7 +28,7 @@ title: City of Leeds
 				},{
 					name: "Schools in Leeds",
 					colour: "UoL-green"
-		  },{
+			},{
 					name: "School age population",
 					colour: "UoL-purple"
 				}]
@@ -88,40 +88,32 @@ title: City of Leeds
 	}}
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Population of young people by ward</h2>
-		<p>This map represents the percentage of people in each ward whom are under 19 years old. Darker colours indicate areas with a greater proportion of young people.</p>
+		<p>This map represents the percentage of people in each ward whom are under 19 years old. Lighter colours indicate areas with a greater proportion of young people.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.ward_level_population,
 				matchKey: 'ward_code',
-        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
-        min: 10,
-        max: 35,
-        "legend": {
-          "position": "top",
-          "items": [{
-              "value": 0,
-              "label": "0%",
-              "colour": '#ffffff'
-            },{
-              "value": 5,
-              "label": "5%",
-              "colour": '#e8eff1'
-            },{
-              "value": 10,
-              "label": "10%"
-            },{
-              "value": 15,
-              "label": "15%"
-            },{
-              "value": 20,
-              "label": "20%"
-            },{
-              "value": 25,
-              "label": "25%"
-            }]
-        },
-        value: 'Percentage of population under 19',
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+				min: 0,
+				max: 35,
+				"legend": {
+					"position": "top",
+					"items": [{
+							"value": 30,
+							"label": "30%"
+						},{
+							"value": 20,
+							"label": "20%"
+						},{
+							"value": 10,
+							"label": "10%"
+						},{
+							"value": 0,
+							"label": "0%"
+						}]
+				},
+				value: 'Percentage of population under 19',
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ Percentage of population under 19 }}%</strong>'
 			}
@@ -137,14 +129,14 @@ title: City of Leeds
 
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Indices of multiple deprivation by Leeds ward</h2>
-		<p>The indices of multiple deprivation, by Leeds ward. Darker colours reflect areas of higher deprivation.</p>
+		<p>The indices of multiple deprivation, by Leeds ward. Lighter colours reflect areas of higher deprivation.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.imd_by_ward,
 				matchKey: 'WD24CD',
 				value: 'imd_decile',
-				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
 				min: 0,
 				max: 8,
 				"legend": {
@@ -224,37 +216,37 @@ title: City of Leeds
 
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Schools offering Arts Award</h2>
-		<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Darker colours indicate there are more schools that offer an Arts Award in that ward.</p>
+		<p>The number of schools in Leeds that offer an Arts Award, by ward. This data includes schools that offered an Arts Award as of 2022/23 academic year. Lighter colours indicate there are more schools that offer an Arts Award in that ward.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.arts_award_schools_by_ward,
 				matchKey: 'ward_code',
-        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
-        "legend": {
-          "position": "top",
-          "items": [{
-              "value": 15,
-              "label": "15"
-            },{
-              "value": 12,
-              "label": "12"
-            },{
-              "value": 9,
-              "label": "9"
-            },{
-              "value": 6,
-              "label": "6"
-            },{
-              "value": 3,
-              "label": "3"
-            },{
-              "value": 0,
-              "label": "0"
-            }]
-        },
-        min: 0,
-        max: 17,
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+				"legend": {
+					"position": "top",
+					"items": [{
+							"value": 15,
+							"label": "15"
+						},{
+							"value": 12,
+							"label": "12"
+						},{
+							"value": 9,
+							"label": "9"
+						},{
+							"value": 6,
+							"label": "6"
+						},{
+							"value": 3,
+							"label": "3"
+						},{
+							"value": 0,
+							"label": "0"
+						}]
+				},
+				min: 0,
+				max: 17,
 				value: 'count_schools',
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
@@ -265,33 +257,33 @@ title: City of Leeds
 	{{# TODO #}}
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Arts Award centres</h2>
-		<p>The Arts Award centres by ward who are known to have engaged with schools and young people as part of their activities. Darker colours indicate there are more Arts Award centres that engage with schools in that ward.</p>
+		<p>The Arts Award centres by ward who are known to have engaged with schools and young people as part of their activities. Lighter colours indicate there are more Arts Award centres that engage with schools in that ward.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.arts_award_leeds,
 				matchKey: 'ward_code',
-				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
 				"legend": {
-				  "position": "top",
-				  "items": [{
-					  "value": 5,
-					  "label": "5"
+					"position": "top",
+					"items": [{
+						"value": 5,
+						"label": "5"
 					},{
-					  "value": 4,
-					  "label": "4"
+						"value": 4,
+						"label": "4"
 					},{
-					  "value": 3,
-					  "label": "3"
+						"value": 3,
+						"label": "3"
 					},{
-					  "value": 2,
-					  "label": "2"
+						"value": 2,
+						"label": "2"
 					},{
-					  "value": 1,
-					  "label": "1"
+						"value": 1,
+						"label": "1"
 					},{
-					  "value": 0,
-					  "label": "0"
+						"value": 0,
+						"label": "0"
 					}]
 				},
 				min: 0,
@@ -309,29 +301,29 @@ title: City of Leeds
 
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h2>Schools awarded Artsmark</h2>
-		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Darker colours indicate there are more schools in that ward with Artsmark accreditation.</p>
+		<p>This map represents the state-funded schools in each ward that have been awarded Artsmark accreditation. This figure does not include schools that are working towards their award. Lighter colours indicate there are more schools in that ward with Artsmark accreditation.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.artsmark_by_ward,
-        width: 500,
+				width: 500,
 				matchKey: 'ward_code',
-        scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
-        "legend": {
-          "position": "top",
-          "items": [{
-              "value": 2,
-              "label": "2"
-            },{
-              "value": 1,
-              "label": "1"
-            },{
-              "value": 0,
-              "label": "0"
-            }]
-        },
-        min: 0,
-        max: 2,
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
+				"legend": {
+					"position": "top",
+					"items": [{
+							"value": 2,
+							"label": "2"
+						},{
+							"value": 1,
+							"label": "1"
+						},{
+							"value": 0,
+							"label": "0"
+						}]
+				},
+				min: 0,
+				max: 2,
 				value: 'count_schools',
 				label: '{{ n | slice(0,3) }}',
 				tooltip: '{{ n }}: <strong>{{ count_schools }}</strong>'
@@ -355,33 +347,33 @@ title: City of Leeds
 
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Cultural organisations by ward</h2>
-		<p>The cultural organisations with addresses in each ward - there are 7 organisations in our dataset that were not assigned to a ward. Darker colours indicate areas where more cultural organisations are based.</p>
+		<p>The cultural organisations with addresses in each ward - there are 7 organisations in our dataset that were not assigned to a ward. Lighter colours indicate areas where more cultural organisations are based.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.organisations_by_ward,
 				matchKey: 'ward_code',
-				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
 				"legend": {
-				  "position": "top",
-				  "items": [{
-					  "value": 50,
-					  "label": "50"
+					"position": "top",
+					"items": [{
+						"value": 50,
+						"label": "50"
 					},{
-					  "value": 40,
-					  "label": "40"
+						"value": 40,
+						"label": "40"
 					},{
-					  "value": 30,
-					  "label": "30"
+						"value": 30,
+						"label": "30"
 					},{
-					  "value": 20,
-					  "label": "20"
+						"value": 20,
+						"label": "20"
 					},{
-					  "value": 10,
-					  "label": "10"
+						"value": 10,
+						"label": "10"
 					},{
-					  "value": 0,
-					  "label": "0"
+						"value": 0,
+						"label": "0"
 					}]
 				},
 				min: 0,
@@ -395,31 +387,31 @@ title: City of Leeds
 
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Leeds City Council funded organisations</h2>
-		<p>The organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Darker colours represent areas where more grants were awarded.</p>
+		<p>The organisations in each ward that have been awarded funding as part of the Leeds Cultural Investment Programme. Lighter colours represent areas where more grants were awarded.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.lcip_funded_orgs_by_ward,
 				matchKey: 'ward_code',
 				value: 'organisations',
-				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
 				"legend": {
-				  "position": "top",
-				  "items": [{
-					  "value": 20,
-					  "label": "20"
+					"position": "top",
+					"items": [{
+						"value": 20,
+						"label": "20"
 					},{
-					  "value": 15,
-					  "label": "15"
+						"value": 15,
+						"label": "15"
 					},{
-					  "value": 10,
-					  "label": "10"
+						"value": 10,
+						"label": "10"
 					},{
-					  "value": 5,
-					  "label": "5"
+						"value": 5,
+						"label": "5"
 					},{
-					  "value": 0,
-					  "label": "0"
+						"value": 0,
+						"label": "0"
 					}]
 				},
 				min: 0,
@@ -435,28 +427,28 @@ title: City of Leeds
 {{ comp grid.autogrid { columns: 1 } }}
 	{{ comp dashboard.panel { bg: "#104454", fg: 'white' } }}
 		<h2>Practitioner activity by ward</h2>
-		<p>The wards where organisations funded by the Leeds Cultural Investment Programme deliver activities. Darker shades indicate areas with a higher concentration of cultural activity.</p>
+		<p>The wards where organisations funded by the Leeds Cultural Investment Programme deliver activities. Lighter shades indicate areas with a higher concentration of cultural activity.</p>
 		{{ comp.oi.map.hex_cartogram({
 			config: {
 				hexjson: hex.wards_leeds,
 				data: viz.dashboard.activity_by_ward,
 				matchKey: 'WD25CD',
 				value: 'Count',
-				scale: 'rgb(210, 224, 229) 0%, rgb(67, 129, 151) 100%',
+				scale: 'rgb(67, 129, 151) 0%, rgb(210, 224, 229) 100%',
 				"legend": {
-				  "position": "top",
-				  "items": [{
-					  "value": 30,
-					  "label": "30"
+					"position": "top",
+					"items": [{
+						"value": 30,
+						"label": "30"
 					},{
-					  "value": 20,
-					  "label": "20"
+						"value": 20,
+						"label": "20"
 					},{
-					  "value": 10,
-					  "label": "10"
+						"value": 10,
+						"label": "10"
 					},{
-					  "value": 0,
-					  "label": "0"
+						"value": 0,
+						"label": "0"
 					}]
 				},
 				min: 0,
@@ -482,83 +474,83 @@ title: City of Leeds
 	{{ comp dashboard.panel { bg: '#104454', fg: 'white' } }}
 		<h3>National Arts GCSE Entries</h3>
 		<p>
-		  The number of young people opting for Drama, Music, Design & Technology, Media and Dance has been steadily declining since 2010, whereas the number of students taking Arts & Design is roughly the same. Individual subject entries are presented as a percentage of total entries. 
+			The number of young people opting for Drama, Music, Design & Technology, Media and Dance has been steadily declining since 2010, whereas the number of students taking Arts & Design is roughly the same. Individual subject entries are presented as a percentage of total entries. 
 		</p>
 		{{ comp.oi.chart.line({ config: {
 			data: viz.dashboard.arts_percentage,
 			width: 950,
 			height: 600,
 			series: [
-			  {
+				{
 				title: 'Art and Design',
 				x: "Year",
 				y: 'Art and Design',
 				colour: '#ffffff'
-			  },
-			  {
+				},
+				{
 				title: 'Dance',
 				x: "Year",
 				y: 'Dance',
 				colour: '#c90d0d'
-			  },
-			  {
+				},
+				{
 				title: 'Design & Technology',
 				x: "Year",
 				y: 'Design & Technology',
 				colour: '#51deee'
-			  },
-			  {
+				},
+				{
 				title: 'Drama',
 				x: "Year",
 				y: 'Drama',
 				colour: '#8d1a8f'
-			  },
-			  {
+				},
+				{
 				title: 'Media/Film/TV',
 				x: "Year",
 				y: 'Media/Film/TV',
 				colour: '#ff7b40'
-			  },
-			  {
+				},
+				{
 				title: 'Music',
 				x: "Year",
 				y: 'Music',
 				colour: '#b2c929'
-			  }
+				}
 			],
 			legend: {
-			  show: true
+				show: true
 			},
 			axis: {
-			  x: {
+				x: {
 				title: {
-				  label: 'Year'
+					label: 'Year'
 				},
 				tick: {
-				  spacing: 2
+					spacing: 2
 				},
 				min:2010,
 				max:2023
-			  },
-			  y: {
+				},
+				y: {
 				grid: {
-				  show: true,
-				  'stroke-width': 0.5
-				},        
+					show: true,
+					'stroke-width': 0.5
+				},				
 				title: {
-				  label: "Percentage of total GCSE entries"
+					label: "Percentage of total GCSE entries"
 				},
 				tick: { 
-				  spacing: 0.5 
+					spacing: 0.5 
 				},
 				min:0,
 				max: 5
-			  }
+				}
 			}
-		  } }) }}
-		  <p>
+			} }) }}
+			<p>
 			 Data were taken from <a href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/f378b6bf-5e72-4867-87fa-83baf102ecad">the Department for Education's Key Stage 4 Performance tables</a>. Design & Technology subject-level data is only available from Academic Year 2018-19.
-		  </p>	  
+			</p>		
 	{{ /comp }} 
 {{ /comp }} 
 
@@ -571,67 +563,67 @@ title: City of Leeds
 			width: 950,
 			height: 600,
 			series: [
-			  {
+				{
 				title: 'Art & design',
 				x: "Year",
 				y: 'Art & design',
 				colour: '#ffffff'
-			  },
-			  {
+				},
+				{
 				title: 'Design & technology',
 				x: "Year",
 				y: 'Design & technology',
 				colour: '#51deee'
-			  },
-			  {
+				},
+				{
 				title: 'Drama',
 				x: "Year",
 				y: 'Drama',
 				colour: '#8d1a8f'
-			  },
-			  {
+				},
+				{
 				title: 'Media/Film/TV',
 				x: "Year",
 				y: 'Media film tv',
 				colour: '#ff7b40'
-			  },
-			  {
+				},
+				{
 				title: 'Music',
 				x: "Year",
 				y: 'Total Music',
 				colour: '#b2c929'
-			  }
+				}
 			],
 			legend: {
-			  show: true
+				show: true
 			},
 			axis: {
-			  x: {
+				x: {
 				title: {
-				  label: 'Date'
+					label: 'Date'
 				},
 				tick: {
-				  spacing: 1
+					spacing: 1
 				},
 				min:2010,
 				max:2023
-			  },
-			  y: {
+				},
+				y: {
 				grid: {
-				  show: true,
-				  'stroke-width': 0.5
-				},        
+					show: true,
+					'stroke-width': 0.5
+				},				
 				title: {
-				  label: "Percentage of total A Level entries"
+					label: "Percentage of total A Level entries"
 				},
 				tick: { 
-				  spacing: 0.5
+					spacing: 0.5
 				},
 				min:0,
 				max: 6
-			  }
+				}
 			}
-		  } }) }}
+			} }) }}
 		<p>Data were taken from <a href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/2f6bffba-735d-4801-8ae3-f0f058044da4">the Department for Education's A level and other 16 to 18 results publication</a>.</p>
 	{{ /comp }}
 {{ /comp }}
